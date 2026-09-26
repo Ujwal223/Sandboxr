@@ -1,0 +1,86 @@
+# ===============================================================
+# SANDBOXR Embedded StevenBlack Privacy & Ad-Blocking Hosts Snapshot
+# Sub-millisecond In-RAM matching for Android zero-root firewall
+# ===============================================================
+
+127.0.0.1 localhost
+::1 localhost
+0.0.0.0 0.0.0.0
+
+# Top Trackers & Ad Networks
+0.0.0.0 doubleclick.net
+0.0.0.0 ad.doubleclick.net
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 adservice.google.com
+0.0.0.0 googleads.g.doubleclick.net
+0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 pagead2.google.com
+0.0.0.0 google-analytics.com
+0.0.0.0 ssl.google-analytics.com
+0.0.0.0 app-measurement.com
+0.0.0.0 firebase-settings.crashlytics.com
+0.0.0.0 crashlytics.com
+
+# Meta / Facebook Tracking & Telemetry
+0.0.0.0 graph.facebook.com
+0.0.0.0 telemetry.facebook.com
+0.0.0.0 pixel.facebook.com
+0.0.0.0 an.facebook.com
+0.0.0.0 b-graph.facebook.com
+0.0.0.0 connect.facebook.net
+0.0.0.0 ads.facebook.com
+
+# Twitter / X Ads & Analytics
+0.0.0.0 ads.twitter.com
+0.0.0.0 analytics.twitter.com
+0.0.0.0 ads-api.twitter.com
+0.0.0.0 p.twitter.com
+
+# TikTok / ByteDance Telemetry
+0.0.0.0 ads.tiktok.com
+0.0.0.0 analytics.tiktok.com
+0.0.0.0 log.byteoversea.com
+0.0.0.0 mon.byteoversea.com
+0.0.0.0 rtlog.byteoversea.com
+
+# Major Ad Exchanges & Telemetry Providers
+0.0.0.0 ads.pubmatic.com
+0.0.0.0 openx.net
+0.0.0.0 ad.openx.net
+0.0.0.0 rubiconproject.com
+0.0.0.0 fastlane.rubiconproject.com
+0.0.0.0 smartadserver.com
+0.0.0.0 adcolony.com
+0.0.0.0 ads.adcolony.com
+0.0.0.0 applovin.com
+0.0.0.0 ms.applovin.com
+0.0.0.0 unityads.unity3d.com
+0.0.0.0 ironSource.com
+0.0.0.0 vungle.com
+0.0.0.0 chartboost.com
+0.0.0.0 flurry.com
+0.0.0.0 data.flurry.com
+0.0.0.0 branch.io
+0.0.0.0 api2.branch.io
+0.0.0.0 adjust.com
+0.0.0.0 app.adjust.com
+0.0.0.0 appsflyer.com
+0.0.0.0 track.appsflyer.com
+0.0.0.0 segment.io
+0.0.0.0 api.segment.io
+0.0.0.0 mixpanel.com
+0.0.0.0 api.mixpanel.com
+0.0.0.0 amplitude.com
+0.0.0.0 api.amplitude.com
+0.0.0.0 bugsnag.com
+0.0.0.0 notify.bugsnag.com
+0.0.0.0 sentry.io
+0.0.0.0 o0.ingest.sentry.io
+
+# Known Tracking & Telemetry Domains
+0.0.0.0 tracking.apps.net
+0.0.0.0 telemetry.mobile.org
+0.0.0.0 metrics.sdk.io
+0.0.0.0 device-metrics-us.amazon.com
+0.0.0.0 telemetry.sdk.unity3d.com

@@ -1,0 +1,158 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "be5d3395a4a8deeb900159440c417e30",
+    "entities": [
+      {
+        "tableName": "environments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `display_name` TEXT NOT NULL, `color_tag` INTEGER NOT NULL, `icon_emoji` TEXT, `sort_order` INTEGER NOT NULL, `network_config` TEXT NOT NULL, `proxy_host` TEXT, `proxy_port` INTEGER, `wg_config` TEXT, `dns_upstream` TEXT, `ad_block_enabled` INTEGER NOT NULL, `clipboard_mode` TEXT NOT NULL, `gms_enabled` INTEGER NOT NULL, `freeze_when_inactive` INTEGER NOT NULL, `notif_isolation` INTEGER NOT NULL, `is_system` INTEGER NOT NULL, `created_at` INTEGER NOT NULL, `hw_imei` TEXT NOT NULL, `hw_androidId` TEXT NOT NULL, `hw_macAddress` TEXT NOT NULL, `hw_serial` TEXT NOT NULL, `hw_advertisingId` TEXT NOT NULL, `hw_wifiBssid` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "display_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorTag",
+            "columnName": "color_tag",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iconEmoji",
+            "columnName": "icon_emoji",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sort_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "networkConfig",
+            "columnName": "network_config",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "proxyHost",
+            "columnName": "proxy_host",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "proxyPort",
+            "columnName": "proxy_port",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "wgConfig",
+            "columnName": "wg_config",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dnsUpstream",
+            "columnName": "dns_upstream",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "adBlockEnabled",
+            "columnName": "ad_block_enabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clipboardMode",
+            "columnName": "clipboard_mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gmsEnabled",
+            "columnName": "gms_enabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "freezeWhenInactive",
+            "columnName": "freeze_when_inactive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notifIsolation",
+            "columnName": "notif_isolation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSystem",
+            "columnName": "is_system",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.imei",
+            "columnName": "hw_imei",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.androidId",
+            "columnName": "hw_androidId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.macAddress",
+            "columnName": "hw_macAddress",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.serial",
+            "columnName": "hw_serial",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.advertisingId",
+            "columnName": "hw_advertisingId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hardwareIds.wifiBssid",
+            "columnName": "hw_wifiBssid",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'be5d3395a4a8deeb900159440c417e30')"
+    ]
+  }
+}
