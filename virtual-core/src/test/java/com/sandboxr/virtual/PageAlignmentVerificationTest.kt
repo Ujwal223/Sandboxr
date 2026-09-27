@@ -46,10 +46,6 @@ class PageAlignmentVerificationTest {
             "build.gradle.kts must include arm64-v8a",
             gradleContent.contains("\"arm64-v8a\"")
         )
-        assertTrue(
-            "build.gradle.kts must include x86_64 for 16KB emulator compatibility",
-            gradleContent.contains("\"x86_64\"")
-        )
     }
 
     @Test

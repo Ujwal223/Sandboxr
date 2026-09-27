@@ -34,10 +34,20 @@ class VClient private constructor() {
     fun loadGuestDex(
         apkFile: File,
         envDataDir: File,
-        parentClassLoader: ClassLoader = VClient::class.java.classLoader!!
+        parentClassLoader: ClassLoader = VClient::class.java.classLoader!!,
+        nativeLibraryDir: String? = null,
+        splitApkFiles: List<File> = emptyList()
     ): VClassLoader {
         require(apkFile.exists()) { "Guest APK does not exist: ${apkFile.absolutePath}" }
-        return VClassLoader.create(apkFile, envDataDir, parentClassLoader)
+        VClassLoader.ensureFileReadOnly(apkFile)
+        splitApkFiles.forEach { VClassLoader.ensureFileReadOnly(it) }
+        return VClassLoader.create(
+            apkFile = apkFile,
+            envDataDir = envDataDir,
+            parent = parentClassLoader,
+            nativeLibraryDir = nativeLibraryDir,
+            splitApkFiles = splitApkFiles
+        )
     }
 
     /**
@@ -61,8 +71,16 @@ class VClient private constructor() {
         val env = vCore.getEnvironment(envId) ?: VEnvironment.create(hostContext, envId, "Default", 0L)
         val packageDataDir = env.getPackageDataDir(packageName)
 
+        val splitApks = appInfo.splitSourceDirs?.map { File(it) }?.filter { it.exists() } ?: emptyList()
+
         try {
-            val classLoader = loadGuestDex(apkFile, packageDataDir, hostContext.classLoader)
+            val classLoader = loadGuestDex(
+                apkFile = apkFile,
+                envDataDir = packageDataDir,
+                parentClassLoader = hostContext.classLoader,
+                nativeLibraryDir = appInfo.nativeLibraryDir,
+                splitApkFiles = splitApks
+            )
             val vContext = VContextImpl(
                 base = hostContext.applicationContext,
                 environment = env,
@@ -106,7 +124,14 @@ class VClient private constructor() {
         savedInstanceState: Bundle? = null
     ): Activity {
         val packageDataDir = env.getPackageDataDir(packageName)
-        val classLoader = loadGuestDex(apkFile, packageDataDir, hostContext.classLoader)
+        val splitApks = appInfo.splitSourceDirs?.map { File(it) }?.filter { it.exists() } ?: emptyList()
+        val classLoader = loadGuestDex(
+            apkFile = apkFile,
+            envDataDir = packageDataDir,
+            parentClassLoader = hostContext.classLoader,
+            nativeLibraryDir = appInfo.nativeLibraryDir,
+            splitApkFiles = splitApks
+        )
         val vContext = VContextImpl(
             base = hostContext,
             environment = env,

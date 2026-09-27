@@ -28,7 +28,9 @@ static bytehook_stub_t g_stub_readlinkat = nullptr;
 
 static inline bool is_sensitive_dev_socket(const char* path) {
     if (!path) return false;
-    return (std::strstr(path, "/dev/socket") != nullptr || std::strstr(path, "dev/socket") != nullptr);
+    // Only intercept rogue root/daemon sockets; do not break system logging, property_service, or OEM IPC
+    return (std::strstr(path, "/dev/socket/su") != nullptr ||
+            std::strstr(path, "/dev/socket/magisk") != nullptr);
 }
 
 static inline bool is_sysfs_net_address_path(const char* path) {

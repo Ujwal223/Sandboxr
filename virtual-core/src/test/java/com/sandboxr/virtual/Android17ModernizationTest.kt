@@ -34,7 +34,7 @@ class Android17ModernizationTest {
         val dummyContext = object : ContextWrapper(null) {
             override fun getApplicationContext(): Context = this
             override fun getFilesDir(): File = filesDir
-            override fun getPackageName(): String = "com.sandboxr.app"
+            override fun getPackageName(): String = "com.ujwal.sandboxr"
         }
         vams = VActivityManagerService.createForTesting(dummyContext)
         vams.clear()

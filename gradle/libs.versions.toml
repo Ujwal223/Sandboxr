@@ -4,21 +4,36 @@ kotlin = "2.4.20"
 coreKtx = "1.15.0"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
-composeBom = "2025.02.00"
+composeBom = "2026.09.00"
 coroutines = "1.10.1"
 room = "2.8.3"
 ksp = "2.3.7"
 hiddenApiBypass = "4.3"
-bytehook = "1.0.9"
-shadowhook = "1.0.10"
+bytehook = "1.1.2"
+shadowhook = "2.0.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 
+# Launcher3 & GrapheneOS Dependencies
+dagger = "2.55"
+protobuf = "4.29.3"
+protobufPlugin = "0.10.0"
+constraintlayout = "2.2.1"
+recyclerview = "1.4.0"
+dynamicanimation = "1.0.0"
+preference = "1.2.1"
+slice = "1.0.0"
+cardview = "1.0.0"
+window = "1.4.0"
+material = "1.12.0"
+lottie = "6.6.3"
+javaxInject = "1"
+
 # SDK Versions
-compileSdk = "35"
+compileSdk = "37"
 minSdk = "29"
-targetSdk = "35"
+targetSdk = "37"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +63,25 @@ androidx-room-testing = { group = "androidx.room", name = "room-testing", versio
 hidden-api-bypass = { group = "org.lsposed.hiddenapibypass", name = "hiddenapibypass", version.ref = "hiddenApiBypass" }
 bytedance-bytehook = { group = "com.bytedance", name = "bytehook", version.ref = "bytehook" }
 bytedance-shadowhook = { group = "com.bytedance.android", name = "shadowhook", version.ref = "shadowhook" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.0" }
+
+# Launcher3 / GrapheneOS Launcher Dependencies
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+javax-inject = { group = "javax.inject", name = "javax.inject", version.ref = "javaxInject" }
+protobuf-javalite = { group = "com.google.protobuf", name = "protobuf-javalite", version.ref = "protobuf" }
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
+protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
+
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-dynamicanimation = { group = "androidx.dynamicanimation", name = "dynamicanimation", version.ref = "dynamicanimation" }
+androidx-preference = { group = "androidx.preference", name = "preference-ktx", version.ref = "preference" }
+androidx-slice-view = { group = "androidx.slice", name = "slice-view", version.ref = "slice" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-window = { group = "androidx.window", name = "window", version.ref = "window" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+airbnb-lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -60,3 +94,4 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 androidx-room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }

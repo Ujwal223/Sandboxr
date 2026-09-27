@@ -1,3 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+/*
+** Copyright (C) 2026 The Android Open Source Project
+** Copyright (C) 2026 Sandboxr Platform
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Common & Standard Launcher Permissions -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ROTATE_SURFACE_FLINGER" />
+    <uses-permission android:name="android.permission.WAKEUP_SURFACE_FLINGER" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.LOCK_APPS" />
+    <uses-permission android:name="com.android.systemui.permission.LAUNCH_ACCESSIBILITY_SHORTCUT_CHOOSER_DIALOG" />
+
+    <!-- Quickstep & Recents Permissions -->
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS" />
+    <uses-permission android:name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS" />
+    <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS" />
+    <uses-permission android:name="android.permission.REMOVE_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES" />
+    <uses-permission android:name="android.permission.SET_ORIENTATION" />
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER" />
+    <uses-permission android:name="android.permission.MANAGE_ACCESSIBILITY" />
+    <uses-permission android:name="android.permission.MONITOR_INPUT" />
+    <uses-permission android:name="android.permission.ALLOW_SLIPPERY_TOUCHES" />
+    <uses-permission android:name="android.permission.ACCESS_SHORTCUTS" />
+    <uses-permission android:name="android.permission.READ_REMOTE_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_TASK_HANDOFF" />
+    <uses-permission android:name="android.permission.SYSTEM_APPLICATION_OVERLAY" />
+    <uses-permission android:name="android.permission.EXECUTE_APP_FUNCTIONS_SYSTEM" />
+    <uses-permission android:name="android.permission.ACCESS_HIDDEN_PROFILES_FULL" />
+
+    <!-- Widget Picker Permissions -->
+    <permission
+        android:name="${applicationId}.permission.START_WIDGET_PICKER_ACTIVITY"
+        android:protectionLevel="signature|privileged" />
+
+    <!-- Grid Control Custom Permissions -->
+    <permission
+        android:name="${applicationId}.permission.GRID_CONTROL"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.GRID_CONTROL" />
+
+    <application>
+        <!-- Property for activity embedding splits -->
+        <property
+            android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
+            android:value="true" />
+
+        <!-- Main Launcher Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.Launcher"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="unspecified"
+            android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:resizeableActivity="true"
+            android:resumeWhilePausing="true"
+            android:taskAffinity=""
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SHOW_WORK_APPS" />
+                <action android:name="android.intent.action.ALL_APPS" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+                <category android:name="android.intent.category.LAUNCHER_APP" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.launcher3.grid.control"
+                android:value="${applicationId}.grid_control" />
+        </activity>
+
+        <!-- Widget Picker Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.widgetpicker.WidgetPickerActivity"
+            android:theme="@style/WidgetPickerActivityTheme"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
+            android:permission="${applicationId}.permission.START_WIDGET_PICKER_ACTIVITY">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Quickstep Widget Picker Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.QuickstepWidgetPickerActivity"
+            android:theme="@style/WidgetPickerActivityTheme"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
+            android:permission="${applicationId}.permission.START_WIDGET_PICKER_ACTIVITY">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Add Item Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.dragndrop.AddItemActivity"
+            android:theme="@style/AddItemActivityTheme"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT" />
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET" />
+            </intent-filter>
+        </activity>
+
+        <!-- Quickstep Add Item Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.QuickstepAddItemActivity"
+            android:theme="@style/AddItemActivityTheme"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT" />
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET" />
+            </intent-filter>
+        </activity>
+
+        <!-- Settings Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.settings.SettingsActivity"
+            android:label="@string/settings_button_text"
+            android:theme="@style/HomeSettings.Theme"
+            android:exported="true"
+            android:autoRemoveFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Secondary Display Launcher -->
+        <activity
+            android:name="com.sandboxr.launcher.secondarydisplay.SecondaryDisplayLauncher"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SECONDARY_HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Recents Activity -->
+        <activity
+            android:name="com.sandboxr.launcher.quickstep.RecentsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:theme="@style/LauncherTheme"
+            android:screenOrientation="behind"
+            android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:resizeableActivity="true"
+            android:resumeWhilePausing="true"
+            android:enableOnBackInvokedCallback="false"
+            android:taskAffinity="" />
+
+        <!-- Proxy Activity Starter -->
+        <activity
+            android:name="com.sandboxr.launcher.proxy.ProxyActivityStarter"
+            android:theme="@style/ProxyActivityStarterTheme"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:exported="false" />
+
+        <!-- Gesture Sandbox & Tutorial Activities -->
+        <activity
+            android:name="com.sandboxr.launcher.quickstep.interaction.GestureSandboxActivity"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:theme="@style/GestureTutorialActivity"
+            android:label="@string/gesture_tutorial_title"
+            android:exported="true"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="com.android.quickstep.action.GESTURE_SANDBOX" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.sandboxr.launcher.quickstep.interaction.AllSetActivity"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:permission="android.permission.REBOOT"
+            android:theme="@style/AllSetTheme"
+            android:enableOnBackInvokedCallback="false"
+            android:label="@string/allset_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.quickstep.action.GESTURE_ONBOARDING_ALL_SET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Organizer Activities -->
+        <activity
+            android:name="com.sandboxr.launcher.organizer.creation.screen.ui.OrganizerActivity"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/OrganizerTheme">
+            <intent-filter>
+                <action android:name="com.android.launcher3.ORGANIZER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.sandboxr.launcher.organizer.creation.screen.ui.foldercreator.FolderCreatorActivity"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/FolderCreatorTheme">
+            <intent-filter>
+                <action android:name="com.android.launcher3.FOLDER_CREATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Receivers -->
+        <receiver
+            android:name="com.sandboxr.launcher.SessionCommitReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.pm.action.SESSION_COMMITTED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.sandboxr.launcher.AppWidgetsRestoredReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_HOST_RESTORED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Services -->
+        <service
+            android:name="com.sandboxr.launcher.notification.NotificationListener"
+            android:label="@string/notification_dots_service_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.sandboxr.launcher.quickstep.TouchInteractionService"
+            android:permission="android.permission.STATUS_BAR_SERVICE"
+            android:directBootAware="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKSTEP_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.sandboxr.launcher.taskbar.CueBarInsightRendererService"
+            android:exported="true"
+            android:permission="android.permission.BIND_CONTEXT_COMPONENT_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.personalcontext.renderer.InsightRendererService" />
+            </intent-filter>
+        </service>
+
+        <!-- Content Providers -->
+        <provider
+            android:name="com.sandboxr.launcher.LauncherProvider"
+            android:authorities="${applicationId}.settings"
+            android:exported="true"
+            android:writePermission="android.permission.ACCESS_LAUNCHER_DATA"
+            android:readPermission="android.permission.ACCESS_LAUNCHER_DATA" />
+
+        <provider
+            android:name="com.sandboxr.launcher.graphics.LauncherCustomizationProvider"
+            android:authorities="${applicationId}.grid_control"
+            android:exported="true" />
+
+        <provider
+            android:name="com.sandboxr.launcher.testing.TestInformationProvider"
+            android:authorities="${applicationId}.TestInfo"
+            android:readPermission="android.permission.WRITE_SECURE_SETTINGS"
+            android:writePermission="android.permission.WRITE_SECURE_SETTINGS"
+            android:exported="true"
+            android:enabled="false" />
+
+        <provider
+            android:name="com.sandboxr.launcher.quickstep.LauncherSearchIndexablesProvider"
+            android:authorities="${applicationId}.search_indexables"
+            android:grantUriPermissions="true"
+            android:multiprocess="true"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+        <!-- FileProvider for Sharing Images/Overviews -->
+        <provider
+            android:name="com.sandboxr.launcher.util.LauncherOverviewFileProvider"
+            android:authorities="${applicationId}.overview.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/overview_file_provider_paths" />
+        </provider>
+
+        <!-- Disable Eager Jetpack Startup Initialization -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
+
+    </application>
+
 </manifest>

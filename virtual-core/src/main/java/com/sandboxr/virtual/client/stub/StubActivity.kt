@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.sandboxr.virtual.VirtualCore
+import com.sandboxr.virtual.compat.SamsungCompat
 import com.sandboxr.virtual.core.VClassLoader
 import com.sandboxr.virtual.core.VContextImpl
 import com.sandboxr.virtual.core.VEnvironment
@@ -35,8 +36,20 @@ open class StubActivity : FragmentActivity() {
     class SingleTop : StubActivity()
     class SingleTask : StubActivity()
     class SingleInstance : StubActivity()
-
     private var guestActivity: Activity? = null
+    private var vContext: VContextImpl? = null
+
+    override fun getResources(): android.content.res.Resources {
+        return vContext?.resources ?: super.getResources()
+    }
+
+    override fun getAssets(): android.content.res.AssetManager {
+        return vContext?.assets ?: super.getAssets()
+    }
+
+    override fun getClassLoader(): ClassLoader {
+        return vContext?.classLoader ?: super.getClassLoader()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Enforce Edge-to-Edge unconditionally (API 36+ requirement, windowOptOutEdgeToEdgeEnforcement removed)
@@ -62,6 +75,9 @@ open class StubActivity : FragmentActivity() {
         val targetPkg = intent.getStringExtra(VActivityManagerService.EXTRA_TARGET_PKG)
         val targetActivityClass = intent.getStringExtra(VActivityManagerService.EXTRA_TARGET_ACTIVITY)
 
+        // Apply Samsung-specific intent flags to prevent crashes and Multi-Window issues
+        SamsungCompat.applyMultiWindowIntentFlags(intent)
+
         if (targetPkg == null || targetActivityClass == null || envId == null) {
             Log.e(TAG, "Missing virtual execution parameters. Finishing.")
             finish()
@@ -84,18 +100,68 @@ open class StubActivity : FragmentActivity() {
             val env = vCore.getEnvironment(envId) ?: VEnvironment.create(this, envId, "Default", 0L)
             val packageDataDir = env.getPackageDataDir(targetPkg)
 
-            // Dynamic ClassLoader for guest APK
-            val classLoader = VClassLoader.create(apkFile, packageDataDir, classLoader)
-            val vContext = VContextImpl(
+            // Dynamic ClassLoader for guest APK with read-only DCL compliance and native libraries
+            VClassLoader.ensureFileReadOnly(apkFile)
+
+            // Resolve all split APK files belonging to the package
+            val pkgDir = apkFile.parentFile
+            val splitFiles = mutableListOf<File>()
+            if (pkgDir != null && pkgDir.exists()) {
+                pkgDir.listFiles { f -> f.isFile && f.name.startsWith("split_") && f.name.endsWith(".apk") }?.let {
+                    splitFiles.addAll(it)
+                }
+            }
+            if (splitFiles.isEmpty()) {
+                // Auto-sync missing splits from host if this is a cloned system package
+                try {
+                    val hostApp = packageManager.getApplicationInfo(targetPkg, 0)
+                    hostApp.splitSourceDirs?.forEach { splitPath ->
+                        val src = File(splitPath)
+                        if (src.exists() && pkgDir != null) {
+                            val dst = File(pkgDir, src.name)
+                            if (src.canonicalPath != dst.canonicalPath) {
+                                if (dst.exists()) dst.setWritable(true)
+                                src.copyTo(dst, overwrite = true)
+                            }
+                            VClassLoader.ensureFileReadOnly(dst)
+                            splitFiles.add(dst)
+                        }
+                    }
+                } catch (_: Throwable) {}
+            }
+            splitFiles.forEach { VClassLoader.ensureFileReadOnly(it) }
+            val splitPaths = splitFiles.map { it.absolutePath }.toTypedArray()
+            if (splitPaths.isNotEmpty()) {
+                appInfo.splitSourceDirs = splitPaths
+                appInfo.splitPublicSourceDirs = splitPaths
+            }
+
+            val guestClassLoader = VClassLoader.create(
+                apkFile = apkFile,
+                envDataDir = packageDataDir,
+                parent = baseContext.classLoader,
+                nativeLibraryDir = appInfo.nativeLibraryDir,
+                splitApkFiles = splitFiles
+            )
+            val contextImpl = VContextImpl(
                 base = baseContext,
                 environment = env,
                 guestPackageName = targetPkg,
-                guestClassLoader = classLoader,
+                guestClassLoader = guestClassLoader,
                 guestAppInfo = appInfo
             )
+            this.vContext = contextImpl
+
+            val themeRes = installedPkg.activities?.firstOrNull { it.name == targetActivityClass }?.theme
+                ?: appInfo.theme
+            if (themeRes != 0) {
+                try {
+                    setTheme(themeRes)
+                } catch (_: Throwable) {}
+            }
 
             // Instantiate guest activity
-            val clazz = classLoader.loadClass(targetActivityClass)
+            val clazz = guestClassLoader.loadClass(targetActivityClass)
             val activityInstance = clazz.getDeclaredConstructor().newInstance() as Activity
             guestActivity = activityInstance
 
@@ -103,15 +169,24 @@ open class StubActivity : FragmentActivity() {
             VActivityManagerService.get(this).registerActiveActivity(envId, targetPkg, this)
 
             // Attach context and transfer core activity tokens via reflection
-            attachGuestActivity(activityInstance, vContext, targetIntent ?: intent)
+            attachGuestActivity(activityInstance, contextImpl, targetIntent ?: intent)
 
             // Invoke guest onCreate
             val onCreateMethod: Method = Activity::class.java.getDeclaredMethod("onCreate", Bundle::class.java)
             onCreateMethod.isAccessible = true
             onCreateMethod.invoke(activityInstance, savedInstanceState)
 
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to launch guest activity $targetActivityClass", e)
+        } catch (e: Throwable) {
+            Log.e(TAG, "Failed to launch guest activity $targetActivityClass: ${e.message}", e)
+            runOnUiThread {
+                try {
+                    android.widget.Toast.makeText(
+                        this,
+                        "Failed to launch app: ${e.localizedMessage ?: e.javaClass.simpleName}",
+                        android.widget.Toast.LENGTH_LONG
+                    ).show()
+                } catch (_: Throwable) {}
+            }
             finish()
         }
     }
@@ -232,10 +307,16 @@ open class StubActivity : FragmentActivity() {
 
     override fun onResume() {
         super.onResume()
+        try {
+            VActivityManagerService.get(this).onGuestActivityResumed()
+        } catch (_: Throwable) {}
         invokeGuestLifecycle("onResume")
     }
 
     override fun onPause() {
+        try {
+            VActivityManagerService.get(this).onGuestActivityPaused()
+        } catch (_: Throwable) {}
         invokeGuestLifecycle("onPause")
         super.onPause()
     }

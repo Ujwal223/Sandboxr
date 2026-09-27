@@ -13,7 +13,7 @@ object ServiceManagerHook {
     private const val TAG = "ServiceManagerHook"
     private val installedHooks = mutableMapOf<String, BinderHook>()
 
-    fun installAll(context: Context) {
+    fun installAll(context: Context, isGuestProcess: Boolean = false) {
         try {
             val isAndroid = System.getProperty("java.vm.name")?.contains("Dalvik", ignoreCase = true) == true
             if (isAndroid) {
@@ -27,6 +27,13 @@ object ServiceManagerHook {
             sCacheField.isAccessible = true
             @Suppress("UNCHECKED_CAST")
             val sCache = sCacheField.get(null) as MutableMap<String, IBinder>
+
+            // Never mutate sCache in the host launcher process on ANY device (Samsung, Pixel, Xiaomi, etc.)
+            // Host launcher needs the genuine system binders to query apps and render the desktop.
+            if (!isGuestProcess) {
+                Log.i(TAG, "Host launcher process: preserving system sCache and sPackageManager for OEM stability across all devices.")
+                return
+            }
 
             // 1. Hook Package Manager
             installServiceHook(
@@ -46,16 +53,7 @@ object ServiceManagerHook {
                 sCache = sCache
             )
 
-            // 3. Hook Window Manager
-            installServiceHook(
-                serviceName = "window",
-                interfaceClassName = "android.view.IWindowManager",
-                hook = WindowManagerHook(context),
-                getServiceMethod = getServiceMethod,
-                sCache = sCache
-            )
-
-            // Also update ActivityThread.sPackageManager cache if available
+            // Update ActivityThread.sPackageManager cache if available (on non-Samsung devices)
             try {
                 val activityThreadClass = Class.forName("android.app.ActivityThread")
                 val sPackageManagerField = activityThreadClass.getDeclaredField("sPackageManager")

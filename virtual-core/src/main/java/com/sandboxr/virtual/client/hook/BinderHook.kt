@@ -48,13 +48,17 @@ abstract class BinderHook(val serviceName: String) : InvocationHandler {
             this
         )
 
-        // Return a proxy IBinder whose queryLocalInterface returns our proxied interface
+        // Return a proxy IBinder whose queryLocalInterface returns our proxied interface only for matching descriptor
         return Proxy.newProxyInstance(
             IBinder::class.java.classLoader,
             arrayOf(IBinder::class.java),
             InvocationHandler { _, method, args ->
                 if (method.name == "queryLocalInterface") {
-                    return@InvocationHandler proxiedInterface
+                    val descriptor = args?.getOrNull(0) as? String
+                    if (descriptor == null || descriptor == interfaceClass.name) {
+                        return@InvocationHandler proxiedInterface
+                    }
+                    return@InvocationHandler null
                 }
                 method.invoke(baseBinder, *(args ?: emptyArray()))
             }

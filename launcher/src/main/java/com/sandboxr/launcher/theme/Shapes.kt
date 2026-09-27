@@ -1,5 +1,6 @@
 package com.sandboxr.launcher.theme
 
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -129,3 +130,18 @@ data class SandboxrShapes(
 )
 
 val LocalSandboxrShapes = staticCompositionLocalOf { SandboxrShapes() }
+
+/**
+ * Resolves the Compose [Shape] corresponding to user's launcher icon shape preference.
+ * Matches Android OS skin customizations (Pixel, OneUI, GrapheneOS).
+ */
+fun getLauncherIconShape(shapeName: String): Shape {
+    return when (shapeName.lowercase().trim()) {
+        "circle" -> CircleShape
+        "rounded square" -> RoundedCornerShape(16.dp)
+        "teardrop" -> RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp, bottomStart = 24.dp, bottomEnd = 6.dp)
+        "pebble", "egg" -> RoundedCornerShape(topStart = 28.dp, topEnd = 12.dp, bottomStart = 12.dp, bottomEnd = 28.dp)
+        "squircle" -> SuperellipseShape(exponent = 4.0f)
+        else -> RoundedCornerShape(20.dp)
+    }
+}

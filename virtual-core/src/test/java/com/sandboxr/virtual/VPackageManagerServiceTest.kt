@@ -46,7 +46,7 @@ class VPackageManagerServiceTest {
 
         val appInfo = ApplicationInfo().apply {
             packageName = guestPkg
-            sourceDir = "/data/data/com.sandboxr.app/envs/$envId/guest.apk"
+            sourceDir = "/data/data/com.ujwal.sandboxr/envs/$envId/guest.apk"
             flags = ApplicationInfo.FLAG_INSTALLED
         }
 
@@ -78,7 +78,7 @@ class VPackageManagerServiceTest {
         val queriedAppInfo = vpm.getApplicationInfo(guestPkg, 0, envId)
         assertNotNull("ApplicationInfo must be returned", queriedAppInfo)
         assertEquals(guestPkg, queriedAppInfo?.packageName)
-        assertEquals("/data/data/com.sandboxr.app/envs/$envId/guest.apk", queriedAppInfo?.sourceDir)
+        assertEquals("/data/data/com.ujwal.sandboxr/envs/$envId/guest.apk", queriedAppInfo?.sourceDir)
 
         // Query getInstalledPackages
         val allPkgs = vpm.getInstalledPackages(0, envId)

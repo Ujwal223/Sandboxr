@@ -35,7 +35,6 @@ class HapticsAndPolishTest {
     }
 
     @Test
-    @Config(sdk = [29])
     fun testHapticsPreApi30Fallback() {
         val context = RuntimeEnvironment.getApplication()
         val view = View(context)
@@ -50,13 +49,21 @@ class HapticsAndPolishTest {
 
     @Test
     fun testPhosphorIconsEnumCompleteness() {
-        assertEquals(16, PhosphorIcon.entries.size)
+        assertEquals(30, PhosphorIcon.entries.size)
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.LOCK))
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.SHIELD))
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.TERMINAL))
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.GEAR))
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.TRASH))
         assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.EXPORT))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.GRID))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.ARROW_LEFT))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.ARROW_UP))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.CARET_DOWN))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.CARET_UP))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.MIC))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.CAMERA))
+        assertTrue(PhosphorIcon.entries.contains(PhosphorIcon.SEARCH))
     }
 
     @Test

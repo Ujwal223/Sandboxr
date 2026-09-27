@@ -42,7 +42,7 @@ class VActivityManagerServiceTest {
         val dummyContext = object : ContextWrapper(null) {
             override fun getApplicationContext(): Context = this
             override fun getFilesDir(): File = filesDir
-            override fun getPackageName(): String = "com.sandboxr.app"
+            override fun getPackageName(): String = "com.ujwal.sandboxr"
         }
         mockContext = dummyContext
         vam = VActivityManagerService.get(dummyContext)

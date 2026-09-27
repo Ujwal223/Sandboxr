@@ -3,7 +3,7 @@ package com.sandboxr.virtual
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.sandboxr.virtual.client.hook.ServiceManagerHook
+import com.sandboxr.virtual.compat.SamsungCompat
 import com.sandboxr.virtual.core.VEnvironment
 import com.sandboxr.virtual.model.InstalledPackage
 import com.sandboxr.virtual.server.am.VActivityManagerService
@@ -56,18 +56,37 @@ class VirtualCore private constructor(val hostContext: Context) {
     }
 
     private fun initializeEngine() {
-        Log.i(TAG, "Initializing VirtualCore engine...")
-        // 1. Bypass hidden API restrictions on Android 12-15+ (API 31-36+)
-        com.sandboxr.virtual.compat.HiddenApiBypassHelper.exemptAll()
+        Log.i(TAG, "Initializing VirtualCore engine (host process services)...")
+
+        // 1. Bypass hidden API restrictions on Android 12–17 (API 31–37+)
+        // Note: HiddenApiBypass is also called in SandboxrApplication for both
+        // host and guest processes; calling it here ensures VirtualCore services
+        // that are accessed before Application.onCreate completes are also covered.
+        try {
+            com.sandboxr.virtual.compat.HiddenApiBypassHelper.exemptAll()
+        } catch (t: Throwable) {
+            Log.w(TAG, "HiddenApiBypass exemption notice: ${t.message}")
+        }
 
         // 2. Initialize native ShadowHook inline properties and ByteHook PLT hooks
-        com.sandboxr.virtual.hardware.NativeHookBridge.init()
+        try {
+            com.sandboxr.virtual.hardware.NativeHookBridge.init()
+        } catch (t: Throwable) {
+            Log.w(TAG, "NativeHookBridge init skipped or fallback active: ${t.message}")
+        }
 
         // 3. Initialize OEM hardware compatibility (Samsung Knox / Multi-Window)
-        com.sandboxr.virtual.compat.SamsungCompat.init(hostContext)
+        try {
+            com.sandboxr.virtual.compat.SamsungCompat.init(hostContext)
+        } catch (t: Throwable) {
+            Log.w(TAG, "SamsungCompat init skipped: ${t.message}")
+        }
 
-        // 4. Inject ServiceManager Binder hooks for ActivityManager, PackageManager, WindowManager
-        ServiceManagerHook.installAll(hostContext)
+        // NOTE: ServiceManagerHook is intentionally NOT installed here.
+        // It is installed from SandboxrApplication.onCreate() with the correct
+        // isGuestProcess flag:
+        //  - Host main process  → isGuestProcess=false  → hooks skipped (preserves OEM binders)
+        //  - Guest subprocess   → isGuestProcess=true   → hooks injected into guest process only
         Log.i(TAG, "VirtualCore engine initialized successfully.")
     }
 
@@ -108,6 +127,16 @@ class VirtualCore private constructor(val hostContext: Context) {
     }
 
     /**
+     * Clones an already installed host system application into the designated environment.
+     */
+    fun cloneSystemPackage(packageName: String, envId: String): InstalledPackage {
+        if (!environments.containsKey(envId)) {
+            createEnvironment(envId, "Default", 0L)
+        }
+        return packageManagerService.cloneSystemPackage(packageName, envId)
+    }
+
+    /**
      * Checks if a guest application is installed in the target environment.
      */
     fun isAppInstalled(packageName: String, envId: String): Boolean {
@@ -122,6 +151,8 @@ class VirtualCore private constructor(val hostContext: Context) {
             `package` = packageName
             addCategory(Intent.CATEGORY_LAUNCHER)
         }
+        // Apply Samsung-specific intent flags to prevent crashes
+        SamsungCompat.applyMultiWindowIntentFlags(intent)
         return activityManagerService.startActivity(intent, envId)
     }
 }

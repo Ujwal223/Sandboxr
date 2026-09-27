@@ -37,7 +37,21 @@ enum class PhosphorIcon {
     CHECK,
     X,
     WARNING,
-    COPY
+    COPY,
+    GRID,
+    ARROW_LEFT,
+    ARROW_UP,
+    CARET_DOWN,
+    CARET_UP,
+    MIC,
+    CAMERA,
+    PALETTE,
+    WIDGETS,
+    HOME,
+    SPARKLE,
+    CLOUD_SUN,
+    USER,
+    SEARCH
 }
 
 @Composable
@@ -73,6 +87,20 @@ fun PhosphorIconView(
             PhosphorIcon.X -> drawPhosphorX(color, stroke, w, h)
             PhosphorIcon.WARNING -> drawPhosphorWarning(color, stroke, w, h)
             PhosphorIcon.COPY -> drawPhosphorCopy(color, stroke, w, h)
+            PhosphorIcon.GRID -> drawPhosphorGrid(color, stroke, w, h)
+            PhosphorIcon.ARROW_LEFT -> drawPhosphorArrowLeft(color, stroke, w, h)
+            PhosphorIcon.ARROW_UP -> drawPhosphorArrowUp(color, stroke, w, h)
+            PhosphorIcon.CARET_DOWN -> drawPhosphorCaretDown(color, stroke, w, h)
+            PhosphorIcon.CARET_UP -> drawPhosphorCaretUp(color, stroke, w, h)
+            PhosphorIcon.MIC -> drawPhosphorMic(color, stroke, w, h)
+            PhosphorIcon.CAMERA -> drawPhosphorCamera(color, stroke, w, h)
+            PhosphorIcon.PALETTE -> drawPhosphorPalette(color, stroke, w, h)
+            PhosphorIcon.WIDGETS -> drawPhosphorWidgets(color, stroke, w, h)
+            PhosphorIcon.HOME -> drawPhosphorHome(color, stroke, w, h)
+            PhosphorIcon.SPARKLE -> drawPhosphorSparkle(color, stroke, w, h)
+            PhosphorIcon.CLOUD_SUN -> drawPhosphorCloudSun(color, stroke, w, h)
+            PhosphorIcon.USER -> drawPhosphorUser(color, stroke, w, h)
+            PhosphorIcon.SEARCH -> drawPhosphorSearch(color, stroke, w, h)
         }
     }
 }
@@ -284,3 +312,199 @@ private fun DrawScope.drawPhosphorCopy(color: Color, stroke: Stroke, w: Float, h
     }
     drawPath(backSheet, color, style = stroke)
 }
+
+private fun DrawScope.drawPhosphorGrid(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val r = 2.5f.dp.toPx()
+    val offsets = listOf(
+        Offset(w * 0.32f, h * 0.32f),
+        Offset(w * 0.68f, h * 0.32f),
+        Offset(w * 0.32f, h * 0.68f),
+        Offset(w * 0.68f, h * 0.68f)
+    )
+    for (pt in offsets) {
+        drawCircle(color, radius = r, center = pt)
+    }
+}
+
+private fun DrawScope.drawPhosphorArrowLeft(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val arrow = Path().apply {
+        moveTo(w * 0.44f, h * 0.28f)
+        lineTo(w * 0.22f, h * 0.50f)
+        lineTo(w * 0.44f, h * 0.72f)
+    }
+    drawPath(arrow, color, style = stroke)
+    drawLine(color, Offset(w * 0.22f, h * 0.50f), Offset(w * 0.78f, h * 0.50f), stroke.width, StrokeCap.Round)
+}
+
+private fun DrawScope.drawPhosphorArrowUp(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val arrow = Path().apply {
+        moveTo(w * 0.28f, h * 0.44f)
+        lineTo(w * 0.50f, h * 0.22f)
+        lineTo(w * 0.72f, h * 0.44f)
+    }
+    drawPath(arrow, color, style = stroke)
+    drawLine(color, Offset(w * 0.50f, h * 0.22f), Offset(w * 0.50f, h * 0.78f), stroke.width, StrokeCap.Round)
+}
+
+private fun DrawScope.drawPhosphorCaretDown(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val caret = Path().apply {
+        moveTo(w * 0.25f, h * 0.38f)
+        lineTo(w * 0.50f, h * 0.65f)
+        lineTo(w * 0.75f, h * 0.38f)
+    }
+    drawPath(caret, color, style = stroke)
+}
+
+private fun DrawScope.drawPhosphorCaretUp(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val caret = Path().apply {
+        moveTo(w * 0.25f, h * 0.62f)
+        lineTo(w * 0.50f, h * 0.35f)
+        lineTo(w * 0.75f, h * 0.62f)
+    }
+    drawPath(caret, color, style = stroke)
+}
+
+private fun DrawScope.drawPhosphorMic(color: Color, stroke: Stroke, w: Float, h: Float) {
+    // Microphone body
+    drawRoundRect(
+        color = color,
+        topLeft = Offset(w * 0.35f, h * 0.15f),
+        size = Size(w * 0.30f, h * 0.45f),
+        cornerRadius = CornerRadius(w * 0.15f, w * 0.15f),
+        style = stroke
+    )
+    // Cradle arc
+    val cradle = Path().apply {
+        moveTo(w * 0.22f, h * 0.40f)
+        cubicTo(w * 0.22f, h * 0.72f, w * 0.78f, h * 0.72f, w * 0.78f, h * 0.40f)
+    }
+    drawPath(cradle, color, style = stroke)
+    // Stem
+    drawLine(color, Offset(w * 0.50f, h * 0.68f), Offset(w * 0.50f, h * 0.85f), stroke.width, StrokeCap.Round)
+    // Base
+    drawLine(color, Offset(w * 0.32f, h * 0.85f), Offset(w * 0.68f, h * 0.85f), stroke.width, StrokeCap.Round)
+}
+
+private fun DrawScope.drawPhosphorCamera(color: Color, stroke: Stroke, w: Float, h: Float) {
+    // Outer camera body
+    val body = Path().apply {
+        moveTo(w * 0.18f, h * 0.32f)
+        lineTo(w * 0.32f, h * 0.32f)
+        lineTo(w * 0.38f, h * 0.20f)
+        lineTo(w * 0.62f, h * 0.20f)
+        lineTo(w * 0.68f, h * 0.32f)
+        lineTo(w * 0.82f, h * 0.32f)
+        cubicTo(w * 0.88f, h * 0.32f, w * 0.88f, h * 0.36f, w * 0.88f, h * 0.40f)
+        lineTo(w * 0.88f, h * 0.78f)
+        cubicTo(w * 0.88f, h * 0.84f, w * 0.84f, h * 0.84f, w * 0.80f, h * 0.84f)
+        lineTo(w * 0.20f, h * 0.84f)
+        cubicTo(w * 0.12f, h * 0.84f, w * 0.12f, h * 0.78f, w * 0.12f, h * 0.78f)
+        lineTo(w * 0.12f, h * 0.40f)
+        cubicTo(w * 0.12f, h * 0.32f, w * 0.18f, h * 0.32f, w * 0.18f, h * 0.32f)
+        close()
+    }
+    drawPath(body, color, style = stroke)
+    // Center lens circle
+    drawCircle(color, radius = w * 0.16f, center = Offset(w * 0.50f, h * 0.56f), style = stroke)
+}
+
+private fun DrawScope.drawPhosphorPalette(color: Color, stroke: Stroke, w: Float, h: Float) {
+    // Artist palette shape
+    val path = Path().apply {
+        moveTo(w * 0.50f, h * 0.12f)
+        cubicTo(w * 0.85f, h * 0.12f, w * 0.90f, h * 0.50f, w * 0.75f, h * 0.65f)
+        cubicTo(w * 0.65f, h * 0.75f, w * 0.65f, h * 0.88f, w * 0.50f, h * 0.88f)
+        cubicTo(w * 0.20f, h * 0.88f, w * 0.10f, h * 0.65f, w * 0.10f, h * 0.50f)
+        cubicTo(w * 0.10f, h * 0.25f, w * 0.25f, h * 0.12f, w * 0.50f, h * 0.12f)
+        close()
+    }
+    drawPath(path, color, style = stroke)
+    // Small paint dabs
+    drawCircle(color, radius = 2.dp.toPx(), center = Offset(w * 0.35f, h * 0.32f))
+    drawCircle(color, radius = 2.dp.toPx(), center = Offset(w * 0.55f, h * 0.28f))
+    drawCircle(color, radius = 2.dp.toPx(), center = Offset(w * 0.70f, h * 0.42f))
+    drawCircle(color, radius = 2.dp.toPx(), center = Offset(w * 0.32f, h * 0.52f))
+}
+
+private fun DrawScope.drawPhosphorWidgets(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val r = CornerRadius(2.5f.dp.toPx())
+    drawRoundRect(color, Offset(w * 0.15f, h * 0.15f), Size(w * 0.30f, h * 0.30f), r, stroke)
+    drawRoundRect(color, Offset(w * 0.55f, h * 0.15f), Size(w * 0.30f, h * 0.30f), r, stroke)
+    drawRoundRect(color, Offset(w * 0.15f, h * 0.55f), Size(w * 0.30f, h * 0.30f), r, stroke)
+    drawRoundRect(color, Offset(w * 0.55f, h * 0.55f), Size(w * 0.30f, h * 0.30f), r, stroke)
+}
+
+private fun DrawScope.drawPhosphorHome(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val roof = Path().apply {
+        moveTo(w * 0.14f, h * 0.46f)
+        lineTo(w * 0.50f, h * 0.16f)
+        lineTo(w * 0.86f, h * 0.46f)
+    }
+    drawPath(roof, color, style = stroke)
+    val walls = Path().apply {
+        moveTo(w * 0.24f, h * 0.44f)
+        lineTo(w * 0.24f, h * 0.84f)
+        lineTo(w * 0.76f, h * 0.84f)
+        lineTo(w * 0.76f, h * 0.44f)
+    }
+    drawPath(walls, color, style = stroke)
+    // Door
+    drawRoundRect(
+        color,
+        Offset(w * 0.42f, h * 0.58f),
+        Size(w * 0.16f, h * 0.26f),
+        CornerRadius(1.5f.dp.toPx()),
+        stroke
+    )
+}
+
+private fun DrawScope.drawPhosphorSparkle(color: Color, stroke: Stroke, w: Float, h: Float) {
+    val star = Path().apply {
+        moveTo(w * 0.50f, h * 0.12f)
+        cubicTo(w * 0.50f, h * 0.38f, w * 0.62f, h * 0.50f, w * 0.88f, h * 0.50f)
+        cubicTo(w * 0.62f, h * 0.50f, w * 0.50f, h * 0.62f, w * 0.50f, h * 0.88f)
+        cubicTo(w * 0.50f, h * 0.62f, w * 0.38f, h * 0.50f, w * 0.12f, h * 0.50f)
+        cubicTo(w * 0.38f, h * 0.50f, w * 0.50f, h * 0.38f, w * 0.50f, h * 0.12f)
+        close()
+    }
+    drawPath(star, color, style = stroke)
+}
+
+private fun DrawScope.drawPhosphorCloudSun(color: Color, stroke: Stroke, w: Float, h: Float) {
+    // Cloud body
+    val cloud = Path().apply {
+        moveTo(w * 0.25f, h * 0.76f)
+        lineTo(w * 0.75f, h * 0.76f)
+        cubicTo(w * 0.86f, h * 0.76f, w * 0.88f, h * 0.62f, w * 0.80f, h * 0.54f)
+        cubicTo(w * 0.84f, h * 0.38f, w * 0.68f, h * 0.32f, w * 0.58f, h * 0.38f)
+        cubicTo(w * 0.52f, h * 0.30f, w * 0.36f, h * 0.30f, w * 0.32f, h * 0.42f)
+        cubicTo(w * 0.22f, h * 0.42f, w * 0.16f, h * 0.52f, w * 0.18f, h * 0.62f)
+        cubicTo(w * 0.12f, h * 0.70f, w * 0.18f, h * 0.76f, w * 0.25f, h * 0.76f)
+        close()
+    }
+    drawPath(cloud, color, style = stroke)
+    // Sun rays in background
+    drawLine(color, Offset(w * 0.65f, h * 0.24f), Offset(w * 0.72f, h * 0.18f), stroke.width, StrokeCap.Round)
+    drawLine(color, Offset(w * 0.82f, h * 0.32f), Offset(w * 0.90f, h * 0.30f), stroke.width, StrokeCap.Round)
+}
+
+private fun DrawScope.drawPhosphorUser(color: Color, stroke: Stroke, w: Float, h: Float) {
+    // Head
+    drawCircle(color, radius = w * 0.18f, center = Offset(w * 0.50f, h * 0.32f), style = stroke)
+    // Shoulders
+    val shoulders = Path().apply {
+        moveTo(w * 0.20f, h * 0.82f)
+        cubicTo(w * 0.22f, h * 0.62f, w * 0.78f, h * 0.62f, w * 0.80f, h * 0.82f)
+    }
+    drawPath(shoulders, color, style = stroke)
+}
+
+private fun DrawScope.drawPhosphorSearch(color: Color, stroke: Stroke, w: Float, h: Float) {
+    drawCircle(color, radius = w * 0.25f, center = Offset(w * 0.44f, h * 0.44f), style = stroke)
+    drawLine(color, Offset(w * 0.62f, h * 0.62f), Offset(w * 0.82f, h * 0.82f), stroke.width, StrokeCap.Round)
+}
+
+
+
+
+

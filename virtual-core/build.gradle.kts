@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.sandboxr.virtual"
-    compileSdk = 35
+    compileSdk = 37
     ndkVersion = "28.2.13676358"
 
     defaultConfig {
@@ -23,7 +23,8 @@ android {
         }
 
         ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a", "x86_64"))
+            // ShadowHook and ByteHook ship ARM prebuilts only — x86_64 is not supported
+            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
         }
     }
 

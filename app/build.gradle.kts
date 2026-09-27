@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.sandboxr.app"
-    compileSdk = 35
+    namespace = "com.ujwal.sandboxr"
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.sandboxr.app"
+        applicationId = "com.ujwal.sandboxr"
         minSdk = 29
-        targetSdk = 35
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0.0"
 
@@ -45,6 +45,19 @@ android {
     buildFeatures {
         compose = true
     }
+
+    // ByteHook and ShadowHook AARs bundle their .so both as a Prefab CMake import
+    // and as raw jniLibs. pickFirst resolves the duplicate-file merge conflict.
+    packaging {
+        jniLibs {
+            pickFirsts += setOf(
+                "lib/arm64-v8a/libbytehook.so",
+                "lib/armeabi-v7a/libbytehook.so",
+                "lib/arm64-v8a/libshadowhook.so",
+                "lib/armeabi-v7a/libshadowhook.so"
+            )
+        }
+    }
 }
 
 kotlin {
@@ -58,6 +71,7 @@ dependencies {
     implementation(project(":aidl"))
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

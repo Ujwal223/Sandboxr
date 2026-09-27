@@ -5,6 +5,7 @@
         <!-- Standard Launch Mode Stub Container -->
         <activity
             android:name="com.sandboxr.virtual.client.stub.StubActivity"
+            android:taskAffinity="com.sandboxr.virtual.container"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection|colorMode|density"
             android:resizeableActivity="true"
             android:exported="false"
@@ -14,6 +15,7 @@
         <!-- SingleTop Launch Mode Stub Container -->
         <activity
             android:name="com.sandboxr.virtual.client.stub.StubActivity$SingleTop"
+            android:taskAffinity="com.sandboxr.virtual.container"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection|colorMode|density"
             android:resizeableActivity="true"
             android:exported="false"
@@ -24,6 +26,7 @@
         <!-- SingleTask Launch Mode Stub Container -->
         <activity
             android:name="com.sandboxr.virtual.client.stub.StubActivity$SingleTask"
+            android:taskAffinity="com.sandboxr.virtual.container"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection|colorMode|density"
             android:resizeableActivity="true"
             android:exported="false"
@@ -34,6 +37,7 @@
         <!-- SingleInstance Launch Mode Stub Container -->
         <activity
             android:name="com.sandboxr.virtual.client.stub.StubActivity$SingleInstance"
+            android:taskAffinity="com.sandboxr.virtual.container"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection|colorMode|density"
             android:resizeableActivity="true"
             android:exported="false"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="LauncherTheme" parent="AppTheme" />
+
+    <style name="WidgetPickerActivityTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="AddItemActivityTheme" parent="Theme.AppCompat.DayNight.Dialog" />
+
+    <style name="HomeSettings.Theme" parent="Theme.AppCompat.DayNight" />
+
+    <style name="OrganizerTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="FolderCreatorTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="ProxyActivityStarterTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="GestureTutorialActivity" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="AllSetTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

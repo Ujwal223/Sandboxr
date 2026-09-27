@@ -39,7 +39,7 @@ class StorageRedirector(
     }
 
     companion object {
-        private const val DEFAULT_HOST_PKG = "com.sandboxr"
+        private const val DEFAULT_HOST_PKG = "com.ujwal.sandboxr"
 
         @Volatile
         private var INSTANCE: StorageRedirector? = null
@@ -47,7 +47,7 @@ class StorageRedirector(
         fun get(context: Context): StorageRedirector {
             return INSTANCE ?: synchronized(this) {
                 INSTANCE ?: run {
-                    val internalBase = context.filesDir.parentFile ?: File("/data/data/$DEFAULT_HOST_PKG")
+                    val internalBase = context.filesDir?.parentFile ?: File("/data/data/${context.packageName}")
                     val externalBase = context.getExternalFilesDir(null)?.parentFile?.parentFile
                     StorageRedirector(internalBase, externalBase).also { INSTANCE = it }
                 }

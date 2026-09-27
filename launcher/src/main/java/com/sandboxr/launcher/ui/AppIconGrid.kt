@@ -1,6 +1,7 @@
 package com.sandboxr.launcher.ui
 
 import android.graphics.drawable.Drawable
+import android.os.UserHandle
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -20,6 +21,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,9 +45,17 @@ import com.sandboxr.launcher.theme.SandboxrSpacingTokens
 import com.sandboxr.launcher.theme.SandboxrTheme
 import com.sandboxr.launcher.theme.SuperellipseShape
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.runtime.Immutable
+import androidx.compose.ui.graphics.ColorFilter
+import com.sandboxr.launcher.theme.getLauncherIconShape
+
 /**
  * Data model representing an installed application in a specific environment.
+ * Marked @Immutable for maximum Compose LazyVerticalGrid recycling efficiency.
  */
+@Immutable
 data class AppItem(
     val packageName: String,
     val label: String,
@@ -53,39 +63,42 @@ data class AppItem(
     val envId: String,
     val envColor: Color = SandboxrColors.PrimaryAccent,
     val isSystemApp: Boolean = false,
-    val notificationBadgeCount: Int = 0
+    val notificationBadgeCount: Int = 0,
+    val userHandle: UserHandle? = null
 )
 
 /**
- * Single App Icon Component adhering strictly to DESIGN.md Section 5.2:
+ * Single App Icon Component adhering strictly to DESIGN.md Section 5.2 and Pixel Launcher aesthetics:
  *
  * - Icon size: 60dp x 60dp
  * - Touch target: 72dp x 72dp
- * - Shape: SuperellipseShape (n=4 exponent squircle)
+ * - Shape: Dynamically adapts to user setting (Circle, Squircle, Rounded Square, Teardrop, Pebble)
+ * - Themed Icons: Monochrome Material You accent mode support
  * - Environment badge: 8dp dot bottom-right of icon with container color
- * - Spring physics: Snappy scale (0.94) on press
- * - Label: 13sp centered, max 1 line, ellipsized
- * - Zero emojis, clean typography
+ * - Snappy press scale
+ * - Label: 12sp centered, max 1 line, ellipsized
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AppIconItem(
     app: AppItem,
     modifier: Modifier = Modifier,
+    iconShape: String = "Squircle",
+    isThemed: Boolean = false,
+    showLabel: Boolean = true,
     onClick: () -> Unit = {},
     onLongClick: () -> Unit = {}
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
 
-    val targetScale = if (isPressed) 0.94f else 1.0f
-    val animatedScale by sandboxrAnimateFloatAsState(
-        targetValue = targetScale,
-        preset = SandboxrSprings.Snappy,
+    val animatedScale by animateFloatAsState(
+        targetValue = if (isPressed) 0.93f else 1.0f,
+        animationSpec = tween(durationMillis = 80),
         label = "AppIconScale"
     )
 
-    val squircleShape = remember { SuperellipseShape(exponent = 4.0f) }
+    val shape = remember(iconShape) { getLauncherIconShape(iconShape) }
 
     Column(
         modifier = modifier
@@ -105,16 +118,18 @@ fun AppIconItem(
             modifier = Modifier.size(SandboxrSpacingTokens.AppIconSize),
             contentAlignment = Alignment.Center
         ) {
-            // App Icon Surface (Superellipse Squircle)
+            // App Icon Surface
             Box(
                 modifier = Modifier
                     .size(SandboxrSpacingTokens.AppIconSize)
-                    .clip(squircleShape)
-                    .background(SandboxrColors.SurfaceLevel2Dark)
+                    .clip(shape)
+                    .background(
+                        if (isThemed) SandboxrTheme.colors.surface3 else SandboxrTheme.colors.surface2
+                    )
                     .border(
                         width = 1.dp,
-                        color = Color.White.copy(alpha = 0.08f),
-                        shape = squircleShape
+                        color = SandboxrTheme.colors.glassBorder,
+                        shape = shape
                     ),
                 contentAlignment = Alignment.Center
             ) {
@@ -122,14 +137,15 @@ fun AppIconItem(
                     androidx.compose.foundation.Image(
                         bitmap = app.iconBitmap,
                         contentDescription = app.label,
+                        colorFilter = if (isThemed) ColorFilter.tint(SandboxrTheme.colors.primaryAccent) else null,
                         modifier = Modifier.size(SandboxrSpacingTokens.AppIconSize)
                     )
                 } else {
-                    // Minimalist monospace initial placeholder (zero emojis)
+                    // Monospace initial placeholder
                     val initial = app.label.firstOrNull()?.uppercaseChar()?.toString() ?: "?"
                     Text(
                         text = initial,
-                        color = SandboxrColors.TextPrimaryDark,
+                        color = if (isThemed) SandboxrTheme.colors.primaryAccent else SandboxrTheme.colors.textPrimary,
                         fontSize = 22.sp,
                         fontFamily = SandboxrFontFamilies.Inter,
                         fontWeight = FontWeight.SemiBold
@@ -138,14 +154,14 @@ fun AppIconItem(
             }
 
             // Environment Color Badge Dot (8dp at bottom-right)
-            if (!app.isSystemApp) {
+            if (!app.isSystemApp || app.envId == "work_profile_environment") {
                 Box(
                     modifier = Modifier
                         .size(SandboxrSpacingTokens.BadgeDotSize + 2.dp)
                         .align(Alignment.BottomEnd)
                         .border(
                             width = 1.dp,
-                            color = SandboxrColors.BackgroundDark,
+                            color = SandboxrTheme.colors.background,
                             shape = CircleShape
                         ),
                     contentAlignment = Alignment.Center
@@ -166,7 +182,7 @@ fun AppIconItem(
                         .align(Alignment.TopEnd)
                         .border(
                             width = 1.dp,
-                            color = SandboxrColors.BackgroundDark,
+                            color = SandboxrTheme.colors.background,
                             shape = CircleShape
                         ),
                     contentAlignment = Alignment.Center
@@ -174,37 +190,44 @@ fun AppIconItem(
                     Box(
                         modifier = Modifier
                             .size(SandboxrSpacingTokens.BadgeDotSize)
-                            .background(color = SandboxrColors.PrimaryAccent, shape = CircleShape)
+                            .background(color = SandboxrTheme.colors.primaryAccent, shape = CircleShape)
                     )
                 }
             }
         }
 
-        Spacer(modifier = Modifier.height(6.dp))
+        if (showLabel) {
+            Spacer(modifier = Modifier.height(6.dp))
 
-        // App Label: 13sp, centered, max 1 line, ellipsized
-        Text(
-            text = app.label,
-            style = SandboxrTheme.typography.mono.copy(fontSize = 13.sp),
-            color = SandboxrColors.TextPrimaryDark,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth()
-        )
+            // App Label: 12sp, centered, max 1 line, ellipsized
+            Text(
+                text = app.label,
+                style = SandboxrTheme.typography.body.copy(
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium
+                ),
+                color = SandboxrTheme.colors.textPrimary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
     }
 }
 
 /**
- * AppIconGrid displaying applications in an environment using standard launcher spacing.
- *
- * Spacing: 16dp horizontal, 20dp vertical
+ * High-performance AppIconGrid displaying applications in an environment or drawer.
+ * Uses stable keys and contentType to ensure butter-smooth 120Hz scrolling without recomposition lag.
  */
 @Composable
 fun AppIconGrid(
     apps: List<AppItem>,
     modifier: Modifier = Modifier,
     columns: GridCells = GridCells.Fixed(4),
+    iconShape: String = "Squircle",
+    isThemed: Boolean = false,
+    showLabel: Boolean = true,
     contentPadding: PaddingValues = PaddingValues(
         horizontal = SandboxrSpacingTokens.AppGridHorizontalSpacing,
         vertical = SandboxrSpacingTokens.AppGridVerticalSpacing
@@ -224,10 +247,14 @@ fun AppIconGrid(
     ) {
         items(
             items = apps,
-            key = { "${it.envId}_${it.packageName}" }
+            key = { "${it.envId}_${it.packageName}" },
+            contentType = { "app_item" }
         ) { app ->
             AppIconItem(
                 app = app,
+                iconShape = iconShape,
+                isThemed = isThemed,
+                showLabel = showLabel,
                 onClick = { onAppClick(app) },
                 onLongClick = { onAppLongClick(app) }
             )

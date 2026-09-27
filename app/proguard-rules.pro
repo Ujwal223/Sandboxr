@@ -1,3 +1,3 @@
 # Proguard rules for Sandboxr application
--keep class com.sandboxr.app.** { *; }
+-keep class com.ujwal.sandboxr.** { *; }
 -dontwarn org.lsposed.hiddenapibypass.**

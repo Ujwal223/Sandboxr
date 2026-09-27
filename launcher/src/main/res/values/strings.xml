@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="derived_app_name">Sandboxr</string>
+    <string name="notification_dots_service_title">Notification Dots</string>
+    <string name="settings_button_text">Home settings</string>
+    <string name="gesture_tutorial_title">Gesture Navigation Tutorial</string>
+    <string name="allset_title">All Set</string>
+    <bool name="config_largeHeap">true</bool>
+</resources>

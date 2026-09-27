@@ -87,9 +87,9 @@ object SamsungCompat {
             if (isInitialized) return
 
             if (isSamsungDevice()) {
-                Log.i(TAG, "Samsung device detected (OneUI: ${getOneUiVersion() ?: "Unknown"}). Applying Knox and Multi-Window mitigations...")
-                patchKnoxSecurityPolicy()
+                Log.i(TAG, "Samsung device detected (OneUI: ${getOneUiVersion() ?: "Unknown"}). Applying Multi-Window and framework mitigations...")
                 configureMultiWindowCompat()
+                patchKnoxSecurityPolicy()
             }
             isInitialized = true
         }
@@ -124,6 +124,7 @@ object SamsungCompat {
         try {
             intent.putExtra("com.samsung.android.multiwindow.extra.ALLOW_SPLIT", true)
             intent.putExtra("com.samsung.android.multiwindow.extra.ALLOW_POPUP", true)
+            intent.putExtra("com.samsung.android.multiwindow.extra.STYLE", "NORMAL")
         } catch (_: Throwable) {
             // Ignored on standard devices
         }

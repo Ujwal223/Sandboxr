@@ -33,11 +33,46 @@ class VContextImpl(
     private val packageExternalDir = environment.getPackageExternalDir(guestPackageName)
     private val sharedPrefsCache = ConcurrentHashMap<String, SharedPreferences>()
 
+    private val guestAssetManager: android.content.res.AssetManager by lazy {
+        try {
+            val am = android.content.res.AssetManager::class.java.getDeclaredConstructor().newInstance()
+            val addAssetPath = android.content.res.AssetManager::class.java.getDeclaredMethod("addAssetPath", String::class.java)
+            addAssetPath.isAccessible = true
+            addAssetPath.invoke(am, guestAppInfo.sourceDir)
+            guestAppInfo.splitSourceDirs?.forEach { splitPath ->
+                if (File(splitPath).exists()) {
+                    try {
+                        addAssetPath.invoke(am, splitPath)
+                    } catch (_: Throwable) {}
+                }
+            }
+            am
+        } catch (_: Throwable) {
+            baseContext.assets
+        }
+    }
+
+    private val guestResources: android.content.res.Resources by lazy {
+        try {
+            android.content.res.Resources(
+                guestAssetManager,
+                baseContext.resources.displayMetrics,
+                baseContext.resources.configuration
+            )
+        } catch (_: Throwable) {
+            baseContext.resources
+        }
+    }
+
     override fun getPackageName(): String = guestPackageName
 
     override fun getClassLoader(): ClassLoader = guestClassLoader
 
     override fun getApplicationInfo(): ApplicationInfo = guestAppInfo
+
+    override fun getAssets(): android.content.res.AssetManager = guestAssetManager
+
+    override fun getResources(): android.content.res.Resources = guestResources
 
     override fun getDataDir(): File = packageDataDir
 

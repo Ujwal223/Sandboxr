@@ -98,6 +98,19 @@ class VActivityManagerService private constructor(private val hostContext: Conte
     // Key: envId -> Map<packageName, CopyOnWriteArrayList<WeakReference<Activity>>>
     private val activeActivityInstances = ConcurrentHashMap<String, ConcurrentHashMap<String, CopyOnWriteArrayList<java.lang.ref.WeakReference<android.app.Activity>>>>()
 
+    @Volatile
+    private var guestExecutingCount = 0
+
+    fun onGuestActivityResumed() {
+        guestExecutingCount++
+    }
+
+    fun onGuestActivityPaused() {
+        guestExecutingCount = maxOf(0, guestExecutingCount - 1)
+    }
+
+    fun isGuestExecuting(): Boolean = guestExecutingCount > 0
+
     // Key: envId -> freezeWhenInactive boolean (default true)
     private val freezePolicies = ConcurrentHashMap<String, Boolean>()
 
