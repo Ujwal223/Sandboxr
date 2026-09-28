@@ -46,4 +46,18 @@ open class LooperExecutor(val looper: Looper) : Executor {
     fun postDelayed(command: Runnable, delayMillis: Long) {
         handler.postDelayed(command, delayMillis)
     }
+
+    fun <T> submit(callable: () -> T): java.util.concurrent.Future<T> {
+        val future = java.util.concurrent.FutureTask(callable)
+        execute(future)
+        return future
+    }
+
+    open fun elevatePriority(caller: Int) {}
+    open fun restorePriority(caller: Int) {}
+
+    companion object {
+        const val CALLER_LOADER_TASK = 1 shl 0
+        const val CALLER_ICON_CACHE = 1 shl 1
+    }
 }

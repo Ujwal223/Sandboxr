@@ -41,7 +41,6 @@ open class MutableListenableStream<T> : ListenableStream<T> {
     }
 
     open fun dispatchValue(value: T) {
-        // Group by executor so only one Runnable is posted per executor per dispatch
         val grouped = listeners.groupBy { it.executor }
         for ((executor, entries) in grouped) {
             executor.execute {
@@ -53,6 +52,8 @@ open class MutableListenableStream<T> : ListenableStream<T> {
             }
         }
     }
+
+    open fun asListenable(): ListenableStream<T> = this
 
     private data class ListenerEntry<T>(
         val executor: Executor,
@@ -70,11 +71,11 @@ interface ListenableRef<T> : ListenableStream<T> {
 /**
  * Mutable implementation of [ListenableRef].
  */
-class MutableListenableRef<T>(initialValue: T) : MutableListenableStream<T>(), ListenableRef<T> {
+open class MutableListenableRef<T>(initialValue: T) : MutableListenableStream<T>(), ListenableRef<T> {
 
     @Volatile
     override var value: T = initialValue
-        private set
+        protected set
 
     override fun forEach(executor: Executor, action: (T) -> Unit): SafeCloseable {
         val closeable = super.forEach(executor, action)
@@ -94,5 +95,45 @@ class MutableListenableRef<T>(initialValue: T) : MutableListenableStream<T>(), L
         }
     }
 
-    fun asListenable(): ListenableRef<T> = this
+    override fun asListenable(): ListenableRef<T> = this
 }
+
+/**
+ * Interface representing a value reference that additionally reports changes with diff events.
+ */
+interface DiffAwareRef<T, D> : ListenableRef<T> {
+    fun forEachWithDiff(executor: Executor, action: (T, D?) -> Unit): SafeCloseable
+}
+
+/**
+ * Mutable implementation of [DiffAwareRef].
+ */
+class MutableDiffAwareRef<T, D>(initialValue: T) : MutableListenableRef<T>(initialValue), DiffAwareRef<T, D> {
+    private val diffListeners = CopyOnWriteArrayList<Pair<Executor, (T, D?) -> Unit>>()
+
+    override fun forEachWithDiff(executor: Executor, action: (T, D?) -> Unit): SafeCloseable {
+        val entry = Pair(executor, action)
+        diffListeners.add(entry)
+        val current = value
+        executor.execute { action(current, null) }
+        return SafeCloseable { diffListeners.remove(entry) }
+    }
+
+    fun dispatchValue(value: T, diff: D) {
+        super.dispatchValue(value)
+        val grouped = diffListeners.groupBy { it.first }
+        for ((executor, entries) in grouped) {
+            executor.execute {
+                for (entry in entries) {
+                    if (diffListeners.contains(entry)) {
+                        entry.second(value, diff)
+                    }
+                }
+            }
+        }
+    }
+
+    fun asDiffAware(): DiffAwareRef<T, D> = this
+}
+
+typealias ListenableDiffAwareRef<T, D> = DiffAwareRef<T, D>

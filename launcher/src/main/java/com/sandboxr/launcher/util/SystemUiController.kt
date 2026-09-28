@@ -24,7 +24,7 @@ import android.view.View
  */
 open class SystemUiController(private val targetView: View) {
 
-    private val states = IntArray(5)
+    private val states = kotlin.IntArray(5)
 
     fun updateUiState(uiState: Int, isLight: Boolean) {
         val flags = if (isLight) {

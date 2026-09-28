@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 The Android Open Source Project
+    Copyright (C) 2026 Sandboxr Platform
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    ===========================================================================
+    Sandboxr Launcher — Device Profile Grid Configuration
+    ===========================================================================
+
+    Each <grid-option> defines a named grid preset for one or more device categories.
+    Each <display-option> within a <grid-option> defines sizing for a given screen
+    smallest-width breakpoint (minWidthDps x minHeightDps).
+
+    Device categories: phone (1), tablet (2), multi_display (4), desktop (8).
+    To enable for all categories use the combination: phone|tablet|multi_display|desktop.
+
+    Icon sizes are in dp. Border/margin spaces are in dp.
+-->
+<device-profiles>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <!--  Phone Profiles — 5×5                                                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <grid-option
+        xmlns:launcher="http://schemas.android.com/apk/res-auto"
+        launcher:name="normal"
+        launcher:numRows="5"
+        launcher:numColumns="5"
+        launcher:numHotseatIcons="5"
+        launcher:numFolderRows="3"
+        launcher:numFolderColumns="3"
+        launcher:isScalable="true"
+        launcher:deviceCategory="phone"
+        launcher:dbFile="launcher.db"
+        launcher:defaultLayoutId="@xml/default_workspace_5x5"
+        launcher:isFixedLandscape="false" >
+
+        <!-- Phone portrait — smallest width ≥ 340dp -->
+        <display-option
+            launcher:minWidthDps="340"
+            launcher:minHeightDps="500"
+            launcher:canBeDefault="true"
+            launcher:iconImageSize="54"
+            launcher:iconTextSize="13.0"
+            launcher:borderSpace="16"
+            launcher:hotseatBarBottomSpace="48"
+            launcher:hotseatQsbSpace="36"
+            launcher:allAppsIconSize="54"
+            launcher:allAppsIconTextSize="13.0"
+            launcher:allAppsBorderSpace="16"
+            launcher:horizontalMargin="22" />
+
+        <!-- Compact phone portrait — smallest width ≥ 280dp -->
+        <display-option
+            launcher:minWidthDps="280"
+            launcher:minHeightDps="500"
+            launcher:iconImageSize="48"
+            launcher:iconTextSize="12.0"
+            launcher:borderSpace="12"
+            launcher:hotseatBarBottomSpace="36"
+            launcher:hotseatQsbSpace="28"
+            launcher:allAppsIconSize="48"
+            launcher:allAppsIconTextSize="12.0"
+            launcher:allAppsBorderSpace="12"
+            launcher:horizontalMargin="16" />
+
+    </grid-option>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <!--  Phone Profiles — 4×5 (wider displays)                                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <grid-option
+        xmlns:launcher="http://schemas.android.com/apk/res-auto"
+        launcher:name="practical"
+        launcher:numRows="5"
+        launcher:numColumns="5"
+        launcher:numHotseatIcons="5"
+        launcher:numFolderRows="3"
+        launcher:numFolderColumns="3"
+        launcher:isScalable="true"
+        launcher:deviceCategory="phone"
+        launcher:dbFile="launcher.db"
+        launcher:defaultLayoutId="@xml/default_workspace_5x5"
+        launcher:isFixedLandscape="false" >
+
+        <display-option
+            launcher:minWidthDps="360"
+            launcher:minHeightDps="640"
+            launcher:canBeDefault="true"
+            launcher:iconImageSize="56"
+            launcher:iconTextSize="13.0"
+            launcher:borderSpace="20"
+            launcher:hotseatBarBottomSpace="52"
+            launcher:hotseatQsbSpace="40"
+            launcher:allAppsIconSize="56"
+            launcher:allAppsIconTextSize="13.0"
+            launcher:allAppsBorderSpace="20"
+            launcher:horizontalMargin="26" />
+
+    </grid-option>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <!--  Tablet / Large Screen Profiles — 6×5                                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+    <grid-option
+        xmlns:launcher="http://schemas.android.com/apk/res-auto"
+        launcher:name="tablet"
+        launcher:numRows="5"
+        launcher:numColumns="6"
+        launcher:numHotseatIcons="6"
+        launcher:numFolderRows="3"
+        launcher:numFolderColumns="3"
+        launcher:isScalable="true"
+        launcher:deviceCategory="tablet|multi_display"
+        launcher:dbFile="launcher_tablet.db"
+        launcher:defaultLayoutId="@xml/default_workspace_6x5"
+        launcher:isFixedLandscape="false" >
+
+        <display-option
+            launcher:minWidthDps="600"
+            launcher:minHeightDps="600"
+            launcher:canBeDefault="true"
+            launcher:iconImageSize="60"
+            launcher:iconTextSize="14.0"
+            launcher:borderSpace="24"
+            launcher:hotseatBarBottomSpace="56"
+            launcher:hotseatQsbSpace="44"
+            launcher:allAppsIconSize="60"
+            launcher:allAppsIconTextSize="14.0"
+            launcher:allAppsBorderSpace="24"
+            launcher:horizontalMargin="32" />
+
+        <display-option
+            launcher:minWidthDps="720"
+            launcher:minHeightDps="700"
+            launcher:iconImageSize="64"
+            launcher:iconTextSize="14.0"
+            launcher:borderSpace="28"
+            launcher:hotseatBarBottomSpace="60"
+            launcher:hotseatQsbSpace="48"
+            launcher:allAppsIconSize="64"
+            launcher:allAppsIconTextSize="14.0"
+            launcher:allAppsBorderSpace="28"
+            launcher:horizontalMargin="40" />
+
+    </grid-option>
+
+</device-profiles>

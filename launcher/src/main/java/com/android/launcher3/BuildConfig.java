@@ -22,6 +22,7 @@ public final class BuildConfig {
     public static final String LIBRARY_PACKAGE_NAME = com.sandboxr.launcher.BuildConfig.LIBRARY_PACKAGE_NAME;
     public static final String BUILD_TYPE = com.sandboxr.launcher.BuildConfig.BUILD_TYPE;
     public static final boolean IS_STUDIO_BUILD = com.sandboxr.launcher.BuildConfig.IS_STUDIO_BUILD;
+    public static final boolean WIDGETS_ENABLED = com.sandboxr.launcher.BuildConfig.WIDGETS_ENABLED;
     public static final boolean IS_DEBUG_DEVICE = DEBUG || "userdebug".equals(android.os.Build.TYPE) || "eng".equals(android.os.Build.TYPE);
 
     private BuildConfig() {}

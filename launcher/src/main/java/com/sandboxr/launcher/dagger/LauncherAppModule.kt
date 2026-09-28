@@ -51,4 +51,10 @@ class AppModule {
     @AppTag
     fun provideAppTag(@ApplicationContext context: Context): String =
         "SandboxrLauncherApp-${context.packageName}"
+
+    @Provides
+    @LauncherAppSingleton
+    fun provideAutomationRepository(
+        impl: com.sandboxr.launcher.automation.DefaultAutomationRepository
+    ): com.sandboxr.launcher.automation.AutomationRepository = impl
 }

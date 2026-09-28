@@ -21,4 +21,5 @@ package com.android.launcher3;
  * AOSP compatibility bridge for [com.sandboxr.launcher.InvariantDeviceProfile].
  */
 public class InvariantDeviceProfile extends com.sandboxr.launcher.InvariantDeviceProfile {
+    public interface OnIDPChangeListener extends com.sandboxr.launcher.InvariantDeviceProfile.OnIDPChangeListener {}
 }

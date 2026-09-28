@@ -41,6 +41,11 @@ interface ActivityContext : SavedStateRegistryOwner {
         return Executors.MAIN_EXECUTOR
     }
 
+    val cellPosMapper: com.android.launcher3.celllayout.CellPosMapper
+        get() = com.android.launcher3.celllayout.CellPosMapper.DEFAULT
+
+    fun getUndoDeleteController(): com.android.launcher3.UndoDeleteController? = null
+
     fun getDeviceProfile(): DeviceProfile
 
     fun getOnDeviceProfileChangeListeners(): List<OnDeviceProfileChangeListener> {

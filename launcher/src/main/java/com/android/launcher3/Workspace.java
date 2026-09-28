@@ -24,6 +24,10 @@ import android.util.AttributeSet;
  * AOSP compatibility bridge for [com.sandboxr.launcher.Workspace].
  */
 public class Workspace<T> extends com.sandboxr.launcher.Workspace<T> {
+    public static final int FIRST_SCREEN_ID = 0;
+    public static final com.android.launcher3.util.IntSet EXTRA_EMPTY_SCREEN_IDS =
+            new com.android.launcher3.util.IntSet();
+
     public Workspace(Context context) {
         super(context);
     }

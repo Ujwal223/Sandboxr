@@ -43,6 +43,7 @@ interface LauncherAppComponent {
     fun appTag(): String
 
     fun getMainProcessInitializer(): com.sandboxr.launcher.MainProcessInitializer
+    fun getLauncherPrefs(): com.sandboxr.launcher.LauncherPrefs
 
     fun activityContextComponentBuilder(): ActivityContextComponent.Builder
     fun perDisplayComponentBuilder(): PerDisplayComponent.Builder

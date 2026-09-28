@@ -50,7 +50,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
     protected var mScrimView: ScrimView? = null
     protected var mOverviewPanel: View? = null
 
-    protected var mIdp: InvariantDeviceProfile = InvariantDeviceProfile.INSTANCE
+    protected lateinit var mIdp: InvariantDeviceProfile
 
     protected var mRotationHelper: com.sandboxr.launcher.states.RotationHelper? = null
     protected var mDepthController: com.sandboxr.launcher.statehandlers.DepthController? = null
@@ -62,6 +62,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
         super.onCreate(savedInstanceState)
 
         // Initialize DeviceProfile
+        mIdp = InvariantDeviceProfile.INSTANCE(this)
         mDeviceProfile = mIdp.getDeviceProfile(this)
         mIdp.addOnChangeListener(this)
 
@@ -245,7 +246,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
      */
     open fun onBackPressedLauncher(): Boolean {
         if (!mStateManager.isInStableState(LauncherState.NORMAL)) {
-            mStateManager.goToState(LauncherState.NORMAL)
+            mStateManager.goToState(LauncherState.NORMAL, animated = false)
             return true
         }
         return false
@@ -258,7 +259,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
             intent.hasCategory(Intent.CATEGORY_HOME)
         ) {
             // User pressed Home button: return to home screen
-            showHomeScreen(animated = true)
+            showHomeScreen(animated = false)
         }
     }
 

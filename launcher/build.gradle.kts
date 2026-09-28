@@ -14,6 +14,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
         buildConfigField("boolean", "IS_STUDIO_BUILD", "true")
+        buildConfigField("boolean", "WIDGETS_ENABLED", "true")
     }
 
     buildTypes {
@@ -75,6 +76,7 @@ android {
 
     testOptions {
         unitTests.isReturnDefaultValues = true
+        unitTests.isIncludeAndroidResources = true
     }
 }
 
@@ -141,6 +143,9 @@ dependencies {
     // Protobuf Lite
     implementation(libs.protobuf.javalite)
     implementation(libs.protobuf.kotlin.lite)
+
+    // Guava (provides ListeningExecutorService used by ExecutorsModule)
+    implementation(libs.guava)
 
     // Testing
     testImplementation(libs.junit)

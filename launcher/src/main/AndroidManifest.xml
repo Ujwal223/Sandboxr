@@ -72,7 +72,10 @@
 
     <uses-permission android:name="${applicationId}.permission.GRID_CONTROL" />
 
-    <application>
+    <application
+        android:backupAgent="com.sandboxr.launcher.LauncherBackupAgent"
+        android:fullBackupContent="@xml/backupscheme"
+        android:restoreAnyVersion="true">
         <!-- Property for activity embedding splits -->
         <property
             android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"

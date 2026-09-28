@@ -5,5 +5,23 @@
     <string name="settings_button_text">Home settings</string>
     <string name="gesture_tutorial_title">Gesture Navigation Tutorial</string>
     <string name="allset_title">All Set</string>
+    <string name="work_folder_name">Work</string>
+    <string name="work_profile_edu_work_apps">Work apps are badged and visible to your IT admin</string>
     <bool name="config_largeHeap">true</bool>
+    <string-array name="filtered_components" />
+
+    <string name="work_apps_paused_title">Work apps are paused</string>
+    <string name="work_apps_paused_info_body">You won’t receive notifications from your work apps</string>
+    <string name="work_apps_paused_body">Your work apps can’t send you notifications, use your battery, or access your location</string>
+    <string name="work_apps_paused_telephony_unavailable_body">You won’t receive phone calls, text messages, or notifications from your work apps</string>
+    <string name="work_apps_pause_btn_text">Pause work apps</string>
+    <string name="work_apps_enable_btn_text">Unpause</string>
+    <string name="all_apps_personal_tab">Personal</string>
+    <string name="all_apps_work_tab">Work</string>
+    <string name="all_apps_button_personal_label">Personal apps list</string>
+    <string name="all_apps_button_work_label">Work apps list</string>
+    <string name="widgets_full_sheet_personal_tab">Personal</string>
+    <string name="widgets_full_sheet_work_tab">Work</string>
+    <string name="msg_disabled_by_admin">Disabled by your admin</string>
+    <string name="package_state_unknown">Unknown</string>
 </resources>

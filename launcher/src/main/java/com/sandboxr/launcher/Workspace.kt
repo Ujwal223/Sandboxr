@@ -42,4 +42,10 @@ open class Workspace<T> @JvmOverloads constructor(
     }
 
     open fun isOverlayShown(): Boolean = false
+
+    companion object {
+        const val FIRST_SCREEN_ID: Int = 0
+        @JvmField
+        val EXTRA_EMPTY_SCREEN_IDS = com.sandboxr.launcher.util.IntSet()
+    }
 }
