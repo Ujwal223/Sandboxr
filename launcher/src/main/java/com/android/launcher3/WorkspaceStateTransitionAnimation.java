@@ -15,15 +15,14 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.WorkspaceStateTransitionAnimation].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+public class WorkspaceStateTransitionAnimation extends com.sandboxr.launcher.WorkspaceStateTransitionAnimation {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    public WorkspaceStateTransitionAnimation(Launcher launcher, Workspace<?> workspace) {
+        super(launcher, workspace);
     }
 }

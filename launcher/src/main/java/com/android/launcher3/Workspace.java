@@ -19,14 +19,23 @@ package com.android.launcher3;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.FloatProperty;
+import android.view.View;
+import com.sandboxr.launcher.pageindicators.PageIndicator;
 
 /**
  * AOSP compatibility bridge for [com.sandboxr.launcher.Workspace].
  */
-public class Workspace<T> extends com.sandboxr.launcher.Workspace<T> {
-    public static final int FIRST_SCREEN_ID = 0;
-    public static final com.android.launcher3.util.IntSet EXTRA_EMPTY_SCREEN_IDS =
-            new com.android.launcher3.util.IntSet();
+public class Workspace<T extends View & PageIndicator> extends com.sandboxr.launcher.Workspace<T> {
+
+    public static final int FIRST_SCREEN_ID = com.sandboxr.launcher.Workspace.FIRST_SCREEN_ID;
+    public static final int EXTRA_EMPTY_SCREEN_ID = com.sandboxr.launcher.Workspace.EXTRA_EMPTY_SCREEN_ID;
+    public static final int EXTRA_EMPTY_SCREEN_SECOND_ID = com.sandboxr.launcher.Workspace.EXTRA_EMPTY_SCREEN_SECOND_ID;
+    public static final com.sandboxr.launcher.util.IntSet EXTRA_EMPTY_SCREEN_IDS =
+            com.sandboxr.launcher.Workspace.EXTRA_EMPTY_SCREEN_IDS;
+
+    public static final FloatProperty<com.sandboxr.launcher.Workspace<?>> WORKSPACE_SCALE_PROPERTY =
+            com.sandboxr.launcher.Workspace.WORKSPACE_SCALE_PROPERTY;
 
     public Workspace(Context context) {
         super(context);

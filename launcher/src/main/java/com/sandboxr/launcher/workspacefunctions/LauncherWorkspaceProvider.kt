@@ -15,15 +15,21 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher.workspacefunctions
+
+import com.sandboxr.launcher.appfunctions.workspace.provider.WorkspaceProvider
+import com.sandboxr.launcher.model.data.WorkspaceData
+import com.sandboxr.launcher.model.repository.HomeScreenRepository
+import javax.inject.Inject
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Manages the [WorkspaceData] for AppFunctions and workspace queries.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+class LauncherWorkspaceProvider @Inject constructor(
+    private val homeScreenRepository: HomeScreenRepository
+) : WorkspaceProvider<WorkspaceData> {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    override suspend fun getWorkspace(): WorkspaceData {
+        return homeScreenRepository.workspaceState.value
     }
 }

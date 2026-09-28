@@ -15,15 +15,17 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher
+
+import android.view.View
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Interface defining an object that can originate a drag.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+interface DragSource {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
-    }
+    /**
+     * A callback made back to the source after an item from this source has been dropped on a DropTarget.
+     */
+    fun onDropCompleted(target: View?, d: DropTarget.DragObject, success: Boolean)
 }

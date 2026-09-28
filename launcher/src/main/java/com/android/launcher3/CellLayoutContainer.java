@@ -15,15 +15,14 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
-
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
-    }
+public interface CellLayoutContainer {
+    int getCellLayoutId(com.sandboxr.launcher.CellLayout cellLayout);
+    int getCellLayoutIndex(com.sandboxr.launcher.CellLayout cellLayout);
+    int getPanelCount();
+    String getPageDescription(int pageIndex);
 }

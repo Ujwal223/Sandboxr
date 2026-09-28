@@ -15,15 +15,21 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher.workspacefunctions
+
+import com.sandboxr.launcher.appfunctions.workspace.WorkspaceRepository
+import dagger.Subcomponent
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Subcomponent for Dagger injection for WorkspaceFunctions.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+@Subcomponent(modules = [WorkspaceFunctionsModule::class])
+interface WorkspaceFunctionsComponent {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    fun getWorkspaceRepository(): WorkspaceRepository
+
+    @Subcomponent.Builder
+    interface Builder {
+        fun build(): WorkspaceFunctionsComponent
     }
 }

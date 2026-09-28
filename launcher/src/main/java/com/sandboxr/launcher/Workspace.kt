@@ -17,35 +17,333 @@
 
 package com.sandboxr.launcher
 
+import android.animation.TimeInterpolator
 import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.widget.FrameLayout
+import android.util.FloatProperty
+import android.view.View
+import android.view.animation.DecelerateInterpolator
+import androidx.annotation.VisibleForTesting
+import com.sandboxr.launcher.anim.PropertySetter
+import com.sandboxr.launcher.celllayout.CellPosMapper
+import com.sandboxr.launcher.model.data.ItemInfo
+import com.sandboxr.launcher.pageindicators.PageIndicator
+import com.sandboxr.launcher.statemanager.StateManager
+import com.sandboxr.launcher.states.StateAnimationConfig
+import com.sandboxr.launcher.util.IntArray
+import com.sandboxr.launcher.util.IntSet
+import com.sandboxr.launcher.util.IntSparseArrayMap
 
 /**
- * The workspace contains desktop screens of cells, shortcuts, and app widgets.
+ * The workspace contains desktop screens of cells, shortcuts, folders, and app widgets.
+ * Manages paginated CellLayout pages, drag and drop targets, spring-loaded scaling,
+ * and launcher state machine transitions.
  */
-open class Workspace<T> @JvmOverloads constructor(
+open class Workspace<T : View> @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : FrameLayout(context, attrs, defStyleAttr), Insettable {
+) : PagedView<T>(context, attrs, defStyleAttr),
+    WorkspaceLayoutManager,
+    CellLayoutContainer,
+    DropTarget,
+    DragSource,
+    Insettable,
+    StateManager.StateHandler<LauncherState> {
 
-    private val insets = Rect()
+    @VisibleForTesting
+    val mWorkspaceScreens = IntSparseArrayMap<CellLayout>()
+
+    @VisibleForTesting
+    val mScreenOrder = IntArray()
+
+    private val mInsets = Rect()
+    private var mCellPosMapper: CellPosMapper = CellPosMapper.DEFAULT
+    protected var mLauncher: Launcher? = null
+
+    var workspaceScale: Float = 1f
+        set(value) {
+            field = value
+            scaleX = value
+            scaleY = value
+        }
+
+    private var mTransitionProgress: Float = 1f
+    private var mIsSpringLoaded: Boolean = false
+
+    init {
+        mLauncher = runCatching { Launcher.getLauncher(context) }.getOrNull()
+        // Bind the initial screen on initialization
+        bindAndInitFirstWorkspaceScreen()
+    }
 
     override fun setInsets(insets: Rect) {
-        this.insets.set(insets)
+        mInsets.set(insets)
+        setPadding(insets.left, insets.top, insets.right, insets.bottom)
     }
+
+    override fun getCellPosMapper(): CellPosMapper = mCellPosMapper
+
+    fun setCellPosMapper(mapper: CellPosMapper) {
+        mCellPosMapper = mapper
+    }
+
+    override fun getHotseat(): Hotseat? = mLauncher?.getHotseat()
+
+    override fun getScreenWithId(screenId: Int): CellLayout? = mWorkspaceScreens.get(screenId)
+
+    fun getScreenOrder(): IntArray = mScreenOrder
+
+    fun getScreenIdForPageIndex(index: Int): Int {
+        return if (index in 0 until mScreenOrder.size()) mScreenOrder.get(index) else -1
+    }
+
+    fun getPageIndexForScreenId(screenId: Int): Int {
+        return mScreenOrder.indexOf(screenId)
+    }
+
+    /**
+     * Initializes and binds the first desktop screen.
+     */
+    fun bindAndInitFirstWorkspaceScreen() {
+        if (!mWorkspaceScreens.containsKey(FIRST_SCREEN_ID)) {
+            insertNewWorkspaceScreen(FIRST_SCREEN_ID, childCount)
+        }
+    }
+
+    /**
+     * Inserts a new workspace screen at the end of the pages.
+     */
+    open fun insertNewWorkspaceScreen(screenId: Int): CellLayout {
+        return insertNewWorkspaceScreen(screenId, childCount)
+    }
+
+    /**
+     * Inserts a new workspace screen at the specified index.
+     */
+    open fun insertNewWorkspaceScreen(screenId: Int, insertIndex: Int): CellLayout {
+        if (mWorkspaceScreens.containsKey(screenId)) {
+            return mWorkspaceScreens.get(screenId)!!
+        }
+
+        val newScreen = CellLayout(context).apply {
+            setCellLayoutContainer(this@Workspace)
+        }
+
+        mWorkspaceScreens.put(screenId, newScreen)
+        mScreenOrder.add(insertIndex.coerceIn(0, mScreenOrder.size()), screenId)
+        addView(newScreen, insertIndex.coerceIn(0, childCount))
+
+        updatePageIndicator()
+        return newScreen
+    }
+
+    /**
+     * Inserts a new screen before any trailing extra empty screens.
+     */
+    open fun insertNewWorkspaceScreenBeforeEmptyScreen(screenId: Int): CellLayout {
+        var insertIndex = mScreenOrder.indexOf(EXTRA_EMPTY_SCREEN_ID)
+        if (insertIndex < 0) {
+            insertIndex = mScreenOrder.size()
+        }
+        return insertNewWorkspaceScreen(screenId, insertIndex)
+    }
+
+    /**
+     * Removes the workspace screen with the given ID.
+     */
+    open fun removeWorkspaceScreen(screenId: Int) {
+        val screen = mWorkspaceScreens.get(screenId) ?: return
+        val index = mScreenOrder.indexOf(screenId)
+        if (index >= 0) {
+            mScreenOrder.removeValue(screenId)
+        }
+        mWorkspaceScreens.remove(screenId)
+        removeView(screen)
+        updatePageIndicator()
+    }
+
+    /**
+     * Removes all workspace screens.
+     */
+    open fun removeAllWorkspaceScreens() {
+        mWorkspaceScreens.clear()
+        mScreenOrder.clear()
+        removeAllViews()
+        updatePageIndicator()
+    }
+
+    /**
+     * Adds an extra empty screen at the end for drag target drops.
+     */
+    open fun addExtraEmptyScreens() {
+        if (!mWorkspaceScreens.containsKey(EXTRA_EMPTY_SCREEN_ID)) {
+            insertNewWorkspaceScreen(EXTRA_EMPTY_SCREEN_ID, childCount)
+        }
+    }
+
+    /**
+     * Removes the extra empty screen.
+     */
+    open fun removeExtraEmptyScreens() {
+        if (mWorkspaceScreens.containsKey(EXTRA_EMPTY_SCREEN_ID)) {
+            removeWorkspaceScreen(EXTRA_EMPTY_SCREEN_ID)
+        }
+    }
+
+    fun isOverlayShown(): Boolean = false
 
     open fun removeWidget(appWidgetId: Int) {
-        // To be expanded in Phase 4 / widget manager
+        // Will be connected to LauncherAppWidgetHost in Phase 6
     }
 
-    open fun isOverlayShown(): Boolean = false
+    // --- CellLayoutContainer Implementation ---
+
+    override fun getCellLayoutId(cellLayout: CellLayout): Int {
+        for (i in 0 until mScreenOrder.size()) {
+            val id = mScreenOrder.get(i)
+            if (mWorkspaceScreens.get(id) === cellLayout) {
+                return id
+            }
+        }
+        return -1
+    }
+
+    override fun getCellLayoutIndex(cellLayout: CellLayout): Int {
+        return indexOfChild(cellLayout)
+    }
+
+    override fun getPanelCount(): Int = 1
+
+    override fun getPageDescription(pageIndex: Int): String {
+        return "Page ${pageIndex + 1} of $pageCount"
+    }
+
+    // --- Drag and Drop & Spring Loaded Mode ---
+
+    open fun enterSpringLoadedMode() {
+        if (!mIsSpringLoaded) {
+            mIsSpringLoaded = true
+            addExtraEmptyScreens()
+            animate().scaleX(SPRING_LOADED_SCALE).scaleY(SPRING_LOADED_SCALE)
+                .setDuration(150)
+                .setInterpolator(DecelerateInterpolator())
+                .start()
+        }
+    }
+
+    open fun exitSpringLoadedMode() {
+        if (mIsSpringLoaded) {
+            mIsSpringLoaded = false
+            removeExtraEmptyScreens()
+            animate().scaleX(1.0f).scaleY(1.0f)
+                .setDuration(150)
+                .setInterpolator(DecelerateInterpolator())
+                .start()
+        }
+    }
+
+    open fun startDrag(v: View, info: ItemInfo) {
+        enterSpringLoadedMode()
+    }
+
+    open fun beginDragShared(child: View, source: View?, info: ItemInfo) {
+        enterSpringLoadedMode()
+    }
+
+    override fun onDropCompleted(target: View?, d: DropTarget.DragObject, success: Boolean) {
+        exitSpringLoadedMode()
+    }
+
+    // --- StateHandler<LauncherState> Implementation ---
+
+    override fun setState(state: LauncherState) {
+        when (state) {
+            LauncherState.NORMAL -> {
+                visibility = View.VISIBLE
+                alpha = 1f
+                workspaceScale = 1f
+                translationX = 0f
+                translationY = 0f
+                exitSpringLoadedMode()
+            }
+            LauncherState.SPRING_LOADED -> {
+                visibility = View.VISIBLE
+                enterSpringLoadedMode()
+            }
+            LauncherState.ALL_APPS -> {
+                visibility = View.GONE
+                alpha = 0f
+            }
+            LauncherState.OVERVIEW -> {
+                visibility = View.VISIBLE
+                alpha = 0.5f
+                workspaceScale = 0.8f
+            }
+            LauncherState.EDIT_MODE -> {
+                visibility = View.VISIBLE
+                workspaceScale = 0.9f
+            }
+            else -> {
+                visibility = View.VISIBLE
+            }
+        }
+    }
+
+    override fun setStateWithAnimation(
+        toState: LauncherState,
+        config: StateAnimationConfig,
+        animation: com.sandboxr.launcher.anim.PendingAnimation
+    ) {
+        setStateWithAnimation(toState, config, animation as PropertySetter)
+    }
+
+    open fun setStateWithAnimation(
+        toState: LauncherState,
+        config: StateAnimationConfig,
+        setter: PropertySetter
+    ) {
+        when (toState) {
+            LauncherState.NORMAL -> {
+                setter.setViewAlpha(this, 1f, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_FADE, DecelerateInterpolator()))
+                setter.setFloat(this, WORKSPACE_SCALE_PROPERTY, 1f, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_SCALE, DecelerateInterpolator()))
+            }
+            LauncherState.SPRING_LOADED -> {
+                setter.setFloat(this, WORKSPACE_SCALE_PROPERTY, SPRING_LOADED_SCALE, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_SCALE, DecelerateInterpolator()))
+            }
+            LauncherState.ALL_APPS -> {
+                setter.setViewAlpha(this, 0f, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_FADE, DecelerateInterpolator()))
+            }
+            LauncherState.OVERVIEW -> {
+                setter.setFloat(this, WORKSPACE_SCALE_PROPERTY, 0.8f, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_SCALE, DecelerateInterpolator()))
+                setter.setViewAlpha(this, 0.5f, config.getInterpolator(StateAnimationConfig.ANIM_WORKSPACE_FADE, DecelerateInterpolator()))
+            }
+            else -> {
+                setter.setViewAlpha(this, 1f, DecelerateInterpolator())
+            }
+        }
+    }
 
     companion object {
         const val FIRST_SCREEN_ID: Int = 0
+        const val EXTRA_EMPTY_SCREEN_ID: Int = -201
+        const val EXTRA_EMPTY_SCREEN_SECOND_ID: Int = -200
         @JvmField
-        val EXTRA_EMPTY_SCREEN_IDS = com.sandboxr.launcher.util.IntSet()
+        val EXTRA_EMPTY_SCREEN_IDS: IntSet = WorkspaceLayoutManager.EXTRA_EMPTY_SCREEN_IDS
+
+        const val SPRING_LOADED_SCALE: Float = 0.88f
+
+        @JvmField
+        val WORKSPACE_SCALE_PROPERTY: FloatProperty<Workspace<*>> =
+            object : FloatProperty<Workspace<*>>("workspaceScale") {
+                override fun setValue(target: Workspace<*>, value: Float) {
+                    target.workspaceScale = value
+                }
+
+                override fun get(target: Workspace<*>): Float {
+                    return target.workspaceScale
+                }
+            }
     }
 }

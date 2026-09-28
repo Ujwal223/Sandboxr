@@ -107,7 +107,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
         }
         mDragLayer = dragLayer
 
-        val workspace = Workspace<Any>(this).apply {
+        val workspace = Workspace<com.sandboxr.launcher.pageindicators.PageIndicatorDots>(this).apply {
             id = R.id.workspace
             layoutParams = InsettableFrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,

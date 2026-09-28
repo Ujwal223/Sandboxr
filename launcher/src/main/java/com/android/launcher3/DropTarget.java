@@ -15,15 +15,12 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.DropTarget].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
-
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+public interface DropTarget extends com.sandboxr.launcher.DropTarget {
+    class DragObject extends com.sandboxr.launcher.DropTarget.DragObject {
     }
 }

@@ -15,15 +15,10 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3.pageindicators;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.pageindicators.PageIndicator].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
-
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
-    }
+public interface PageIndicator extends com.sandboxr.launcher.pageindicators.PageIndicator {
 }

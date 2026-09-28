@@ -15,15 +15,36 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher.pageindicators
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Base contract for workspace page indicators.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+interface PageIndicator {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    fun setScroll(currentScroll: Int, totalScroll: Int)
+
+    fun setActiveMarker(activePage: Int)
+
+    fun setMarkersCount(numMarkers: Int)
+
+    fun setPauseScroll(pause: Boolean, isTwoPanels: Boolean) {
+        // No-op by default
+    }
+
+    fun setShouldAutoHide(shouldAutoHide: Boolean) {
+        // No-op by default
+    }
+
+    fun pauseAnimations() {
+        // No-op by default
+    }
+
+    fun skipAnimationsToEnd() {
+        // No-op by default
+    }
+
+    fun setPaintColor(color: Int) {
+        // No-op by default
     }
 }

@@ -15,15 +15,11 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher.appfunctions.workspace.provider
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Interface for providing installed items (apps, widgets) on the system.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
-
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
-    }
+interface InstalledItemsProvider<T> {
+    suspend fun getInstalledItems(orderByUsageStats: Boolean): List<T>
 }

@@ -15,15 +15,27 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import com.sandboxr.launcher.pageindicators.PageIndicator;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.PagedView].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+public class PagedView<T extends View & PageIndicator> extends com.sandboxr.launcher.PagedView<T> {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    public PagedView(Context context) {
+        super(context);
+    }
+
+    public PagedView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public PagedView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 }

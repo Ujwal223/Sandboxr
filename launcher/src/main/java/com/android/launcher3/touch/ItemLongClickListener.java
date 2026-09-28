@@ -15,15 +15,17 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.android.launcher3.touch;
+
+import android.view.View.OnLongClickListener;
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * AOSP compatibility bridge for [com.sandboxr.launcher.touch.ItemLongClickListener].
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+public class ItemLongClickListener {
+    public static final OnLongClickListener INSTANCE_WORKSPACE =
+            com.sandboxr.launcher.touch.ItemLongClickListener.INSTANCE_WORKSPACE;
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
-    }
+    public static final OnLongClickListener INSTANCE_ALL_APPS =
+            com.sandboxr.launcher.touch.ItemLongClickListener.INSTANCE_ALL_APPS;
 }

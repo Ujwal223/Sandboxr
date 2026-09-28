@@ -15,15 +15,19 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.celllayout;
+package com.sandboxr.launcher.workspacefunctions
+
+import android.appwidget.AppWidgetProviderInfo
+import com.sandboxr.launcher.appfunctions.workspace.provider.InstalledItemsProvider
+import javax.inject.Inject
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.celllayout.CellPosMapper].
+ * Returns installed widget providers on the device.
  */
-public class CellPosMapper extends com.sandboxr.launcher.celllayout.CellPosMapper {
-    public static final CellPosMapper DEFAULT = new CellPosMapper(false, -1);
+class LauncherInstalledWidgetsProvider @Inject constructor() :
+    InstalledItemsProvider<AppWidgetProviderInfo> {
 
-    public CellPosMapper(boolean hasVerticalHotseat, int numOfHotseat) {
-        super(hasVerticalHotseat, numOfHotseat);
+    override suspend fun getInstalledItems(orderByUsageStats: Boolean): List<AppWidgetProviderInfo> {
+        return emptyList()
     }
 }
