@@ -15,10 +15,16 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.android.launcher3.util;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+import android.util.FloatProperty;
+
+public class MultiPropertyFactory<T> extends com.sandboxr.launcher.util.MultiPropertyFactory<T> {
+    public MultiPropertyFactory(T target, FloatProperty<T> property, int size, FloatBiFunction aggregator) {
+        super(target, property, size, aggregator, 0f);
+    }
+
+    public MultiPropertyFactory(T target, FloatProperty<T> property, int size, FloatBiFunction aggregator, float defaultPropertyValue) {
+        super(target, property, size, aggregator, defaultPropertyValue);
+    }
 }

@@ -15,10 +15,20 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.sandboxr.launcher.celllayout
+
+import android.view.View
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
+ * Parameters encapsulating a requested reorder operation.
  */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
-}
+class ReorderParameters(
+    val pixelX: Int,
+    val pixelY: Int,
+    val spanX: Int,
+    val spanY: Int,
+    val minSpanX: Int,
+    val minSpanY: Int,
+    val dragView: View?,
+    val solution: ItemConfiguration
+)

@@ -15,10 +15,16 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.sandboxr.launcher
+
+import com.sandboxr.launcher.util.MultiTranslateDelegate
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
+ * Interface implemented by workspace views (shortcuts, app widgets, folder icons) that can be
+ * animated during drag and reordering operations.
  */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+interface Reorderable {
+    fun getTranslateDelegate(): MultiTranslateDelegate
+    fun setReorderBounceScale(scale: Float)
+    fun getReorderBounceScale(): Float
 }

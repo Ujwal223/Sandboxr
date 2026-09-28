@@ -17,8 +17,5 @@
 
 package com.android.launcher3;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+public interface Reorderable extends com.sandboxr.launcher.Reorderable {
 }

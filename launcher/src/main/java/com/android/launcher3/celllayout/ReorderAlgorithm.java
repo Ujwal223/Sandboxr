@@ -15,10 +15,12 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.android.launcher3.celllayout;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+import com.sandboxr.launcher.CellLayout;
+
+public class ReorderAlgorithm extends com.sandboxr.launcher.celllayout.ReorderAlgorithm {
+    public ReorderAlgorithm(CellLayout cellLayout) {
+        super(cellLayout);
+    }
 }

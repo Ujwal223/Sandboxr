@@ -15,10 +15,16 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.android.launcher3.util;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+import android.view.View;
+
+public class MultiTranslateDelegate extends com.sandboxr.launcher.util.MultiTranslateDelegate {
+    public MultiTranslateDelegate(View target) {
+        super(target);
+    }
+
+    public MultiTranslateDelegate(View target, int countX, int countY) {
+        super(target, countX, countY);
+    }
 }

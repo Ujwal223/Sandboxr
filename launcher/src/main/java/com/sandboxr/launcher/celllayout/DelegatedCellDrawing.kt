@@ -15,10 +15,20 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.sandboxr.launcher.celllayout
+
+import android.graphics.Canvas
 
 /**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
+ * A delegated drawing hook for drawing under or over items in CellLayout.
  */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+abstract class DelegatedCellDrawing {
+    @JvmField var mDelegateCellX: Int = 0
+    @JvmField var mDelegateCellY: Int = 0
+
+    /** Draw under CellLayout child items */
+    abstract fun drawUnderItem(canvas: Canvas)
+
+    /** Draw over CellLayout child items */
+    abstract fun drawOverItem(canvas: Canvas)
 }

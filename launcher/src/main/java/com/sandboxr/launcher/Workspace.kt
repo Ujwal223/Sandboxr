@@ -333,6 +333,7 @@ open class Workspace<T : View> @JvmOverloads constructor(
         val EXTRA_EMPTY_SCREEN_IDS: IntSet = WorkspaceLayoutManager.EXTRA_EMPTY_SCREEN_IDS
 
         const val SPRING_LOADED_SCALE: Float = 0.88f
+        const val REORDER_TIMEOUT: Int = 650
 
         @JvmField
         val WORKSPACE_SCALE_PROPERTY: FloatProperty<Workspace<*>> =

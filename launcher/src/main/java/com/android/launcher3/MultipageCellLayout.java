@@ -17,8 +17,19 @@
 
 package com.android.launcher3;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+import android.content.Context;
+import android.util.AttributeSet;
+
+public class MultipageCellLayout extends com.sandboxr.launcher.MultipageCellLayout {
+    public MultipageCellLayout(Context context) {
+        super(context);
+    }
+
+    public MultipageCellLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public MultipageCellLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
 }

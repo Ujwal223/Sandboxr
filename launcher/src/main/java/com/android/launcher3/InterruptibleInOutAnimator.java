@@ -17,8 +17,8 @@
 
 package com.android.launcher3;
 
-/**
- * AOSP compatibility bridge for [com.sandboxr.launcher.CellLayoutContainer].
- */
-public interface CellLayoutContainer extends com.sandboxr.launcher.CellLayoutContainer {
+public class InterruptibleInOutAnimator extends com.sandboxr.launcher.InterruptibleInOutAnimator {
+    public InterruptibleInOutAnimator(long duration, float fromValue, float toValue) {
+        super(duration, fromValue, toValue);
+    }
 }

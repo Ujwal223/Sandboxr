@@ -33,6 +33,7 @@ public class Workspace<T extends View & PageIndicator> extends com.sandboxr.laun
     public static final int EXTRA_EMPTY_SCREEN_SECOND_ID = com.sandboxr.launcher.Workspace.EXTRA_EMPTY_SCREEN_SECOND_ID;
     public static final com.sandboxr.launcher.util.IntSet EXTRA_EMPTY_SCREEN_IDS =
             com.sandboxr.launcher.Workspace.EXTRA_EMPTY_SCREEN_IDS;
+    public static final int REORDER_TIMEOUT = com.sandboxr.launcher.Workspace.REORDER_TIMEOUT;
 
     public static final FloatProperty<com.sandboxr.launcher.Workspace<?>> WORKSPACE_SCALE_PROPERTY =
             com.sandboxr.launcher.Workspace.WORKSPACE_SCALE_PROPERTY;

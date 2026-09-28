@@ -30,17 +30,24 @@ import com.sandboxr.launcher.celllayout.CellLayoutLayoutParams
 open class ShortcutAndWidgetContainer @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
+    val containerType: Int = CellLayout.CONTAINER_TYPE_WORKSPACE
 ) : ViewGroup(context, attrs, defStyleAttr) {
+
+    constructor(context: Context, containerType: Int) : this(context, null, 0, containerType)
 
     var cellWidth: Int = 0
     var cellHeight: Int = 0
     var countX: Int = 4
     var countY: Int = 5
     var borderSpace: Point = Point(0, 0)
-    var invertHorizontally: Boolean = false
+    var invertIfRtl: Boolean = false
 
-    fun setCellDimensions(cellWidth: Int, cellHeight: Int, countX: Int, countY: Int, borderSpace: Point) {
+    init {
+        clipChildren = false
+    }
+
+    open fun setCellDimensions(cellWidth: Int, cellHeight: Int, countX: Int, countY: Int, borderSpace: Point) {
         this.cellWidth = cellWidth
         this.cellHeight = cellHeight
         this.countX = countX
@@ -49,7 +56,38 @@ open class ShortcutAndWidgetContainer @JvmOverloads constructor(
         requestLayout()
     }
 
+    fun invertLayoutHorizontally(): Boolean {
+        return invertIfRtl && layoutDirection == LAYOUT_DIRECTION_RTL
+    }
+
+    open fun getChildAt(cellX: Int, cellY: Int): View? {
+        val count = childCount
+        for (i in 0 until count) {
+            val child = getChildAt(i)
+            val lp = child.layoutParams as? CellLayoutLayoutParams ?: continue
+            val cx = lp.cellX
+            val cy = lp.cellY
+            if (cx <= cellX && cellX < cx + lp.cellHSpan && cy <= cellY && cellY < cy + lp.cellVSpan) {
+                return child
+            }
+        }
+        return null
+    }
+
+    open fun setupLp(child: View) {
+        val lp = child.layoutParams as? CellLayoutLayoutParams ?: return
+        lp.setup(cellWidth, cellHeight, invertLayoutHorizontally(), countX, countY, borderSpace)
+    }
+
+    open fun addViewInLayout(child: View, params: LayoutParams): Boolean {
+        return super.addViewInLayout(child, -1, params, true)
+    }
+
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val width = MeasureSpec.getSize(widthMeasureSpec)
+        val height = MeasureSpec.getSize(heightMeasureSpec)
+        setMeasuredDimension(width, height)
+
         val count = childCount
         for (i in 0 until count) {
             val child = getChildAt(i)
@@ -57,14 +95,11 @@ open class ShortcutAndWidgetContainer @JvmOverloads constructor(
                 measureChild(child)
             }
         }
-        val width = MeasureSpec.getSize(widthMeasureSpec)
-        val height = MeasureSpec.getSize(heightMeasureSpec)
-        setMeasuredDimension(width, height)
     }
 
-    fun measureChild(child: View) {
+    open fun measureChild(child: View) {
         val lp = child.layoutParams as? CellLayoutLayoutParams ?: return
-        lp.setup(cellWidth, cellHeight, invertHorizontally, countX, countY, borderSpace)
+        setupLp(child)
         val childWidthMeasureSpec = MeasureSpec.makeMeasureSpec(lp.width.coerceAtLeast(0), MeasureSpec.EXACTLY)
         val childHeightMeasureSpec = MeasureSpec.makeMeasureSpec(lp.height.coerceAtLeast(0), MeasureSpec.EXACTLY)
         child.measure(childWidthMeasureSpec, childHeightMeasureSpec)
@@ -80,7 +115,7 @@ open class ShortcutAndWidgetContainer @JvmOverloads constructor(
         }
     }
 
-    fun layoutChild(child: View) {
+    open fun layoutChild(child: View) {
         val lp = child.layoutParams as? CellLayoutLayoutParams ?: return
         val childLeft = lp.x
         val childTop = lp.y
