@@ -136,6 +136,14 @@ open class DeviceProfile @VisibleForTesting constructor() {
     /** Label text size for All Apps items in pixels. */
     @JvmField var allAppsIconTextSizePx: Float = 0f
 
+    /** Number of columns shown in All Apps drawer. */
+    val numShownAllAppsColumns: Int
+        get() = numColumns
+
+    /** Cell height in pixels for All Apps drawer items. */
+    val allAppsCellHeightPx: Int
+        get() = if (minCellHeightPx > 0) minCellHeightPx else max(80, (allAppsIconSizePx * 1.5f).toInt())
+
     // ─────────────────────────────────────────────────────────────────────────────────────────
     // Cell / workspace sizing
     // ─────────────────────────────────────────────────────────────────────────────────────────
@@ -176,6 +184,21 @@ open class DeviceProfile @VisibleForTesting constructor() {
 
     /** Hotseat cell width in pixels. */
     @JvmField var hotseatCellWidthPx: Int = 0
+
+    /** Space between hotseat icons in pixels. */
+    @JvmField var hotseatBorderSpace: Int = 0
+
+    /** Width of QSB search bar in pixels. */
+    @JvmField var hotseatQsbWidth: Int = 0
+
+    /** Height of QSB search bar in pixels. */
+    @JvmField var hotseatQsbHeight: Int = 0
+
+    /** Whether the QSB is displayed inline alongside hotseat icons (tablets / foldables). */
+    @JvmField var isQsbInline: Boolean = false
+
+    /** Whether the current landscape orientation is seascape (rotated 180). */
+    @JvmField var isSeascape: Boolean = false
 
     // ─────────────────────────────────────────────────────────────────────────────────────────
     // Taskbar
@@ -222,11 +245,51 @@ open class DeviceProfile @VisibleForTesting constructor() {
     // Layout helpers
     // ─────────────────────────────────────────────────────────────────────────────────────────
 
+    @JvmField var allAppsProfile: com.sandboxr.launcher.deviceprofile.AllAppsProfile? = null
+
+    open fun getAllAppsProfile(): com.sandboxr.launcher.deviceprofile.AllAppsProfile =
+        allAppsProfile ?: com.sandboxr.launcher.deviceprofile.AllAppsProfile(
+            cellHeightPx = allAppsCellHeightPx,
+            shiftRange = heightPx,
+            numShownAllAppsColumns = numShownAllAppsColumns
+        )
+
     /**
      * Returns `true` if the launcher should use a vertical bar layout (side hotseat) instead of
      * the bottom hotseat. This is the case on phones in landscape when not in tablet mode.
      */
     open fun isVerticalBarLayout(): Boolean = isLandscape && !isTablet
+
+    /** Returns whether the current device is in seascape mode. */
+    open fun isSeascape(): Boolean = isSeascape
+
+    /** Returns vertical offset for positioning the QSB. */
+    open fun getQsbOffsetY(): Int = hotseatBarBottomSpacePx + hotseatQsbSpacePx
+
+    /** Returns padding for the hotseat view. */
+    open fun getHotseatLayoutPadding(context: Context): Rect {
+        val padding = Rect()
+        if (isVerticalBarLayout()) {
+            val paddingTop = max(insets.top, 0)
+            val paddingBottom = max(insets.bottom, 0)
+            if (isSeascape()) {
+                padding.set(insets.left, paddingTop, 0, paddingBottom)
+            } else {
+                padding.set(0, paddingTop, insets.right, paddingBottom)
+            }
+        } else {
+            val sidePadding = max(0, (widthPx - numShownHotseatIcons * hotseatCellWidthPx) / 2)
+            padding.set(sidePadding, 0, sidePadding, hotseatBarBottomSpacePx)
+        }
+        return padding
+    }
+
+    // Bubble bar adjustment helpers
+    open fun shouldAdjustHotseatForBubbleBar(context: Context, hasBubbles: Boolean): Boolean = false
+    open fun shouldAdjustHotseatOrQsbForBubbleBar(context: Context): Boolean = false
+    open fun shouldAlignBubbleBarWithHotseat(): Boolean = false
+    open fun shouldAlignBubbleBarWithQSB(): Boolean = false
+    open fun getHotseatAdjustedTranslation(context: Context, cellX: Int): Float = 0f
 
     /**
      * Returns the available bounds for an open folder, clipped to safe insets.
@@ -342,6 +405,10 @@ open class DeviceProfile @VisibleForTesting constructor() {
                 hotseatBarSizePx = iconSizePx + pxFromDp(48f, dm.densityDpi)
                 hotseatBarBottomSpacePx = pxFromDp(48f, dm.densityDpi)
                 hotseatQsbSpacePx = pxFromDp(36f, dm.densityDpi)
+                hotseatQsbHeight = pxFromDp(48f, dm.densityDpi)
+                hotseatBorderSpace = pxFromDp(16f, dm.densityDpi)
+                isQsbInline = isTablet
+                hotseatQsbWidth = if (isQsbInline) pxFromDp(260f, dm.densityDpi) else (widthPx - pxFromDp(32f, dm.densityDpi))
                 numShownHotseatIcons = 5
                 hotseatCellWidthPx = widthPx / numShownHotseatIcons
                 cellLayoutBorderSpacePx = Point(
@@ -437,6 +504,10 @@ open class DeviceProfile @VisibleForTesting constructor() {
                 hotseatBarBottomSpacePx = pxFromDp(hotseatBottomDp, densityDpi)
                 hotseatQsbSpacePx = pxFromDp(hotseatQsbDp, densityDpi)
                 hotseatBarSizePx = iconSizePx + hotseatBarBottomSpacePx
+                hotseatQsbHeight = pxFromDp(48f, densityDpi)
+                hotseatBorderSpace = pxFromDp(16f, densityDpi)
+                isQsbInline = isTablet || isTwoPanels
+                hotseatQsbWidth = if (isQsbInline) pxFromDp(260f, densityDpi) else (widthPx - pxFromDp(32f, densityDpi))
                 workspacePaddingBottomPx = hotseatBarSizePx + hotseatBarBottomSpacePx
 
                 // Cell metrics

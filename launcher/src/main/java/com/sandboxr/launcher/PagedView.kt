@@ -18,6 +18,7 @@
 package com.sandboxr.launcher
 
 import android.content.Context
+import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.VelocityTracker
@@ -27,6 +28,7 @@ import android.view.ViewGroup
 import android.widget.OverScroller
 import androidx.core.view.ViewCompat
 import com.sandboxr.launcher.pageindicators.PageIndicator
+import com.sandboxr.launcher.util.EdgeEffectCompat
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -35,7 +37,8 @@ import kotlin.math.roundToInt
 /**
  * Base paging engine for horizontally paginated views like Workspace.
  * Implements smooth scrolling, touch drag detection, velocity-based fling,
- * snap-to-page physics, overscroll clamping, and page indicator synchronization.
+ * snap-to-page physics, overscroll clamping, edge glow/stretch effects,
+ * and page indicator synchronization.
  */
 open class PagedView<T : View> @JvmOverloads constructor(
     context: Context,
@@ -48,6 +51,10 @@ open class PagedView<T : View> @JvmOverloads constructor(
         protected const val TOUCH_STATE_REST: Int = 0
         protected const val TOUCH_STATE_SCROLLING: Int = 1
         protected const val PAGE_SNAP_ANIMATION_DURATION: Int = 300
+    }
+
+    fun interface PageSwitchListener {
+        fun onPageSwitch(newPage: Int, previousPage: Int)
     }
 
     protected var mCurrentPage: Int = 0
@@ -66,12 +73,22 @@ open class PagedView<T : View> @JvmOverloads constructor(
     private var mMaxFlingVelocity: Int = 0
     private var mVelocityTracker: VelocityTracker? = null
 
+    protected val mEdgeGlowLeft: EdgeEffectCompat = EdgeEffectCompat(context)
+    protected val mEdgeGlowRight: EdgeEffectCompat = EdgeEffectCompat(context)
+    var isOverScrollEnabled: Boolean = true
+
+    protected var mMinScroll: Int = 0
+    protected var mMaxScroll: Int = 0
+
+    private val mPageSwitchListeners = ArrayList<PageSwitchListener>()
+
     init {
         isHapticFeedbackEnabled = false
         val vc = ViewConfiguration.get(context)
         mTouchSlop = vc.scaledTouchSlop
         mMinFlingVelocity = vc.scaledMinimumFlingVelocity
         mMaxFlingVelocity = vc.scaledMaximumFlingVelocity
+        setWillNotDraw(false)
     }
 
     open fun setPageIndicator(pageIndicator: T?) {
@@ -96,16 +113,30 @@ open class PagedView<T : View> @JvmOverloads constructor(
         requestLayout()
     }
 
+    open fun addPageSwitchListener(listener: PageSwitchListener) {
+        if (!mPageSwitchListeners.contains(listener)) {
+            mPageSwitchListeners.add(listener)
+        }
+    }
+
+    open fun removePageSwitchListener(listener: PageSwitchListener) {
+        mPageSwitchListeners.remove(listener)
+    }
+
     open fun setCurrentPage(page: Int) {
         if (!mScroller.isFinished) {
             mScroller.abortAnimation()
         }
         val count = pageCount
+        val prevPage = mCurrentPage
         mCurrentPage = page.coerceIn(0, max(0, count - 1))
         mNextPage = INVALID_PAGE
         val scrollX = getScrollForPage(mCurrentPage)
         scrollTo(scrollX, scrollY)
         updatePageIndicator()
+        if (prevPage != mCurrentPage) {
+            notifyPageSwitch(mCurrentPage, prevPage)
+        }
         invalidate()
     }
 
@@ -127,21 +158,42 @@ open class PagedView<T : View> @JvmOverloads constructor(
 
     override fun computeScroll() {
         if (mScroller.computeScrollOffset()) {
-            scrollTo(mScroller.currX, mScroller.currY)
+            val currX = mScroller.currX
+            val currY = mScroller.currY
+            scrollTo(currX, currY)
             val maxScroll = max(0, getScrollForPage(max(0, pageCount - 1)))
-            (mPageIndicator as? PageIndicator)?.setScroll(mScroller.currX, maxScroll)
-            ViewCompat.postInvalidateOnAnimation(this)
+            (mPageIndicator as? PageIndicator)?.setScroll(currX, maxScroll)
+
+            // Edge bounce absorption if fling goes beyond min/max bounds
+            if (isOverScrollEnabled) {
+                if (currX < mMinScroll && mEdgeGlowLeft.isFinished) {
+                    mEdgeGlowLeft.onAbsorb(mScroller.currVelocity.toInt())
+                } else if (currX > mMaxScroll && mEdgeGlowRight.isFinished) {
+                    mEdgeGlowRight.onAbsorb(mScroller.currVelocity.toInt())
+                }
+            }
+            postInvalidateOnAnimation()
         } else if (mNextPage != INVALID_PAGE) {
+            val prevPage = mCurrentPage
             mCurrentPage = mNextPage.coerceIn(0, max(0, pageCount - 1))
             mNextPage = INVALID_PAGE
             updatePageIndicator()
             onPageEndTransition()
+            if (prevPage != mCurrentPage) {
+                notifyPageSwitch(mCurrentPage, prevPage)
+            }
         }
     }
 
     protected open fun onPageBeginTransition() {}
 
     protected open fun onPageEndTransition() {}
+
+    private fun notifyPageSwitch(newPage: Int, prevPage: Int) {
+        for (i in 0 until mPageSwitchListeners.size) {
+            mPageSwitchListeners[i].onPageSwitch(newPage, prevPage)
+        }
+    }
 
     open fun snapToPage(whichPage: Int, duration: Int = PAGE_SNAP_ANIMATION_DURATION): Boolean {
         val count = pageCount
@@ -240,9 +292,25 @@ open class PagedView<T : View> @JvmOverloads constructor(
                     mLastMotionX = ev.x
 
                     val maxScroll = max(0, getScrollForPage(max(0, pageCount - 1)))
-                    val newScroll = (scrollX + deltaX).coerceIn(-width / 4, maxScroll + width / 4)
-                    scrollTo(newScroll, scrollY)
-                    (mPageIndicator as? PageIndicator)?.setScroll(newScroll, maxScroll)
+                    val newScroll = (scrollX + deltaX)
+
+                    // Overscroll resistance and glow effect
+                    if (isOverScrollEnabled && (newScroll < mMinScroll || newScroll > maxScroll)) {
+                        val overScrollDistance = if (newScroll < mMinScroll) mMinScroll - newScroll else newScroll - maxScroll
+                        val displacement = ev.y / height.coerceAtLeast(1)
+                        val pullDistance = (overScrollDistance.toFloat() / width.coerceAtLeast(1)) * 0.5f
+
+                        if (newScroll < mMinScroll) {
+                            mEdgeGlowLeft.onPullDistance(pullDistance, 1f - displacement, ev)
+                        } else {
+                            mEdgeGlowRight.onPullDistance(pullDistance, displacement, ev)
+                        }
+                        invalidate()
+                    }
+
+                    val clampedScroll = newScroll.coerceIn(-width / 3, maxScroll + width / 3)
+                    scrollTo(clampedScroll, scrollY)
+                    (mPageIndicator as? PageIndicator)?.setScroll(clampedScroll, maxScroll)
                 } else {
                     val x = ev.x
                     val xDiff = abs(x - mLastMotionX)
@@ -258,6 +326,11 @@ open class PagedView<T : View> @JvmOverloads constructor(
                     val tracker = mVelocityTracker
                     tracker?.computeCurrentVelocity(1000, mMaxFlingVelocity.toFloat())
                     val velocityX = tracker?.xVelocity ?: 0f
+
+                    if (isOverScrollEnabled) {
+                        mEdgeGlowLeft.onRelease(ev)
+                        mEdgeGlowRight.onRelease(ev)
+                    }
 
                     val count = pageCount
                     if (abs(velocityX) > mMinFlingVelocity && count > 1) {
@@ -279,6 +352,10 @@ open class PagedView<T : View> @JvmOverloads constructor(
             }
             MotionEvent.ACTION_CANCEL -> {
                 if (mTouchState == TOUCH_STATE_SCROLLING) {
+                    if (isOverScrollEnabled) {
+                        mEdgeGlowLeft.onRelease(ev)
+                        mEdgeGlowRight.onRelease(ev)
+                    }
                     snapToDestination()
                     mTouchState = TOUCH_STATE_REST
                     mVelocityTracker?.recycle()
@@ -287,6 +364,40 @@ open class PagedView<T : View> @JvmOverloads constructor(
             }
         }
         return true
+    }
+
+    override fun draw(canvas: Canvas) {
+        super.draw(canvas)
+        drawEdgeEffect(canvas)
+    }
+
+    protected open fun drawEdgeEffect(canvas: Canvas) {
+        if (isOverScrollEnabled && (!mEdgeGlowLeft.isFinished || !mEdgeGlowRight.isFinished)) {
+            val width = width
+            val height = height
+
+            if (!mEdgeGlowLeft.isFinished) {
+                val restoreCount = canvas.save()
+                canvas.rotate(-90f)
+                canvas.translate(-height.toFloat(), min(mMinScroll, scrollX).toFloat())
+                mEdgeGlowLeft.setSize(height, width)
+                if (mEdgeGlowLeft.draw(canvas)) {
+                    postInvalidateOnAnimation()
+                }
+                canvas.restoreToCount(restoreCount)
+            }
+
+            if (!mEdgeGlowRight.isFinished) {
+                val restoreCount = canvas.save()
+                canvas.rotate(90f, width.toFloat(), 0f)
+                canvas.translate(width.toFloat(), -(max(mMaxScroll, scrollX)).toFloat())
+                mEdgeGlowRight.setSize(height, width)
+                if (mEdgeGlowRight.draw(canvas)) {
+                    postInvalidateOnAnimation()
+                }
+                canvas.restoreToCount(restoreCount)
+            }
+        }
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -320,6 +431,9 @@ open class PagedView<T : View> @JvmOverloads constructor(
                 childLeft += childWidth + mPageSpacing
             }
         }
+
+        mMinScroll = 0
+        mMaxScroll = max(0, getScrollForPage(max(0, count - 1)))
 
         if (mCurrentPage in 0 until count) {
             val targetScroll = getScrollForPage(mCurrentPage)

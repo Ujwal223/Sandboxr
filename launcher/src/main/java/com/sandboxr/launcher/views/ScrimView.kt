@@ -36,4 +36,23 @@ open class ScrimView @JvmOverloads constructor(
             setBackgroundColor(value.backgroundColor)
             invalidate()
         }
+
+    var scrimHeaderScale: Float = 1f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
+    var drawingController: Any? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
+
+    var progress: Float = 0f
+        set(value) {
+            field = value
+            alpha = value.coerceIn(0f, 1f)
+            invalidate()
+        }
 }

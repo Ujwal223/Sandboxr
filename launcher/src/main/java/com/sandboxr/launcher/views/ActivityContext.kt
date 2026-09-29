@@ -66,11 +66,29 @@ interface ActivityContext : SavedStateRegistryOwner {
         return false
     }
 
+    fun isBubbleBarEnabled(): Boolean = false
+
+    fun hasBubbles(): Boolean = false
+
     fun asContext(): Context {
         return this as Context
     }
 
     fun getLayoutInflater(): LayoutInflater?
+
+    fun getItemOnClickListener(): View.OnClickListener? = null
+
+    fun getAllAppsItemLongClickListener(): View.OnLongClickListener? = null
+
+    fun getAllAppsItemCustomActionsListener(): Any? = null
+
+    fun getAppsStore(): com.sandboxr.launcher.allapps.AllAppsStore? = null
+
+    fun getAppsView(): com.sandboxr.launcher.allapps.ActivityAllAppsContainerView<*>? = null
+
+    fun hideKeyboard() {}
+
+    fun startActivitySafely(v: View?, intent: android.content.Intent?, item: com.sandboxr.launcher.model.data.ItemInfo?): Boolean = false
 
     fun closeOnDestroy(closeable: SafeCloseable) {}
 

@@ -40,4 +40,9 @@
     <item type="id" name="search_container_all_apps" />
     <item type="id" name="search_container_hotseat" />
     <item type="id" name="qsb_widget" />
+    <item type="id" name="qsb_layout" />
+    <item type="id" name="btn_qsb_search" />
+    <item type="id" name="btn_qsb_mic" />
+    <item type="id" name="btn_qsb_lens" />
+    <item type="id" name="btn_qsb_setup" />
 </resources>

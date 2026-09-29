@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2026 The Android Open Source Project
+ * Copyright (C) 2026 Sandboxr Platform
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.launcher3;
+
+import android.util.FloatProperty;
+import android.util.IntProperty;
+import android.view.View;
+
+/**
+ * AOSP compatibility bridge for [com.sandboxr.launcher.LauncherAnimUtils].
+ */
+public class LauncherAnimUtils {
+    public static final FloatProperty<View> VIEW_ALPHA = com.sandboxr.launcher.LauncherAnimUtils.VIEW_ALPHA;
+    public static final FloatProperty<View> VIEW_TRANSLATE_X = com.sandboxr.launcher.LauncherAnimUtils.VIEW_TRANSLATE_X;
+    public static final FloatProperty<View> VIEW_TRANSLATE_Y = com.sandboxr.launcher.LauncherAnimUtils.VIEW_TRANSLATE_Y;
+    public static final IntProperty<View> VIEW_BACKGROUND_COLOR = com.sandboxr.launcher.LauncherAnimUtils.VIEW_BACKGROUND_COLOR;
+}

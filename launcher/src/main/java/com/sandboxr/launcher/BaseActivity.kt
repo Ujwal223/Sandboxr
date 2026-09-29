@@ -90,6 +90,20 @@ abstract class BaseActivity : Activity(), ActivityContext {
     override fun getOnDeviceProfileChangeListeners(): List<OnDeviceProfileChangeListener> =
         mDPChangeListeners
 
+    fun addOnDeviceProfileChangeListener(listener: OnDeviceProfileChangeListener) {
+        mDPChangeListeners.add(listener)
+    }
+
+    fun removeOnDeviceProfileChangeListener(listener: OnDeviceProfileChangeListener) {
+        mDPChangeListeners.remove(listener)
+    }
+
+    fun dispatchDeviceProfileChanged() {
+        for (listener in mDPChangeListeners) {
+            listener.onDeviceProfileChanged(mDeviceProfile)
+        }
+    }
+
     override fun getActivityComponent(): ActivityContextComponent? {
         if (mActivityComponent == null) {
             try {

@@ -349,6 +349,10 @@ open class IconCache @Inject constructor(
         clearMemoryCache()
     }
 
+    fun interface ItemInfoUpdateReceiver {
+        fun reapplyItemInfo(info: ItemInfoWithIcon?)
+    }
+
     companion object {
         const val EMPTY_CLASS_NAME: String = BaseIconCache.EMPTY_CLASS_NAME
     }

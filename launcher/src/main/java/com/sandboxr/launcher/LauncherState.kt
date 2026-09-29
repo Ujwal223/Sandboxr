@@ -56,6 +56,8 @@ open class LauncherState(
         return HOTSEAT_ICONS or WORKSPACE_PAGE_INDICATOR
     }
 
+    open fun getVerticalProgress(launcher: Launcher): Float = 1f
+
     override fun toString(): String {
         return when (this) {
             NORMAL -> "NORMAL"
@@ -153,6 +155,7 @@ open class LauncherState(
         ) {
             override fun getVisibleElements(context: ActivityContext): Int = ALL_APPS_CONTENT
             override fun getHistoryForState(previousState: LauncherState): LauncherState = NORMAL
+            override fun getVerticalProgress(launcher: Launcher): Float = 0f
         }
 
         @JvmField

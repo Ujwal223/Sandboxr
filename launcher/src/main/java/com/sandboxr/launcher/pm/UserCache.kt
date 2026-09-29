@@ -174,5 +174,13 @@ class UserCache @Inject constructor(
                 }
             }
         }
+
+        @JvmStatic
+        fun get(context: Context): UserCache = getInstance(context)
+
+        @JvmField
+        val INSTANCE = object {
+            fun get(context: Context): UserCache = getInstance(context)
+        }
     }
 }

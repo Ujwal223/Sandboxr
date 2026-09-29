@@ -24,4 +24,19 @@
     <string name="widgets_full_sheet_work_tab">Work</string>
     <string name="msg_disabled_by_admin">Disabled by your admin</string>
     <string name="package_state_unknown">Unknown</string>
+
+    <!-- Icon Shape Titles -->
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="circle_shape_title">Circle</string>
+    <string name="square_shape_title">Square</string>
+    <string name="four_sided_cookie_shape_title">Pebble</string>
+    <string name="seven_sided_cookie_shape_title">Flower</string>
+    <string name="arch_shape_title">Arch</string>
+
+    <!-- QSB Search Strings -->
+    <string name="search_hint">Search apps, web &amp; more</string>
+    <string name="abandoned_search">Search</string>
+    <string name="gadget_setup_text">Setup</string>
+    <string name="qsb_voice_search">Voice search</string>
+    <string name="qsb_lens_search">Lens</string>
 </resources>

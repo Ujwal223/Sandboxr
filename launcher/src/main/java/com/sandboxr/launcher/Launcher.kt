@@ -46,6 +46,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
     protected var mDragLayer: DragLayer? = null
     protected var mWorkspace: Workspace<*>? = null
     protected var mHotseat: Hotseat? = null
+    protected var mHotseatPredictionController: com.sandboxr.launcher.hybridhotseat.HotseatPredictionController? = null
     protected var mAppsView: ActivityAllAppsContainerView<Launcher>? = null
     protected var mScrimView: ScrimView? = null
     protected var mOverviewPanel: View? = null
@@ -54,6 +55,9 @@ open class Launcher : StatefulActivity<LauncherState>(),
 
     protected var mRotationHelper: com.sandboxr.launcher.states.RotationHelper? = null
     protected var mDepthController: com.sandboxr.launcher.statehandlers.DepthController? = null
+    protected var mAllAppsController: com.sandboxr.launcher.allapps.AllAppsTransitionController? = null
+
+    open fun getAllAppsController(): com.sandboxr.launcher.allapps.AllAppsTransitionController? = mAllAppsController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Show live system wallpaper behind window for home screen experience
@@ -124,6 +128,7 @@ open class Launcher : StatefulActivity<LauncherState>(),
             )
         }
         mHotseat = hotseat
+        mHotseatPredictionController = com.sandboxr.launcher.hybridhotseat.HotseatPredictionController(this, hotseat)
 
         val scrimView = ScrimView(this).apply {
             id = R.id.scrim_view
@@ -151,6 +156,11 @@ open class Launcher : StatefulActivity<LauncherState>(),
         dragLayer.addView(appsView)
         root.addView(dragLayer)
 
+        val allAppsController = com.sandboxr.launcher.allapps.AllAppsTransitionController(this).apply {
+            setupViews(scrimView, appsView)
+        }
+        mAllAppsController = allAppsController
+
         setContentView(root)
     }
 
@@ -162,27 +172,29 @@ open class Launcher : StatefulActivity<LauncherState>(),
 
     fun getHotseat(): Hotseat? = mHotseat
 
-    fun getAppsView(): ActivityAllAppsContainerView<Launcher>? = mAppsView
+    fun getHotseatPredictionController(): com.sandboxr.launcher.hybridhotseat.HotseatPredictionController? =
+        mHotseatPredictionController
+
+    override fun getAppsView(): ActivityAllAppsContainerView<Launcher>? = mAppsView
 
     fun getScrimView(): ScrimView? = mScrimView
 
+    open fun onAllAppsTransition(progress: Float) {
+        // Subclasses or listeners can react to All Apps continuous transition progress
+    }
+
     override fun collectStateHandlers(out: MutableList<StateManager.StateHandler<LauncherState>>) {
         mDepthController?.let { out.add(it) }
+        mAllAppsController?.let { out.add(it) }
         out.add(object : StateManager.StateHandler<LauncherState> {
             override fun setState(state: LauncherState) {
                 when (state) {
                     LauncherState.NORMAL -> {
                         mWorkspace?.visibility = View.VISIBLE
                         mHotseat?.visibility = View.VISIBLE
-                        mAppsView?.visibility = View.GONE
-                        mScrimView?.visibility = View.GONE
                         mOverviewPanel?.visibility = View.GONE
                     }
                     LauncherState.ALL_APPS -> {
-                        mWorkspace?.visibility = View.GONE
-                        mHotseat?.visibility = View.GONE
-                        mAppsView?.visibility = View.VISIBLE
-                        mScrimView?.visibility = View.VISIBLE
                         mOverviewPanel?.visibility = View.GONE
                     }
                     LauncherState.OVERVIEW -> {
@@ -283,16 +295,19 @@ open class Launcher : StatefulActivity<LauncherState>(),
     override fun onHandleConfigurationChanged() {
         mDeviceProfile = mIdp.getDeviceProfile(this)
         mLauncherUiState.setDeviceProfile(mDeviceProfile)
+        dispatchDeviceProfileChanged()
         reapplyUi()
     }
 
     override fun onIdpChanged(modelPropertiesChanged: Boolean) {
         mDeviceProfile = mIdp.getDeviceProfile(this)
         mLauncherUiState.setDeviceProfile(mDeviceProfile)
+        dispatchDeviceProfileChanged()
         reapplyUi()
     }
 
     override fun onDestroy() {
+        mHotseatPredictionController?.destroy()
         mRotationHelper?.destroy()
         mIdp.removeOnChangeListener(this)
         super.onDestroy()
