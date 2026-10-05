@@ -65,7 +65,10 @@ data class LauncherSettings(
     // Security & Privacy (Signature GrapheneOS features)
     val hiddenPackages: Set<String> = emptySet(),
     val protectedPackages: Set<String> = emptySet(),
-    val showSandboxIndicators: Boolean = true
+    val showSandboxIndicators: Boolean = true,
+
+    // Onboarding & Guided Tour
+    val hasCompletedOnboarding: Boolean = false
 )
 
 /**
@@ -109,6 +112,7 @@ class LauncherPreferencesManager(context: Context) {
         private const val KEY_HIDDEN_PACKAGES = "pref_hidden_packages"
         private const val KEY_PROTECTED_PACKAGES = "pref_protected_packages"
         private const val KEY_SHOW_SANDBOX_INDICATORS = "pref_show_sandbox_indicators"
+        private const val KEY_HAS_COMPLETED_ONBOARDING = "pref_has_completed_onboarding"
     }
 
     private val prefs: SharedPreferences =
@@ -156,7 +160,8 @@ class LauncherPreferencesManager(context: Context) {
 
             hiddenPackages = prefs.getStringSet(KEY_HIDDEN_PACKAGES, emptySet()) ?: emptySet(),
             protectedPackages = prefs.getStringSet(KEY_PROTECTED_PACKAGES, emptySet()) ?: emptySet(),
-            showSandboxIndicators = prefs.getBoolean(KEY_SHOW_SANDBOX_INDICATORS, true)
+            showSandboxIndicators = prefs.getBoolean(KEY_SHOW_SANDBOX_INDICATORS, true),
+            hasCompletedOnboarding = prefs.getBoolean(KEY_HAS_COMPLETED_ONBOARDING, false)
         )
     }
 
@@ -189,6 +194,7 @@ class LauncherPreferencesManager(context: Context) {
             .putStringSet(KEY_HIDDEN_PACKAGES, settings.hiddenPackages)
             .putStringSet(KEY_PROTECTED_PACKAGES, settings.protectedPackages)
             .putBoolean(KEY_SHOW_SANDBOX_INDICATORS, settings.showSandboxIndicators)
+            .putBoolean(KEY_HAS_COMPLETED_ONBOARDING, settings.hasCompletedOnboarding)
             .apply()
     }
 }

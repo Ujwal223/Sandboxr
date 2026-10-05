@@ -50,6 +50,7 @@ import com.sandboxr.launcher.ui.PhosphorIconView
 fun HomeSettingsDialog(
     currentSettings: LauncherSettings,
     onSaveSettings: (LauncherSettings) -> Unit,
+    onOpenOnboarding: () -> Unit = {},
     onDismissRequest: () -> Unit
 ) {
     var settings by remember { mutableStateOf(currentSettings) }
@@ -276,6 +277,48 @@ fun HomeSettingsDialog(
                             checked = settings.showSandboxIndicators,
                             onCheckedChange = { settings = settings.copy(showSandboxIndicators = it) }
                         )
+                    }
+
+                    // SECTION 7: HELP & ONBOARDING
+                    item {
+                        SettingsSectionHeader("HELP & ONBOARDING")
+                    }
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(SandboxrTheme.colors.surface2)
+                                .clickable {
+                                    onSaveSettings(settings)
+                                    onDismissRequest()
+                                    onOpenOnboarding()
+                                }
+                                .padding(horizontal = 14.dp, vertical = 12.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = "Virtual Profiles Setup Guide",
+                                    fontFamily = SandboxrFontFamilies.Inter,
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    color = SandboxrTheme.colors.textPrimary
+                                )
+                                Text(
+                                    text = "Revisit the 6-step architecture & navigation tour",
+                                    fontFamily = SandboxrFontFamilies.Inter,
+                                    fontSize = 11.sp,
+                                    color = SandboxrTheme.colors.textSecondary
+                                )
+                            }
+                            PhosphorIconView(
+                                icon = PhosphorIcon.SHIELD,
+                                color = SandboxrTheme.colors.primaryAccent,
+                                size = 16.dp
+                            )
+                        }
                     }
                 }
 

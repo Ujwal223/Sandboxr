@@ -171,6 +171,23 @@ open class StubActivity : FragmentActivity() {
             // Attach context and transfer core activity tokens via reflection
             attachGuestActivity(activityInstance, contextImpl, targetIntent ?: intent)
 
+            // Configure system task description so the card appears with the guest label, icon, and env color in Recents
+            try {
+                val label = installedPkg.applicationInfo?.loadLabel(packageManager)?.toString() ?: targetPkg
+                val icon = try {
+                    val d = installedPkg.applicationInfo?.loadIcon(packageManager)
+                    if (d is android.graphics.drawable.BitmapDrawable) d.bitmap else null
+                } catch (_: Throwable) { null }
+                val taskDesc = android.app.ActivityManager.TaskDescription.Builder()
+                    .setLabel("$label (${env.name})")
+                    .apply {
+                        if (icon != null) setIcon(icon)
+                        if (env.color != 0L) setPrimaryColor(env.color.toInt())
+                    }
+                    .build()
+                setTaskDescription(taskDesc)
+            } catch (_: Throwable) {}
+
             // Invoke guest onCreate
             val onCreateMethod: Method = Activity::class.java.getDeclaredMethod("onCreate", Bundle::class.java)
             onCreateMethod.isAccessible = true
@@ -333,6 +350,32 @@ open class StubActivity : FragmentActivity() {
                 guest.onConfigurationChanged(newConfig)
             } catch (t: Throwable) {
                 Log.w(TAG, "Failed to dispatch onConfigurationChanged to guest activity", t)
+            }
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        guestActivity?.let { guest ->
+            try {
+                val method = Activity::class.java.getDeclaredMethod("onSaveInstanceState", Bundle::class.java)
+                method.isAccessible = true
+                method.invoke(guest, outState)
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to dispatch onSaveInstanceState to guest", e)
+            }
+        }
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        guestActivity?.let { guest ->
+            try {
+                val method = Activity::class.java.getDeclaredMethod("onRestoreInstanceState", Bundle::class.java)
+                method.isAccessible = true
+                method.invoke(guest, savedInstanceState)
+            } catch (e: Exception) {
+                Log.w(TAG, "Failed to dispatch onRestoreInstanceState to guest", e)
             }
         }
     }

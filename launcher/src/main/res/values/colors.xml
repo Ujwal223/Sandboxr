@@ -264,4 +264,22 @@
     <color name="materialColorPrimaryContainer">#1E293B</color>
     <color name="materialColorOnPrimaryContainer">#FFFFFF</color>
     <color name="home_settings_header_collapsed">#1A1A26</color>
+    <color name="customColorSurfaceEffect0">#1A1A26</color>
+    <color name="customColorSurfaceEffect1">#222233</color>
+    <color name="customColorSurfaceEffect2">#2C2C40</color>
+    <color name="customColorSurfaceEffect3">#383850</color>
+    <color name="customColorSurfaceEffect0Fallback">#1A1A26</color>
+    <color name="materialColorSecondaryContainer">#252538</color>
+    <color name="materialColorPrimaryFixed">#D3E3FD</color>
+    <color name="materialColorPrimaryFixedDim">#A8C7FA</color>
+    <color name="materialColorOnPrimaryFixed">#041E49</color>
+    <color name="materialColorSecondaryFixed">#E8DEF8</color>
+    <color name="materialColorOnSecondaryContainer">#E6E6FA</color>
+    <color name="go_overview_text_color">#3C4043</color>
+    <color name="go_overview_text_color_dark">#F8F9FA</color>
+    <color name="go_overview_button_color">#70FFFFFF</color>
+    <color name="go_overview_button_color_dark">#474747</color>
+    <color name="go_modal_dialog_background">#FFFFFF</color>
+    <color name="go_modal_dialog_background_dark">#424242</color>
+    <color name="materialColorOnSecondaryFixed">#1D192B</color>
 </resources>

@@ -1,0 +1,56 @@
+/*
+ * Copyright (C) 2025 The Android Open Source Project
+ * Copyright (C) 2026 Sandboxr Platform
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.sandboxr.launcher.concurrent.annotations
+
+import javax.inject.Qualifier
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class Background
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class BackgroundContext
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class LightweightBackground
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class LightweightBackgroundContext
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class TaskbarUi
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class ThreadPool
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class ThreadPoolContext
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class Ui
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class UiContext

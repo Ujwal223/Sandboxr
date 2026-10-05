@@ -63,6 +63,7 @@ import com.ujwal.sandboxr.ui.dialogs.CreateEnvironmentDialog
 import com.ujwal.sandboxr.ui.dialogs.GrapheneHomeMenuDialog
 import com.ujwal.sandboxr.ui.dialogs.HardwareProfileDialog
 import com.ujwal.sandboxr.ui.dialogs.ProfileSwitcherDialog
+import com.ujwal.sandboxr.ui.onboarding.GrapheneOnboardingScreen
 import com.ujwal.sandboxr.ui.settings.HomeSettingsDialog
 import com.ujwal.sandboxr.ui.viewmodel.LauncherViewModel
 import kotlinx.coroutines.delay
@@ -108,6 +109,7 @@ fun HomeScreen(
     val showHomeSettings by viewModel.showHomeSettings.collectAsState()
     val showProfileSwitcher by viewModel.showProfileSwitcher.collectAsState()
     val showHomeMenu by viewModel.showHomeMenu.collectAsState()
+    val showOnboarding by viewModel.showOnboarding.collectAsState()
     val showCreateDialog by viewModel.showCreateDialog.collectAsState()
     val cloneSheetEnv by viewModel.cloneSheetEnv.collectAsState()
     val hardwareProfileEnv by viewModel.hardwareProfileEnv.collectAsState()
@@ -433,7 +435,10 @@ fun HomeScreen(
                     showSearchBar = launcherSettings.showDrawerSearchBar,
                     columnsCount = launcherSettings.drawerColumns,
                     iconShape = launcherSettings.iconShape,
-                    isThemed = launcherSettings.themedIcons
+                    isThemed = launcherSettings.themedIcons,
+                    environments = environments,
+                    onSelectProfileFilter = { envId -> viewModel.setSelectedProfileFilter(context, envId) },
+                    onCreateNewProfile = { viewModel.openCreateDialog() }
                 )
             }
         }
@@ -515,7 +520,8 @@ fun HomeScreen(
                 onOpenWidgets = { viewModel.openWidgetsDialog() },
                 onOpenManageScreens = { viewModel.openManageScreensDialog() },
                 onOpenHomeSettings = { viewModel.openHomeSettings() },
-                onOpenProfileSwitcher = { viewModel.openProfileSwitcher() }
+                onOpenProfileSwitcher = { viewModel.openProfileSwitcher() },
+                onOpenOnboarding = { viewModel.openOnboarding() }
             )
         }
 
@@ -560,6 +566,7 @@ fun HomeScreen(
             HomeSettingsDialog(
                 currentSettings = launcherSettings,
                 onSaveSettings = { viewModel.updateLauncherSettings(context, it) },
+                onOpenOnboarding = { viewModel.openOnboarding() },
                 onDismissRequest = { viewModel.closeHomeSettings() }
             )
         }
@@ -602,6 +609,16 @@ fun HomeScreen(
                 environment = env,
                 onDismissRequest = { viewModel.closeHardwareProfile() },
                 onCopyNotice = { viewModel.showNotice(it) }
+            )
+        }
+
+        // ── GrapheneOS Virtual Profiles & Onboarding Tour ───────────────────
+        if (showOnboarding) {
+            GrapheneOnboardingScreen(
+                isDefaultLauncher = isDefaultLauncher,
+                onRequestDefaultLauncher = { viewModel.requestDefaultLauncher(context) },
+                onCompleteOnboarding = { viewModel.completeOnboarding(context) },
+                onDismiss = { viewModel.closeOnboarding() }
             )
         }
     }

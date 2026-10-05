@@ -128,6 +128,12 @@ open class BubbleTextView @JvmOverloads constructor(
 
     private var mDotInfo: DotInfo? = null
     private var mDotRenderer: DotRenderer = DotRenderer(16)
+
+    var environmentBadgeColor: Int = 0
+        set(value) {
+            field = value
+            invalidate()
+        }
     protected val mDotParams: DotRenderer.DrawParams = DotRenderer.DrawParams()
     private var mDotScaleAnim: Animator? = null
 
@@ -186,6 +192,13 @@ open class BubbleTextView @JvmOverloads constructor(
         val iconDrawable = info.newIcon(context)
         mDotParams.appColor = iconDrawable.iconColor
         mDotParams.dotColor = Color.TRANSPARENT
+        val envId = info.intent?.getStringExtra(com.sandboxr.virtual.server.am.VActivityManagerService.EXTRA_ENV_ID)
+        if (envId != null) {
+            val env = com.sandboxr.launcher.virtual.VirtualEnvironmentBridge.get(context).refreshEnvironments().firstOrNull { it.id == envId }
+            environmentBadgeColor = env?.color?.toInt() ?: 0
+        } else {
+            environmentBadgeColor = 0
+        }
         setIcon(iconDrawable)
         applyLabel(info)
     }
@@ -409,6 +422,19 @@ open class BubbleTextView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         drawDotIfNecessary(canvas)
+        drawEnvironmentBadgeIfNecessary(canvas)
+    }
+
+    protected open fun drawEnvironmentBadgeIfNecessary(canvas: Canvas) {
+        if (environmentBadgeColor != 0) {
+            val iconBounds = Rect()
+            getIconBounds(iconBounds)
+            val scrollX = scrollX
+            val scrollY = scrollY
+            canvas.translate(scrollX.toFloat(), scrollY.toFloat())
+            com.sandboxr.launcher.virtual.VirtualIconBadgeRenderer.drawBadge(canvas, iconBounds, environmentBadgeColor)
+            canvas.translate(-scrollX.toFloat(), -scrollY.toFloat())
+        }
     }
 
     protected open fun drawDotIfNecessary(canvas: Canvas) {

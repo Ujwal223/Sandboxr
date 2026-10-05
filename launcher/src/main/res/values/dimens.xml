@@ -854,4 +854,21 @@
     <dimen name="split_divider_handle_length">72dp</dimen>
     <dimen name="split_divider_handle_thickness">4dp</dimen>
     <dimen name="split_divider_handle_radius">2dp</dimen>
+    <dimen name="desktop_windowing_freeform_rounded_corner_radius">16dp</dimen>
+    <dimen name="floating_dismiss_background_size">80dp</dimen>
+    <dimen name="floating_dismiss_icon_size">24dp</dimen>
+    <dimen name="go_button_corner_radius">8dp</dimen>
+    <dimen name="modal_dialog_corner_radius">28dp</dimen>
+    <dimen name="go_overview_button_width">60dp</dimen>
+    <dimen name="go_overview_button_height">60dp</dimen>
+    <dimen name="go_overview_button_container_width">80dp</dimen>
+    <dimen name="go_overview_button_container_margin">16dp</dimen>
+    <dimen name="go_overview_button_caption_margin">8dp</dimen>
+    <dimen name="modal_dialog_width">288dp</dimen>
+    <dimen name="modal_dialog_padding">24dp</dimen>
+    <dimen name="modal_dialog_padding_bottom">8dp</dimen>
+    <dimen name="modal_dialog_vertical_spacer">12dp</dimen>
+    <dimen name="modal_dialog_text_height">216dp</dimen>
+    <dimen name="tooltip_corner_radius">8dp</dimen>
+    <dimen name="tooltip_top_margin">3dp</dimen>
 </resources>

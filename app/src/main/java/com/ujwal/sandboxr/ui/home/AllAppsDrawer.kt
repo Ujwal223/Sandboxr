@@ -106,6 +106,9 @@ fun AllAppsDrawer(
     columnsCount: Int = 5,
     iconShape: String = "Circle",
     isThemed: Boolean = false,
+    environments: List<EnvironmentEntity> = emptyList(),
+    onSelectProfileFilter: (String?) -> Unit = {},
+    onCreateNewProfile: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -279,6 +282,16 @@ fun AllAppsDrawer(
                 selectedFilterEnvId = selectedFilterEnvId,
                 appCount = apps.size,
                 onClick = onOpenProfileSwitcher
+            )
+        }
+
+        // ── GrapheneOS / AOSP Profile Tabs Bar ───────────────────────────────
+        if (environments.isNotEmpty() && searchQuery.isEmpty()) {
+            GrapheneProfileTabBar(
+                environments = environments,
+                selectedFilterEnvId = selectedFilterEnvId,
+                onSelectProfile = onSelectProfileFilter,
+                onCreateNewProfile = onCreateNewProfile
             )
         }
 
@@ -545,3 +558,142 @@ fun AllAppsDrawer(
         )
     }
 }
+
+/**
+ * Native GrapheneOS-style Profile Tab Bar for All Apps Drawer.
+ * Renders tabs for Personal, Work, and each virtual profile with active indicator lines,
+ * plus a 1-tap '+ New Profile' creation shortcut.
+ */
+@Composable
+fun GrapheneProfileTabBar(
+    environments: List<EnvironmentEntity>,
+    selectedFilterEnvId: String?,
+    onSelectProfile: (String?) -> Unit,
+    onCreateNewProfile: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    androidx.compose.foundation.lazy.LazyRow(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 14.dp, vertical = 2.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        // Tab 1: All Apps (unified)
+        item(key = "tab_all") {
+            ProfileTabItem(
+                title = "All",
+                isSelected = selectedFilterEnvId == null,
+                color = SandboxrTheme.colors.primaryAccent,
+                icon = PhosphorIcon.GRID,
+                onClick = { onSelectProfile(null) }
+            )
+        }
+
+        // Tabs 2..N: Personal, Work, Virtual Profiles
+        items(
+            items = environments,
+            key = { "tab_${it.id}" }
+        ) { env ->
+            val isSelected = selectedFilterEnvId == env.id
+            val isWork = env.id == EnvironmentEntity.WORK_PROFILE_ENV_ID
+            val isPersonal = (env.isSystem || env.id == EnvironmentEntity.SYSTEM_ENV_ID) && !isWork
+            val title = when {
+                isWork -> "Work"
+                isPersonal -> "Personal"
+                else -> env.displayName
+            }
+            val color = when {
+                isWork -> Color(0xFF2E7D32)
+                isPersonal -> SandboxrTheme.colors.primaryAccent
+                else -> Color(env.colorTag)
+            }
+            val icon = when {
+                isWork -> PhosphorIcon.BOX
+                isPersonal -> PhosphorIcon.USER
+                else -> PhosphorIcon.LOCK
+            }
+
+            ProfileTabItem(
+                title = title,
+                isSelected = isSelected,
+                color = color,
+                icon = icon,
+                onClick = { onSelectProfile(env.id) }
+            )
+        }
+
+        // Action Tab: + New Sandbox Profile
+        item(key = "tab_add_profile") {
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(SandboxrTheme.colors.surface2.copy(alpha = 0.7f))
+                    .border(1.dp, SandboxrTheme.colors.glassBorder, RoundedCornerShape(16.dp))
+                    .clickable(onClick = onCreateNewProfile)
+                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                PhosphorIconView(
+                    icon = PhosphorIcon.PLUS,
+                    color = SandboxrTheme.colors.primaryAccent,
+                    size = 14.dp
+                )
+                Text(
+                    text = "New Profile",
+                    fontFamily = SandboxrFontFamilies.Inter,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = SandboxrTheme.colors.primaryAccent
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ProfileTabItem(
+    title: String,
+    isSelected: Boolean,
+    color: Color,
+    icon: PhosphorIcon,
+    onClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(onClick = onClick)
+            .padding(horizontal = 10.dp, vertical = 4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(3.dp)
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(8.dp)
+                    .clip(CircleShape)
+                    .background(if (isSelected) color else color.copy(alpha = 0.45f))
+            )
+            Text(
+                text = title,
+                fontFamily = SandboxrFontFamilies.Inter,
+                fontSize = 13.sp,
+                fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                color = if (isSelected) SandboxrTheme.colors.textPrimary else SandboxrTheme.colors.textSecondary
+            )
+        }
+        // Active indicator line matching GrapheneOS / Launcher3
+        Box(
+            modifier = Modifier
+                .height(2.5.dp)
+                .width(if (isSelected) 26.dp else 0.dp)
+                .clip(RoundedCornerShape(1.5.dp))
+                .background(if (isSelected) color else Color.Transparent)
+        )
+    }
+}
+

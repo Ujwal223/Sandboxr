@@ -161,7 +161,10 @@ class VActivityManagerService private constructor(private val hostContext: Conte
             putExtra(EXTRA_ENV_ID, envId)
             putExtra(EXTRA_TARGET_PKG, activityInfo.packageName)
             putExtra(EXTRA_TARGET_ACTIVITY, activityInfo.name)
-            flags = originalIntent.flags or Intent.FLAG_ACTIVITY_NEW_TASK
+            flags = originalIntent.flags or
+                    Intent.FLAG_ACTIVITY_NEW_TASK or
+                    Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
+                    Intent.FLAG_ACTIVITY_MULTIPLE_TASK
         }
         com.sandboxr.virtual.compat.SamsungCompat.applyMultiWindowIntentFlags(stubIntent)
         return stubIntent

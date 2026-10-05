@@ -40,7 +40,8 @@ fun GrapheneHomeMenuDialog(
     onOpenWidgets: () -> Unit,
     onOpenManageScreens: () -> Unit,
     onOpenHomeSettings: () -> Unit,
-    onOpenProfileSwitcher: () -> Unit
+    onOpenProfileSwitcher: () -> Unit,
+    onOpenOnboarding: () -> Unit = {}
 ) {
     Dialog(onDismissRequest = onDismissRequest) {
         Box(
@@ -103,10 +104,21 @@ fun GrapheneHomeMenuDialog(
                 HomeMenuItem(
                     title = "Sandbox Profiles",
                     subtitle = "Switch or create container environments",
-                    icon = PhosphorIcon.SHIELD,
+                    icon = PhosphorIcon.BOX,
                     onClick = {
                         onDismissRequest()
                         onOpenProfileSwitcher()
+                    }
+                )
+
+                // Item 6: Virtual Profiles Guide
+                HomeMenuItem(
+                    title = "Virtual Profiles Guide",
+                    subtitle = "6-step onboarding & navigation tour",
+                    icon = PhosphorIcon.SHIELD,
+                    onClick = {
+                        onDismissRequest()
+                        onOpenOnboarding()
                     }
                 )
             }

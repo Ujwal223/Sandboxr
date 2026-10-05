@@ -28,6 +28,7 @@ import com.sandboxr.launcher.theme.SandboxrColors
 import com.sandboxr.launcher.ui.AppItem
 import com.sandboxr.launcher.ui.EnvironmentIconType
 import com.sandboxr.launcher.ui.NavTab
+import com.ujwal.sandboxr.ui.model.VirtualAppCache
 import com.ujwal.sandboxr.ui.model.toImageBitmap
 import com.ujwal.sandboxr.ui.settings.LauncherPreferencesManager
 import com.ujwal.sandboxr.ui.settings.LauncherSettings
@@ -36,6 +37,8 @@ import com.sandboxr.virtual.model.SpoofProfile
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -137,6 +140,9 @@ class LauncherViewModel(
 
     private val _showHomeMenu = MutableStateFlow(false)
     val showHomeMenu: StateFlow<Boolean> = _showHomeMenu.asStateFlow()
+
+    private val _showOnboarding = MutableStateFlow(false)
+    val showOnboarding: StateFlow<Boolean> = _showOnboarding.asStateFlow()
 
     val filteredApps: StateFlow<List<AppItem>> = combine(
         _installedApps,
@@ -411,15 +417,19 @@ class LauncherViewModel(
                 val combined = mutableListOf<AppItem>()
                 val envList = environments.value
                 val loader = appLoader ?: LawnchairAppLoader(context).also { appLoader = it }
-                val systemApps = withContext(Dispatchers.IO) { loader.loadAllSystemApps() }
-                combined.addAll(systemApps)
 
-                for (env in envList) {
-                    if (!env.isSystem) {
-                        val vApps = withContext(Dispatchers.IO) { queryApps(context, env) }
-                        combined.addAll(vApps)
-                    }
+                // Load system apps and all virtual environments concurrently in parallel
+                val systemDeferred = async(Dispatchers.IO) { loader.loadAllSystemApps() }
+                val virtualDeferreds = envList.filter { !it.isSystem }.map { env ->
+                    async(Dispatchers.IO) { queryApps(context, env) }
                 }
+
+                combined.addAll(systemDeferred.await())
+                val virtualResults = virtualDeferreds.awaitAll()
+                for (vApps in virtualResults) {
+                    combined.addAll(vApps)
+                }
+
                 combined.sortBy { it.label.lowercase() }
                 _installedApps.value = combined
                 updateDefaultHomeAndDock("merged_all", combined)
@@ -522,7 +532,25 @@ class LauncherViewModel(
     }
 
     fun loadLauncherSettings(context: Context) {
-        _launcherSettings.value = LauncherPreferencesManager(context).loadSettings()
+        val loaded = LauncherPreferencesManager(context).loadSettings()
+        _launcherSettings.value = loaded
+        if (!loaded.hasCompletedOnboarding) {
+            _showOnboarding.value = true
+        }
+    }
+
+    fun openOnboarding() {
+        _showOnboarding.value = true
+    }
+
+    fun closeOnboarding() {
+        _showOnboarding.value = false
+    }
+
+    fun completeOnboarding(context: Context) {
+        val updated = _launcherSettings.value.copy(hasCompletedOnboarding = true)
+        updateLauncherSettings(context, updated)
+        _showOnboarding.value = false
     }
 
     fun openWallpaperPicker(context: Context) {
@@ -782,50 +810,18 @@ class LauncherViewModel(
             val vc = try { VirtualCore.get() } catch (_: Exception) { null }
             if (vc != null) {
                 val installedPackages = vc.packageManagerService.getInstalledPackages(0, environment.id)
-                val pm = context.packageManager
 
                 for (pkg in installedPackages) {
                     val pkgName = pkg.packageName
                     val appInfo = pkg.applicationInfo
 
-                    // Resolve human-readable label:
-                    // Priority: APK archive label → host PM label → package name suffix
-                    val label: String = try {
-                        val apkSourceDir = appInfo?.sourceDir
-                        if (apkSourceDir != null && File(apkSourceDir).exists()) {
-                            val archiveInfo = pm.getPackageArchiveInfo(apkSourceDir, 0)
-                            archiveInfo?.applicationInfo?.apply {
-                                sourceDir = apkSourceDir
-                                publicSourceDir = apkSourceDir
-                            }?.loadLabel(pm)?.toString()
-                                ?: appInfo.loadLabel(pm).toString()
-                        } else {
-                            try {
-                                pm.getApplicationInfo(pkgName, 0).loadLabel(pm).toString()
-                            } catch (_: Exception) {
-                                pkgName.substringAfterLast('.')
-                            }
-                        }
-                    } catch (_: Exception) {
-                        pkgName.substringAfterLast('.')
-                    }
-
-                    // Resolve icon:
-                    val icon = try {
-                        val apkSourceDir = appInfo?.sourceDir
-                        if (apkSourceDir != null && File(apkSourceDir).exists()) {
-                            val archiveInfo = pm.getPackageArchiveInfo(apkSourceDir, 0)
-                            val ai = archiveInfo?.applicationInfo?.apply {
-                                sourceDir = apkSourceDir
-                                publicSourceDir = apkSourceDir
-                            }
-                            ai?.loadIcon(pm)?.toImageBitmap()
-                        } else null
-                    } catch (_: Exception) {
-                        try {
-                            pm.getApplicationIcon(pkgName).toImageBitmap()
-                        } catch (_: Exception) { null }
-                    }
+                    // Fast, zero-repetition retrieval from VirtualAppCache (RAM LRU)
+                    val (label, icon) = VirtualAppCache.resolveOrLoad(
+                        context = context,
+                        envId = environment.id,
+                        packageName = pkgName,
+                        apkSourceDir = appInfo?.sourceDir
+                    )
 
                     result.add(
                         AppItem(
@@ -1005,6 +1001,7 @@ class LauncherViewModel(
      */
     fun deleteEnvironment(context: Context, envId: String) {
         viewModelScope.launch {
+            VirtualAppCache.invalidateEnv(envId)
             val deleted = environmentRepository.deleteEnvironment(envId)
             if (deleted) {
                 closeActionSheet()
@@ -1127,6 +1124,7 @@ class LauncherViewModel(
      */
     fun uninstallVirtualApp(context: Context, packageName: String, envId: String) {
         viewModelScope.launch {
+            VirtualAppCache.invalidate(envId, packageName)
             withContext(Dispatchers.IO) {
                 try {
                     val vc = VirtualCore.get()
