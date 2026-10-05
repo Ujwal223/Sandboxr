@@ -21,6 +21,7 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.view.View
 import com.sandboxr.launcher.DropTarget.DragObject
 import com.sandboxr.launcher.dragndrop.DragOptions
 import com.sandboxr.launcher.model.data.ItemInfo
@@ -96,6 +97,16 @@ open class DeleteDropTarget @JvmOverloads constructor(
         val item = dragObject.dragInfo ?: return
         if (canRemove(item)) {
             mDropTargetHandler?.onDeleteComplete(item, dragObject.dragView)
+        }
+    }
+
+    override fun getSupportedAccessibilityAction(info: ItemInfo?, view: View?): Int {
+        return if (canRemove(info)) R.id.action_remove else -1
+    }
+
+    override fun onAccessibilityDrop(view: View?, info: ItemInfo?, action: Int) {
+        if (info != null && canRemove(info)) {
+            mDropTargetHandler?.onDeleteComplete(info, view)
         }
     }
 }

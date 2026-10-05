@@ -26,6 +26,8 @@ import android.view.animation.Interpolator;
 public class Interpolators {
     public static final Interpolator LINEAR = com.sandboxr.launcher.anim.Interpolators.LINEAR;
     public static final Interpolator ACCELERATE = com.sandboxr.launcher.anim.Interpolators.ACCELERATE;
+    public static final Interpolator ACCELERATE_0_75 = com.sandboxr.launcher.anim.Interpolators.ACCELERATE_0_75;
+    public static final Interpolator ACCELERATE_1_5 = com.sandboxr.launcher.anim.Interpolators.ACCELERATE_1_5;
     public static final Interpolator ACCELERATE_2 = com.sandboxr.launcher.anim.Interpolators.ACCELERATE_2;
     public static final Interpolator DECELERATE = com.sandboxr.launcher.anim.Interpolators.DECELERATE;
     public static final Interpolator DECELERATE_1_5 = com.sandboxr.launcher.anim.Interpolators.DECELERATE_1_5;
@@ -35,16 +37,24 @@ public class Interpolators {
     public static final Interpolator FAST_OUT_SLOW_IN = com.sandboxr.launcher.anim.Interpolators.FAST_OUT_SLOW_IN;
     public static final Interpolator SLOW_IN_FAST_OUT = com.sandboxr.launcher.anim.Interpolators.SLOW_IN_FAST_OUT;
     public static final Interpolator AGGRESSIVE_EASE = com.sandboxr.launcher.anim.Interpolators.AGGRESSIVE_EASE;
+    public static final Interpolator DECELERATED_EASE = com.sandboxr.launcher.anim.Interpolators.DECELERATED_EASE;
     public static final Interpolator EXAGGERATED_EASE = com.sandboxr.launcher.anim.Interpolators.EXAGGERATED_EASE;
     public static final Interpolator EMPHASIZED = com.sandboxr.launcher.anim.Interpolators.EMPHASIZED;
     public static final Interpolator EMPHASIZED_DECELERATE = com.sandboxr.launcher.anim.Interpolators.EMPHASIZED_DECELERATE;
     public static final Interpolator EMPHASIZED_ACCELERATE = com.sandboxr.launcher.anim.Interpolators.EMPHASIZED_ACCELERATE;
     public static final Interpolator ZOOM_OUT = com.sandboxr.launcher.anim.Interpolators.ZOOM_OUT;
     public static final Interpolator OVERSHOOT_1_2 = com.sandboxr.launcher.anim.Interpolators.OVERSHOOT_1_2;
+    public static final Interpolator OVERSHOOT_1_7 = com.sandboxr.launcher.anim.Interpolators.OVERSHOOT_1_7;
     public static final Interpolator FINAL_FRAME = com.sandboxr.launcher.anim.Interpolators.FINAL_FRAME;
+    public static final Interpolator INSTANT = com.sandboxr.launcher.anim.Interpolators.INSTANT;
+    public static final Interpolator SCROLL = com.sandboxr.launcher.anim.Interpolators.SCROLL;
 
     public static TimeInterpolator clampToProgress(TimeInterpolator interpolator, float lowerBound, float upperBound) {
         return com.sandboxr.launcher.anim.Interpolators.clampToProgress(interpolator, lowerBound, upperBound);
+    }
+
+    public static float mapToProgress(float progress, float lowerBound, float upperBound) {
+        return com.sandboxr.launcher.anim.Interpolators.mapToProgress(progress, lowerBound, upperBound);
     }
 
     public static Interpolator scrollInterpolatorForVelocity(float velocityPxPerMs) {

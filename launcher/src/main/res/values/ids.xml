@@ -58,4 +58,19 @@
     <item type="id" name="action_deep_shortcut" />
     <item type="id" name="deep_shortcuts_container" />
     <item type="id" name="system_shortcuts_container" />
+
+    <!-- Accessibility Actions -->
+    <item type="id" name="action_remove" />
+    <item type="id" name="action_uninstall" />
+    <item type="id" name="action_reconfigure" />
+    <item type="id" name="action_add_to_workspace" />
+    <item type="id" name="action_move" />
+    <item type="id" name="action_move_to_workspace" />
+    <item type="id" name="action_move_screen_backwards" />
+    <item type="id" name="action_move_screen_forwards" />
+    <item type="id" name="action_resize" />
+    <item type="id" name="action_deep_shortcuts" />
+    <item type="id" name="action_dismiss_prediction" />
+    <item type="id" name="action_pin_prediction" />
+    <item type="id" name="action_close" />
 </resources>

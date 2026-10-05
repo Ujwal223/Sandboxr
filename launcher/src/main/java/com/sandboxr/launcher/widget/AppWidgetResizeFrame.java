@@ -306,4 +306,8 @@ public class AppWidgetResizeFrame extends AbstractFloatingView {
     public int getSpanY() {
         return mSpanY;
     }
+
+    public View getViewForAccessibility() {
+        return mWidgetView;
+    }
 }

@@ -1029,6 +1029,45 @@ open class CellLayout @JvmOverloads constructor(
         return CellLayoutLayoutParams(p)
     }
 
+    protected var mDragAndDropAccessibilityDelegate: com.sandboxr.launcher.accessibility.DragAndDropAccessibilityDelegate? = null
+    open var isDropPending: Boolean = false
+
+    open fun setDragAndDropAccessibilityDelegate(delegate: com.sandboxr.launcher.accessibility.DragAndDropAccessibilityDelegate?) {
+        mDragAndDropAccessibilityDelegate = delegate
+        androidx.core.view.ViewCompat.setAccessibilityDelegate(this, delegate)
+    }
+
+    open fun getItemMoveDescription(cellX: Int, cellY: Int): String {
+        return if (containerType == CONTAINER_TYPE_HOTSEAT) {
+            context.getString(R.string.move_to_hotseat_position, (maxOf(cellX, cellY) + 1).toString())
+        } else {
+            val row = cellY + 1
+            val col = cellX + 1
+            val pageDesc = getContainerPageDescription()
+            context.getString(R.string.move_to_empty_cell_description, row.toString(), col.toString(), pageDesc)
+        }
+    }
+
+    open fun getContainerPageDescription(): String {
+        val container = mContainer
+        return if (container != null) {
+            val pageIndex = container.getCellLayoutIndex(this)
+            container.getPageDescription(pageIndex) ?: ""
+        } else {
+            ""
+        }
+    }
+
+    open fun getDragAndDropAccessibilityDelegate(): com.sandboxr.launcher.accessibility.DragAndDropAccessibilityDelegate {
+        if (mDragAndDropAccessibilityDelegate == null) {
+            mDragAndDropAccessibilityDelegate = object : com.sandboxr.launcher.accessibility.DragAndDropAccessibilityDelegate(this) {
+                override fun intersectsValidDropTarget(id: Int): Int = id
+                override fun getLocationDescriptionForIconDrop(id: Int): String = "Cell $id"
+            }
+        }
+        return mDragAndDropAccessibilityDelegate!!
+    }
+
     companion object {
         const val CONTAINER_TYPE_WORKSPACE = 0
         const val CONTAINER_TYPE_HOTSEAT = 1

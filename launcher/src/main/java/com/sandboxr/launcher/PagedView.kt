@@ -106,6 +106,8 @@ open class PagedView<T : View> @JvmOverloads constructor(
 
     open fun getNextPage(): Int = if (mNextPage != INVALID_PAGE) mNextPage else mCurrentPage
 
+    open fun isPageInTransition(): Boolean = !mScroller.isFinished || mNextPage != INVALID_PAGE
+
     open fun getPageSpacing(): Int = mPageSpacing
 
     open fun setPageSpacing(spacing: Int) {

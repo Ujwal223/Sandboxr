@@ -7,10 +7,13 @@
     <dimen name="drop_target_button_drawable_size">24dp</dimen>
     <dimen name="drop_target_button_drawable_padding">8dp</dimen>
     <dimen name="drag_distanceThreshold">10dp</dimen>
+    <dimen name="dynamic_grid_edge_margin">10.77dp</dimen>
+    <dimen name="bg_round_rect_radius">8dp</dimen>
 
     <!-- Dialogs and Corners -->
     <dimen name="default_dialog_corner_radius">26dp</dimen>
     <dimen name="dialogCornerRadius">@dimen/default_dialog_corner_radius</dimen>
+    <dimen name="rounded_button_radius">200dp</dimen>
 
     <!-- Popup and Shortcuts -->
     <dimen name="deep_shortcuts_elevation">2dp</dimen>
@@ -49,4 +52,76 @@
     <dimen name="popup_item_margin">2dp</dimen>
     <dimen name="widget_cell_add_button_drawable_width">19dp</dimen>
     <dimen name="options_menu_icon_size">24dp</dimen>
+    <dimen name="base_swift_detector_fling_release_velocity">1dp</dimen>
+
+    <!-- Keyboard & Focus navigation -->
+    <dimen name="focus_outline_radius">16dp</dimen>
+    <dimen name="focus_inner_outline_radius">14dp</dimen>
+    <dimen name="focus_outline_stroke_width">2dp</dimen>
+    <dimen name="focus_rect_widget_outsets">-6dp</dimen>
+    <dimen name="grid_visualization_rounding_radius">16dp</dimen>
+    <dimen name="keyboard_drag_stroke_width">4dp</dimen>
+    <dimen name="default_ime_height">300dp</dimen>
+
+    <!-- Recents and TaskView -->
+    <dimen name="task_dismiss_button_padding">4dp</dimen>
+    <dimen name="task_dismiss_button_margin">8dp</dimen>
+    <dimen name="task_dismiss_button_width">32dp</dimen>
+    <dimen name="task_thumbnail_splash_icon_size">48dp</dimen>
+    <dimen name="digital_wellbeing_toast_height">40dp</dimen>
+    <dimen name="task_corner_radius">24dp</dimen>
+    <dimen name="recents_page_spacing">16dp</dimen>
+    <dimen name="recents_clear_all_side_padding">32dp</dimen>
+
+    <!-- Taskbar and Navigation -->
+    <dimen name="taskbar_size">64dp</dimen>
+    <dimen name="taskbar_nav_buttons_size">44dp</dimen>
+    <dimen name="taskbar_icon_size">44dp</dimen>
+    <dimen name="taskbar_icon_spacing">12dp</dimen>
+    <dimen name="taskbar_icon_min_touch_size">48dp</dimen>
+    <dimen name="taskbar_icon_drag_icon_size">54dp</dimen>
+    <dimen name="taskbar_stashed_size">24dp</dimen>
+    <dimen name="taskbar_stashed_handle_width">220dp</dimen>
+    <dimen name="taskbar_stashed_handle_height">4dp</dimen>
+    <dimen name="taskbar_contextual_button_padding">16dp</dimen>
+    <dimen name="taskbar_contextual_padding_top">8dp</dimen>
+    <dimen name="taskbar_contextual_buttons_size">35dp</dimen>
+    <dimen name="transient_taskbar_bottom_margin">8dp</dimen>
+    <dimen name="transient_taskbar_padding">12dp</dimen>
+    <dimen name="transient_taskbar_stashed_height">24dp</dimen>
+    <dimen name="transient_taskbar_stash_spring_velocity_dp_per_s">1000dp</dimen>
+
+    <!-- Bubblebar -->
+    <dimen name="bubblebar_size">72dp</dimen>
+    <dimen name="bubblebar_size_with_pointer">80dp</dimen>
+    <dimen name="bubblebar_pointer_visible_size">9dp</dimen>
+    <dimen name="bubblebar_elevation">1dp</dimen>
+    <dimen name="bubblebar_icon_size">36dp</dimen>
+    <dimen name="bubblebar_icon_spacing">6dp</dimen>
+    <dimen name="bubblebar_badge_size">24dp</dimen>
+    <dimen name="bubblebar_stashed_handle_width">55dp</dimen>
+    <dimen name="bubblebar_stashed_handle_height">4dp</dimen>
+    <dimen name="bubblebar_stashed_size">24dp</dimen>
+
+    <!-- Desktop Mode & Split Screen -->
+    <dimen name="desktop_vertical_padding_between_tasks">24dp</dimen>
+    <dimen name="desktop_horizontal_padding_between_tasks">24dp</dimen>
+    <dimen name="desktop_top_bottom_margin_one_row">72dp</dimen>
+    <dimen name="desktop_left_right_margin_one_row">72dp</dimen>
+    <dimen name="desktop_top_margin_multi_rows">72dp</dimen>
+    <dimen name="desktop_bottom_margin_multi_rows">24dp</dimen>
+    <dimen name="desktop_left_right_margin_multi_rows">24dp</dimen>
+    <dimen name="desktop_min_task_width">72dp</dimen>
+    <integer name="desktop_layout_max_rows">5</integer>
+    <dimen name="desktop_windowing_freeform_task_rounded_corner_radius">16dp</dimen>
+    <dimen name="split_instructions_radius">22dp</dimen>
+    <dimen name="split_instructions_elevation">1dp</dimen>
+    <dimen name="split_instructions_horizontal_padding">24dp</dimen>
+    <dimen name="split_instructions_vertical_padding">12dp</dimen>
+    <dimen name="split_instructions_drawable_padding">10dp</dimen>
+    <dimen name="split_instructions_start_margin_cancel">8dp</dimen>
+    <dimen name="split_divider_bar_thickness">10dp</dimen>
+    <dimen name="split_divider_handle_length">72dp</dimen>
+    <dimen name="split_divider_handle_thickness">4dp</dimen>
+    <dimen name="split_divider_handle_radius">2dp</dimen>
 </resources>

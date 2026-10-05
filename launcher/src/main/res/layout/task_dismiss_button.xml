@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2026 The Android Open Source Project
+  ~ Copyright (C) 2026 Sandboxr Platform
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_dismiss_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end|top"
+    android:padding="@dimen/task_dismiss_button_padding"
+    android:layout_margin="@dimen/task_dismiss_button_margin"
+    android:alpha="0">
+    <ImageButton
+        android:id="@+id/dismiss_button_icon"
+        android:layout_width="@dimen/task_dismiss_button_width"
+        android:layout_height="@dimen/task_dismiss_button_width"
+        android:src="@drawable/ic_circle_dismiss"
+        android:background="@drawable/circle_dismiss_background"
+        android:backgroundTint="@color/materialColorPrimary"
+        android:duplicateParentState="true"
+        android:clickable="false"
+        android:contentDescription="@string/recent_task_option_remove_task" />
+</FrameLayout>

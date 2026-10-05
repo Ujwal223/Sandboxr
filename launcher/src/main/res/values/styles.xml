@@ -7,6 +7,8 @@
         <item name="popupShadeFirst">@color/popup_shade_first_dark</item>
         <item name="popupShadeSecond">@color/popup_shade_second_dark</item>
         <item name="popupShadeThird">@color/popup_shade_third_dark</item>
+        <item name="folderBackgroundColor">#2A2A2A</item>
+        <item name="folderTextColor">#FFFFFF</item>
     </style>
 
     <style name="LauncherTheme" parent="AppTheme" />
@@ -15,7 +17,21 @@
 
     <style name="AddItemActivityTheme" parent="Theme.AppCompat.DayNight.Dialog" />
 
-    <style name="HomeSettings.Theme" parent="Theme.AppCompat.DayNight" />
+    <style name="HomeSettings.Theme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="HomeSettings.CollapsingToolbar" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="HomeSettings.CollapsedToolbarTitle" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HomeSettings.ExpandedToolbarTitle" parent="HomeSettings.CollapsedToolbarTitle">
+        <item name="android:textSize">32sp</item>
+    </style>
 
     <style name="OrganizerTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
 

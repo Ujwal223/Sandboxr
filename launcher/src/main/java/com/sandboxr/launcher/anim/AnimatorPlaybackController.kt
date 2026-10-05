@@ -23,31 +23,36 @@ import android.animation.AnimatorSet
 import android.animation.TimeInterpolator
 import android.animation.ValueAnimator
 import android.content.Context
+import com.android.launcher3.Utilities
 import com.sandboxr.launcher.util.window.RefreshRateTracker
 import java.util.ArrayList
 import java.util.Collections
 import kotlin.math.abs
 import kotlin.math.max
+import kotlin.math.min
 
 /**
  * Controls the playback fraction, scrubbing, velocity launch, and spring dynamics of an [AnimatorSet].
+ * Supports mid-flight interruption with smooth physics-based continuation.
  */
-open class AnimatorPlaybackController constructor(
+open class AnimatorPlaybackController(
     val target: AnimatorSet,
     val duration: Long,
     childAnims: ArrayList<Holder>
 ) : ValueAnimator.AnimatorUpdateListener {
 
-    private val animationPlayer: ValueAnimator = ValueAnimator.ofFloat(0f, 1f)
+    val animationPlayer: ValueAnimator = ValueAnimator.ofFloat(0f, 1f)
     private val childAnimations: Array<Holder> = childAnims.toTypedArray()
 
     var currentFraction: Float = 0f
         protected set
 
     private var targetCancelled: Boolean = false
+    private var endAction: Runnable? = null
 
     init {
         animationPlayer.interpolator = Interpolators.LINEAR
+        animationPlayer.addListener(OnAnimationEndDispatcher())
         animationPlayer.addUpdateListener(this)
 
         target.addListener(object : AnimatorListenerAdapter() {
@@ -71,15 +76,21 @@ open class AnimatorPlaybackController constructor(
     val progressFraction: Float
         get() = currentFraction
 
+    open fun getInterpolatedProgress(): Float = interpolator.getInterpolation(currentFraction)
+
+    open fun setEndAction(runnable: Runnable?) {
+        endAction = runnable
+    }
+
     open fun start() {
         animationPlayer.setFloatValues(currentFraction, 1f)
-        animationPlayer.duration = (duration * (1f - currentFraction)).toLong().coerceAtLeast(0)
+        animationPlayer.duration = clampDuration(1f - currentFraction)
         animationPlayer.start()
     }
 
     open fun reverse() {
         animationPlayer.setFloatValues(currentFraction, 0f)
-        animationPlayer.duration = (duration * currentFraction).toLong().coerceAtLeast(0)
+        animationPlayer.duration = clampDuration(currentFraction)
         animationPlayer.start()
     }
 
@@ -94,7 +105,7 @@ open class AnimatorPlaybackController constructor(
         val velocityProgressPerMs = velocityPxPerMs * distanceInverse
         val singleFrameMs = RefreshRateTracker.getSingleFrameMs(context).toFloat()
         val oneFrameProgress = velocityProgressPerMs * singleFrameMs
-        val nextFrameProgress = (progressFraction + oneFrameProgress).coerceIn(0f, 1f)
+        val nextFrameProgress = Utilities.boundToRange(progressFraction + oneFrameProgress, 0f, 1f)
 
         val springFlag = if (goingToEnd) SpringProperty.FLAG_CAN_SPRING_ON_END else SpringProperty.FLAG_CAN_SPRING_ON_START
         var springDuration = animationDuration
@@ -110,9 +121,22 @@ open class AnimatorPlaybackController constructor(
                     .setStiffness(h.springProperty.stiffness)
                     .computeParams()
 
-                val expectedDuration = s.getDuration()
-                springDuration = max(expectedDuration, springDuration)
+                val expectedDurationL = s.getDuration()
+                springDuration = max(expectedDurationL, springDuration)
+                val expectedDuration = expectedDurationL.toFloat()
 
+                h.mapper = ProgressMapper { _, _ ->
+                    if (expectedDuration <= 0f || abs(oneFrameProgress) >= 1f) {
+                        1f
+                    } else {
+                        Utilities.mapToRange(
+                            animationPlayer.currentPlayTime.toFloat() / expectedDuration,
+                            0f, 1f,
+                            abs(oneFrameProgress), 1f,
+                            Interpolators.LINEAR
+                        )
+                    }
+                }
                 h.anim.interpolator = TimeInterpolator { f -> s.getInterpolatedValue(f) }
             }
         }
@@ -133,6 +157,12 @@ open class AnimatorPlaybackController constructor(
         animationPlayer.start()
     }
 
+    open fun forceFinishIfCloseToEnd() {
+        if (animationPlayer.isRunning && animationPlayer.animatedFraction > ANIMATION_COMPLETE_THRESHOLD) {
+            animationPlayer.end()
+        }
+    }
+
     open fun pause() {
         for (h in childAnimations) {
             h.reset()
@@ -141,42 +171,98 @@ open class AnimatorPlaybackController constructor(
     }
 
     open fun setPlayFraction(fraction: Float) {
-        currentFraction = fraction.coerceIn(0f, 1f)
+        currentFraction = fraction
+        if (targetCancelled) {
+            return
+        }
+        val progress = Utilities.boundToRange(fraction, 0f, 1f)
         for (h in childAnimations) {
-            h.setProgress(currentFraction)
+            h.setProgress(progress)
         }
     }
 
     override fun onAnimationUpdate(animation: ValueAnimator) {
-        setPlayFraction(animation.animatedValue as Float)
+        setPlayFraction((animation.animatedValue as Number).toFloat())
     }
 
-    fun dispatchOnStart() {
-        callListenerCommandRecursively(target) { listener -> listener.onAnimationStart(target) }
+    protected open fun clampDuration(fraction: Float): Long {
+        val playPos = duration.toFloat() * fraction
+        return if (playPos <= 0f) {
+            0L
+        } else {
+            min(playPos.toLong(), duration)
+        }
     }
 
-    fun dispatchOnCancel() {
-        callListenerCommandRecursively(target) { listener -> listener.onAnimationCancel(target) }
+    open fun dispatchOnStart(): AnimatorPlaybackController {
+        callListenerCommandRecursively(target) { listener, anim -> listener.onAnimationStart(anim) }
+        return this
     }
 
-    fun dispatchOnEnd() {
-        callListenerCommandRecursively(target) { listener -> listener.onAnimationEnd(target) }
+    open fun dispatchOnCancel(): AnimatorPlaybackController {
+        callListenerCommandRecursively(target) { listener, anim -> listener.onAnimationCancel(anim) }
+        return this
+    }
+
+    open fun dispatchOnEnd(): AnimatorPlaybackController {
+        callListenerCommandRecursively(target) { listener, anim -> listener.onAnimationEnd(anim) }
+        return this
+    }
+
+    open fun dispatchSetInterpolator(interpolator: TimeInterpolator) {
+        callAnimatorCommandRecursively(target) { a -> a.interpolator = interpolator }
+    }
+
+    private inner class OnAnimationEndDispatcher : AnimationSuccessListener() {
+        private var dispatched = false
+
+        override fun onAnimationStart(animation: Animator) {
+            super.onAnimationStart(animation)
+            dispatched = false
+        }
+
+        override fun onAnimationSuccess(animator: Animator) {
+            if (!dispatched) {
+                dispatchOnEnd()
+                endAction?.run()
+                dispatched = true
+            }
+        }
+    }
+
+    fun interface ProgressMapper {
+        fun getProgress(progress: Float, globalProgress: Float): Float
+
+        companion object {
+            @JvmField
+            val DEFAULT = ProgressMapper { progress, globalEndProgress ->
+                if (progress > globalEndProgress) 1f else (progress / globalEndProgress)
+            }
+        }
     }
 
     class Holder(
         val anim: ValueAnimator,
+        val globalDuration: Float,
         val springProperty: SpringProperty
     ) {
+        val interpolator: TimeInterpolator = anim.interpolator ?: Interpolators.LINEAR
+        val globalEndProgress: Float = if (globalDuration > 0f) anim.duration.toFloat() / globalDuration else 1f
+        var mapper: ProgressMapper = ProgressMapper.DEFAULT
+
         fun setProgress(progress: Float) {
-            anim.setCurrentFraction(progress)
+            anim.setCurrentFraction(mapper.getProgress(progress, globalEndProgress))
         }
 
         fun reset() {
-            // no-op reset
+            anim.interpolator = interpolator
+            mapper = ProgressMapper.DEFAULT
         }
     }
 
     companion object {
+        private const val ANIMATION_COMPLETE_THRESHOLD = 0.95f
+
         @JvmStatic
         fun wrap(anim: AnimatorSet, duration: Long): AnimatorPlaybackController {
             val childAnims = ArrayList<Holder>()
@@ -187,30 +273,47 @@ open class AnimatorPlaybackController constructor(
         @JvmStatic
         fun addAnimationHoldersRecur(
             anim: Animator,
-            totalDuration: Long,
+            globalDuration: Long,
             springProperty: SpringProperty,
             out: ArrayList<Holder>
         ) {
+            val forceDuration = anim.duration
+            val forceInterpolator = anim.interpolator
             if (anim is ValueAnimator) {
-                out.add(Holder(anim, springProperty))
+                out.add(Holder(anim, globalDuration.toFloat(), springProperty))
             } else if (anim is AnimatorSet) {
                 for (child in anim.childAnimations) {
-                    addAnimationHoldersRecur(child, totalDuration, springProperty, out)
+                    if (forceDuration > 0) {
+                        child.duration = forceDuration
+                    }
+                    if (forceInterpolator != null) {
+                        child.interpolator = forceInterpolator
+                    }
+                    addAnimationHoldersRecur(child, globalDuration, springProperty, out)
+                }
+            } else {
+                throw IllegalArgumentException("Unknown animation type: $anim")
+            }
+        }
+
+        @JvmStatic
+        fun callListenerCommandRecursively(anim: Animator, command: (Animator.AnimatorListener, Animator) -> Unit) {
+            callAnimatorCommandRecursively(anim) { a ->
+                val listeners = a.listeners
+                if (listeners != null) {
+                    for (listener in ArrayList(listeners)) {
+                        command(listener, a)
+                    }
                 }
             }
         }
 
         @JvmStatic
-        fun callListenerCommandRecursively(anim: Animator, command: (Animator.AnimatorListener) -> Unit) {
-            val listeners = anim.listeners
-            if (listeners != null) {
-                for (listener in ArrayList(listeners)) {
-                    command(listener)
-                }
-            }
+        fun callAnimatorCommandRecursively(anim: Animator, command: (Animator) -> Unit) {
+            command(anim)
             if (anim is AnimatorSet) {
                 for (child in anim.childAnimations) {
-                    callListenerCommandRecursively(child, command)
+                    callAnimatorCommandRecursively(child, command)
                 }
             }
         }

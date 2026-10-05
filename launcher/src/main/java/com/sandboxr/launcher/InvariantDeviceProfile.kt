@@ -376,6 +376,14 @@ open class InvariantDeviceProfile(
         return getDeviceProfile(context, bounds)
     }
 
+    /**
+     * Creates a device profile configured for secondary / external displays.
+     */
+    fun createDeviceProfileForSecondaryDisplay(displayContext: Context): DeviceProfile {
+        val bounds = wmProxy.getRealBounds(displayContext, wmProxy.getDisplayInfo(displayContext))
+        return getDeviceProfile(displayContext, bounds)
+    }
+
     // ─────────────────────────────────────────────────────────────────────────────────────────
     // Interpolation
     // ─────────────────────────────────────────────────────────────────────────────────────────

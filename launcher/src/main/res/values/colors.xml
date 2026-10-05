@@ -47,4 +47,23 @@
     <color name="popup_notification_dot_dark">#757575</color>
     <color name="notification_dot_color_light">#6DD58C</color>
     <color name="notification_dot_color_dark">#C4EED0</color>
+    <color name="focused_background">#80c6c5c5</color>
+    <color name="materialColorPrimary">#5B8AF5</color>
+    <color name="materialColorOnPrimary">#FFFFFF</color>
+    <color name="overview_foreground_scrim_color">#33000000</color>
+    <!-- Taskbar colors -->
+    <color name="taskbar_nav_icon_selection_ripple">#E0E0E0</color>
+    <color name="taskbar_nav_icon_light_color_on_home">#ffffff</color>
+    <color name="taskbar_nav_icon_dark_color_on_home">#99000000</color>
+    <color name="taskbar_nav_icon_light_color">#ffffff</color>
+    <color name="taskbar_nav_icon_dark_color">#99000000</color>
+    <color name="taskbar_stashed_handle_light_color">#EBffffff</color>
+    <color name="taskbar_stashed_handle_dark_color">#99000000</color>
+    <color name="taskbar_divider_background">#66FFFFFF</color>
+    <color name="taskbar_background">#1A1A26</color>
+    <color name="taskbar_background_dark">#0A0A0F</color>
+    <color name="taskbar_stroke">#3D3D56</color>
+    <color name="materialColorPrimaryContainer">#1E293B</color>
+    <color name="materialColorOnPrimaryContainer">#FFFFFF</color>
+    <color name="home_settings_header_collapsed">#1A1A26</color>
 </resources>

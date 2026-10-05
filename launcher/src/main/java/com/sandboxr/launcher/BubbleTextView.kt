@@ -421,4 +421,9 @@ open class BubbleTextView @JvmOverloads constructor(
             canvas.translate(-scrollX.toFloat(), -scrollY.toFloat())
         }
     }
+
+    open fun canShowLongPressPopup(): Boolean {
+        val item = tag as? com.sandboxr.launcher.model.data.ItemInfo ?: return false
+        return com.sandboxr.launcher.util.ShortcutUtil.supportsShortcuts(item)
+    }
 }

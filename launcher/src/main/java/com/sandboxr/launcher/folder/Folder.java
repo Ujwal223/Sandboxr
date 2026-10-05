@@ -59,6 +59,11 @@ public class Folder extends AbstractFloatingView
     public static final int STATE_ANIMATING = 1;
     public static final int STATE_OPEN = 2;
 
+
+    public boolean isDestroyed() {
+        return false;
+    }
+
     private Launcher mLauncher;
     private DragController mDragController;
     private FolderInfo mInfo;
@@ -155,6 +160,12 @@ public class Folder extends AbstractFloatingView
 
     public FolderInfo getInfo() {
         return mInfo;
+    }
+
+    public void removeFolderContent(boolean animate, ItemInfo item) {
+        if (mInfo != null) {
+            mInfo.remove(item, animate);
+        }
     }
 
     public FolderPagedView getContent() {

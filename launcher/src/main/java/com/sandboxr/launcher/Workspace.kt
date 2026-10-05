@@ -22,6 +22,7 @@ import android.content.Context
 import android.graphics.Rect
 import android.util.AttributeSet
 import android.util.FloatProperty
+import android.view.MotionEvent
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.annotation.VisibleForTesting
@@ -205,6 +206,40 @@ open class Workspace<T : View> @JvmOverloads constructor(
         }
     }
 
+    /**
+     * Commits extra empty screens and returns their IDs.
+     */
+    open fun commitExtraEmptyScreens(): IntSet {
+        val emptyPageIds = IntSet()
+        if (mWorkspaceScreens.containsKey(EXTRA_EMPTY_SCREEN_ID)) {
+            val cl = mWorkspaceScreens.get(EXTRA_EMPTY_SCREEN_ID)
+            mWorkspaceScreens.remove(EXTRA_EMPTY_SCREEN_ID)
+            mScreenOrder.removeValue(EXTRA_EMPTY_SCREEN_ID)
+            var newScreenId = 0
+            while (mWorkspaceScreens.containsKey(newScreenId)) {
+                newScreenId++
+            }
+            if (cl != null) {
+                mWorkspaceScreens.put(newScreenId, cl)
+            }
+            mScreenOrder.add(newScreenId)
+            emptyPageIds.add(newScreenId)
+        }
+        return emptyPageIds
+    }
+
+    private var mOnPageTransitionEndCallback: Runnable? = null
+
+    open fun setOnPageTransitionEndCallback(callback: Runnable?) {
+        mOnPageTransitionEndCallback = callback
+    }
+
+    override fun onPageEndTransition() {
+        super.onPageEndTransition()
+        mOnPageTransitionEndCallback?.run()
+        mOnPageTransitionEndCallback = null
+    }
+
     fun isOverlayShown(): Boolean = false
 
     open fun removeWidget(appWidgetId: Int) {
@@ -286,11 +321,23 @@ open class Workspace<T : View> @JvmOverloads constructor(
         }
     }
 
+    /** Returns true if the workspace is currently handling a drag/scroll touch sequence. */
+    open fun isHandlingTouch(): Boolean = !mScroller.isFinished
+
+    /** Called when the user taps on the wallpaper area (no item under touch). */
+    open fun onWallpaperTap(ev: MotionEvent) {
+        // Default: no action. Override to show wallpaper picker or similar.
+    }
+
     open fun startDrag(v: View, info: ItemInfo) {
         enterSpringLoadedMode()
     }
 
     open fun beginDragShared(child: View, source: View?, info: ItemInfo) {
+        enterSpringLoadedMode()
+    }
+
+    open fun beginDragShared(child: View, source: View?, dragOptions: DragOptions) {
         enterSpringLoadedMode()
     }
 

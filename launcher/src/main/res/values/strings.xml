@@ -7,6 +7,13 @@
     <string name="notification_dots_desc_off">Off</string>
     <string name="notification_dots_desc_permission_needed">Missing notification access</string>
     <string name="settings_button_text">Home settings</string>
+    <string name="settings_fragment_name" translatable="false">com.sandboxr.launcher.settings.SettingsActivity$LauncherSettingsFragment</string>
+    <string name="auto_add_shortcuts_label">Add app icons to home screen</string>
+    <string name="auto_add_shortcuts_description">For new apps</string>
+    <string name="title_missing_notification_access">Notification access needed</string>
+    <string name="msg_missing_notification_access">To show Notification Dots, turn on app notifications for %1$s</string>
+    <string name="title_change_settings">Change settings</string>
+    <string name="developer_options_title">Developer Options</string>
     <string name="gesture_tutorial_title">Gesture Navigation Tutorial</string>
     <string name="allset_title">All Set</string>
     <string name="work_folder_name">Work</string>
@@ -88,8 +95,46 @@
     <string name="shortcuts_popup_menu_button">Shortcuts</string>
     <string name="shortcuts_popup_menu_button_description">Show app shortcuts menu</string>
     <string name="safemode_widget_error">Widgets disabled in Safe mode</string>
+    <string name="activity_not_found">App not found</string>
     <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
     <string name="remote_action_failed">Failed to perform action: %1$s</string>
+    <string name="action_move_here">Move item here</string>
+    <string name="recent_task_option_remove_task">Remove</string>
+    <string name="recents_clear_all">Clear all</string>
+    <string name="recent_task_option_desktop">Desktop</string>
+    <string name="recent_split_task_option_desktop">Desktop for %1$s</string>
+    <string name="recent_task_desktop">Desktop</string>
+    <string name="toast_split_select_app">Tap another app to use split screen</string>
+    <string name="toast_split_select_app_cancel">Cancel</string>
+    <string name="recent_task_option_split_screen">Split screen</string>
+    <string name="split_screen_position_top">Top</string>
+    <string name="split_screen_position_bottom">Bottom</string>
+    <string name="split_screen_position_left">Left</string>
+    <string name="split_screen_position_right">Right</string>
+
+    <!-- Accessibility Strings -->
+    <string name="action_move">Move item</string>
+    <string name="action_move_to_workspace">Move to home screen</string>
+    <string name="action_resize">Resize</string>
+    <string name="action_increase_width">Increase width</string>
+    <string name="action_increase_height">Increase height</string>
+    <string name="action_decrease_width">Decrease width</string>
+    <string name="action_decrease_height">Decrease height</string>
+    <string name="move_to_position">Move to position %1$s</string>
+    <string name="move_to_empty_cell_description">Move to row %1$s column %2$s in %3$s</string>
+    <string name="move_to_hotseat_position">Move to favorites position %1$s</string>
+    <string name="item_moved">Item moved</string>
+    <string name="add_to_folder">Add to folder: %1$s</string>
+    <string name="add_to_folder_with_position">Add to %1$s folder. Row %2$s, column %3$s in %4$s</string>
+    <string name="add_to_folder_with_app">Add to folder with %1$s</string>
+    <string name="add_to_folder_with_app_with_position">Add to folder with %1$s. Row %2$s, column %3$s, in %4$s</string>
+    <string name="added_to_folder">Item added to folder</string>
+    <string name="create_folder_with">Create folder with: %1$s</string>
+    <string name="create_folder_with_position">Create folder with %1$s. Row %2$s, column %3$s, in %4$s</string>
+    <string name="folder_created">Folder created</string>
+    <string name="widget_resized">Widget resized to width %1$s height %2$s</string>
+    <string name="action_close">Close</string>
+    <string name="pin_prediction">Pin app</string>
 
     <string-array name="skip_private_profile_shortcut_packages" />
 </resources>

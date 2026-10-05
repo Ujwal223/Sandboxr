@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2026 The Android Open Source Project
+  ~ Copyright (C) 2026 Sandboxr Platform
+  -->
+<com.sandboxr.launcher.recents.views.IconAppChipView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start|top"
+    android:layout_margin="12dp"
+    android:clipToOutline="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/app_chip_container"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/circle_dismiss_background">
+
+        <ImageView
+            android:id="@+id/icon_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/icon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="?android:attr/textColorPrimary" />
+
+    </LinearLayout>
+
+</com.sandboxr.launcher.recents.views.IconAppChipView>

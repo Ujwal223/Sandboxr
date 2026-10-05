@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2020 The Android Open Source Project
+     Copyright (C) 2026 Sandboxr Platform -->
+<com.sandboxr.launcher.secondarydisplay.SecondaryDragLayer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drag_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:padding="@dimen/dynamic_grid_edge_margin">
+
+    <GridView
+        android:id="@+id/workspace_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:theme="@style/HomeScreenElementTheme"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_margin="@dimen/dynamic_grid_edge_margin" />
+
+    <ImageButton
+        android:id="@+id/all_apps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="40dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_apps"
+        android:background="@drawable/bg_all_apps_button"
+        android:contentDescription="@string/all_apps_button_label"
+        android:onClick="onAppsButtonClicked" />
+
+    <com.sandboxr.launcher.allapps.SecondaryLauncherAllAppsContainerView
+        android:id="@+id/apps_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:focusable="false"
+        android:saveEnabled="false"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/round_rect_primary"
+        android:visibility="invisible" />
+</com.sandboxr.launcher.secondarydisplay.SecondaryDragLayer>

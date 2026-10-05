@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2026 The Android Open Source Project
+  ~ Copyright (C) 2026 Sandboxr Platform
+  -->
+<com.sandboxr.launcher.LauncherRootView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/launcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.sandboxr.launcher.recents.views.RecentsView
+        android:id="@+id/overview_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+</com.sandboxr.launcher.LauncherRootView>

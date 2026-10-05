@@ -71,4 +71,13 @@ public class PendingAddWidgetInfo extends PendingAddItemInfo {
     public PendingAddWidgetInfo clone() {
         return new PendingAddWidgetInfo(this);
     }
+
+    public Bundle getDefaultSizeOptions(android.content.Context context) {
+        Bundle options = new Bundle();
+        options.putInt(android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH, spanX * 70);
+        options.putInt(android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT, spanY * 70);
+        options.putInt(android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_WIDTH, spanX * 70);
+        options.putInt(android.appwidget.AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT, spanY * 70);
+        return options;
+    }
 }

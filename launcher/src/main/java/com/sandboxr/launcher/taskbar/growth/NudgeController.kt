@@ -1,0 +1,46 @@
+/*
+ * Copyright (C) 2026 The Android Open Source Project
+ * Copyright (C) 2026 Sandboxr Platform
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.sandboxr.launcher.taskbar.growth
+
+import android.content.Context
+import android.view.View
+
+/** Controller handling subtle UX nudges and hints. */
+class NudgeController(val context: Context) {
+    var isNudgeShown: Boolean = false
+        private set
+
+    fun showNudge() {
+        isNudgeShown = true
+    }
+
+    fun dismissNudge() {
+        isNudgeShown = false
+    }
+}
+
+/** View controller for nudge UI elements. */
+class NudgeViewController(val nudgeView: View?) {
+    fun show() {
+        nudgeView?.visibility = View.VISIBLE
+    }
+
+    fun hide() {
+        nudgeView?.visibility = View.GONE
+    }
+}

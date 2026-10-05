@@ -15,6 +15,8 @@ android {
         consumerProguardFiles("consumer-rules.pro")
         buildConfigField("boolean", "IS_STUDIO_BUILD", "true")
         buildConfigField("boolean", "WIDGETS_ENABLED", "true")
+        buildConfigField("boolean", "NOTIFICATION_DOTS_ENABLED", "true")
+        buildConfigField("boolean", "IS_DEBUG_DEVICE", "false")
     }
 
     buildTypes {
@@ -77,6 +79,10 @@ android {
     testOptions {
         unitTests.isReturnDefaultValues = true
         unitTests.isIncludeAndroidResources = true
+        unitTests.all {
+            it.maxHeapSize = "1536m"
+            it.forkEvery = 15
+        }
     }
 }
 
@@ -125,6 +131,7 @@ dependencies {
 
     // Jetpack Compose
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.animation)

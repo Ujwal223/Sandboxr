@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 Sandboxr Platform -->
+<com.sandboxr.launcher.taskbar.TaskbarDragLayer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskbar_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+    <com.sandboxr.launcher.taskbar.TaskbarView
+        android:id="@+id/taskbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:forceHasOverlappingRendering="false"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/transient_taskbar_bottom_margin"
+        android:clipChildren="false" />
+
+    <com.sandboxr.launcher.taskbar.customization.CustomizableTaskbarView
+        android:id="@+id/customizable_taskbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:forceHasOverlappingRendering="false"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/transient_taskbar_bottom_margin"
+        android:clipChildren="false" />
+
+    <com.sandboxr.launcher.taskbar.TaskbarScrimView
+        android:id="@+id/taskbar_scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/taskbar_bubbles_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <com.sandboxr.launcher.taskbar.bubbles.BubbleBarView
+            android:id="@+id/taskbar_bubbles"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bubblebar_size_with_pointer"
+            android:layout_gravity="bottom|end"
+            android:layout_marginHorizontal="@dimen/transient_taskbar_bottom_margin"
+            android:paddingTop="@dimen/bubblebar_pointer_visible_size"
+            android:paddingEnd="@dimen/taskbar_icon_spacing"
+            android:paddingStart="@dimen/taskbar_icon_spacing"
+            android:visibility="gone"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:elevation="@dimen/bubblebar_elevation" />
+    </FrameLayout>
+
+    <com.sandboxr.launcher.taskbar.navbutton.NearestTouchFrame
+        android:id="@+id/navbuttons_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <FrameLayout
+            android:id="@+id/start_contextual_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/taskbar_contextual_button_padding"
+            android:paddingEnd="@dimen/taskbar_contextual_button_padding"
+            android:paddingTop="@dimen/taskbar_contextual_padding_top"
+            android:gravity="center_vertical"
+            android:layout_gravity="start" />
+
+        <LinearLayout
+            android:id="@+id/end_nav_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="end" />
+
+        <FrameLayout
+            android:id="@+id/end_contextual_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/taskbar_contextual_padding_top"
+            android:gravity="center_vertical"
+            android:layout_gravity="end" />
+    </com.sandboxr.launcher.taskbar.navbutton.NearestTouchFrame>
+
+    <com.sandboxr.launcher.taskbar.StashedHandleView
+        android:id="@+id/stashed_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/taskbar_stashed_handle_dark_color"
+        android:clipToOutline="true"
+        android:layout_gravity="bottom" />
+
+    <com.sandboxr.launcher.taskbar.StashedHandleView
+        android:id="@+id/stashed_bubble_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/taskbar_stashed_handle_dark_color"
+        android:clipToOutline="true"
+        android:layout_gravity="bottom" />
+
+</com.sandboxr.launcher.taskbar.TaskbarDragLayer>

@@ -68,6 +68,7 @@ public class DragController implements DragDriver.EventListener, TouchController
     protected DropTarget mLastDropTarget;
     protected boolean mDragging = false;
     protected boolean mIsInPreDrag = false;
+    protected float mDistanceDragged = 0f;
 
     public DragController(ActivityContext activity) {
         mActivity = activity;
@@ -237,8 +238,9 @@ public class DragController implements DragDriver.EventListener, TouchController
             ((DragView) mDragObject.dragView).move(ix, iy);
         }
 
+        mDistanceDragged = (float) Math.hypot(ix - mMotionDown.x, iy - mMotionDown.y);
         if (mIsInPreDrag && mOptions.preDragCondition != null) {
-            double distance = Math.hypot(ix - mMotionDown.x, iy - mMotionDown.y);
+            double distance = mDistanceDragged;
             if (mOptions.preDragCondition.shouldStartDrag(distance)) {
                 mIsInPreDrag = false;
                 mOptions.preDragCondition.onPreDragEnd(mDragObject, true);
@@ -247,6 +249,19 @@ public class DragController implements DragDriver.EventListener, TouchController
         }
 
         handleMoveEvent(ix, iy);
+    }
+
+    public float getDistanceDragged() {
+        return mDistanceDragged;
+    }
+
+    protected boolean isItemPinnable() {
+        if (mDragObject == null || mDragObject.dragInfo == null) return true;
+        if (mDragObject.dragInfo instanceof com.sandboxr.launcher.model.data.ItemInfoWithIcon) {
+            com.sandboxr.launcher.model.data.ItemInfoWithIcon iconInfo = (com.sandboxr.launcher.model.data.ItemInfoWithIcon) mDragObject.dragInfo;
+            return (iconInfo.runtimeStatusFlags & com.sandboxr.launcher.model.data.ItemInfoWithIcon.FLAG_NOT_PINNABLE) == 0;
+        }
+        return true;
     }
 
     protected void handleMoveEvent(int x, int y) {
@@ -338,6 +353,22 @@ public class DragController implements DragDriver.EventListener, TouchController
         }
 
         endDrag();
+    }
+
+    /**
+     * Emulates drop target events and completes drag-and-drop for accessibility.
+     */
+    public void completeAccessibleDrag(int[] location) {
+        if (!mDragging) return;
+        int x = location[0];
+        int y = location[1];
+        handleMoveEvent(x, y);
+        int[] dropCoordinates = mCoordinatesTemp;
+        DropTarget target = findDropTarget(x, y, dropCoordinates);
+        if (target != null) {
+            target.prepareAccessibilityDrop();
+        }
+        drop(target, null);
     }
 
     @Override

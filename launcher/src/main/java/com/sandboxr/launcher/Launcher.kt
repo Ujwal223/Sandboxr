@@ -33,6 +33,10 @@ import com.sandboxr.launcher.statemanager.StatefulActivity
 import com.sandboxr.launcher.views.ActivityContext
 import com.sandboxr.launcher.views.ScrimView
 
+import com.sandboxr.launcher.accessibility.LauncherAccessibilityDelegate
+import com.sandboxr.launcher.popup.PopupController
+import com.sandboxr.launcher.popup.PopupDataRepository
+
 /**
  * Default Launcher Activity for SANDBOXR.
  * Implements complete activity lifecycle management, state machine transitions
@@ -44,6 +48,10 @@ open class Launcher : StatefulActivity<LauncherState>(),
 
     protected val mLauncherUiState = LauncherUiState()
     private lateinit var mStateManager: StateManager<LauncherState, Launcher>
+
+    protected var mAccessibilityDelegate: LauncherAccessibilityDelegate? = null
+    private var mPopupControllerForAppIcons: PopupController<Launcher>? = null
+    private var mPopupControllerForHomeScreenItems: PopupController<Launcher>? = null
 
     protected var mDragLayer: DragLayer? = null
     protected var mDragController: LauncherDragController? = null
@@ -182,6 +190,8 @@ open class Launcher : StatefulActivity<LauncherState>(),
         }
         mAllAppsController = allAppsController
 
+        mAccessibilityDelegate = createAccessibilityDelegate()
+
         setContentView(root)
     }
 
@@ -194,6 +204,49 @@ open class Launcher : StatefulActivity<LauncherState>(),
     fun getWorkspace(): Workspace<*>? = mWorkspace
 
     fun getHotseat(): Hotseat? = mHotseat
+
+    override fun getAccessibilityDelegate(): LauncherAccessibilityDelegate? = mAccessibilityDelegate
+
+    protected open fun createAccessibilityDelegate(): LauncherAccessibilityDelegate {
+        return LauncherAccessibilityDelegate(this)
+    }
+
+    override fun getPopupControllerForAppIcons(): PopupController<Launcher> {
+        return mPopupControllerForAppIcons ?: PopupController.createPopupController<Launcher>().also {
+            mPopupControllerForAppIcons = it
+        }
+    }
+
+    open fun getPopupControllerForHomeScreenItems(): PopupController<Launcher> {
+        return mPopupControllerForHomeScreenItems ?: run {
+            val dc = mDragController ?: LauncherDragController(this)
+            PopupController.createPopupController<Launcher>(PopupDataRepository(emptySet()), dc).also {
+                mPopupControllerForHomeScreenItems = it
+            }
+        }
+    }
+
+    open fun addPendingItem(
+        info: com.sandboxr.launcher.PendingAddItemInfo,
+        container: Int,
+        screenId: Int,
+        cell: kotlin.IntArray,
+        spanX: Int,
+        spanY: Int
+    ) {
+        // Pending add item hook
+    }
+
+    open fun inflateAndBindItemWithAnimation(item: com.sandboxr.launcher.model.data.ItemInfo) {
+        // Inflate and bind item hook
+    }
+
+    open fun bindInflatedItems(
+        items: List<android.util.Pair<com.sandboxr.launcher.model.data.ItemInfo, View>>,
+        anim: android.animation.AnimatorSet
+    ) {
+        anim.start()
+    }
 
     fun getHotseatPredictionController(): com.sandboxr.launcher.hybridhotseat.HotseatPredictionController? =
         mHotseatPredictionController

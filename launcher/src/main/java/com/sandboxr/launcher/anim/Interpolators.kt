@@ -39,6 +39,12 @@ object Interpolators {
     val ACCELERATE: Interpolator = AccelerateInterpolator()
 
     @JvmField
+    val ACCELERATE_0_75: Interpolator = AccelerateInterpolator(0.75f)
+
+    @JvmField
+    val ACCELERATE_1_5: Interpolator = AccelerateInterpolator(1.5f)
+
+    @JvmField
     val ACCELERATE_2: Interpolator = AccelerateInterpolator(2f)
 
     @JvmField
@@ -66,6 +72,9 @@ object Interpolators {
     val AGGRESSIVE_EASE: Interpolator = PathInterpolator(0.2f, 0f, 0f, 1f)
 
     @JvmField
+    val DECELERATED_EASE: Interpolator = PathInterpolator(0f, 0f, 0.2f, 1f)
+
+    @JvmField
     val EXAGGERATED_EASE: Interpolator = PathInterpolator(0.4f, 0f, 0.2f, 1.4f)
 
     @JvmField
@@ -84,7 +93,19 @@ object Interpolators {
     val OVERSHOOT_1_2: Interpolator = OvershootInterpolator(1.2f)
 
     @JvmField
+    val OVERSHOOT_1_7: Interpolator = OvershootInterpolator(1.7f)
+
+    @JvmField
     val FINAL_FRAME: Interpolator = Interpolator { input -> if (input >= 1f) 1f else 0f }
+
+    @JvmField
+    val INSTANT: Interpolator = Interpolator { 1f }
+
+    @JvmField
+    val SCROLL: Interpolator = Interpolator { input ->
+        var t = input - 1.0f
+        t * t * t * t * t + 1.0f
+    }
 
     @JvmStatic
     fun clampToProgress(interpolator: TimeInterpolator, lowerBound: Float, upperBound: Float): TimeInterpolator {
@@ -98,6 +119,15 @@ object Interpolators {
                     interpolator.getInterpolation(progress)
                 }
             }
+        }
+    }
+
+    @JvmStatic
+    fun mapToProgress(progress: Float, lowerBound: Float, upperBound: Float): Float {
+        return when {
+            progress <= lowerBound -> 0f
+            progress >= upperBound -> 1f
+            else -> (progress - lowerBound) / (upperBound - lowerBound)
         }
     }
 

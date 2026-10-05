@@ -24,6 +24,10 @@
     <attr name="popupShadeFirst" format="color" />
     <attr name="popupShadeSecond" format="color" />
     <attr name="popupShadeThird" format="color" />
+    <attr name="focusOutlineColor" format="color" />
+    <attr name="focusInnerOutlineColor" format="color" />
+    <attr name="folderBackgroundColor" format="color" />
+    <attr name="folderTextColor" format="color" />
 
     <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
     <!--  Layout / View                                                                         -->

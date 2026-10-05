@@ -52,4 +52,21 @@ object ItemLongClickListener {
         if (!canStartDrag(launcher)) return false
         return true
     }
+
+    @JvmStatic
+    fun beginDrag(
+        v: View,
+        launcher: Launcher,
+        info: com.sandboxr.launcher.model.data.ItemInfo,
+        dragOptions: com.sandboxr.launcher.dragndrop.DragOptions,
+    ) {
+        launcher.getWorkspace()?.beginDragShared(
+            v,
+            v as? com.sandboxr.launcher.dragndrop.DraggableView,
+            launcher.getWorkspace() as? com.sandboxr.launcher.DragSource,
+            info,
+            null,
+            dragOptions
+        )
+    }
 }

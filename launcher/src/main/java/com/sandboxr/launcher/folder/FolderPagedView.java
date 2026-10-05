@@ -138,4 +138,10 @@ public class FolderPagedView extends PagedView<View> {
         }
         return page;
     }
+
+    public int getAllocatedContentSize() {
+        return mFolder != null && mFolder.getInfo() != null
+                ? mFolder.getInfo().getContents().size()
+                : getChildCount() * mOrganizer.getCountX() * mOrganizer.getCountY();
+    }
 }

@@ -46,9 +46,10 @@ open class StateAnimationConfig {
 
     open fun isUserControlled(): Boolean = (animProps and USER_CONTROLLED) != 0
 
-    open fun getInterpolator(animId: Int, fallback: Interpolator): Interpolator {
+    open fun <T : Interpolator?> getInterpolator(animId: Int, fallback: T): T {
         return if (animId in 0 until ANIM_TYPES_COUNT && interpolators[animId] != null) {
-            interpolators[animId]!!
+            @Suppress("UNCHECKED_CAST")
+            interpolators[animId] as T
         } else {
             fallback
         }

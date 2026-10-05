@@ -39,6 +39,11 @@ open class ApiWrapper(protected val context: Context) {
 
     open fun getPersons(shortcutInfo: ShortcutInfo): Array<Person> = emptyArray()
 
+    open fun createStatusBarTouchController(
+        activityContext: com.sandboxr.launcher.views.ActivityContext,
+        canIntercept: java.util.function.BooleanSupplier
+    ): com.sandboxr.launcher.util.TouchController? = null
+
     companion object {
         class Initializer<T>(private val factory: (Context) -> T) {
             private var instance: T? = null

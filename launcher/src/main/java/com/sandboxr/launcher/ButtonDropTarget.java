@@ -212,4 +212,11 @@ public abstract class ButtonDropTarget extends TextView
     public void onClick(View v) {
         // Accessibility click handler
     }
+
+    public int getSupportedAccessibilityAction(ItemInfo info, View view) {
+        return -1;
+    }
+
+    public void onAccessibilityDrop(View view, ItemInfo info, int action) {
+    }
 }

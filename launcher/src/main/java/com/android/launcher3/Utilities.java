@@ -160,4 +160,44 @@ public final class Utilities {
         float slop = android.view.ViewConfiguration.get(context).getScaledTouchSlop();
         return slop * slop;
     }
+
+    public static float boundToRange(float value, float lowerBound, float upperBound) {
+        return Math.max(lowerBound, Math.min(value, upperBound));
+    }
+
+    public static int boundToRange(int value, int lowerBound, int upperBound) {
+        return Math.max(lowerBound, Math.min(value, upperBound));
+    }
+
+    public static float getProgress(float current, float min, float max) {
+        return Math.abs(current - min) / Math.abs(max - min);
+    }
+
+    public static float mapRange(float value, float min, float max) {
+        return min + (value * (max - min));
+    }
+
+    public static float mapToRange(float t, float fromMin, float fromMax, float toMin, float toMax,
+            android.animation.TimeInterpolator interpolator) {
+        if (fromMin == fromMax || toMin == toMax) {
+            return toMin;
+        }
+        float progress = getProgress(t, fromMin, fromMax);
+        return mapRange(interpolator.getInterpolation(progress), toMin, toMax);
+    }
+
+    public static int mapToRange(int t, int fromMin, int fromMax, int toMin, int toMax,
+            android.animation.TimeInterpolator interpolator) {
+        if (fromMin == fromMax || toMin == toMax) {
+            return toMin;
+        }
+        float progress = getProgress(t, fromMin, fromMax);
+        return (int) mapRange(interpolator.getInterpolation(progress), toMin, toMax);
+    }
+
+    public static float mapBoundToRange(float t, float lowerBound, float upperBound,
+            float toMin, float toMax, android.animation.TimeInterpolator interpolator) {
+        return mapToRange(boundToRange(t, lowerBound, upperBound), lowerBound, upperBound,
+                toMin, toMax, interpolator);
+    }
 }

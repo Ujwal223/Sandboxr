@@ -23,6 +23,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.view.View
 import com.sandboxr.launcher.DropTarget.DragObject
 import com.sandboxr.launcher.dragndrop.DragOptions
 import com.sandboxr.launcher.model.data.AppInfo
@@ -171,6 +172,21 @@ open class SecondaryDropTarget @JvmOverloads constructor(
                     // Reconfigure widget
                 }
             }
+        }
+    }
+
+    override fun getSupportedAccessibilityAction(info: ItemInfo?, view: View?): Int {
+        if (info == null) return -1
+        return if (getUninstallTarget(context, info) != null) {
+            R.id.action_uninstall
+        } else {
+            -1
+        }
+    }
+
+    override fun onAccessibilityDrop(view: View?, info: ItemInfo?, action: Int) {
+        if (action == R.id.action_uninstall && info != null) {
+            performUninstall(context, getUninstallTarget(context, info), info)
         }
     }
 

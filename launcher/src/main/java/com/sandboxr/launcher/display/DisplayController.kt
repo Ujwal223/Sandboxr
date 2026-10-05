@@ -164,8 +164,26 @@ class DisplayController @Inject constructor(
         fun onDisplayInfoChanged(info: LauncherDisplayInfo, flags: Int)
     }
 
+
     companion object {
         private const val TAG = "DisplayController"
+
+        @Volatile
+        private var instance: DisplayController? = null
+
+        @JvmStatic
+        fun get(context: Context): DisplayController =
+            instance ?: synchronized(this) {
+                instance ?: DisplayController(context.applicationContext).also { instance = it }
+            }
+
+        @JvmStatic
+        fun getInstance(context: Context): DisplayController = get(context)
+
+        @JvmField
+        val INSTANCE = object {
+            operator fun get(context: Context): DisplayController = DisplayController.get(context)
+        }
     }
 }
 
