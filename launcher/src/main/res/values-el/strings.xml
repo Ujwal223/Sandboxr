@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Launcher3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Εργασία"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"Η εφαρμογή δεν έχει εγκατασταθεί."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"Η εφαρμογή δεν είναι διαθέσιμη"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"Η λήψη εφαρμογών απενεργοποήθηκε στην Ασφαλή λειτουργία"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"Τα γραφικά στοιχεία απενεργοποιήθηκαν στην ασφαλή λειτουργία"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"Η συντόμευση δεν είναι διαθέσιμη"</string>
+    <string name="home_screen" msgid="5629429142036709174">"Αρχική οθόνη"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"Ορίστε το <ns0:g id="LAUNCHER_NAME">%1$s</ns0:g> ως την προεπιλεγμένη εφαρμογή αρχικής οθόνης στις Ρυθμίσεις"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"Διαχωρισμός οθόνης"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"Αλλαγή λόγου διαστάσεων"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"Πληροφορίες εφαρμογής για %1$s"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"Ρυθμίσεις χρήσης για %1$s"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"Κλείσιμο %1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"Νέο παράθυρο"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"Διαχείριση παραθύρων"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"Κλείσιμο"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"Αποθήκευση ζεύγους εφαρμογών"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"Αυτό το ζεύγος εφαρμογών δεν υποστηρίζεται σε αυτή τη συσκευή"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"Ξεδιπλώστε τη συσκευή για να χρησιμοποιήσετε αυτό το ζεύγος εφαρμογών"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"Το ζεύγος εφαρμογών δεν είναι διαθέσιμο"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"Πατήστε παρατετ. για μετακίνηση γραφ. στοιχείου."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"Πατήστε δύο φορές παρατεταμένα για μετακίνηση γραφικού στοιχείου ή χρήση προσαρμοσμένων ενεργειών."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"Περισσότερες επιλογές"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"Εμφ. συνόλου γραφ. στοιχ."</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"Πλάτος %1$d επί ύψος %2$d"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"Γραφικό στοιχείο <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"Γραφικό στοιχείο <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, %2$d πλάτος επί %3$d ύψος"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"Αγγίξτε παρατεταμένα το γραφικό στοιχείο για να το μετακινήσετε στην αρχική οθόνη"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"Προσθήκη στην αρχική οθόνη"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"Το γραφικό στοιχείο <ns0:g id="WIDGET_NAME">%1$s</ns0:g> προστέθηκε στην αρχική οθόνη."</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"Προτάσεις"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"Απαραίτητα"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"Ειδήσεις και περιοδικά"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"Ψυχαγωγία"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"Κοινωνικά δίκτυα"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"Προτεινόμενα για εσάς"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"Γραφικά στοιχεία <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> στα δεξιά, αναζήτηση και επιλογές στα αριστερά"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# γραφικό στοιχείο}other{# γραφικά στοιχεία}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# συντόμευση}other{# συντομεύσεις}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"Γραφικά στοιχεία"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"Δεν υπάρχουν διαθέσιμα γραφικά στοιχεία και συντομεύσεις."</string>
+    <string name="no_search_results" msgid="3787956167293097509">"Δεν βρέθηκαν γραφικά στοιχεία ή συντομεύσεις."</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"Προσωπικά"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"Εργασίας"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"Συνομιλίες"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"Δημιουργία σημειώσεων"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"Εμφάνιση κουμπιού προσθήκης"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"Απόκρυψη κουμπιού προσθήκης"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"Προσθήκη"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"Προσθήκη του γραφικού στοιχείου <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"Εμφάνιση όλων"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"Εμφάνιση συνόλου γραφικών στοιχείων"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"Εμφάνιση όλων των γραφικών στοιχείων"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"Πατήστε για αλλαγή των ρυθμίσεων του γραφικού στοιχείου"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"Αλλαγή ρυθμίσεων γραφικού στοιχείου"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"Αναζήτηση εφαρμογών"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"Φόρτωση εφαρμογών…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"Δεν βρέθηκαν εφαρμογές αντιστοίχισης για \"<ns0:g id="QUERY">%1$s</ns0:g>\""</string>
+    <string name="label_application" msgid="8531721983832654978">"Εφαρμογή"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"Όλες οι εφαρμογές"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"Λίστα εφαρμογών"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"Ειδοποιήσεις"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"Πατήστε παρατεταμένα για μετακίνηση συντόμευσης."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"Πατήστε δύο φορές παρατεταμένα για μετακίνηση συντόμευσης ή χρήση προσαρμοσμένων ενεργειών."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"Δεν υπάρχει χώρος σε αυτή την αρχική οθόνη"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"Δεν υπάρχει επιπλέον χώρος στην περιοχή Αγαπημένα"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"Λίστα εφαρμογών"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"Αποτελέσματα αναζήτησης"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"Λίστα προσωπικών εφαρμογών"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"Λίστα εφαρμογών εργασίας"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"Κατάργηση"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"Απεγκατάσταση"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"Πληροφ. εφαρμογής"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"Εγκατ. στο απόρρητο"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"Απεγκατάσταση εφαρμογής"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"Εγκατάσταση"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"Να μην προτείνεται"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"Καρφίτσωμα πρόβλεψης"</string>
+    <string name="bubble" msgid="3072951361014076670">"Συννεφάκι"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"Κλείδωμα εφαρμογών"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"Κατ. κλειδ. εφαρμ."</string>
+    <string name="widget_settings" msgid="5280157748464495511">"Ρυθμίσεις"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"Προσθ. Γραμ. εργαλ."</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"Κατάργ. Γραμ. εργαλ."</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"Δεν υπάρχει χώρος στη Γραμμή εργαλείων"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"Η εφαρμογή προστέθηκε στη Γραμμή εργαλείων"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"Η εφαρμογή καταργήθηκε από τη Γραμμή εργαλείων"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"Κατάργηση"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"Αντιγραφή"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"Άνοιγμα"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"Μετονομασία"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"Οριστική διαγραφή"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"Μετακίνηση στον κάδο"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"Το στοιχείο μετακινήθηκε στον κάδο"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"Αδύνατη η μετακίνηση στον κάδο. Προέκυψε πρόβλημα."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"Δεν είναι δυνατή η αναίρεση. Μεταβείτε στην εφαρμογή Files για επαναφορά."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"Ενέργειες"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"Συντομεύσεις"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"Εμφάνιση μενού ενεργειών"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"Εμφάνιση μενού συντομεύσεων εφαρμογών"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"Παύση εφαρμογής"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"εγκατάσταση συντομεύσεων"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"Επιτρέπει σε μια εφαρμογή την προσθήκη συντομεύσεων χωρίς την παρέμβαση του χρήστη."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"ανάγνωση ρυθμίσεων και συντομεύσεων αρχικής οθόνης"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"Επιτρέπει στην εφαρμογή την ανάγνωση των ρυθμίσεων και των συντομεύσεων στην αρχική οθόνη."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"εγγραφή ρυθμίσεων και συντομεύσεων αρχικής οθόνης"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"Επιτρέπει στην εφαρμογή την αλλαγή των ρυθμίσεων και των συντομεύσεων στην αρχική οθόνη."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"Δεν είναι δυνατή η φόρτωση του γραφικού στοιχείου"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"Ρυθμίσεις γραφικών στοιχείων"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"Πατήστε για να ολοκληρώσετε τη ρύθμιση"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"Αυτή είναι μια εφαρμογή συστήματος και δεν είναι δυνατή η κατάργηση της εγκατάστασής της."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"Επεξεργασία ονόματος"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"Σελιδοποίηση αριστερά"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"Σελιδοποίηση δεξιά"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"Η εφαρμογή <ns0:g id="APP_NAME">%1$s</ns0:g> είναι απενεργοποιημένη"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{Η εφαρμογή {app_name} έχει # ειδοποίηση}other{Η εφαρμογή {app_name} έχει # ειδοποιήσεις}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"Εφαρμογή από πρόβλεψη: <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"Σελίδα %1$d από %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"Αρχική οθόνη %1$d από %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"Νέα σελίδα αρχικής οθόνης"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"Ενεργό"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"Ελαχιστοποιήθηκε"</string>
+    <string name="folder_opened" msgid="94695026776264709">"Άνοιγμα φακέλου, <ns0:g id="WIDTH">%1$d</ns0:g> επί <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"Πατήστε για να κλείσετε το φάκελο"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"Πατήστε για να αποθηκεύσετε τη νέα ονομασία"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"Ο φάκελος έκλεισε"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"Ο φάκελος μετονομάστηκε σε <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"Φάκελος"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"Φάκελος εφαρμογής"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> στοιχεία"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> στοιχεία, υπάρχουν ειδοποιήσεις"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ή περισσότερα στοιχεία"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ή περισσότερα στοιχεία, υπάρχουν ειδοποιήσεις"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"Φάκελος χωρίς όνομα"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"Φάκελος αρχείων: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"Ζεύγος εφαρμογών: <ns0:g id="APP1">%1$s</ns0:g> και <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"Ταπετσαρία και στιλ"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"Επεξεργασία αρχικής οθόνης"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"Ρυθμ. Αρχικής οθόνης"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"Απενεργοποιήθηκε από τον διαχειριστή σας"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"Οργάνωση Σπιτιού"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"Όταν το τηλέφωνο περιστρέφεται"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"Ενεργοποίηση παρακολούθησης σύνθεσης"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"Ενεργοποίηση παρακολούθησης σύνθεσης κατά τη λήψη ίχνους Perfetto στην επισκόπηση"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"Οριζόντιος προσανατολισμός"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"Ορισμός αρχικής οθόνης σε οριζόντιο προσανατολισμό"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"Κουκκίδες ειδοποίησης"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"Ενεργοποίηση"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"Απενεργοποίηση"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"Απαιτείται πρόσβαση στις ειδοποιήσεις"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"Για να εμφανιστούν οι Κουκκίδες ειδοποίησης, ενεργοποιήστε τις κουκκίδες εφαρμογής για την εφαρμογή <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"Αλλαγή ρυθμίσεων"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"Εμφάνιση κουκκίδων ειδοποιήσεων"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"Επιλογές για προγραμματιστές"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"Προσθήκη εικονιδίων εφαρμογών στην αρχική οθόνη"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"Για νέες εφαρμογές"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"Άγνωστο"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"Κατάργηση"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"Αναζήτηση"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"Αυτή η εφαρμογή δεν είναι εγκατεστημένη"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"Η εφαρμογή γι\' αυτό το εικονίδιο δεν είναι εγκατεστημένη. Μπορείτε να το καταργήσετε ή να αναζητήσετε την εφαρμογή και να την εγκαταστήσετε με μη αυτόματο τρόπο."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"Έχει ολοκληρωθεί το <ns0:g id="PROGRESS">%2$s</ns0:g> της εγκατάστασης της εφαρμογής <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"Λήψη <ns0:g id="NAME">%1$s</ns0:g>, ολοκληρώθηκε <ns0:g id="PROGRESS">%2$s</ns0:g>"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"<ns0:g id="NAME">%1$s</ns0:g> σε αναμονή για εγκατάσταση"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"Η εφαρμογή <ns0:g id="NAME">%1$s</ns0:g> είναι αρχειοθετημένη."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"λήψη και επαναφορά"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"Απαιτείται ενημέρωση της εφαρμογής"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"Η εφαρμογή για αυτό το εικονίδιο δεν έχει ενημερωθεί. Μπορείτε να την ενημερώσετε μη αυτόματα για να ενεργοποιήσετε ξανά τη συγκεκριμένη συντόμευση ή να καταργήσετε το εικονίδιο."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"Ενημέρωση"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"Κατάργηση"</string>
+    <string name="widgets_list" msgid="796804551140113767">"Λίστα γραφικών στοιχείων"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"Η λίστα γραφικών στοιχείων έκλεισε"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"Προσθήκη στην αρχική οθόνη"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"Μετακίνηση στοιχείου εδώ"</string>
+    <string name="item_removed" msgid="851119963877842327">"Το στοιχείο καταργήθηκε"</string>
+    <string name="undo" msgid="4151576204245173321">"Αναίρεση"</string>
+    <string name="action_move" msgid="4339390619886385032">"Μετακίνηση στοιχείου"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"Μετακίνηση στη σειρά <ns0:g id="NUMBER_0">%1$s</ns0:g> στήλη <ns0:g id="NUMBER_1">%2$s</ns0:g> στην <ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"Μετακίνηση στη θέση <ns0:g id="NUMBER">%1$s</ns0:g>"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"Μετακίνηση στη θέση <ns0:g id="NUMBER">%1$s</ns0:g> στα αγαπημένα"</string>
+    <string name="item_moved" msgid="4606538322571412879">"Το στοιχείο καταργήθηκε"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"Προσθήκη στο φάκελο: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"Προσθήκη στον φάκελο <ns0:g id="NAME">%1$s</ns0:g>. Σειρά <ns0:g id="NUMBER_0">%2$s</ns0:g>, στήλη <ns0:g id="NUMBER_1">%3$s</ns0:g> στο <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"Προσθήκη στο φάκελο με την εφαρμογή <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"Προσθήκη σε φάκελο με <ns0:g id="NAME">%1$s</ns0:g>. Σειρά <ns0:g id="NUMBER_0">%2$s</ns0:g>, στήλη <ns0:g id="NUMBER_1">%3$s</ns0:g>, στο <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"Το στοιχείο προστέθηκε στο φάκελο"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"Δημιουργία φακέλου με: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"Δημιουργία φακέλου με <ns0:g id="NAME">%1$s</ns0:g>. Σειρά <ns0:g id="NUMBER_0">%2$s</ns0:g>, στήλη <ns0:g id="NUMBER_1">%3$s</ns0:g>, στο <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"Δημιουργήθηκε φάκελος"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"Μετακίνηση στην αρχική οθόνη"</string>
+    <string name="action_resize" msgid="1802976324781771067">"Προσαρμογή μεγέθους"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"Αύξηση του πλάτους"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"Αύξηση του ύψους"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"μείωση του πλάτους"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"Μείωση του ύψους"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"Δείκ. αλλαγής μεγέθ. αριστερά"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"Δείκτης αλλαγής μεγέθους επάνω"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"Δείκτης αλλαγής μεγέθους δεξιά"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"Δείκτης αλλαγής μεγέθους κάτω"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"Εμφάν. κουμπιών αλλαγής μεγέθ."</string>
+    <string name="widget_resized" msgid="9130327887929620">"Έγινε προσαρμογή του μεγέθους του γραφικού στοιχείου σε <ns0:g id="NUMBER_0">%1$s</ns0:g> πλάτος και <ns0:g id="NUMBER_1">%2$s</ns0:g> ύψος"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"Μενού συντομεύσεων"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"Πλαίσιο αλλαγής μεγέθους γραφικού στοιχείου για <ns0:g id="STRING">%1$s</ns0:g>"</string>
+    <string name="action_close" msgid="1077760267194136901">"Κλείσιμο"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"Παράβλεψη"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"Κλείσιμο"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"Προσωπικές"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"Εργασίας"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"Καρτέλα προσωπικών εφαρμογών"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"Καρτέλα εφαρμογών εργασιών"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"Προφίλ εργασίας"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"Οι εφαρμογές εργασιών φέρουν σήμα και είναι ορατές στον διαχειριστή IT σας"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"Οι εφαρμογές εργασίας τέθηκαν σε παύση."</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"Δεν θα λαμβάνετε ειδοποιήσεις από τις εφαρμογές εργασιών σας"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"Οι εφαρμογές εργασίας δεν έχουν τη δυνατότητα αποστολής ειδοποιήσεων, χρήσης της μπαταρίας ή πρόσβασης στην τοποθεσία σας"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"Δεν θα λαμβάνετε τηλεφωνικές κλήσεις, μηνύματα κειμένου ή ειδοποιήσεις από τις εφαρμογές εργασιών σας"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"Οι εφαρμογές εργασιών φέρουν σήμα και είναι ορατές στον διαχειριστή IT σας"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"Το κατάλαβα"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"Παύση εφαρμογών εργασιών"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"Αναίρεση παύσης"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"Πρόγραμμα εφαρμογών εργασιών"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"Φίλτρο"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"Αποτυχία: <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"Ιδιωτικός χώρος"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"Πάτημα για ρύθμιση ή άνοιγμα"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"Ιδιωτικό"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"Ρυθμίσεις Ιδιωτικού χώρου"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"Ιδιωτικό, ξεκλειδωμένο."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"Ιδιωτικό, κλειδωμένο."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"Κλείδωμα"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"Μετάβαση στον Ιδιωτικό χώρο"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"Εγκατάσταση"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"Προσθήκη"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"Εγκατάσταση εφαρμογών στον ιδιωτικό χώρο"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"Προσθέστε αρχεία και άλλα στοιχεία στον Ιδιωτικό χώρο"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"Κύκλος"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"Τετράγωνο"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Μπισκότο με 4 πλευρές"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Μπισκότο με 7 πλευρές"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"Αψίδα"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"Νέος φάκελος"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"Νέος φάκελος"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"Διαγραφή"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"Ακύρωση"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"Μετονομασία"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"Μετονομασία αρχείου"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"Μετονομασία φακέλου"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"Παρουσιάστηκε κάποιο πρόβλημα"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"Δημιουργία οθόνης"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"Επιλέξτε μια κατηγορία για να προσθέσετε εφαρμογές και γραφικά στοιχεία από το τηλέφωνό σας"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"Επιλογή διάταξης"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"Καρφίτσωμα"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"Ελεύθερη μορφή"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"Υπολογιστής"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"Υπολογιστής για %1$s"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"Μετακίνηση σε εξωτερική οθόνη"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"Διαγραφή"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"Υπολογιστής"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"Δεν υπάρχουν πρόσφατα στοιχεία"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"Ρυθμίσεις χρήσης εφαρμογής"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"Διαγραφή όλων"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"Προσθήκη νέου γραφείου"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"Πρόσφατες εφαρμογές"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"&lt; 1 λ."</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"Απομένουν <ns0:g id="TIME">%1$s</ns0:g> σήμερα"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"Προτεινόμενες εφαρμογές"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"Προβλέψεις εφαρμογών"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"Ρυθμίσεις"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"Οι εφαρμογές που χρησιμοποιείτε περισσότερο εμφανίζονται εδώ και αλλάζουν με βάση τις ρουτίνες"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"Σύρετε εφαρμογές μακριά από την κάτω σειρά, για να δείτε τις προτεινόμενες εφαρμογές"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"Οι προτεινόμενες εφαρμογές προστέθηκαν στον κενό χώρο"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"Οι προτεινόμενες εφαρμογές ενεργοποιήθηκαν"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"Οι προτεινόμενες εφαρμογές είναι απενεργοποιημένες"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"Οδηγός για την πλοήγηση με κινήσεις"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"Περιστρέψτε τη συσκευή σας"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"Περιστρέψτε τη συσκευή σας για να ολοκληρώσετε τον οδηγό πλοήγησης με κινήσεις"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"Φροντίστε να σύρετε από το άκρο της δεξιάς ή της αριστερής πλευράς."</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"Σύρετε από το δεξί ή το αριστερό άκρο προς το κέντρο της οθόνης και απομακρύνετε το δάχτυλό σας"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"Μάθατε πώς να σύρετε από τα δεξιά για επιστροφή. Τώρα, μάθετε πώς να κάνετε εναλλαγή εφαρμογών."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"Ολοκληρώσατε την κίνηση επιστροφής. Στη συνέχεια, μάθετε πώς να κάνετε εναλλαγή εφαρμογών."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"Ολοκληρώσατε την κίνηση επιστροφής"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"Φροντίστε να μην σύρετε υπερβολικά κοντά στο κάτω μέρος της οθόνης"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"Μεταβείτε στις Ρυθμίσεις για αλλαγή ευαισθ. κίνησης επιστρ."</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"Σύρετε για επιστροφή"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"Για να επιστρέψετε στην τελευταία οθόνη, σύρετε από το αριστερό ή το δεξί άκρο προς το μέσο της οθόνης."</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"Επιστροφή"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"Σύρετε από το αριστερό ή το δεξί άκρο προς το κέντρο της οθόνης"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"Φροντίστε να σύρετε προς τα επάνω από το κάτω άκρο της οθόνης"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"Φροντίστε να μην διακόψετε την κίνηση προτού απομακρύνετε τα δάχτυλά σας"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"Φροντίστε να σύρετε ευθεία προς τα επάνω"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"Ολοκληρώσατε την κίνηση μετάβασης στην αρχική οθόνη Στη συνέχεια, μάθετε την κίνηση επιστροφής."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"Ολοκληρώσατε την κίνηση μετάβασης στην αρχική οθόνη"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"Σύρετε για μετάβαση στην αρχική οθόνη"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"Σύρετε προς τα πάνω από το κάτω μέρος της οθόνης. Αυτή η κίνηση σάς μεταφέρει πάντα στην αρχ. οθόνη."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"Μετάβαση στην αρχική οθόνη"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"Σύρετε προς τα επάνω από το κάτω μέρος της οθόνης"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"Μπράβο!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"Φροντίστε να σύρετε προς τα επάνω από το κάτω άκρο της οθόνης"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"Δοκιμάστε να κρατήσετε περισσότερο το παράθυρο προτού το αφήσετε."</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"Φροντίστε να σύρετε ευθεία προς τα επάνω και έπειτα σταματήστε την κίνηση"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"Μάθατε πώς να χρησιμοποιείτε κινήσεις. Μεταβείτε στις Ρυθμίσεις για απενεργοποίηση των κινήσεων."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"Ολοκληρώσατε την κίνηση εναλλαγής εφαρμογών"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"Σύρετε για εναλλαγή εφαρμογών"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"Για εναλλαγή εφαρμογών, σύρετε προς τα πάνω από το κάτω μέρος της οθόνης, πατήστε παρατεταμένα και μετά αφήστε."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"Εναλλαγή μεταξύ εφαρμογών"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"Σύρετε προς τα πάνω από το κάτω μέρος της οθόνης, κρατήστε τα δάχτυλα επάνω στην οθόνη και μετά απομακρύνετέ τα"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"Μπράβο!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"Όλα είναι έτοιμα"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"Τέλος"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"Ρυθμίσεις"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"Δοκιμάστε ξανά"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"Ωραία!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"Οδηγός <ns0:g id="CURRENT">%1$d</ns0:g>/<ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"Όλα έτοιμα!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"Σύρετε προς τα επάνω για να μεταβείτε στην αρχική σελίδα"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"Πατήστε το κουμπί αρχικής οθόνης για να μεταβείτε στην αρχική οθόνη"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"Είστε έτοιμοι να ξεκινήσετε να χρησιμοποιείτε τη <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"Είστε έτοιμοι να ξεκινήσετε να χρησιμοποιείτε τη συσκευή σας"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"Ρυθμίσεις πλοήγησης συστήματος"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"Η συσκευή σας <ns0:g id="DEVICE">%1$s</ns0:g> είναι \nέτοιμη!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"Η συσκευή σας είναι \nέτοιμη!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"Είστε έτοιμοι!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"Απολαύστε το νέο σας <ns0:g id="DEVICE">%1$s</ns0:g>!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"Σύρετε προς τα επάνω για να ξεκινήσετε με τη συσκευή <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"Πατήστε για να ξεκινήσετε με τη συσκευή <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"Επιλέξτε τον τρόπο πλοήγησης"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"Σύρετε προς τα επάνω"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"Πατήστε το κουμπί αρχικής οθόνης"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"tablet"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"τηλέφωνο"</string>
+    <string name="action_share" msgid="2648470652637092375">"Κοινοποίηση"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"Στιγμιότυπο οθόνης"</string>
+    <string name="action_split" msgid="2098009717623550676">"Διαχωρισμός"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"Αποθήκ. ζεύγ. εφαρμ."</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"Πατήστε άλλη εφαρμογή για διαχωρισμό οθόνης"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"Επιλέξτε άλλη εφαρμογή για διαχωρισμό οθόνης"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"Ακύρωση"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"Έξοδος από την επιλογή διαχωρισμού οθόνης"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"Επιλέξτε άλλη εφαρμογή για διαχωρισμό οθόνης"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"Αυτή η ενέργεια δεν επιτρέπεται από την εφαρμογή ή τον οργανισμό σας."</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"Προς το παρόν, τα γραφικά στοιχεία δεν υποστηρίζονται. Επιλέξτε άλλη εφαρμογή"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"Αντιγραφή"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"Αποθήκευση"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"Περιστροφή οθόνης"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"Κινούμενη εικόνα που δείχνει πώς η γραμμή εργαλείων εμφανίζεται από το κάτω μέρος της οθόνης και κρύβεται αυτόματα όταν δεν χρησιμοποιείται"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"Κινούμενη εικόνα που δείχνει πώς να καρφιτσώσετε τη γραμμή εργαλείων χρησιμοποιώντας έναν διακόπτη, ώστε η γραμμή εργαλείων να παραμένει μόνιμα ορατή στο κάτω μέρος της οθόνης"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"Κινούμενη εικόνα που δείχνει πώς μπορείτε να δημιουργήσετε ένα συννεφάκι από τη γραμμή εργαλείων χρησιμοποιώντας μια κίνηση μεταφοράς"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"Κινούμενη εικόνα που δείχνει πώς να δημιουργήσετε μια διαχωρισμένη οθόνη, μεταφέροντας και αποθέτοντας μια εφαρμογή από τη γραμμή εργαλείων πάνω από μια ανοιχτή εφαρμογή"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"Κινούμενη εικόνα που δείχνει πώς μπορείτε να αποκτήσετε πρόσβαση στις προτεινόμενες εφαρμογές στη συσκευή σας"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"Κινούμενη εικόνα που δείχνει τον τρόπο αναζήτησης ενός στοιχείου στην οθόνη, αγγίζοντας παρατεταμένα το πλήκτρο ενέργειας και επιλέγοντας την περιοχή στην οποία βρίσκεται το στοιχείο"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"Πληροφορίες χρήσης της Γραμμής εργαλείων"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"Σύρετε μια εφαρμ. στην άκρη για χρήση δύο εφαρμ. ταυτόχρονα"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"Σύρετε προς τις κάτω γωνίες, για να εμφανίζεται ως κινούμενη"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"Σύρετε αργά προς τα πάνω για εμφάνιση της Γραμμής εργαλείων"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"Λάβετε προτεινόμενες εφαρμογές με βάση τη ρουτίνα σας"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"Παρατετ. πάτημα στο διαχωρ. για καρφ. της Γραμμής εργαλείων"</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"Κάντε περισσότερα με τη Γραμμή εργαλείων"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"Να εμφανίζεται πάντα η Γραμμή εργαλείων"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"Για να εμφανίζεται πάντα η Γραμμή εργαλείων στο κάτω μέρος της οθόνης, αγγίξτε παρατεταμένα το διαχωριστικό"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"Σύρετε μια εφαρμογή στη γωνία, για να εμφανίζεται ως κινούμενη"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"Αγγίξτε παρατεταμένα το πλήκτρο ενέργειας για να αναζητήσετε το περιεχόμενο της οθόνης"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"Αυτό το προϊόν χρησιμοποιεί το επιλεγμένο τμήμα της οθόνης σας για αναζήτηση. Ισχύουν η <ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>Πολιτική απορρήτου<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> και οι <ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>Όροι παροχής υπηρεσιών<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g> της Google."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"Κλείσιμο"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"Τέλος"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"Επόμενο"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"Αρχική σελίδα"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"Προσβασιμότητα"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"Πίσω"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"Εναλλαγή IME"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"Πρόσφατα"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"Ειδοποιήσεις"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"Γρήγορες ρυθμ."</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"Περισσότερες επιλογές"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"Γραμμή εργαλείων"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"Φούσκα"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"Γραμμή πλοήγησης"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"Εμφάνιση Γραμμής εργαλείων"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"Αλλαγή τρόπου πλοήγησης"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"Διαχωριστικό Γραμμής εργαλείων"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"Άλλες πρόσφατες εφαρμογές"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"Άλλες εφαρμογές"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"Κατάργηση"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"Μετακίνηση επάνω/αριστερά"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"Μετακίνηση κάτω/δεξιά"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"Άνοιγμα εφαρμογής σε συννεφάκι"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"Μετακίνηση στοιχείου προς τα αριστερά"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"Μετακίνηση στοιχείου προς τα δεξιά"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"Πρόσφατες εφαρμογές"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"Λίστα πρόσφατων εφαρμογών"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{ακόμη εφαρμογή}other{ακόμη εφαρμογές}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"Υπολογιστής"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g> και <ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, στοιχείο <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> από <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>, αποδεσμεύστε τις συνδέσεις πλήκτρων για επιλογή"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"Κύλιση προς τα αριστερά"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"Κύλιση προς τα δεξιά"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"Συννεφάκι"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"Υπερχείλιση"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g> από <ns0:g id="APP_NAME">%2$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g> και <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g> ακόμα"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"Μετακίνηση αριστερά"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"Μετακίνηση δεξιά"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"Παράβλεψη όλων"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"Κυκλώστε για αναζήτηση"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"Εικονίδιο εφαρμογής"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"Τίτλος εφαρμογής"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"Κλείσιμο"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"Υπενθύμιση"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"Κλείσιμο"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"Εικόνα υπενθύμισης"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"Εικονίδιο"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"Λήψη χρήσιμων προτάσεων"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"Χρησιμοποιούμε AI για να προτείνουμε προληπτικά πληροφορίες και ενέργειες που σχετίζονται με τις ενέργειές σας στην οθόνη"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"Κλείσιμο"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"ανάπτυξη"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"Εικονίδιο προτάσεων λειτουργίας περιβάλλοντος"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"Αγγίξτε παρατεταμένα για να δείτε πώς δημιουργούνται οι προτάσεις"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"αυτόματη συμπλήρωση"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"Κοινή χρήση εφαρμογ."</string>
+    <string name="action_listen" msgid="2370304050784689486">"Ακρόαση"</string>
+    <string name="action_translate" msgid="8028378961867277746">"Μετάφραση"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lens"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"ΤΟ ΚΑΤΑΛΑΒΑ"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ΑΚΥΡΩΣΗ"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"ΡΥΘΜΙΣΕΙΣ"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"Μετάφραση ή ακρόαση του κειμένου στην οθόνη"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"Πληροφορίες όπως είναι το κείμενο στην οθόνη, οι διευθύνσεις ιστού και τα στιγμιότυπα οθόνης, ενδέχεται να κοινοποιηθούν στην Google.\n\nΓια να αλλάξετε τις πληροφορίες που κοινοποιείτε, μεταβείτε στις "<b>"Ρυθμίσεις &gt; Εφαρμογές &gt; Προεπιλεγμένες εφαρμογές &gt; Εφαρμογή ψηφιακού βοηθού"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"Επιλέξτε έναν βοηθό για να χρησιμοποιήσετε αυτήν τη λειτουργία"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"Για να ακούσετε ή να μεταφράσετε κείμενο στην οθόνη σας, επιλέξτε μια εφαρμογή ψηφιακού βοηθού στις Ρυθμίσεις."</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"Αλλάξτε τον βοηθό σας για να χρησιμοποιήσετε αυτήν τη λειτουργία"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"Για να ακούσετε ή να μεταφράσετε κείμενο στην οθόνη σας, αλλάξτε την εφαρμογή ψηφιακού βοηθού στις Ρυθμίσεις."</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"Πατήστε εδώ για να ακούσετε το κείμενο σε αυτή την οθόνη"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"Πατήστε εδώ για να μεταφράσετε το κείμενο σε αυτή την οθόνη"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"Δεν είναι δυνατή η κοινή χρήση της εφαρμογής"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"Κλείσιμο φύλλου"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"Όνομα εφαρμογής"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# γραφικό στοιχείο}other{# γραφικά στοιχεία}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# συντόμευση}other{# συντομεύσεις}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"%1$d πλάτος επί %2$d ύψος"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"Γραφικό στοιχείο <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, %2$d πλάτος επί %3$d ύψος"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"Εμφάνιση κουμπιού προσθήκης"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"Απόκρυψη κουμπιού προσθήκης"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"Προσθήκη"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"Προσθήκη του γραφικού στοιχείου <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"Επιλεγμένα"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"Περιήγηση"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"<ns0:g id="TAB_NAME">%1$s</ns0:g> γραφικά στοιχεία"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"Γραφικά στοιχεία <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> στα δεξιά, αναζήτηση και επιλογές στα αριστερά"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"Επιλογές αναζήτησης και γραφικών στοιχείων στα αριστερά, γραφικά στοιχεία στα δεξιά"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"Αναζήτηση"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"Διαγραφή"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"Πίσω"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"Δεν υπάρχουν διαθέσιμα γραφικά στοιχεία και συντομεύσεις"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"Δεν βρέθηκαν γραφικά στοιχεία ή συντομεύσεις"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"Προσθήκη στην αρχική οθόνη"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"Ακύρωση"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"Αγγίξτε παρατεταμένα για μετακίνηση γραφικού στοιχείου."</string>
+</resources>

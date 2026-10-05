@@ -1,8 +1,243 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2026 The Android Open Source Project
-     Copyright (C) 2026 Sandboxr Platform -->
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Base Material 3 Colors -->
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="http://schemas.android.com/tools">
+    <color name="delete_target_hover_tint">#FFC1C1C1</color>
+    <color name="uninstall_target_hover_tint">#FFF0592B</color>
+    <color name="focused_background">#80c6c5c5</color>
+    <color name="default_shadow_color_no_alpha">#FF000000</color>
+    <color name="spring_loaded_panel_color">#40FFFFFF</color>
+    <color name="spring_loaded_highlighted_panel_border_color">#FFF</color>
+    <color name="notification_icon_default_color">#757575</color>
+    <color name="icon_background">#E0E0E0</color>
+    <color name="popup_color_primary_light">#FFFFFF</color>
+    <color name="popup_color_secondary_light">#F1F3F4</color>
+    <color name="popup_color_tertiary_light">#E0E0E0</color>
+    <color name="popup_text_color_light">#1F1F1F</color>
+    <color name="popup_color_neutral_dark">#1A1A26</color>
+    <color name="popup_color_primary_dark">#1A1A26</color>
+    <color name="popup_color_secondary_dark">#12121A</color>
+    <color name="popup_color_tertiary_dark">#757575</color>
+    <color name="popup_text_color_dark">#E3E3E3</color>
+    <color name="popup_shade_first_light">#F9F9F9</color>
+    <color name="popup_shade_second_light">#F1F1F1</color>
+    <color name="popup_shade_third_light">#E2E2E2</color>
+    <color name="popup_shade_first_dark">#252538</color>
+    <color name="popup_shade_second_dark">#1E1E2C</color>
+    <color name="popup_shade_third_dark">#161622</color>
+    <color name="popup_notification_dot_light">#FFFFFF</color>
+    <color name="popup_notification_dot_dark">#757575</color>
+    <color name="notification_dot_color_light">#6DD58C</color>
+    <color name="notification_dot_color_dark">#C4EED0</color>
+    <color name="workspace_text_color_light">#FFF</color>
+    <color name="workspace_text_color_dark">#FF000000</color>
+    <color name="folder_text_color_light">#1F1F1F</color>
+    <color name="folder_text_color_dark">#E3E3E3</color>
+    <color name="folder_hint_text_color_light">#444746</color>
+    <color name="folder_hint_text_color_dark">#C4C7C5</color>
+    <color name="folder_background_light">#EFEDED</color>
+    <color name="folder_background_dark">#1F2020</color>
+    <color name="folder_preview_light">#7FCFFF</color>
+    <color name="folder_preview_dark">#1E1F20</color>
+    <color name="pagination_indicator_dot_color_light">#0B57D0</color>
+    <color name="pagination_indicator_dot_color_dark">#A8C7FA</color>
+    <color name="page_indicator_arrow_bg_light">#000000</color>
+    <color name="page_indicator_arrow_bg_dark">#FFFFFF</color>
+    <color name="page_indicator_rounded_background_color">#1AD6EAB4</color>
+    <color name="text_color_primary_dark">#FFFFFFFF</color>
+    <color name="text_color_secondary_dark">#FFFFFFFF</color>
+    <color name="text_color_tertiary_dark">#CCFFFFFF</color>
+    <color name="wallpaper_popup_scrim">?android:attr/colorAccent</color>
+    <color name="workspace_accent_color_light">#D3E3FD</color>
+    <color name="workspace_accent_color_dark">#041E49</color>
+    <color name="workspace_surface_color">#D3E3FD</color>
+    <color name="drop_target_hover_text_color_light">#041E49</color>
+    <color name="drop_target_hover_text_color_dark">#D3E3FD</color>
+    <color name="drop_target_hover_button_color_light">#D3E3FD</color>
+    <color name="drop_target_hover_button_color_dark">#0842A0</color>
+    <color name="preload_icon_accent_color_light">#00668B</color>
+    <color name="preload_icon_background_color_light">#B5CAD7</color>
+    <color name="preload_icon_accent_color_dark">#4BB6E8</color>
+    <color name="preload_icon_background_color_dark">#40484D</color>
+    <color name="blur_shade_panel_fg">#ffffffff</color>
+    <color name="blur_shade_panel_bg">#ff12121a</color>
+    <color name="work_turn_on_stroke">@color/materialColorPrimary</color>
+    <color name="widget_picker_secondary_surface_color_light">
+        @color/system_surface_bright_light</color>
+    <color name="widget_picker_blur_fg_light">@color/blur_shade_panel_fg</color>
+    <color name="widget_picker_blur_bg_light">@color/blur_shade_panel_bg</color>
+    <color name="widget_picker_blur_fallback_light">@android:color/system_accent2_200</color>
+    <color name="widget_picker_focus_outline_color_light">@color/system_secondary_light</color>
+    <color name="widget_picker_primary_surface_color_light">@android:color/transparent</color>
+    <color name="widget_picker_sheet_background_bottom_layer_light">#99000000</color>
+    <color name="widget_picker_title_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_description_color_light" ns0:ignore="DuplicateDefinition">@color/system_on_surface_variant_light</color>
+    <color name="widget_picker_header_app_title_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_header_app_subtitle_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_selected_header_app_title_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_selected_header_app_subtitle_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_header_background_color_light">#C2E7FF</color>
+    <color name="widget_picker_suggestions_icon_background_color_light">#FFFFFF</color>
+    <color name="widget_picker_suggestions_icon_color_light">#0B57D0</color>
+    <color name="widget_picker_search_bar_background_color_light">@color/customColorSurfaceEffect1</color>
+    <color name="widget_picker_search_text_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_search_cursor_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_tab_background_selected_light">#0B57D0</color>
+    <color name="widget_picker_tab_background_unselected_light">#E3E3E3</color>
+    <color name="widget_picker_selected_tab_text_color_light">#FFFFFF</color>
+    <color name="widget_picker_unselected_tab_text_color_light">#444746</color>
+    <color name="widget_picker_collapse_handle_color_light">@color/system_outline_light</color>
+    <color name="widget_picker_add_button_background_color_light">@color/system_primary_light</color>
+    <color name="widget_picker_add_button_text_color_light">@color/system_on_primary_light</color>
+    <color name="widget_picker_expandable_list_items_background_light">@color/customColorSurfaceEffect2</color>
+    <color name="widget_picker_expand_icon_button_background_light">@color/customColorSurfaceEffect1</color>
+    <color name="widget_picker_expand_icon_button_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_expand_button_background_color_light">
+        @color/widget_picker_secondary_surface_color_light
+    </color>
+    <color name="widget_picker_clickable_list_header_background_light">@color/system_secondary_container_light</color>
+    <color name="widget_picker_widgets_container_background_light">@color/customColorSurfaceEffect2</color>
+    <color name="widget_picker_featured_header_icon_background_light">@color/system_on_primary_light</color>
+    <color name="widget_picker_featured_header_icon_color_light">@color/system_primary_light</color>
+    <color name="widget_picker_no_widget_error_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_preview_placeholder_background_light">@color/system_secondary_container_light</color>
+    <color name="widget_picker_preview_placeholder_content_light">@color/system_on_secondary_container_light</color>
+    <color name="widget_picker_toolbar_background_light">
+        @color/system_surface_bright_light
+    </color>
+    <color name="widget_picker_toolbar_selected_tab_background_light">
+        @color/system_secondary_container_light
+    </color>
+    <color name="widget_picker_toolbar_unselected_tab_background_light">
+        @android:color/transparent
+    </color>
+    <color name="widget_picker_toolbar_selected_tab_content_color_light">
+        @color/system_on_secondary_container_light
+    </color>
+    <color name="widget_picker_toolbar_unselected_tab_content_color_light">
+        @color/system_on_surface_variant_light
+    </color>
+    <color name="widget_picker_expand_button_text_color_light">
+        @color/widget_picker_header_app_title_color_light
+    </color>
+    <color name="widget_cell_title_color_light">@color/system_on_surface_light</color>
+    <color name="widget_cell_subtitle_color_light">@color/system_on_surface_light</color>
+    <color name="widget_picker_focus_outline_color_dark">@color/system_secondary_dark</color>
+    <color name="widget_picker_blur_fg_dark">@color/blur_shade_panel_fg</color>
+    <color name="widget_picker_blur_bg_dark">@color/blur_shade_panel_bg</color>
+    <color name="widget_picker_blur_fallback_dark">@android:color/system_accent2_800</color>
+    <color name="widget_picker_primary_surface_color_dark">@android:color/transparent</color>
+    <color name="widget_picker_sheet_background_bottom_layer_dark">#99000000</color>
+    <color name="widget_picker_secondary_surface_color_dark">@color/system_surface_bright_dark</color>
+    <color name="widget_picker_title_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_description_color_dark">@color/system_on_surface_variant_dark</color>
+    <color name="widget_picker_header_app_title_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_header_app_subtitle_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_selected_header_app_title_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_selected_header_app_subtitle_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_header_background_color_dark">#004A77</color>
+    <color name="widget_picker_suggestions_icon_background_color_dark">#FFFFFFFF</color>
+    <color name="widget_picker_suggestions_icon_color_dark">#062E6F</color>
+    <color name="widget_picker_search_bar_background_color_dark">@color/customColorSurfaceEffect1</color>
+    <color name="widget_picker_search_text_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_search_cursor_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_tab_background_selected_dark">#A8C7FA</color>
+    <color name="widget_picker_tab_background_unselected_dark">#343535</color>
+    <color name="widget_picker_selected_tab_text_color_dark">#2D312F</color>
+    <color name="widget_picker_unselected_tab_text_color_dark">#C4C7C5</color>
+    <color name="widget_picker_collapse_handle_color_dark">@color/system_outline_dark</color>
+    <color name="widget_picker_add_button_background_color_dark">@color/system_primary_dark</color>
+    <color name="widget_picker_add_button_text_color_dark">@color/system_on_primary_dark</color>
+    <color name="widget_picker_expandable_list_items_background_dark">@color/customColorSurfaceEffect2</color>
+    <color name="widget_picker_expand_icon_button_background_dark">@color/customColorSurfaceEffect1</color>
+    <color name="widget_picker_expand_icon_button_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_clickable_list_header_background_dark">@color/system_secondary_container_dark</color>
+    <color name="widget_picker_widgets_container_background_dark">@color/customColorSurfaceEffect2</color>
+    <color name="widget_picker_featured_header_icon_background_dark">@color/system_on_primary_dark</color>
+    <color name="widget_picker_featured_header_icon_color_dark">@color/system_primary_dark</color>
+    <color name="widget_picker_no_widget_error_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_picker_preview_placeholder_background_dark">@color/system_secondary_container_dark</color>
+    <color name="widget_picker_preview_placeholder_content_dark">@color/system_on_secondary_container_dark</color>
+    <color name="widget_picker_toolbar_background_dark">
+        @color/system_surface_bright_dark
+    </color>
+    <color name="widget_picker_toolbar_selected_tab_background_dark">
+        @color/system_secondary_container_dark
+    </color>
+    <color name="widget_picker_toolbar_unselected_tab_background_dark">
+        @android:color/transparent
+    </color>
+    <color name="widget_picker_toolbar_selected_tab_content_color_dark">
+        @color/system_on_secondary_container_dark
+    </color>
+    <color name="widget_picker_toolbar_unselected_tab_content_color_dark">
+        @color/system_on_surface_variant_dark
+    </color>
+    <color name="widget_picker_expand_button_background_color_dark">
+        @color/widget_picker_secondary_surface_color_dark
+    </color>
+    <color name="widget_picker_expand_button_text_color_dark">
+        @color/widget_picker_header_app_title_color_dark
+    </color>
+    <color name="widget_cell_title_color_dark">@color/system_on_surface_dark</color>
+    <color name="widget_cell_subtitle_color_dark">@color/system_on_surface_dark</color>
+    <color name="suw_all_set_expressive_theme_color">#ECDFE5</color>
+    <color name="suw_all_set_scrim">#40000000</color>
+    <color name="home_screen_files_folder_icon_color">@color/system_primary_light</color>
+    <color name="chip_hint_foreground_color">#fff</color>
+    <color name="chip_scrim_start_color">#39000000</color>
+    <color name="all_apps_label_text">#61000000</color>
+    <color name="all_apps_label_text_dark">#61FFFFFF</color>
+    <color name="all_apps_prediction_row_separator">#3c000000</color>
+    <color name="all_apps_prediction_row_separator_dark">#3cffffff</color>
+    <color name="taskbar_nav_icon_selection_ripple">#E0E0E0</color>
+    <color name="taskbar_nav_icon_light_color_on_home">#ffffff</color>
+    <color name="taskbar_nav_icon_dark_color_on_home">#99000000</color>
+    <color name="taskbar_stashed_handle_light_color">#EBffffff</color>
+    <color name="taskbar_stashed_handle_dark_color">#99000000</color>
+    <color name="taskbar_handoff_suggestion_badge_background_color">#1A73E8</color>
+    <color name="floating_rotation_button_light_color">#ffffff</color>
+    <color name="floating_rotation_button_dark_color">#99000000</color>
+    <color name="gesture_tutorial_back_arrow_color">#FFFFFFFF</color>
+    <color name="gesture_tutorial_fake_wallpaper_color">#f9f9f9</color>
+    <color name="gesture_tutorial_ripple_color">#A0C2F9</color>
+    <color name="gesture_tutorial_fake_task_view_color">#6DA1FF</color>
+    <color name="gesture_tutorial_fake_previous_task_view_color">#3C4043</color>
+    <color name="gesture_tutorial_taskbar_color">#E8EAED</color>
+    <color name="mock_app_icon">#BDC1C6</color>
+    <color name="mock_search_bar">#3C4043</color>
+    <color name="mock_conversation_background">#f1f3f4</color>
+    <color name="mock_conversation_top_bar">#e8eaed</color>
+    <color name="mock_conversation_top_bar_item">#dadce0</color>
+    <color name="mock_conversation_sent_message">#bdc1c6</color>
+    <color name="mock_conversation_received_message">#e8eaed</color>
+    <color name="mock_conversation_message_input">#dadce0</color>
+    <color name="mock_conversation_profile_icon">#dadce0</color>
+    <color name="mock_list_background">#dadce0</color>
+    <color name="mock_list_top_bar">#e8eaed</color>
+    <color name="mock_list_top_bar_item">#f8f9fa</color>
+    <color name="mock_list_profile_icon">#9aa0a6</color>
+    <color name="mock_list_preview_message">#bdc1c6</color>
+    <color name="mock_list_button">#bdc1c6</color>
+    <color name="mock_webpage_background">#f1f3f4</color>
+    <color name="mock_webpage_url_bar">#6e7175</color>
+    <color name="mock_webpage_url_bar_item">#9a9a9a</color>
+    <color name="mock_webpage_top_bar">#e8eaed</color>
+    <color name="mock_webpage_top_bar_item">#80868b</color>
+    <color name="mock_webpage_page_text">#bdc1c6</color>
+    <color name="all_set_page_background">@android:color/system_neutral1_50</color>
+    <color name="lottie_blue400">#669df6</color>
+    <color name="lottie_blue600">#1a73e8</color>
+    <color name="lottie_green400">#5bb974</color>
+    <color name="lottie_green600">#1e8e3e</color>
+    <color name="lottie_grey200">#e8eaed</color>
+    <color name="lottie_grey600">#80868b</color>
+    <color name="lottie_grey700">#5f6368</color>
+    <color name="lottie_red600">#d93025</color>
+    <color name="lottie_yellow400">#fcc934</color>
+    <color name="lottie_yellow600">#f9ab00</color>
+    <color name="nudge_pill_color1">#4285F4</color>
+    <color name="nudge_pill_color2">#7430E2</color>
+    <color name="nudge_pill_color3">#2A7EC8</color>
+    <color name="nudge_pill_color4">#2DB8BD</color>
     <color name="materialColorSurface">#12121A</color>
     <color name="materialColorSurfaceDim">#0F0F14</color>
     <color name="materialColorSurfaceBright">#2A2A38</color>
@@ -21,48 +256,11 @@
     <color name="materialColorOnTertiary">#FFFFFF</color>
     <color name="materialColorTertiaryContainer">#263668</color>
     <color name="materialColorTertiaryFixedDim">#4A6BD6</color>
-
-    <!-- Popup container colors -->
-    <color name="notification_icon_default_color">#757575</color>
-    <color name="icon_background">#E0E0E0</color>
-
-    <color name="popup_color_primary_light">#FFFFFF</color>
-    <color name="popup_color_secondary_light">#F1F3F4</color>
-    <color name="popup_color_tertiary_light">#E0E0E0</color>
-    <color name="popup_text_color_light">#1F1F1F</color>
-    <color name="popup_color_neutral_dark">#1A1A26</color>
-    <color name="popup_color_primary_dark">#1A1A26</color>
-    <color name="popup_color_secondary_dark">#12121A</color>
-    <color name="popup_color_tertiary_dark">#757575</color>
-    <color name="popup_text_color_dark">#E3E3E3</color>
-
-    <color name="popup_shade_first_light">#F9F9F9</color>
-    <color name="popup_shade_second_light">#F1F1F1</color>
-    <color name="popup_shade_third_light">#E2E2E2</color>
-    <color name="popup_shade_first_dark">#252538</color>
-    <color name="popup_shade_second_dark">#1E1E2C</color>
-    <color name="popup_shade_third_dark">#161622</color>
-
-    <color name="popup_notification_dot_light">#FFFFFF</color>
-    <color name="popup_notification_dot_dark">#757575</color>
-    <color name="notification_dot_color_light">#6DD58C</color>
-    <color name="notification_dot_color_dark">#C4EED0</color>
-    <color name="focused_background">#80c6c5c5</color>
     <color name="materialColorPrimary">#5B8AF5</color>
     <color name="materialColorOnPrimary">#FFFFFF</color>
     <color name="overview_foreground_scrim_color">#33000000</color>
-    <!-- Taskbar colors -->
-    <color name="taskbar_nav_icon_selection_ripple">#E0E0E0</color>
-    <color name="taskbar_nav_icon_light_color_on_home">#ffffff</color>
-    <color name="taskbar_nav_icon_dark_color_on_home">#99000000</color>
-    <color name="taskbar_nav_icon_light_color">#ffffff</color>
-    <color name="taskbar_nav_icon_dark_color">#99000000</color>
-    <color name="taskbar_stashed_handle_light_color">#EBffffff</color>
-    <color name="taskbar_stashed_handle_dark_color">#99000000</color>
     <color name="taskbar_divider_background">#66FFFFFF</color>
     <color name="taskbar_background">#1A1A26</color>
-    <color name="taskbar_background_dark">#0A0A0F</color>
-    <color name="taskbar_stroke">#3D3D56</color>
     <color name="materialColorPrimaryContainer">#1E293B</color>
     <color name="materialColorOnPrimaryContainer">#FFFFFF</color>
     <color name="home_settings_header_collapsed">#1A1A26</color>

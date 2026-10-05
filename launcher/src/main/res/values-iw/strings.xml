@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Launcher3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"עבודה"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"האפליקציה לא מותקנת."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"האפליקציה אינה זמינה"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"אפליקציה שהורדת הושבתה במצב בטוח"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"ווידג\'טים מושבתים במצב בטוח"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"קיצור הדרך אינו זמין"</string>
+    <string name="home_screen" msgid="5629429142036709174">"בית"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"הגדרה של <ns0:g id="LAUNCHER_NAME">%1$s</ns0:g> כאפליקציית הבית ב\'הגדרות\'"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"מסך מפוצל"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"שינוי יחס גובה-רוחב"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"‏פרטים על האפליקציה %1$s"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"‏הגדרות שימוש ב-%1$s"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"‏סגירת %1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"חלון חדש"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"ניהול החלונות"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"סגירה"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"שמירת צמד אפליקציות"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"צמד האפליקציות הזה לא נתמך במכשיר הזה"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"צריך לפתוח את המכשיר כדי להשתמש בצמד האפליקציות הזה"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"צמד האפליקציות לא זמין"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"להעברת ווידג\'ט למקום אחר לוחצים עליו לחיצה ארוכה."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"כדי להעביר ווידג\'ט למקום אחר או להשתמש בפעולות מותאמות אישית, יש ללחוץ פעמיים ולא להרפות."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"אפשרויות נוספות"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"הצגת כל הווידג\'טים"</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"‏%1$d × ‏%2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"‏רוחב %1$d על גובה %2$d"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"ווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"‏ווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, רוחב: %2$d, אורך: %3$d"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"לוחצים לחיצה ארוכה על הווידג\'ט כדי להזיז אותו במסך הבית"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"הוספה למסך הבית"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"הווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g> נוסף למסך הבית"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"הצעות"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"הכי חשוב"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"חדשות וכתבי עת"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"בידור"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"רשתות חברתיות"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"הצעות בשבילך"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"‫<ns0:g id="SELECTED_HEADER">%1$s</ns0:g> ווידג\'טים מימין, חיפוש ואפשרויות משמאל"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{ווידג\'ט אחד}one{# ווידג\'טים}two{# ווידג\'טים}other{# ווידג\'טים}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{קיצור דרך אחד}one{# קיצורי דרך}two{# קיצורי דרך}other{# קיצורי דרך}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"ווידג\'טים"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"אין ווידג\'טים או קיצורי דרך"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"לא נמצאו ווידג\'טים או קיצורי דרך"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"אישיים"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"לעבודה"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"שיחות"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"כתיבת הערות"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"הצגת כפתור ההוספה"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"הסתרת כפתור ההוספה"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"הוספה"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"הוספת הווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"הצגת הכול"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"הצגת כל הווידג\'טים"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"כל הווידג\'טים מוצגים"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"אפשר לשנות את הגדרות הווידג\'ט בלחיצה"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"שינוי הגדרות הווידג\'ט"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"חיפוש אפליקציות"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"טעינת אפליקציות מתבצעת…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"לא נמצאו אפליקציות התואמות ל-\"<ns0:g id="QUERY">%1$s</ns0:g>\""</string>
+    <string name="label_application" msgid="8531721983832654978">"אפליקציה"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"כל האפליקציות"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"רשימת האפליקציות"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"התראות"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"כדי להעביר קיצור דרך למקום אחר יש לגעת ולא להרפות."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"כדי להעביר קיצור דרך למקום אחר או להשתמש בפעולות מותאמות אישית\' יש ללחוץ פעמיים ולא להרפות."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"אין מקום במסך הבית הזה"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"אין עוד מקום במגש המועדפים"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"רשימת האפליקציות"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"תוצאות חיפוש"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"רשימת אפליקציות אישיות"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"רשימת אפליקציות עבודה"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"הסרה"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"הסרת ההתקנה"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"פרטי האפליקציה"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"התקנה במרחב הפרטי"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"הסרת האפליקציה"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"התקנה"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"בלי להציע את האפליקציה"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"הצמדת החיזוי"</string>
+    <string name="bubble" msgid="3072951361014076670">"בועה"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"נעילת האפליקציה"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"הסרת נעילת האפליקציה"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"הגדרות"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"הוספה לסרגל האפליקציות"</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"הסרה מסרגל האפליקציות"</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"אין מקום בסרגל האפליקציות"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"האפליקציה נוספה לסרגל האפליקציות"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"האפליקציה הוסרה מסרגל האפליקציות"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"הסרה"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"העתקה"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"פתיחה"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"שינוי שם"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"מחיקה לתמיד"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"העברה לאשפה"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"הפריט הועבר לאשפה"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"אי אפשר להעביר לאשפה. משהו השתבש."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"‏אי אפשר לבטל את הפעולה. כדי לשחזר, צריך להיכנס לאפליקציית Files."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"פעולות"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"קיצורי דרך"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"הצגת תפריט הפעולות"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"הצגת תפריט קיצורי הדרך של האפליקציות"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"השהיית האפליקציה"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"התקנת קיצורי דרך"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"מאפשר לאפליקציה להוסיף קיצורי דרך ללא התערבות המשתמש."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"קריאת ההגדרות וקיצורי הדרך בדף הבית"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"מאפשרת לאפליקציה לקרוא את ההגדרות וקיצורי הדרך בדף הבית."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"כתיבת ההגדרות וקיצורי הדרך בדף הבית"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"מאפשרת לאפליקציה לשנות את ההגדרות וקיצורי הדרך בדף הבית."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"לא ניתן לטעון את הווידג\'ט"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"הגדרות הווידג\'ט"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"צריך ללחוץ כדי לסיים את תהליך ההגדרה"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"זוהי אפליקציית מערכת ולא ניתן להסיר את התקנתה."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"עריכת השם"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"הגדרה של מעבר עמוד שמאלה"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"הגדרה של מעבר עמוד ימינה"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"<ns0:g id="APP_NAME">%1$s</ns0:g> מושבתת"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{לאפליקציה {app_name} יש התראה אחת}one{לאפליקציה {app_name} יש # התראות}two{לאפליקציה {app_name} יש # התראות}other{לאפליקציה {app_name} יש # התראות}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"האפליקציות החזויות: <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"‏דף %1$d מתוך %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"‏מסך הבית %1$d מתוך %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"מסך הבית חדש"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"מצב פעיל"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"ממוזער"</string>
+    <string name="folder_opened" msgid="94695026776264709">"תיקייה פתוחה, <ns0:g id="WIDTH">%1$d</ns0:g> על <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"יש ללחוץ כדי לסגור את התיקייה"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"יש ללחוץ כדי לשמור שינוי שם"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"התיקייה נסגרה"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"שם התיקייה שונה ל-<ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"תיקייה"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"תיקיית אפליקציות"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"‫<ns0:g id="TYPE">%1$s</ns0:g>:‏ <ns0:g id="NAME">%2$s</ns0:g>,‏ <ns0:g id="SIZE">%3$d</ns0:g> פריטים"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"‫<ns0:g id="TYPE">%1$s</ns0:g>:‏ <ns0:g id="NAME">%2$s</ns0:g>,‏ <ns0:g id="SIZE">%3$d</ns0:g> פריטים, יש התראות"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"‫<ns0:g id="TYPE">%1$s</ns0:g>:‏ <ns0:g id="NAME">%2$s</ns0:g>,‏ <ns0:g id="SIZE">%3$d</ns0:g> פריטים או יותר"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"‫<ns0:g id="TYPE">%1$s</ns0:g>:‏ <ns0:g id="NAME">%2$s</ns0:g>,‏ <ns0:g id="SIZE">%3$d</ns0:g> פריטים או יותר, יש התראות"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"תיקייה ללא שם"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"תיקיית קבצים: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"צמד אפליקציות: <ns0:g id="APP1">%1$s</ns0:g> ו-<ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"טפט וסגנון"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"עריכה של מסך הבית"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"ההגדרות של מסך הבית"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"הושבת על ידי מנהל המערכת שלך"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"‏אפשרויות לניהול Home"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"כאשר מסובבים את הטלפון"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"‏‫Jetpack פיתוח נייטיב"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"הפעלת מעקב אחר קומפוזיציה"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"‏הפעלת מעקב אחר קומפוזיציה כשמבצעים מעקב ב-Perfetto בסקירה כללית"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"פריסה לרוחב"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"הגדרת פריסה לרוחב במסך הבית"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"סימני ההתראות"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"מופעל"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"כבוי"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"נדרשת גישה להתראות"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"כדי להציג את סימני ההתראות,יש להפעיל התראות מהאפליקציה <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"שינוי ההגדרות"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"הצגת סימני ההתראות"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"אפשרויות למפתחים"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"הוספת סמלי אפליקציות למסך הבית"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"לאפליקציות חדשות"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"לא ידוע"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"הסרה"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"חיפוש"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"אפליקציה זו אינה מותקנת"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"האפליקציה של סמל זה אינה מותקנת. ניתן להסיר אותו, או לחפש את האפליקציה ולהתקין אותה ידנית."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"<ns0:g id="NAME">%1$s</ns0:g> בתהליך התקנה, <ns0:g id="PROGRESS">%2$s</ns0:g> הושלמו"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"הורדת <ns0:g id="NAME">%1$s</ns0:g> מתבצעת, <ns0:g id="PROGRESS">%2$s</ns0:g> הושלמו"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"מחכה להתקנה של <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"אפליקציית <ns0:g id="NAME">%1$s</ns0:g> הועברה לארכיון."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"הורדה ושחזור"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"נדרש עדכון לאפליקציה"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"האפליקציה של הסמל הזה לא מעודכנת. אפשר לעדכן אותה ידנית כדי להפעיל מחדש את קיצור הדרך הזה, או להסיר את הסמל."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"עדכון"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"הסרה"</string>
+    <string name="widgets_list" msgid="796804551140113767">"רשימת ווידג\'טים"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"רשימת הווידג\'טים נסגרה"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"הוספה למסך הבית"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"העברת הפריט לכאן"</string>
+    <string name="item_removed" msgid="851119963877842327">"הפריט הוסר"</string>
+    <string name="undo" msgid="4151576204245173321">"ביטול"</string>
+    <string name="action_move" msgid="4339390619886385032">"העברת הפריט"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"צריך לעבור לשורה <ns0:g id="NUMBER_0">%1$s</ns0:g> ולטור <ns0:g id="NUMBER_1">%2$s</ns0:g> ב-<ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"העברה אל מיקום <ns0:g id="NUMBER">%1$s</ns0:g>"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"העברה אל מיקום <ns0:g id="NUMBER">%1$s</ns0:g> במועדפים"</string>
+    <string name="item_moved" msgid="4606538322571412879">"הפריט הועבר"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"הוספה לתיקייה: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"הוספה לתיקייה: <ns0:g id="NAME">%1$s</ns0:g> שורה <ns0:g id="NUMBER_0">%2$s</ns0:g>, עמודה <ns0:g id="NUMBER_1">%3$s</ns0:g> ב<ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"הוספה לתיקייה עם <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"הוספה לתיקייה עם <ns0:g id="NAME">%1$s</ns0:g> שורה <ns0:g id="NUMBER_0">%2$s</ns0:g>, עמודה <ns0:g id="NUMBER_1">%3$s</ns0:g>, ב<ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"הפריט נוסף לתיקייה"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"יצירת תיקייה עם: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"יצירת תיקייה עם: <ns0:g id="NAME">%1$s</ns0:g> שורה <ns0:g id="NUMBER_0">%2$s</ns0:g>, עמודה <ns0:g id="NUMBER_1">%3$s</ns0:g>, ב<ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"התיקייה נוצרה"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"העברה למסך הבית"</string>
+    <string name="action_resize" msgid="1802976324781771067">"שינוי גודל"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"הגדלת רוחב"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"הגדלת גובה"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"הקטנת רוחב"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"הקטנת גובה"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"נקודת אחיזה שמאלית לשינוי גודל"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"נקודת אחיזה עליונה לשינוי גודל"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"נקודת אחיזה ימנית לשינוי גודל"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"נקודת אחיזה תחתונה לשינוי גודל"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"הצגת כפתורי שינוי הגודל"</string>
+    <string name="widget_resized" msgid="9130327887929620">"גודל הווידג\'ט שונה - רוחב <ns0:g id="NUMBER_0">%1$s</ns0:g> גובה <ns0:g id="NUMBER_1">%2$s</ns0:g>"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"תפריט קיצורי הדרך"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"מסגרת שינוי גודל הווידג\'ט של <ns0:g id="STRING">%1$s</ns0:g>"</string>
+    <string name="action_close" msgid="1077760267194136901">"סגירה"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"סגירה"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"סגירה"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"אישי"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"עבודה"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"הכרטיסייה \"אפליקציות לשימוש אישי\""</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"הכרטיסייה \"אפליקציות לעבודה\""</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"פרופיל עבודה"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"‏האפליקציות לעבודה מתויגות ומוצגות למנהל ה-IT"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"האפליקציות לעבודה מושהות"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"לא יתקבלו התראות מהאפליקציות לעבודה"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"האפליקציות לעבודה לא יכולות לשלוח לך התראות, להשתמש בסוללה או לגשת למיקום שלך"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"לא יתקבלו שיחות טלפון, הודעות טקסט או התראות מהאפליקציות לעבודה"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"‏האפליקציות לעבודה מתויגות ומוצגות למנהל ה-IT"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"הבנתי"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"השהיית האפליקציות לעבודה"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"ביטול ההשהיה"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"לוח זמנים להשהיית אפליקציות לעבודה"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"סינון"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"הפעולה נכשלה: <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"מרחב פרטי"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"יש ללחוץ כדי להגדיר או לפתוח"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"פרטי"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"הגדרות המרחב הפרטי"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"פרטי, פתוח."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"פרטי, נעול."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"נעילה"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"מעבר למרחב הפרטי"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"התקנה"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"הוספה"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"התקנת אפליקציות במרחב הפרטי"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"הוספת קבצים ופריטים נוספים למרחב הפרטי"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"צורת עיגול"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"ריבוע"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"עוגייה עם 4 צלעות"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"עוגייה עם 7 צלעות"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"קשת"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"תיקייה חדשה"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"תיקייה חדשה"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"ניקוי"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"ביטול"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"שינוי שם"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"שינוי שם הקובץ"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"שינוי שם התיקיה"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"משהו השתבש"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"יצירת מסך"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"כדי להוסיף ווידג\'טים ואפליקציות מהטלפון, צריך לבחור קטגוריה"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"בחירת פריסה"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"הצמדה"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"מצב חופשי"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"במחשב"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"‏שולחן עבודה בשביל %1$s"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"העברה למסך חיצוני"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"ניקוי"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"מחשב"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"אין פריטים אחרונים"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"הגדרות שימוש באפליקציה"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"ניקוי הכול"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"הוספה של שולחן עבודה וירטואלי חדש"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"אפליקציות אחרונות"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"‏&lt; דקה"</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"הזמן שנותר להיום: <ns0:g id="TIME">%1$s</ns0:g>"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"הצעות לאפליקציות"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"האפליקציות החזויות שלך"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"הגדרות"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"רוב האפליקציות הכי נפוצות מופיעות כאן ומשתנות בהתאם להרגלי השימוש שלך"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"כדי לקבל הצעות נוספות לאפליקציות, צריך לגרור אפליקציות מהשורה התחתונה"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"הצעות לאפליקציות נוספו לאזור ריק"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"התכונה \'הצעות לאפליקציות\' מופעלת"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"ההצעות לאפליקציות מושבתות"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"מדריך לניווט באמצעות תנועות"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"צריך לסובב את המכשיר"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"צריך לסובב את המכשיר כדי להשלים את המדריך לניווט באמצעות תנועות"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"חשוב להחליק מהקצה השמאלי או הימני"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"חשוב להחליק מהקצה השמאלי או הימני למרכז המסך ואז לשחרר"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"למדת איך להחליק מצד ימין כדי לחזור אחורה. בשלב הבא לומדים איך לעבור בין אפליקציות."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"השלמת את תנועת \'הקודם\'. בשלב הבא לומדים איך לעבור בין אפליקציות."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"סיימת לתרגל את התנועה \"חזרה אחורה\""</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"חשוב שלא להחליק קרוב מדי לתחתית המסך"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"כדי לשנות את מידת הרגישות של תנועת החזרה, יש לעבור להגדרות"</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"יש להחליק כדי לחזור"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"כדי לחזור למסך הקודם, יש להחליק מהקצה השמאלי או הימני למרכז המסך."</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"חזרה אחורה"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"החלקה מהקצה השמאלי או הימני למרכז המסך תחזיר אותך למסך הקודם"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"חשוב להחליק למעלה מהקצה התחתון של המסך"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"חשוב שלא לחכות לפני שחרור האצבע"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"חשוב להחליק ישר למעלה"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"השלמת את תנועת המעבר למסך הבית. בשלב הבא נראה איך לחזור למסך הקודם."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"הבנת איך עושים את תנועת המעבר למסך הבית"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"יש להחליק כדי לעבור למסך הבית"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"החלקה למעלה מתחתית המסך תמיד תעביר אותך למסך הבית."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"מעבר למסך הבית"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"החלקה למעלה מהחלק התחתון של המסך"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"מעולה!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"חשוב להחליק למעלה מהקצה התחתון של המסך"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"כדאי לנסות להחזיק את החלון זמן רב יותר לפני שחרור האצבע"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"חשוב להחליק למעלה בקו ישר ואז לעצור"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"למדת איך להשתמש בתנועות. אפשר להשבית את התנועות ב\'הגדרות\'."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"הבנת איך עושים את תנועת המעבר בין אפליקציות"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"יש להחליק כדי לעבור בין אפליקציות"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"כדי לעבור בין אפלקציות, יש להחליק למעלה מתחתית המסך, להחזיק ולאחר מכן לשחרר."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"מעבר בין אפליקציות"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"מחליקים כלפי מעלה מתחתית המסך, מחזיקים ואז משחררים"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"כל הכבוד!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"הכול מוכן"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"סיום"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"הגדרות"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"ניסיון חוזר"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"יפה!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"מדריך <ns0:g id="CURRENT">%1$d</ns0:g>/<ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"הכול מוכן!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"כדי לחזור לדף הבית, צריך להחליק למעלה"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"כדי לעבור אל מסך הבית צריך ללחוץ על הכפתור הראשי"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"הכול מוכן ואפשר להתחיל להשתמש ב<ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"הכול מוכן ואפשר להתחיל להשתמש במכשיר"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"הגדרות הניווט במערכת"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"ה-<ns0:g id="DEVICE">%1$s</ns0:g> שלך \nמוכן!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"המכשיר שלך \nמוכן!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"הכל מוכן!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"מקווים שיהיה לך כיף עם ה<ns0:g id="DEVICE">%1$s</ns0:g> החדש שלך!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"צריך להחליק למעלה כדי להתחיל להשתמש ב<ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"כדי להתחיל להשתמש ב<ns0:g id="DEVICE">%1$s</ns0:g>, צריך ללחוץ"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"בחירת אופן הניווט"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"אפשר להחליק למעלה"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"אפשר ללחוץ על הכפתור הראשי"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"טאבלט"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"טלפון"</string>
+    <string name="action_share" msgid="2648470652637092375">"שיתוף"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"צילום מסך"</string>
+    <string name="action_split" msgid="2098009717623550676">"פיצול"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"שמירת צמד אפליקציות"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"צריך ללחוץ על אפליקציה אחרת כדי להשתמש במסך מפוצל"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"כדי להשתמש במסך מפוצל צריך לבחור אפליקציה אחרת"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"ביטול"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"יציאה מתצוגת מסך מפוצל"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"כדי להשתמש במסך מפוצל צריך לבחור אפליקציה אחרת"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"האפליקציה או הארגון שלך אינם מתירים את הפעולה הזאת"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"הווידג\'טים לא נתמכים כרגע, צריך לבחור אפליקציה אחרת"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"העתקה"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"שמירה"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"סיבוב המסך"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"אנימציה שמראה איך סרגל האפליקציות מוצג מתחתית המסך, ומוסתר באופן אוטומטי כשלא משתמשים בו"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"אנימציה שמראה איך להצמיד את סרגל האפליקציות באמצעות מתג, כדי שהסרגל יוצג באופן קבוע בתחתית המסך"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"אנימציה שמראה איך ליצור בועה מסרגל האפליקציות באמצעות תנועת גרירה"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"אנימציה שמראה איך ליצור מסך מפוצל על ידי גרירה ושחרור של אפליקציה מסרגל האפליקציות מעל אפליקציה פתוחה"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"אנימציה שמראה איך לגשת לאפליקציות המוצעות במכשיר"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"אנימציה שמראה איך לחפש פריט במסך על ידי לחיצה ארוכה על מקש הפעולה ובחירת האזור שבו הפריט נמצא"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"הסבר על סרגל האפליקציות"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"כדי להשתמש בשתי אפליקציות בו-זמנית, צריך לגרור אפליקציה לצד"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"כדי לגרום לאפליקציה לצוף, צריך לגרור אותה לפינה"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"כדי להציג את סרגל האפליקציות, צריך להחליק למעלה לאט"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"אפשר לקבל הצעות לאפליקציות על סמך השימוש השגרתי"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"כדי להצמיד את סרגל האפליקציות, לוחצים לחיצה ארוכה על הקו המפריד"</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"עוד פעולות עם סרגל האפליקציות"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"תמיד להציג את סרגל האפליקציות"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"כדי להציג תמיד את סרגל האפליקציות בתחתית המסך, יש ללחוץ לחיצה ארוכה על המחיצה"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"כדי לגרום לאפליקציה לצוף, גוררים אותה לפינה"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"כדי לחפש את מה שרואים במסך, צריך ללחוץ לחיצה ארוכה על מקש הפעולה"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"‏המוצר הזה משתמש בחלק שבחרת במסך לצורך חיפוש, בכפוף ל<ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>מדיניות הפרטיות<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> ו<ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>לתנאים ולהגבלות<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g> של Google."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"סגירה"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"סיום"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"הבא"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"בית"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"נגישות"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"חזרה"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"‏כלי להחלפת IME"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"לאחרונה"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"התראות"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"הגדרות מהירות"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"אפשרויות נוספות"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"סרגל האפליקציות"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"סרגל הבועות"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"סרגל הניווט"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"סרגל האפליקציות מוצג תמיד"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"שינוי מצב הניווט"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"המחיצה בסרגל האפליקציות"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"אפליקציות אחרות שהיו בשימוש לאחרונה"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"אפליקציות אחרות"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"הסרה"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"העברה לפינה השמאלית/העליונה"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"העברה לפינה הימנית/התחתונה"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"פתיחת האפליקציה בבועה"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"העברת הפריט שמאלה"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"העברת הפריט ימינה"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"אפליקציות אחרונות"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"רשימת האפליקציות האחרונות"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{אפליקציה נוספת}one{אפליקציות נוספות}two{אפליקציות נוספות}other{אפליקציות נוספות}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"מחשב"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g> ו-<ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"‫<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, פריט <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> מתוך <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>. כדי לבחור צריך לשחרר את מקשי הקיצור"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"גלילה שמאלה"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"גלילה ימינה"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"בועה"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"אפשרויות נוספות"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"‫<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g> מתוך <ns0:g id="APP_NAME">%2$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"‫<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g> ועוד <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g>"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"הזזה שמאלה"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"הזזה ימינה"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"ביטול של הכול"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"מקיפים ומחפשים"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"סמל האפליקציה"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"שם האפליקציה"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"סגירה"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"נדנוד"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"סגירה"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"תמונה של תכונת הנדנוד"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"האפליקציה <ns0:g id="APP_TITLE">%1$s</ns0:g> במצב <ns0:g id="RUNNING_STATE">%2$s</ns0:g>⁠"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"סמל"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"קבלת הצעות מועילות"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"‏אנחנו משתמשים ב-AI כדי להציע לך מידע ופעולות שרלוונטיים לפעולות שלך במסך"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"סגירה"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"הרחבה"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"סמל של הצעות אווירה"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"כדי לראות איך ההצעות נוצרות, צריך ללחוץ לחיצה ארוכה"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"מילוי אוטומטי"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"לשיתוף האפליקציה"</string>
+    <string name="action_listen" msgid="2370304050784689486">"האזנה"</string>
+    <string name="action_translate" msgid="8028378961867277746">"תרגום"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lens"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"הבנתי"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ביטול"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"הגדרות"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"תרגום טקסט שמוצג במסך או האזנה לו"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"‏ייתכן שישותף עם Google מידע כגון טקסט שמוצג במסך, כתובות אינטרנט וצילומי מסך.\n\nכדי לקבוע איזה מידע ישותף, יש לעבור אל "<b>"הגדרות &gt; אפליקציות &amp;gt אפליקציות ברירת מחדל &gt; אפליקציית עוזר דיגיטלי"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"יש לבחור עוזר דיגיטלי כדי להשתמש בתכונה הזו"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"כדי להאזין לטקסט שבמסך או לתרגם אותו, צריך לבחור אפליקציית עוזר דיגיטלי ב\'הגדרות\'"</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"צריך לשנות את העוזר הדיגיטלי כדי להשתמש בתכונה הזו"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"כדי להאזין לטקסט שבמסך או לתרגם אותו, צריך לשנות את אפליקציית העוזר הדיגיטלי ב\'הגדרות\'"</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"צריך ללחוץ כאן כדי להאזין לטקסט שבמסך הזה"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"צריך ללחוץ כאן כדי לתרגם את הטקסט שבמסך הזה"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"אי אפשר לשתף את האפליקציה הזו"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"סגירת החלונית"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"שם האפליקציה"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{ווידג\'ט אחד}one{‫# ווידג\'טים}two{‫# ווידג\'טים}other{‫# ווידג\'טים}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{קיצור דרך אחד}one{‫# קיצורי דרך}two{‫# קיצורי דרך}other{‫# קיצורי דרך}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"‫<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>‏, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"‏רוחב %1$d ואורך %2$d"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"‏ווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, רוחב %2$d ואורך %3$d"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"הצגת כפתור ההוספה"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"הסתרת כפתור ההוספה"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"הוספה"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"הוספת הווידג\'ט <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"מומלצים"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"עיון"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"‫<ns0:g id="TAB_NAME">%1$s</ns0:g> ווידג\'טים"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"ווידג\'טים של <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> מימין, חיפוש ואפשרויות משמאל"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"אפשרויות החיפוש והווידג\'טים בצד שמאל, הווידג\'טים בצד ימין"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"חיפוש"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"מחיקה"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"חזרה"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"אין ווידג\'טים או קיצורי דרך זמינים"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"לא נמצאו ווידג\'טים או קיצורי דרך"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"הוספה למסך הבית"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"ביטול"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"כדי להעביר ווידג\'ט למקום אחר לוחצים עליו לחיצה ארוכה."</string>
+</resources>

@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Стартер3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Работа"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"Апликацијата не е инсталирана."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"Апликацијата не е достапна"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"Преземената апликација е оневозможена во безбеден режим"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"Додатоците се оневозможени во безбеден режим"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"Кратенката не е достапна"</string>
+    <string name="home_screen" msgid="5629429142036709174">"Почетен екран"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"Поставете <ns0:g id="LAUNCHER_NAME">%1$s</ns0:g> да биде стандардна апликација за почетен екран во „Поставки“"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"Поделен екран"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"Променете го соодносот"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"Податоци за апликација за %1$s"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"Поставки за користење за %1$s"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"Затвори %1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"Нов прозорец"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"Управувајте со прозорците"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"Затвори"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"Зачувај го парот апликации"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"Паров апликации не е поддржан на уредов"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"Отворете го уредот за да го користите паров апликации"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"Парот апликации не е достапен"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"Допрете и задржете за да преместите виџет."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"Допрете двапати и задржете за да преместите виџет или користете приспособени дејства."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"Повеќе опции"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"Прикажи ги сите виџети"</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"%1$d широк на %2$d висок"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"Виџет <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"Виџет <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, ширина од %2$d со висина од %3$d"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"Допрете го и задржете го виџетот за да го движите наоколу на почетниот екран"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"Додај на почетниот екран"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"Виџетот <ns0:g id="WIDGET_NAME">%1$s</ns0:g> е додаден на почетниот екран"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"Предлози"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"Неопходни"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"Вести и списанија"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"Забава"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"Друштвени"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"Препорачано за вас"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"<ns0:g id="SELECTED_HEADER">%1$s</ns0:g> виџети оддесно, „Пребарување“ и „Опции“ одлево"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# виџет}one{# виџет}other{# виџети}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# кратенка}one{# кратенка}other{# кратенки}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"Виџети"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"Виџетите и кратенките не се достапни"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"Не се најдени виџети или кратенки"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"Лични"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"Работни"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"Разговори"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"Фаќање белешки"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"Прикажи го копчето за додавање"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"Скриј го копчето за додавање"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"Додај"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"Додај го виџетот <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"Прикажи ги сите"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"Прикажи ги сите виџети"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"Се прикажуваат сите виџети"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"Допрете за да ги промените поставките за виџетот"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"Промени ги поставките за виџетот"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"Пребарувајте апликации"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"Се вчитуваат апликации…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"Не се најдени апликации што одговараат на „<ns0:g id="QUERY">%1$s</ns0:g>“"</string>
+    <string name="label_application" msgid="8531721983832654978">"Апликација"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"Сите апликации"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"Список со апликации"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"Известувања"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"Допрете и задржете за да преместите кратенка."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"Допрете двапати и задржете за да преместите кратенка или користете приспособени дејства."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"Нема простор на почетниов екран"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"Нема повеќе простор на лентата „Омилени“"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"Список со апликации"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"Резултати од пребарување"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"Список со лични апликации"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"Список со апликации за работа"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"Отстрани"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"Деинсталирај"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"Инф. за апликација"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"Инстал. во приватен"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"Деинсталирај ја апликацијата"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"Инсталирај"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"Не предлагај апл."</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"Закачи го предвидувањето"</string>
+    <string name="bubble" msgid="3072951361014076670">"Балонче"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"Заклучување апликација"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"Отстрани заклучување"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"Поставки"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"Додај на „Лентата со задачи“"</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"Отстрани од „Лентата со задачи“"</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"Нема простор во „Лентата со задачи“"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"Апликацијата е додадена на „Лентата со задачи“"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"Апликацијата е отстранета од „Лентата со задачи“"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"Отстрани"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"Копирај"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"Отвори"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"Преименувајте"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"Избриши трајно"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"Премести во „Корпа“"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"Ставката е преместена во корпата"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"Не може да се премести во „Корпа“. Нешто тргна наопаку."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"Не може да се врати. Одете во апликацијата Files за да вратите."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"Дејства"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"Кратенки"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"Прикажи го менито со дејства"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"Прикажи го менито со кратенки за апликации"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"Паузирај апликација"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"инсталирање кратенки"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"Овозможува апликацијата да додава кратенки без интервенција на корисникот."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"да чита поставки и кратенки на почетна страница"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"Овозможува апликацијата да ги чита поставките и кратенките на почетната страница."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"да пишува поставки и кратенки на почетна страница"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"Овозможува апликацијата да ги менува поставките и кратенките на почетната страница."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"Не може да се вчита виџетот"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"Поставки за виџетот"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"Допрете за да го завршите поставувањето"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"Ова е системска апликација и не може да се деинсталира."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"Изменете го името"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"Разделување на страници налево"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"Разделување на страници надесно"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"<ns0:g id="APP_NAME">%1$s</ns0:g> е оневозможена"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{{app_name} има # известување}one{{app_name} има # известување}other{{app_name} има # известувања}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"Предвидена апликација: <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"Страница %1$d од %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"Екран на почетна страница %1$d од %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"Нова страница на почетен екран"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"Активно"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"Минимизирано"</string>
+    <string name="folder_opened" msgid="94695026776264709">"Отворена е папка, <ns0:g id="WIDTH">%1$d</ns0:g> на <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"Допрете за да ја затворите папката"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"Допрете за да го зачувате преименувањето"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"Папката е затворена"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"Папката е преименувана во <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"Папка"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"Папка со апликации"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ставки"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ставки, има известувања"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> или повеќе ставки"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> или повеќе ставки, има известувања"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"Неименувана папка"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"Папка со датотеки: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"Пар апликации: <ns0:g id="APP1">%1$s</ns0:g> и <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"Тапет и стил"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"Изменете го почетниот екран"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"Поставки за почетен екран"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"Оневозможено од администраторот"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"Организатор на Home"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"Кога телефонот се ротира"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"Овозможете следење на композицијата"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"Овозможете следење на композицијата при снимање на трагата perfetto во прегледот"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"Хоризонтален режим"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"Поставете го почетниот екран во хоризонтален режим"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"Точки за известување"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"Вклучено"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"Исклучено"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"Потребен е пристап до известувањата"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"За да се прикажуваат „Точки за известување“, вклучете ги известувањата за апликацијата <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"Промени ги поставките"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"Прикажувај точки за известување"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"Програмерски опции"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"Додавај икони за апликации на почетниот екран"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"За нови апликации"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"Непознато"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"Отстрани"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"Барај"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"Апликацијата не е инсталирана"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"Апликацијата за оваа икона не е инсталирана. Може да ја отстраните или да се обидете да ја најдете апликацијата и да ја инсталирате рачно."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"<ns0:g id="NAME">%1$s</ns0:g> се инсталира, <ns0:g id="PROGRESS">%2$s</ns0:g> завршено"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"Се презема <ns0:g id="NAME">%1$s</ns0:g>, <ns0:g id="PROGRESS">%2$s</ns0:g> завршено"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"<ns0:g id="NAME">%1$s</ns0:g> чека да се инсталира"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"Апликацијата <ns0:g id="NAME">%1$s</ns0:g> е архивирана."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"преземете и вратете"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"Потребно е ажурирање на апликацијата"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"Апликацијата за оваа икона не е ажурирана. Може да ажурирате рачно за да повторно се овозможи кратенкава или отстранете ја иконата."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"Ажурирај"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"Отстрани"</string>
+    <string name="widgets_list" msgid="796804551140113767">"Список со виџети"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"Списокот со виџети е затворен"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"Додај на почетниот екран"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"Премести ја ставката овде"</string>
+    <string name="item_removed" msgid="851119963877842327">"Отстрането е"</string>
+    <string name="undo" msgid="4151576204245173321">"Врати"</string>
+    <string name="action_move" msgid="4339390619886385032">"Премести ја ставката"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"Преместете во редица <ns0:g id="NUMBER_0">%1$s</ns0:g>, колона <ns0:g id="NUMBER_1">%2$s</ns0:g> во <ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"Премести на место <ns0:g id="NUMBER">%1$s</ns0:g>"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"Премести на место <ns0:g id="NUMBER">%1$s</ns0:g> во омилени"</string>
+    <string name="item_moved" msgid="4606538322571412879">"Ставката е преместена"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"Додај во папката: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"Додајте во папката <ns0:g id="NAME">%1$s</ns0:g>. Ред <ns0:g id="NUMBER_0">%2$s</ns0:g>, колона <ns0:g id="NUMBER_1">%3$s</ns0:g> во <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"Додај во папка со <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"Додајте во папка со <ns0:g id="NAME">%1$s</ns0:g>. Ред <ns0:g id="NUMBER_0">%2$s</ns0:g>, колона <ns0:g id="NUMBER_1">%3$s</ns0:g>, во <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"Ставката е додадена во папката"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"Создај папка со: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"Создајте папка со <ns0:g id="NAME">%1$s</ns0:g>. Ред <ns0:g id="NUMBER_0">%2$s</ns0:g>, колона <ns0:g id="NUMBER_1">%3$s</ns0:g>, во <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"Папката е создадена"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"Премести на почетен екран"</string>
+    <string name="action_resize" msgid="1802976324781771067">"Промени големина"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"Зголеми ширина"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"Зголеми висина"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"Намали ширина"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"Намали висина"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"Лева рачка за менување големина"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"Горна рачка за менување големина"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"Десна рачка за менување големина"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"Долна рачка за менување големина"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"Прикажи ги копчињата за менување големина"</string>
+    <string name="widget_resized" msgid="9130327887929620">"Големината на виџетот е променета на ширина <ns0:g id="NUMBER_0">%1$s</ns0:g> висина <ns0:g id="NUMBER_1">%2$s</ns0:g>"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"Мени за кратенки"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"Рамка за промена на големината на виџетот за <ns0:g id="STRING">%1$s</ns0:g>"</string>
+    <string name="action_close" msgid="1077760267194136901">"Затвори"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"Отфрли"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"Затвори"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"Лично"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"За работа"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"Картичка „Лични апликации“"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"Картичка „Работни апликации“"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"Работен профил"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"Работните апликации имаат значка и се видливи за IT-администраторот"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"Работните апликации се паузирани"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"Нема да примате известувања од работните апликации"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"Работните апликации не може да ви испраќаат известувања, да ја користат батеријата или да пристапуваат до вашата локација"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"Нема да добивате телефонски повици, текстуални пораки или известувања од работните апликации"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"Работните апликации имаат значка и се видливи за IT-администраторот"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"Сфатив"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"Паузирај ги работните апликации"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"Прекини ја паузата"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"Распоред на работните апликации"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"Филтер"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"Не успеа: <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"Приватен простор"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"Допрете за да поставите или отворите"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"Приватен"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"Поставки за „Приватен простор“"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"Приватно, отклучено."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"Приватно, заклучено."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"Заклучи"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"Префрлање на „Приватен простор“"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"Инсталирајте"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"Додај"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"Инсталирање апликации во „Приватен простор“"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"Додавање датотеки и друго во „Приватен простор“"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"Круг"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"Квадрат"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Колаче со 4 страни"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Колаче со 7 страни"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"Свод"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"Нова папка"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"Нова папка"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"Избриши"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"Откажи"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"Преименувај"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"Преименувајте ја датотеката"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"Преименувајте ја папката"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"Нешто тргна наопаку"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"Создајте екран"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"Изберете категорија за да додавате апликации и виџети од телефонот"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"Изберете распоред"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"Закачи"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"Freeform"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"Работна површина"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"Работна површина за %1$s"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"Префрлете се на надворешниот екран"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"Избришете"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"За компјутер"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"Нема неодамнешни ставки"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"Поставки за користење на апликациите"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"Избриши ги сите"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"Додајте нова работна површина"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"Неодамнешни апликации"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"&lt; 1 минута"</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"Уште <ns0:g id="TIME">%1$s</ns0:g> за денес"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"Предлози за апликации"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"Вашите предвидени апликации"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"Поставки"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"Најкористените апликации се појавуваат тука и се менуваат според рутините"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"Отстранете апликации од долниот ред со повлекување за да добивате предлози за апликации"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"Предлозите за апликации се додадени во празен простор"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"Предлозите за апликации се овозможени"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"Предлозите за апликации се оневозможени"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"Упатство за навигација со движења"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"Ротирајте го уредот"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"Ротирајте го уредот за да го завршите упатството за навигација со движење"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"Повлечете од крајниот десен или крајниот лев раб"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"Повлечете од десниот или левиот раб кон средината на екранот и пуштете"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"Научивте како да повлекувате оддесно за враќање назад. Научете и како да се префрлате помеѓу апликациите."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"Го научивте движењето за враќање назад. Научете го и движењето за префрлање помеѓу апликациите."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"Го научивте движењето за враќање назад"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"Не повлекувајте преблиску до дното на екранот"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"За да ја промените чувствителноста, одете во „Поставки“"</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"Повлечете за да се вратите назад"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"За да се вратите на последниот екран, повлечете од левиот или десниот раб кон средината на екранот."</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"Враќање назад"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"Повлечете од левиот или десниот раб кон средината на екранот"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"Повлечете нагоре од долниот раб на екранот"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"Не правете пауза пред да пуштите"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"Повлечете право нагоре"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"Го научивте движењето за отворање на почетниот екран. Научете го и движењето за враќање назад."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"Го научивте движењето за отворање на почетниот екран"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"Повлечете за да одите на почетниот екран"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"Повлечете нагоре од долниот раб на екранот. Ова движење секогаш ќе ве одведе на почетниот екран."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"Отворање на почетниот екран"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"Повлечете нагоре од дното на екранот"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"Одлично сторено!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"Повлечете нагоре од долниот раб на екранот"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"Задржете го прозорецот подолго пред да го пуштите"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"Повлечете право нагоре, а потоа застанете"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"Научивте како се користат движењата. За да ги исклучите движењата, одете во „Поставки“."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"Го научивте движењето за префрлање помеѓу апликации"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"Повлечете за префрлање помеѓу апликации"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"За да смените апликација, повлечете нагоре од дното на екранот и задржете, па пуштете."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"Префрлање помеѓу апликации"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"Повлечете нагоре од дното на екранот и задржете, па пуштете"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"Браво!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"Готово"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"Готово"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"Поставки"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"Обидете се повторно"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"Одлично!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"Упатство <ns0:g id="CURRENT">%1$d</ns0:g>/<ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"Готово!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"Повлечете нагоре за да го отворите почетниот екран"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"Допрете го копчето за почетен екран за да одите на почетниот екран"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"Подготвени сте да почнете да го користите вашиот <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"Подготвени сте да започнете да го користите вашиот уред"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"Поставки за системска навигација"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"Вашиот <ns0:g id="DEVICE">%1$s</ns0:g> е \nподготвен!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"Вашиот уред е \nподготвен!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"Подготвени сте!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"Уживајте во новиот <ns0:g id="DEVICE">%1$s</ns0:g>!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"Повлечете нагоре за да започнете со вашиот <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"Допрете за да започнете со вашиот <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"Изберете поставки за навигација"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"Повлечете нагоре"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"Допрете го копчето за почетен екран"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"таблет"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"телефон"</string>
+    <string name="action_share" msgid="2648470652637092375">"Сподели"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"Слика од екранот"</string>
+    <string name="action_split" msgid="2098009717623550676">"Раздели"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"Зачувај го паров"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"Допрете друга аплик. за да користите поделен екран"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"Изберете друга апликација за да користите поделен екран"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"Откажи"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"Излези од изборот на поделен екран"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"Изберете друга апликација за да користите поделен екран"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"Апликацијата или вашата организација не го дозволува дејствово"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"Виџетите не се поддржани во моментов, изберете друга апликација"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"Копирај"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"Зачувај"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"Ротирајте го екранот"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"Анимација што прикажува како „Лентата со задачи“ се појавува од дното на екранот и автоматски се крие кога не се користи"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"Анимација што прикажува како да ја закачите „Лентата со задачи“ со прекинувач за да може „Лентата со задачи“ да остане трајно видлива на дното на екранот"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"Анимација што прикажува како да се создаде балонче од лентата со задачи со движење со повлекување"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"Анимација што прикажува како да создадете поделен екран, со влечење и спуштање апликација од „Лентата со задачи“ над отворена апликација"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"Анимација што прикажува како да пристапите до предложените апликации на вашиот уред"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"Анимација што прикажува како да пребарате ставка на екранот, со допирање и задржување на копчето за дејство и избирање на областа во која се наоѓа ставката"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"Обука за лентата со задачи"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"Повлечете апликација настрана за да користите 2 апликации одеднаш"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"Повлечете до долните агли за да направите да лебди"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"Полека повлечете нагоре за да се прикаже „Лентата со задачи“"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"Добивајте предлози за апликации според вашата рутина"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"Притиснете долго на разделникот за да ја закачите „Лентата со задачи“"</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"Правете сешто со „Лентата со задачи“"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"Како секогаш да се прикажува „Лентата со задачи“"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"Допрете и задржете го разделникот за да може „Лентата со задачи“ секогаш да се прикажува на дното на екранот"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"Повлечете апликација до аголот за да направите да лебди"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"Допрете и задржете го копчето за дејство за да пребарувате на екранот"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"Производов го користи избраниот дел од екранот за пребарување. Важат <ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>Политиката за приватност<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> и <ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>Условите за користење<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g> на Google."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"Затвори"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"Готово"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"Следно"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"Дома"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"Пристапност"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"Назад"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"IME менувач"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"Неодамнешни"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"Известувања"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"Брзи поставки"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"Повеќе опции"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"Лента со задачи"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"Лента со балончиња"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"Лента за навигација"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"Секогаш прикажувај „Лента“"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"Променете режим на навигација"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"Разделник на „Лента со задачи“"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"Други неодамнешни апликации"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"Други апликации"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"Отстрани"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"Премести горе лево"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"Премести долу десно"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"Отвори апликација како балонче"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"Премести ја ставката налево"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"Премести ја ставката надесно"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"Неодамнешни апликации"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"Список со неодамнешни апликации"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{дополнителна апликација}one{дополнителна апликација}other{дополнителни апликации}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"Режим за компјутер"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g> и <ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, ставка <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> од <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>, отпуштете ги поврзаните копчиња за да изберете"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"Лизгај налево"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"Лизгај надесно"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"Балонче"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"Проширено балонче"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g> од <ns0:g id="APP_NAME">%2$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g> и уште <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g>"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"Премести налево"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"Премести надесно"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"Отфрли ги сите"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"Пребарување со заокружување"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"Икона за апликацијата"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"Наслов на апликацијата"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"Затвори"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"Потсетување"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"Затвори"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"Слика на потсетување"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>⁠"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"Икона"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"Добивајте корисни предлози"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"Користиме AI за проактивно да предлагаме информации и дејства релевантни за она што го правите на екранот"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"Затвори"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"прошири"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"Икона за „Амбиентални предлози“"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"Допрете и задржете за да видите како се генерираат предлозите"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"автоматско пополнување"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"Сподели апликација"</string>
+    <string name="action_listen" msgid="2370304050784689486">"Слушај"</string>
+    <string name="action_translate" msgid="8028378961867277746">"Преведи"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lens"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"СФАТИВ"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ОТКАЖИ"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"ПОСТАВКИ"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"Преведете или слушајте текст на екранот"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"Информациите како текст на екранот, интернет-адреси и слики од екранот може да се споделуваат со Google.\n\nЗа да промените кои информации ќе се споделуваат, одете во "<b>"Поставки &gt; Апликации &gt; Стандардни апликации &gt; Апликација за дигитален помошник"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"Изберете помошник за да ја користите функцијава"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"За да го слушнете или преведете текстот од екранот, изберете ја апликацијата за дигитален помошник во „Поставки“"</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"Променете го помошникот за да ја користите функцијава"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"За да го слушнете или преведете текстот од екранот, променете ја апликацијата за дигитален помошник во „Поставки“"</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"Допрете тука за да го слушнете текстот од екранов"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"Допрете тука за да го преведете текстот од екранов"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"Апликацијава не може да се сподели"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"Затвори го листот"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"Име на апликацијата"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# виџет}one{# виџет}other{# виџети}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# кратенка}one{# кратенка}other{# кратенки}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"Ширина од %1$d и висина од %2$d"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"Виџет <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, со ширина од %2$d и висина од %3$d"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"Прикажи го копчето за додавање"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"Скриј го копчето за додавање"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"Додај"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"Додај го виџетот <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"Истакнати"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"Прелистувајте"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"<ns0:g id="TAB_NAME">%1$s</ns0:g> виџети"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"Виџети за <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> оддесно, „Пребарување“ и „Опции“ одлево"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"Опции за пребарување и виџети одлево, виџети оддесно"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"Пребарајте"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"Избриши"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"Назад"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"Виџетите и кратенките не се достапни"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"Не се најдени виџети или кратенки"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"Додај на почетниот екран"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"Откажи"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"Допрете и задржете за да преместите виџет."</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <color name="home_screen_files_folder_icon_color">@color/system_primary_dark</color>
+    <color name="gesture_tutorial_back_arrow_color">#99000000</color>
+    <color name="gesture_tutorial_fake_wallpaper_color">#000000</color>
+    <color name="mock_webpage_url_bar">#202124</color>
+    <color name="mock_webpage_url_bar_item">#3c4043</color>
+    <color name="all_set_page_background">@android:color/system_neutral1_900</color>
+    <color name="work_turn_on_stroke">@color/materialColorPrimary</color>
+</resources>

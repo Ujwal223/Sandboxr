@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="widget_picker_right_pane_accessibility_title">
+        <ns0:g id="selected_header" example="Calendar">%1$s</ns0:g> widgets on left, search and options on right</string>
+</resources>

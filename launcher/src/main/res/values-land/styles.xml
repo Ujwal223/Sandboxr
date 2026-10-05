@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <style name="CellStyleDefault">
+        <item name="iconDrawablePadding">4dp</item>
+    </style>
+</resources>

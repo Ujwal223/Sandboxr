@@ -1,22 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright (C) 2026 The Android Open Source Project
-    Copyright (C) 2026 Sandboxr Platform
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <!-- Popup Attributes -->
+    <attr name="pageIndicator" format="reference" />
+    <attr name="allAppsScrimColor" format="color" />
+    <attr name="allappsHeaderProtectionColor" format="color" />
+    <attr name="allAppsNavBarScrimColor" format="color" />
+    <attr name="allAppsSurfaceLow" format="color" />
+    <attr name="allAppsSurfaceHighest" format="color" />
+    <attr name="allAppsUnselectedTab" format="color" />
+    <attr name="allAppsSearchIconBackground" format="color" />
+    <attr name="privateSpaceSettingsColor" format="color" />
+    <attr name="privateSpaceDividerColor" format="color" />
+    <attr name="bottomSheetDragHandleColor" format="color" />
+    <attr name="allAppsTheme" format="reference" />
     <attr name="popupColorPrimary" format="color" />
     <attr name="popupColorSecondary" format="color" />
     <attr name="popupColorTertiary" format="color" />
@@ -24,16 +19,77 @@
     <attr name="popupShadeFirst" format="color" />
     <attr name="popupShadeSecond" format="color" />
     <attr name="popupShadeThird" format="color" />
+    <attr name="isMainColorDark" format="boolean" />
+    <attr name="isWorkspaceDarkText" format="boolean" />
+    <attr name="workspaceTextColor" format="color" />
+    <attr name="workspaceShadowColor" format="color" />
+    <attr name="workspaceAmbientShadowColor" format="color" />
+    <attr name="workspaceKeyShadowColor" format="color" />
+    <attr name="widgetsTheme" format="reference" />
+    <attr name="iconOnlyShortcutColor" format="color" />
+    <attr name="overviewScrimColor" format="color" />
+    <attr name="overviewScrimColorFallback" format="color" />
+    <attr name="overviewScrimColorBlur" format="color" />
+    <attr name="overviewScrimForegroundPrimaryBlur" format="color" />
+    <attr name="overviewScrimForegroundPrimary" format="color" />
+    <attr name="overviewScrimForegroundSecondaryBlur" format="color" />
+    <attr name="overviewScrimForegroundSecondary" format="color" />
+    <attr name="overviewActionsContainerStyle" format="reference" />
+    <attr name="overviewActionButtonStyle" format="reference" />
+    <attr name="addDesktopButtonBackgroundDrawable" format="reference" />
+    <attr name="popupNotificationDotColor" format="color" />
+    <attr name="notificationDotColor" format="color" />
     <attr name="focusOutlineColor" format="color" />
     <attr name="focusInnerOutlineColor" format="color" />
+    <attr name="focusHighlight" format="color" />
+    <attr name="groupHighlight" format="color" />
+    <attr name="searchboxHighlight" format="color" />
+    <attr name="pageIndicatorDotColor" format="color" />
+    <attr name="pageIndicatorArrowBgColor" format="color" />
+    <attr name="folderPreviewColor" format="color" />
     <attr name="folderBackgroundColor" format="color" />
+    <attr name="folderIconRadius" format="float" />
+    <attr name="folderIconBorderColor" format="color" />
     <attr name="folderTextColor" format="color" />
-
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-    <!--  Layout / View                                                                         -->
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
-    <!-- XML attributes used by default_workspace.xml -->
+    <attr name="folderHintTextColor" format="color" />
+    <attr name="appPairSurfaceInFolder" format="color" />
+    <attr name="isFolderDarkText" format="boolean" />
+    <attr name="workspaceAccentColor" format="color" />
+    <attr name="workspaceSurfaceColor" format="color" />
+    <attr name="dropTargetHoverTextColor" format="color" />
+    <attr name="dropTargetHoverButtonColor" format="color" />
+    <attr name="preloadIconAccentColor" format="color" />
+    <attr name="preloadIconBackgroundColor" format="color" />
+    <attr name="widgetPickerHeaderAppTitleColor" format="color" />
+    <attr name="widgetPickerHeaderAppSubtitleColor" format="color" />
+    <attr name="widgetPickerSearchTextColor" format="color" />
+    <attr name="widgetCellTitleColor" format="color" />
+    <attr name="widgetCellSubtitleColor" format="color" />
+    <declare-styleable name="BubbleTextView">
+        <attr name="layoutHorizontal" />
+        <attr name="iconSizeOverride" />
+        <attr name="iconDisplay" />
+        <attr name="centerVertically" />
+    </declare-styleable>
+    <declare-styleable name="FolderIconPreview">
+        <attr name="folderPreviewColor" />
+        <attr name="folderIconBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="SearchResultSuggestion">
+        <attr name="customIcon" format="reference" />
+        <attr name="matchTextInsetWithQuery" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ShadowInfo">
+        <attr name="ambientShadowColor" format="color" />
+        <attr name="ambientShadowBlur" format="dimension" />
+        <attr name="keyShadowColor" format="color" />
+        <attr name="keyShadowBlur" format="dimension" />
+        <attr name="keyShadowOffsetX" format="dimension" />
+        <attr name="keyShadowOffsetY" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="PagedView">
+        <attr name="pageIndicator" />
+    </declare-styleable>
     <declare-styleable name="Favorite">
         <attr name="className" format="string" />
         <attr name="packageName" format="string" />
@@ -47,67 +103,41 @@
         <attr name="title" format="string" />
         <attr name="uri" format="string" />
     </declare-styleable>
-
     <declare-styleable name="Extra">
         <attr name="key" format="string" />
         <attr name="value" format="string" />
     </declare-styleable>
-
     <declare-styleable name="Include">
         <attr name="workspace" format="reference" />
         <attr name="folderItems" format="reference" />
     </declare-styleable>
-
     <declare-styleable name="InsettableFrameLayout_Layout">
         <attr name="layout_ignoreInsets" format="boolean" />
     </declare-styleable>
-
-    <declare-styleable name="Workspace">
-        <attr name="pageIndicator" format="reference" />
+    <declare-styleable name="StickyScroller_Layout">
+        <attr name="layout_sticky" format="boolean" />
     </declare-styleable>
-
-    <declare-styleable name="CellLayout">
-        <attr name="containerType" format="integer">
-            <enum name="workspace" value="0" />
-            <enum name="hotseat" value="1" />
-            <enum name="folder" value="2" />
-        </attr>
+    <declare-styleable name="AllAppsSize">
+        <attr name="minDeviceWidthDp" format="float" />
+        <attr name="alignWithWorkspaceRow" format="integer" />
+        <attr name="allAppsColumns" format="integer" />
     </declare-styleable>
-
-    <declare-styleable name="CellStyle">
-        <attr name="iconDrawablePadding" format="dimension" />
+    <declare-styleable name="GridSize">
+        <attr name="minDeviceWidthPx" format="integer" />
+        <attr name="minDeviceHeightPx" format="integer" />
+        <attr name="numGridRows" format="integer" />
+        <attr name="numGridColumns" format="integer" />
+        <attr name="dbFile" />
+        <attr name="defaultLayoutId" />
     </declare-styleable>
-
-    <declare-styleable name="AllAppsStyle">
-        <attr name="horizontalPadding" format="dimension" />
-    </declare-styleable>
-
-    <declare-styleable name="FolderStyle">
-        <attr name="folderCellHeight" format="dimension" />
-        <attr name="folderCellWidth" format="dimension" />
-        <attr name="folderBorderSpace" format="dimension" />
-        <attr name="folderFooterHeight" format="dimension" />
-        <attr name="folderTopPadding" format="dimension" />
-    </declare-styleable>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-    <!--  Device-Profile Grid Configuration                                                     -->
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
     <declare-styleable name="GridDisplayOption">
         <attr name="name" format="string" />
         <attr name="gridTitle" format="string" />
         <attr name="gridIconId" format="reference" />
-
         <attr name="numRows" format="integer" />
         <attr name="numColumns" format="integer" />
-        <!-- numSearchContainerColumns defaults to numColumns if not specified -->
         <attr name="numSearchContainerColumns" format="integer" />
-
-        <!-- Support attributes in CellStyle. defaults to CellStyleDefault -->
         <attr name="cellStyle" format="reference" />
-
-        <!-- numFolderRows/Columns default to numRows/numColumns if not specified -->
         <attr name="numFolderRows" format="integer" />
         <attr name="numFolderRowsLandscape" format="integer" />
         <attr name="numFolderRowsTwoPanelLandscape" format="integer" />
@@ -116,37 +146,19 @@
         <attr name="numFolderColumnsLandscape" format="integer" />
         <attr name="numFolderColumnsTwoPanelLandscape" format="integer" />
         <attr name="numFolderColumnsTwoPanelPortrait" format="integer" />
-        <!-- Support attributes in FolderStyle -->
         <attr name="folderStyle" format="reference" />
-
-        <!-- Support attributes in AllAppsStyle. Defaults to AllAppsStyleDefault -->
         <attr name="allAppsStyle" format="reference" />
-
-        <!-- numAllAppsColumns defaults to numColumns if not specified -->
         <attr name="numAllAppsColumns" format="integer" />
-        <!-- Number of columns to use when extending all-apps size, defaults to 2×numAllAppsColumns -->
         <attr name="numExtendedAllAppsColumns" format="integer" />
-        <!-- Number of rows used to calculate cell height for all apps when needed.
-             Defaults to numRows. -->
         <attr name="numAllAppsRowsForCellHeightCalculation" format="integer" />
-
-        <!-- numHotseatIcons defaults to numColumns if not specified -->
         <attr name="numHotseatIcons" format="integer" />
-        <!-- Number of icons to use when extending hotseat size, defaults to 2×numHotseatIcons -->
         <attr name="numExtendedHotseatIcons" format="integer" />
-
-        <!-- Spacing to have at the end of the nav buttons in large screen 3 button nav -->
         <attr name="inlineNavButtonsEndSpacing" format="reference" />
-
-        <!-- Grid flips row and column count when rotating the device -->
         <attr name="isDualGrid" format="boolean" />
-
         <attr name="dbFile" format="string" />
         <attr name="defaultLayoutId" format="reference" />
         <attr name="isScalable" format="boolean" />
         <attr name="devicePaddingId" format="reference" />
-
-        <!-- Responsive workspace spec files -->
         <attr name="workspaceSpecsId" format="reference" />
         <attr name="workspaceSpecsTwoPanelId" format="reference" />
         <attr name="allAppsSpecsId" format="reference" />
@@ -161,26 +173,18 @@
         <attr name="allAppsCellSpecsTwoPanelId" format="reference" />
         <attr name="gridSizeSpecsId" format="reference" />
         <attr name="allAppsSizeSpecsId" format="reference" />
-
-        <!-- defaults to false if not specified -->
         <attr name="isFixedLandscape" format="boolean" />
-
-        <!-- By default all grid types are enabled -->
         <attr name="gridType" format="integer">
             <flag name="standard" value="1" />
             <flag name="desktop_landscape_optimized_grid" value="4" />
             <flag name="desktop_dual_optimized_grid" value="8" />
         </attr>
-
-        <!-- By default all categories are enabled -->
         <attr name="deviceCategory" format="integer">
             <flag name="phone" value="1" />
             <flag name="tablet" value="2" />
             <flag name="multi_display" value="4" />
             <flag name="desktop" value="8" />
         </attr>
-
-        <!-- By default all are false -->
         <attr name="inlineQsb" format="integer">
             <flag name="portrait" value="1" />
             <flag name="landscape" value="2" />
@@ -188,16 +192,59 @@
             <flag name="twoPanelLandscape" value="8" />
         </attr>
     </declare-styleable>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-    <!--  Profile Display Option                                                                 -->
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
+    <declare-styleable name="DevicePadding">
+        <attr name="maxEmptySpace" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="DevicePaddingFormula">
+        <attr name="a" format="float|dimension" />
+        <attr name="b" format="float|dimension" />
+        <attr name="c" format="float|dimension" />
+    </declare-styleable>
+    <declare-styleable name="PersonalWorkSlidingTabStrip">
+        <attr name="alignOnIcon" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ResponsiveSpec">
+        <attr name="dimensionType" format="integer">
+            <enum name="height" value="0" />
+            <enum name="width" value="1" />
+        </attr>
+        <attr name="maxAvailableSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ResponsiveSpecGroup">
+        <attr name="maxAspectRatio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="WorkspaceSpec">
+        <attr name="dimensionType" />
+        <attr name="maxAvailableSize" />
+    </declare-styleable>
+    <declare-styleable name="FolderSpec">
+        <attr name="dimensionType" />
+        <attr name="maxAvailableSize" />
+    </declare-styleable>
+    <declare-styleable name="AllAppsSpec">
+        <attr name="dimensionType" />
+        <attr name="maxAvailableSize" />
+    </declare-styleable>
+    <declare-styleable name="HotseatSpec">
+        <attr name="dimensionType" />
+        <attr name="maxAvailableSize" />
+    </declare-styleable>
+    <declare-styleable name="CellSpec">
+        <attr name="dimensionType" />
+        <attr name="maxAvailableSize" />
+        <attr name="maxLineCount" format="integer" />
+        <attr name="maxLineCountMatchesWorkspace" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SizeSpec">
+        <attr name="fixedSize" format="dimension" />
+        <attr name="ofAvailableSpace" format="float" />
+        <attr name="ofRemainderSpace" format="float" />
+        <attr name="matchWorkspace" format="boolean" />
+        <attr name="maxSize" format="dimension" />
+    </declare-styleable>
     <declare-styleable name="ProfileDisplayOption">
         <attr name="minWidthDps" format="float" />
         <attr name="minHeightDps" format="float" />
-
-        <!-- Min cell sizes (only used if GridDisplayOption#isScalable is true) -->
         <attr name="minCellHeight" format="float" />
         <attr name="minCellWidth" format="float" />
         <attr name="minCellHeightLandscape" format="float" />
@@ -206,8 +253,6 @@
         <attr name="minCellWidthTwoPanelPortrait" format="float" />
         <attr name="minCellHeightTwoPanelLandscape" format="float" />
         <attr name="minCellWidthTwoPanelLandscape" format="float" />
-
-        <!-- Border spaces (only used if GridDisplayOption#isScalable is true) -->
         <attr name="borderSpace" format="float" />
         <attr name="borderSpaceHorizontal" format="float" />
         <attr name="borderSpaceVertical" format="float" />
@@ -220,8 +265,6 @@
         <attr name="borderSpaceTwoPanelLandscape" format="float" />
         <attr name="borderSpaceTwoPanelLandscapeHorizontal" format="float" />
         <attr name="borderSpaceTwoPanelLandscapeVertical" format="float" />
-
-        <!-- All apps cell sizes -->
         <attr name="allAppsCellHeight" format="float" />
         <attr name="allAppsCellWidth" format="float" />
         <attr name="allAppsCellHeightLandscape" format="float" />
@@ -230,31 +273,21 @@
         <attr name="allAppsCellWidthTwoPanelPortrait" format="float" />
         <attr name="allAppsCellHeightTwoPanelLandscape" format="float" />
         <attr name="allAppsCellWidthTwoPanelLandscape" format="float" />
-
-        <!-- Icon sizes -->
         <attr name="iconImageSize" format="float" />
         <attr name="iconSizeLandscape" format="float" />
         <attr name="iconSizeTwoPanelPortrait" format="float" />
         <attr name="iconSizeTwoPanelLandscape" format="float" />
-
-        <!-- Icon text sizes -->
         <attr name="iconTextSize" format="float" />
         <attr name="iconTextSizeLandscape" format="float" />
         <attr name="iconTextSizeTwoPanelPortrait" format="float" />
         <attr name="iconTextSizeTwoPanelLandscape" format="float" />
-
-        <!-- All apps icon sizes -->
         <attr name="allAppsIconSize" format="float" />
         <attr name="allAppsIconSizeLandscape" format="float" />
         <attr name="allAppsIconSizeTwoPanelPortrait" format="float" />
         <attr name="allAppsIconSizeTwoPanelLandscape" format="float" />
-
-        <!-- All apps icon text sizes -->
         <attr name="allAppsIconTextSize" format="float" />
         <attr name="allAppsIconTextSizeTwoPanelPortrait" format="float" />
         <attr name="allAppsIconTextSizeTwoPanelLandscape" format="float" />
-
-        <!-- All apps border spaces -->
         <attr name="allAppsBorderSpace" format="float" />
         <attr name="allAppsBorderSpaceHorizontal" format="float" />
         <attr name="allAppsBorderSpaceVertical" format="float" />
@@ -267,130 +300,71 @@
         <attr name="allAppsBorderSpaceTwoPanelLandscape" format="float" />
         <attr name="allAppsBorderSpaceTwoPanelLandscapeHorizontal" format="float" />
         <attr name="allAppsBorderSpaceTwoPanelLandscapeVertical" format="float" />
-
-        <!-- Hotseat spacing -->
         <attr name="hotseatBarBottomSpace" format="float" />
         <attr name="hotseatBarBottomSpaceLandscape" format="float" />
         <attr name="hotseatBarBottomSpaceTwoPanelLandscape" format="float" />
         <attr name="hotseatBarBottomSpaceTwoPanelPortrait" format="float" />
-
         <attr name="hotseatQsbSpace" format="float" />
         <attr name="hotseatQsbSpaceLandscape" format="float" />
         <attr name="hotseatQsbSpaceTwoPanelLandscape" format="float" />
         <attr name="hotseatQsbSpaceTwoPanelPortrait" format="float" />
-
-        <!-- Taskbar icon sizes -->
         <attr name="transientTaskbarIconSize" format="float" />
         <attr name="transientTaskbarIconSizeLandscape" format="float" />
         <attr name="transientTaskbarIconSizeTwoPanelLandscape" format="float" />
         <attr name="transientTaskbarIconSizeTwoPanelPortrait" format="float" />
-
-        <!-- Taskbar alignment -->
         <attr name="startAlignTaskbar" format="boolean" />
         <attr name="startAlignTaskbarLandscape" format="boolean" />
         <attr name="startAlignTaskbarTwoPanelLandscape" format="boolean" />
         <attr name="startAlignTaskbarTwoPanelPortrait" format="boolean" />
-
-        <!-- If set, this display option is used to determine the default grid -->
         <attr name="canBeDefault" format="boolean" />
-
-        <!-- Workspace horizontal margins -->
         <attr name="horizontalMargin" format="float" />
         <attr name="horizontalMarginLandscape" format="float" />
         <attr name="horizontalMarginTwoPanelLandscape" format="float" />
         <attr name="horizontalMarginTwoPanelPortrait" format="float" />
     </declare-styleable>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-    <!--  Responsive Spec System                                                                 -->
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
-    <declare-styleable name="DevicePadding">
-        <attr name="maxEmptySpace" format="dimension" />
+    <declare-styleable name="FolderStyle">
+        <attr name="folderCellHeight" format="dimension" />
+        <attr name="folderCellWidth" format="dimension" />
+        <attr name="folderBorderSpace" format="dimension" />
+        <attr name="folderFooterHeight" format="dimension" />
+        <attr name="folderTopPadding" format="dimension" />
     </declare-styleable>
-
-    <declare-styleable name="DevicePaddingFormula">
-        <attr name="a" format="float|dimension" />
-        <attr name="b" format="float|dimension" />
-        <attr name="c" format="float|dimension" />
-    </declare-styleable>
-
-    <declare-styleable name="ResponsiveSpec">
-        <attr name="dimensionType" format="integer">
-            <enum name="height" value="0" />
-            <enum name="width" value="1" />
+    <declare-styleable name="CellLayout">
+        <attr name="containerType" format="integer">
+            <enum name="workspace" value="0" />
+            <enum name="hotseat" value="1" />
+            <enum name="folder" value="2" />
         </attr>
-        <attr name="maxAvailableSize" format="dimension" />
     </declare-styleable>
-
-    <declare-styleable name="ResponsiveSpecGroup">
-        <attr name="maxAspectRatio" format="float" />
+    <declare-styleable name="CellStyle">
+        <attr name="iconDrawablePadding" format="dimension" />
     </declare-styleable>
-
-    <declare-styleable name="WorkspaceSpec">
-        <attr name="dimensionType" />
-        <attr name="maxAvailableSize" />
+    <declare-styleable name="AllAppsStyle">
+        <attr name="horizontalPadding" format="dimension" />
     </declare-styleable>
-
-    <declare-styleable name="FolderSpec">
-        <attr name="dimensionType" />
-        <attr name="maxAvailableSize" />
-    </declare-styleable>
-
-    <declare-styleable name="AllAppsSpec">
-        <attr name="dimensionType" />
-        <attr name="maxAvailableSize" />
-    </declare-styleable>
-
-    <declare-styleable name="HotseatSpec">
-        <attr name="dimensionType" />
-        <attr name="maxAvailableSize" />
-    </declare-styleable>
-
-    <declare-styleable name="CellSpec">
-        <attr name="dimensionType" />
-        <attr name="maxAvailableSize" />
-        <attr name="maxLineCount" format="integer" />
-        <attr name="maxLineCountMatchesWorkspace" format="boolean" />
-    </declare-styleable>
-
-    <declare-styleable name="SizeSpec">
-        <attr name="fixedSize" format="dimension" />
-        <attr name="ofAvailableSpace" format="float" />
-        <attr name="ofRemainderSpace" format="float" />
-        <attr name="matchWorkspace" format="boolean" />
-        <attr name="maxSize" format="dimension" />
-    </declare-styleable>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-    <!--  Shadow / UI Decorations                                                                -->
-    <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
     <declare-styleable name="ShadowDrawable">
         <attr name="android:src" />
         <attr name="android:shadowColor" />
         <attr name="android:elevation" />
         <attr name="darkTintColor" format="color" />
     </declare-styleable>
-
     <declare-styleable name="RecyclerViewFastScroller">
         <attr name="canThumbDetach" format="boolean" />
     </declare-styleable>
-
-    <declare-styleable name="ArrowTipView">
-        <attr name="arrowTipBackground" format="color" />
-        <attr name="arrowTipTextColor" format="color" />
+    <declare-styleable name="LoggablePref">
+        <attr name="android:key" />
+        <attr name="android:defaultValue" />
+        <attr name="logIdOn" format="integer" />
+        <attr name="logIdOff" format="integer" />
     </declare-styleable>
-
-    <declare-styleable name="PersonalWorkSlidingTabStrip">
-        <attr name="alignOnIcon" format="boolean" />
+    <declare-styleable name="PreviewFragment">
+        <attr name="android:name" />
+        <attr name="android:id" />
     </declare-styleable>
-
     <declare-styleable name="WidgetsListRowHeader">
         <attr name="appIconSize" format="dimension" />
         <attr name="collapsable" format="boolean" />
     </declare-styleable>
-
     <declare-styleable name="WidgetSections">
         <attr name="provider" format="string" />
         <attr name="alsoKeepInApp" format="boolean" />
@@ -398,28 +372,46 @@
         <attr name="sectionTitle" format="reference" />
         <attr name="sectionDrawable" format="reference" />
     </declare-styleable>
-
-    <declare-styleable name="LoggablePref">
-        <attr name="android:key" />
-        <attr name="android:defaultValue" />
-        <attr name="logIdOn" format="integer" />
-        <attr name="logIdOff" format="integer" />
+    <declare-styleable name="ArrowTipView">
+        <attr name="arrowTipBackground" format="color" />
+        <attr name="arrowTipTextColor" format="color" />
     </declare-styleable>
-
-    <declare-styleable name="PreviewFragment">
-        <attr name="android:name" />
-        <attr name="android:id" />
+    <declare-styleable name="AllSetLinkSpan">
+        <attr name="android:textSize" />
+        <attr name="android:fontFamily" />
     </declare-styleable>
-
+    <declare-styleable name="TaskView">
+        <attr name="focusBorderColor" format="color" />
+        <attr name="hoverBorderColor" format="color" />
+        <attr name="focusBorderRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TaskContentView">
+        <attr name="focusBorderColor" />
+        <attr name="hoverBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="ClearAllButton">
+        <attr name="focusBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="AddDesktopButton">
+        <attr name="focusBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="IconAppChip">
+        <attr name="focusBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="RootSandboxLayout">
+        <attr name="surfaceContainer" format="color" />
+        <attr name="onContainerHome" format="color" />
+        <attr name="containerHome" format="color" />
+        <attr name="onContainerBack" format="color" />
+        <attr name="containerBack" format="color" />
+        <attr name="onContainerOverview" format="color" />
+        <attr name="containerOverview" format="color" />
+    </declare-styleable>
+    <declare-styleable name="Workspace">
+        <attr name="pageIndicator" />
+    </declare-styleable>
     <attr name="layoutHorizontal" format="boolean" />
     <attr name="iconSizeOverride" format="dimension" />
     <attr name="iconDisplay" format="string" />
     <attr name="centerVertically" format="boolean" />
-
-    <declare-styleable name="BubbleTextView">
-        <attr name="layoutHorizontal" />
-        <attr name="iconSizeOverride" />
-        <attr name="iconDisplay" />
-        <attr name="centerVertically" />
-    </declare-styleable>
 </resources>

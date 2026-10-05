@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Nisësi3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Puna"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"Aplikacioni nuk është i instaluar."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"Aplikacioni nuk mundësohet"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"Aplikacioni i shkarkuar është i çaktivizuar në modalitetin e sigurt"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"Miniaplikacionet janë të çaktivizuara në modalitetin e sigurt"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"Shkurtorja nuk është e disponueshme"</string>
+    <string name="home_screen" msgid="5629429142036709174">"Ekrani bazë"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"Cakto <ns0:g id="LAUNCHER_NAME">%1$s</ns0:g> si aplikacionin e parazgjedhur të ekranit bazë te \"Cilësimet\""</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"Ekrani i ndarë"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"Ndrysho raportin e pamjes"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"Informacioni i aplikacionit për %1$s"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"Cilësimet e përdorimit për \"%1$s\""</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"Mbyll %1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"Dritare e re"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"Menaxho dritaret"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"Mbyll"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"Ruaj çiftin e aplikacioneve"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"Ky çift aplikacionesh nuk mbështetet në këtë pajisje"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"Shpalose pajisjen për të përdorur këtë çift aplikacionesh"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"Çifti i aplikacioneve nuk ofrohet"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"Prek dhe mbaj shtypur një miniaplikacion për ta zhvendosur."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"Trokit dy herë dhe mbaje shtypur një miniapliikacion për ta zhvendosur atë ose për të përdorur veprimet e personalizuara."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"Opsione të tjera"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"Shfaq të gjitha miniapl."</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"%1$d i gjerë me %2$d i lartë"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"<ns0:g id="WIDGET_NAME">%1$s</ns0:g> miniaplikacion"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"Miniaplikacioni <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, me gjerësi %2$d dhe lartësi %3$d"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"Prek dhe mbaj të shtypur miniaplikacionin për ta lëvizur atë nëpër ekranin bazë"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"Shto në ekranin bazë"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"Miniaplikacioni <ns0:g id="WIDGET_NAME">%1$s</ns0:g> u shtua në ekranin bazë"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"Sugjerime"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"Thelbësoret"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"Lajme dhe revista"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"Argëtim"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"Rrjetet sociale"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"Sugjeruar për ty"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"Miniaplikacionet e <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> në të djathtë, kërkimi dhe opsionet në të majtë"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# miniaplikacion}other{# miniaplikacione}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# shkurtore}other{# shkurtore}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"Miniaplikacionet"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"Miniaplikacionet dhe shkurtoret nuk ofrohen"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"Nuk u gjet asnjë miniaplikacion ose shkurtore"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"Personale"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"Puna"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"Bisedat"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"Mbajtja e shënimeve"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"Shfaq butonin e shtimit"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"Fshih butonin e shtimit"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"Shto"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"Shto miniaplikacionin <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"Shfaq të gjitha"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"Shfaq të gjitha miniaplikacionet"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"Po shfaqen të gjitha miniaplikacionet"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"Trokit për të ndryshuar cilësimet e miniaplikacionit"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"Ndrysho cilësimet e miniaplikacionit"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"Kërko për aplikacione"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"Po ngarkon aplikacionet..."</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"Nuk u gjet asnjë aplikacion që përputhet me \"<ns0:g id="QUERY">%1$s</ns0:g>\""</string>
+    <string name="label_application" msgid="8531721983832654978">"Aplikacioni"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"Të gjitha aplikacionet"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"Lista e aplikacioneve"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"Njoftimet"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"Prek dhe mbaj shtypur një shkurtore për ta zhvendosur."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"Trokit dy herë dhe mbaje shtypur një shkurtore për ta zhvendosur atë ose për të përdorur veprimet e personalizuara."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"Nuk ka më hapësirë në këtë ekran bazë"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"Nuk ka më hapësirë në tabakanë \"Të preferuarat\""</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"Lista e aplikacioneve"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"Rezultatet e kërkimit"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"Lista e aplikacioneve personale"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"Lista e aplikacioneve të punës"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"Hiqe"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"Çinstalo"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"Info mbi aplikacionin"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"Instalo në private"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"Çinstalo aplikacionin"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"Instalo"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"Mos sugjero aplikacion"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"Gozhdo parashikimin"</string>
+    <string name="bubble" msgid="3072951361014076670">"Flluskë"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"Kyçja e aplikacioneve"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"Hiq kyçjen e aplikacioneve"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"Cilësimet"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"Shtoje te \"Shiriti i detyrave\""</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"Hiqe nga \"Shiriti i detyrave\""</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"Nuk ka hapësirë te \"Shiriti i detyrave\""</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"Aplikacioni u shtua te \"Shiriti i detyrave\""</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"Aplikacioni u hoq nga \"Shiriti i detyrave\""</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"Hiq"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"Kopjo"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"Hap"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"Riemërto"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"Fshi përgjithmonë"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"Zhvendos te koshi"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"Artikulli u zhvendos te koshi"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"Nuk mund të zhvendoset te koshi. Ndodhi një gabim."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"Nuk mund të zhbëhet. Shko tek aplikacioni Files për ta restauruar."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"Veprimet"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"Shkurtoret"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"Shfaq menynë e veprimeve"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"Shfaq menynë e shkurtoreve të aplikacioneve"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"Vendos apl. në pauzë"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"instalimi i shkurtoreve"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"Lejon një aplikacion të shtojë shkurtore pa ndërhyrjen e përdoruesit."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"lexo cilësimet dhe shkurtoret e ekranit bazë"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"Lejon aplikacionin që të lexojë cilësimet dhe shkurtoret në ekranin bazë."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"shkruaj cilësimet dhe shkurtoret e ekranit bazë"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"Lejon aplikacionin që të ndryshojë cilësimet dhe shkurtoret në ekranin bazë."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"S\'mund të ngarkohet miniaplikacioni"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"Cilësimet e miniaplikacionit"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"Trokit për të përfunduar konfigurimin"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"Ky është aplikacion sistemi dhe nuk mund të çinstalohet."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"Redakto emrin"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"Ndaj në faqe majtas"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"Ndaj në faqe djathtas"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"<ns0:g id="APP_NAME">%1$s</ns0:g> u çaktivizua"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{{app_name} ka # njoftim}other{{app_name} ka # njoftime}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"Aplikacioni i parashikuar: <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"Faqja: %1$d nga gjithsej %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"Ekrani bazë: %1$d nga gjithsej %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"Faqja e ekranit të ri kryesor"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"Aktiv"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"Minimizuar"</string>
+    <string name="folder_opened" msgid="94695026776264709">"Dosja u hap, <ns0:g id="WIDTH">%1$d</ns0:g> me <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"Trokit për të mbyllur dosjen"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"Trokit për të ruajtur riemërtimin"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"Dosja u mbyll"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"Dosja u riemërtua në <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"Dosje"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"Dosja e aplikacionit"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> artikuj"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> artikuj, ka njoftime"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ose më shumë artikuj"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g>: <ns0:g id="NAME">%2$s</ns0:g>, <ns0:g id="SIZE">%3$d</ns0:g> ose më shumë artikuj, ka njoftime"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"Dosje pa emër"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"Dosja e skedarit: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"Çifti i aplikacioneve: <ns0:g id="APP1">%1$s</ns0:g> dhe <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"Imazhi i sfondit dhe stili"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"Modifiko ekranin bazë"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"Cilësimet e ekranit bazë"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"Çaktivizuar nga administratori"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"Org. i shtëpisë"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"Kur telefoni rrotullohet"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"Aktivizo gjurmimin e hartimit"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"Aktivizo gjurmimin e hartimit kur kryen gjurmim perfetto në përmbledhje"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"Modaliteti horizontal"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"Cakto ekranin bazë në modalitetin horizontal"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"Pikat e njoftimeve"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"Aktiv"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"Joaktiv"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"Nevojitet qasja në njoftime"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"Për të shfaqur \"Pikat e njoftimeve\", aktivizo njoftimet e aplikacionit për <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"Ndrysho cilësimet"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"Shfaq pikat e njoftimeve"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"Opsionet e zhvilluesit‏"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"Shto ikona aplikacionesh në ekranin bazë"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"Për aplikacionet e reja"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"I panjohur"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"Hiq"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"Kërko"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"Aplikacioni nuk është i instaluar"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"Aplikacioni për këtë ikonë nuk është i instaluar. Mund ta heqësh ose të kërkosh aplikacionin dhe ta instalosh atë në mënyrë manuale."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"<ns0:g id="NAME">%1$s</ns0:g> po instalohet, <ns0:g id="PROGRESS">%2$s</ns0:g> i përfunduar"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"<ns0:g id="NAME">%1$s</ns0:g> po shkarkohet, <ns0:g id="PROGRESS">%2$s</ns0:g> të përfunduara"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"<ns0:g id="NAME">%1$s</ns0:g> po pret të instalohet"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"<ns0:g id="NAME">%1$s</ns0:g> është arkivuar."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"shkarko dhe restauro"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"Kërkohet përditësimi i aplikacionit"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"Aplikacioni për këtë ikonë nuk është përditësuar. Mund ta përditësosh manualisht për të riaktivizuar këtë shkurtore ose hiq ikonën."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"Përditëso"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"Hiq"</string>
+    <string name="widgets_list" msgid="796804551140113767">"Lista e miniaplikacioneve"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"Lista e miniaplikacioneve u mbyll"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"Shto në ekranin bazë"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"Zhvendose artikullin këtu"</string>
+    <string name="item_removed" msgid="851119963877842327">"Artikulli u hoq"</string>
+    <string name="undo" msgid="4151576204245173321">"Zhbëj"</string>
+    <string name="action_move" msgid="4339390619886385032">"Zhvendose artikullin"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"Kalo te rreshti <ns0:g id="NUMBER_0">%1$s</ns0:g> kolona <ns0:g id="NUMBER_1">%2$s</ns0:g> në <ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"Zhvendos te pozicioni <ns0:g id="NUMBER">%1$s</ns0:g>"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"Zhvendos te pozicioni <ns0:g id="NUMBER">%1$s</ns0:g> i preferencave"</string>
+    <string name="item_moved" msgid="4606538322571412879">"Artikulli u zhvendos"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"Shto te dosja: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"Shto te dosja e <ns0:g id="NAME">%1$s</ns0:g>. Rreshti <ns0:g id="NUMBER_0">%2$s</ns0:g>, kolona <ns0:g id="NUMBER_1">%3$s</ns0:g> në <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"Shto te dosja me <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"Shto te dosja me <ns0:g id="NAME">%1$s</ns0:g>. Rreshti <ns0:g id="NUMBER_0">%2$s</ns0:g>, kolona <ns0:g id="NUMBER_1">%3$s</ns0:g> në <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"Artikulli u shtua te dosja"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"Krijo një dosje me: <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"Krijo dosje me <ns0:g id="NAME">%1$s</ns0:g>. Rreshti <ns0:g id="NUMBER_0">%2$s</ns0:g>, kolona <ns0:g id="NUMBER_1">%3$s</ns0:g> në <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"Dosja u krijua"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"Kaloje në ekranin bazë"</string>
+    <string name="action_resize" msgid="1802976324781771067">"Ndrysho madhësinë"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"Rrit gjerësinë"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"Rrit lartësinë"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"Zvogëlo gjerësinë"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"Zvogëlo lartësinë"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"Doreza e ndryshimit të përmasave në të majtë"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"Doreza e ndryshimit të përmasave në krye"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"Doreza e ndryshimit të përmasave në të djathtë"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"Doreza e ndryshimit të përmasave në fund"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"Shfaq butonat për ndryshimin e përmasave"</string>
+    <string name="widget_resized" msgid="9130327887929620">"Madhësia e miniaplikacionit u ndryshua me gjerësinë <ns0:g id="NUMBER_0">%1$s</ns0:g> dhe lartësinë <ns0:g id="NUMBER_1">%2$s</ns0:g>"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"Menyja e shkurtoreve"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"Kuadri i ndryshimit të përmasave të miniaplikacionit për <ns0:g id="STRING">%1$s</ns0:g>"</string>
+    <string name="action_close" msgid="1077760267194136901">"Mbyll"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"Hiqe"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"Mbyll"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"Personale"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"Punë"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"Skeda e aplikacioneve personale"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"Skeda e aplikacioneve të punës"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"Profili i punës"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"Aplikacionet e punës janë të shënuara dhe të dukshme për administratorin e teknologjisë së informacionit"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"Aplikacionet e punës janë vendosur në pauzë"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"Nuk do të marrësh njoftime nga aplikacionet e punës"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"Aplikacionet e tua të punës nuk mund të të dërgojnë njoftime, të përdorin baterinë tënde apo të kenë qasje në vendndodhjen tënde"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"Nuk do të marrësh telefonata, mesazhe me tekst ose njoftime nga aplikacionet e punës"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"Aplikacionet e punës janë të shënuara dhe të dukshme për administratorin e teknologjisë së informacionit"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"E kuptova"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"Vendos në pauzë aplikacionet e punës"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"Hiq nga pauza"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"Orari për aplikacionet e punës"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"Filtro"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"Dështoi: <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"Hapësira private"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"Trokit për të konfiguruar ose për të hapur"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"Private"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"Cilësimet e \"Hapësirës private\""</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"Private, e shkyçur."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"Private, e kyçur."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"Kyç"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"Kalimi te \"Hapësira private\""</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"Instalo"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"Shto"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"Instalo aplikacionet në hapësirën private"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"Shto skedarë dhe më shumë te \"Hapësira private\""</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"Rreth"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"Katror"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Biskotë me 4 anë"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Biskotë me 7 anë"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"Hark"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"Dosje e re"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"Dosje e re"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"Pastro"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"Anulo"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"Riemërto"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"Riemërto skedarin"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"Riemërto dosjen"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"Ndodhi një gabim"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"Krijo ekranin"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"Zgjidh një kategori për të shtuar aplikacione dhe miniaplikacione nga telefoni"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"Zgjidh strukturën"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"Gozhdo"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"Formë e lirë"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"Desktopi"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"Desktopi për %1$s"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"Zhvendose tek ekrani i jashtëm"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"Pastro"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"Desktopi"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"Nuk ka asnjë artikull të fundit"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"Cilësimet e përdorimit të aplikacionit"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"Pastroji të gjitha"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"Shto një tavolinë të re pune"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"Aplikacionet e fundit"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"&lt; 1 minutë"</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"<ns0:g id="TIME">%1$s</ns0:g> të mbetura sot"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"Aplikacionet e sugjeruara"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"Aplikacionet e tua të parashikuara"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"Cilësimet"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"Aplikacionet më të përdorura shfaqen këtu dhe ndryshojnë bazuar në rutinat"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"Zvarrit aplikacionet jashtë rreshtit të poshtëm për të marrë aplikacione të sugjeruara"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"Aplikacionet e sugjeruara u shtuan në hapësirën bosh"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"Aplikacionet e sugjeruara janë aktivizuar"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"Sugjerimet e aplikacioneve janë çaktivizuar"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"Udhëzuesi për navigimin me gjeste"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"Rrotullo pajisjen"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"Rrotullo pajisjen për të përfunduar udhëzuesin e navigimit me gjeste"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"Sigurohu që të rrëshqasësh shpejt nga skaji më i djathtë ose më i majtë"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"Sigurohu që të rrëshqasësh shpejt nga skaji i djathtë ose i majtë drejt mesit të ekranit dhe lëshoje"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"Ke mësuar si të rrëshqasësh shpejt nga e djathta për t\'u kthyer prapa. Në vijim do të mësosh se si t\'i ndërrosh aplikacionet."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"E ke përfunduar gjestin e kthimit prapa. Në vijim do të mësosh se si t\'i ndërrosh aplikacionet."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"E ke përfunduar gjestin e kthimit prapa"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"Sigurohu që të mos rrëshqasësh shpejt shumë afër pjesës së poshtme të ekranit"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"Për të ndryshuar ndjeshmërinë e gjestit të kthimit prapa, shko te \"Cilësimet\""</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"Rrëshqit shpejt për t\'u kthyer prapa"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"Për t\'u kthyer prapa tek ekrani i fundit, rrëshqit shpejt nga skaji i majtë ose i djathtë drejt mesit të ekranit"</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"Kthehu prapa"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"Rrëshqit shpejt nga skaji i majtë ose i djathtë drejt mesit të ekranit"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"Sigurohu që të rrëshqasësh shpejt lart nga skaji i poshtëm i ekranit"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"Sigurohu që të mos ndalosh para se ta lëshosh"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"Sigurohu që të rrëshqasësh shpejt drejt lart"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"E ke përfunduar gjestin e kalimit tek ekrani bazë. Në vijim, mëso si të kthehesh prapa."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"E ke përfunduar gjestin e kalimit tek ekrani bazë"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"Rrëshqit shpejt për të kaluar tek ekrani bazë"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"Rrëshqit shpejt lart nga fundi i ekranit tënd. Ky gjest të dërgon gjithmonë tek ekrani bazë."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"Shko tek ekrani bazë"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"Rrëshqit shpejt lart nga pjesa e poshtme e ekranit"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"Punë e shkëlqyer!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"Sigurohu që të rrëshqasësh shpejt lart nga skaji i poshtëm i ekranit"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"Provo ta mbash shtypur dritaren për një kohë më të gjatë para se ta lëshosh"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"Sigurohu që të rrëshqasësh shpejt drejt lart dhe më pas ndalo"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"Ke mësuar si të përdorësh gjestet. Për t\'i çaktivizuar gjestet, shko te \"Cilësimet\"."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"E ke përfunduar gjestin e ndërrimit të aplikacioneve"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"Rrëshqit shpejt për të ndërruar aplikacionet"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"Për të ndërruar mes aplikacioneve, rrëshqit shpejt lart nga fundi i ekranit tënd, mbaj dhe pastaj lësho."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"Ndërro aplikacionet"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"Rrëshqit shpejt lart nga fundi i ekranit, mbaje të shtypur dhe më pas lëshoje"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"Shumë mirë!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"Plotësisht gati"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"U krye"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"Cilësimet"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"Provo përsëri"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"Bukur!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"Udhëzuesi <ns0:g id="CURRENT">%1$d</ns0:g>/<ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"Plotësisht gati!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"Rrëshqit shpejt lart për të shkuar në ekranin bazë"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"Trokit te butoni \"kreu\" për të shkuar tek ekrani bazë"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"Je gati që të fillosh ta përdorësh këtë <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"Je gati që të fillosh të përdorësh pajisjen tënde"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"Cilësimet e navigimit të sistemit"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"Pajisja jote <ns0:g id="DEVICE">%1$s</ns0:g> është \ngati!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"Pajisja jote është \ngati!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"Je plotësisht gati!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"Shijoje <ns0:g id="DEVICE">%1$s</ns0:g> tënd të ri!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"Rrëshqit shpejt lart për të filluar me <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"Trokit për të filluar me <ns0:g id="DEVICE">%1$s</ns0:g> tënd"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"Zgjidh se si do të navigosh"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"Rrëshqit shpejt lart"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"Trokit te butoni \"kreu\""</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"tabletin"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"telefonin"</string>
+    <string name="action_share" msgid="2648470652637092375">"Ndaj"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"Pamja e ekranit"</string>
+    <string name="action_split" msgid="2098009717623550676">"Ndaj"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"Ruaj çiftin e aplikacioneve"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"Trokit një apl. tjetër; përdor ekranin e ndarë"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"Zgjidh një aplikacion tjetër për të përdorur ekranin e ndarë"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"Anulo"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"Dil nga zgjedhja e ekranit të ndarë"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"Zgjidh një aplikacion tjetër për të përdorur ekranin e ndarë"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"Ky veprim nuk lejohet nga aplikacioni ose organizata jote"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"Miniaplikacionet nuk mbështeten për momentin. Zgjidh një aplikacion tjetër"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"Kopjo"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"Ruaj"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"Rrotullo ekranin"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"Animacioni që tregon se si shfaqet shiriti i detyrave nga fundi i ekranit dhe si fshihet automatikisht kur nuk është në përdorim"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"Animacioni që tregon se si të gozhdosh shiritin e detyrave duke përdorur një çelës, në mënyrë që shiriti i detyrave të qëndrojë përgjithmonë i dukshëm në fund të ekranit"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"Animacioni që tregon se si të krijosh një flluskë nga shiriti i detyrave duke përdorur një gjest zvarritjeje"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"Animacioni që tregon si të krijosh një ekran të ndarë duke zvarritur dhe lëshuar një aplikacion nga shiriti i detyrave mbi një aplikacion të hapur"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"Animacioni që tregon se si të qasesh në aplikacionet e sugjeruara në pajisjen tënde"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"Animacioni që tregon se si të kërkosh për një artikull në ekran, duke prekur dhe mbajtur shtypur tastin e veprimit dhe duke zgjedhur zonën ku është artikulli"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"Edukimi për shiritin e detyrave"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"Zvarrit një aplikacion në anë për të përdorur 2 aplikacione njëherësh"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"Zvarrit në këndet e poshtme për ta bërë të pluskojë"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"Rrëshqit ngadalë lart për të shfaqur \"Shiritin e detyrave\""</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"Merr sugjerime për aplikacion bazuar në rutinën tënde"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"Kryej një shtypje të gjatë te ndarësi për të gozhduar \"Shiritin e detyrave\""</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"Bëj më shumë me \"Shiritin e detyrave\""</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"Shfaq gjithmonë \"Shiritin e detyrave\""</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"Prek e mbaj ndarësin dhe shfaq gjithmonë \"Shiritin e detyrave\" në fund të ekranit"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"Zvarrit një aplikacion te këndi për ta bërë që të pluskojë"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"Prek dhe mbaj shtypur tastin e veprimit për të kërkuar për gjërat në ekran"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"Ky produkt përdor pjesën e zgjedhur të ekranit tënd për të kërkuar. Zbatohen <ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>Politika e privatësisë<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> dhe <ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>Kushtet e shërbimit<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g> të Google."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"Mbyll"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"U krye"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"Para"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"Ekrani bazë"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"Qasshmëria"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"Pas"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"Çelësi IME"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"Të fundit"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"Njoftimet"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"Cilësimet shpejt"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"Opsione të tjera"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"Shiriti i detyrave"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"Shirit i flluskave"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"Shiriti i navigimit"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"Shfaq gjithmonë shiritin e detyrave"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"Ndrysho modalitetin e navigimit"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"Ndarësi i shiritit të detyrave"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"Aplikacionet e tjera së fundi"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"Aplikacionet e tjera"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"Hiq"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"Lëviz në krye/majtas"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"Lëviz në fund/djathtas"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"Hap aplikacionin si një flluskë"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"Zhvendose artikullin në të majtë"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"Zhvendose artikullin në të djathtë"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"Aplikacionet e fundit"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"Lista e aplikacioneve të fundit"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{aplikacion tjetër}other{aplikacione të tjera}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"Desktop"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g> dhe <ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, artikulli <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> nga <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>, lësho lidhjet e tasteve për të zgjedhur"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"Lëviz majtas"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"Lëviz djathtas"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"Flluska"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"Tejkalimi"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"\"<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g>\" nga <ns0:g id="APP_NAME">%2$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"\"<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g>\" dhe <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g> të tjera"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"Lëviz majtas"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"Lëviz djathtas"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"Hiqi të gjitha"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"Qarko për të kërkuar"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"Ikona e aplikacionit"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"Titulli i aplikacionit"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"Mbyll"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"Shtytje"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"Mbyll"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"Shtyj imazhin"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>⁠"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"Ikona"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"Merr sugjerime të dobishme"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"Ne e përdorim IA-në për të sugjeruar në mënyrë proaktive informacione dhe veprime në lidhje me atë që po bën në ekran"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"Mbyll"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"zgjero"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"Ikona e sugjerimeve të ambientit"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"Prek dhe mbaj të shtypur për të shikuar se si gjenerohen sugjerimet"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"plotëso automatikisht"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"Ndaj aplikacionin"</string>
+    <string name="action_listen" msgid="2370304050784689486">"Dëgjo"</string>
+    <string name="action_translate" msgid="8028378961867277746">"Përkthe"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lentja"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"E KUPTOVA"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ANULO"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"CILËSIMET"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"Përkthe ose dëgjo tekstin në ekran"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"Informacionet si teksti në ekranin tënd, adresat e uebit dhe pamjet e ekranit mund të ndahen me Google.\n\nPër të ndryshuar se çfarë informacionesh ndahen, shko te "<b>"Cilësimet &gt; Aplikacionet &gt; Aplikacionet e parazgjedhura &gt; Aplikacioni i asistentit dixhital"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"Zgjidh një asistent për të përdorur këtë veçori"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"Për të dëgjuar ose përkthyer tekstin në ekran, zgjidh një aplikacion të asistentit dixhital te \"Cilësimet\""</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"Ndrysho asistentin për të përdorur këtë veçori"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"Për të dëgjuar ose përkthyer tekstin në ekran, ndrysho aplikacionin e asistentit dixhital te \"Cilësimet\""</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"Trokit këtu për të dëgjuar tekstin në këtë ekran"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"Trokit këtu për të përkthyer tekstin në këtë ekran"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"Ky aplikacion nuk mund të ndahet"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"Mbyll fletën"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"Emri i aplikacionit"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# miniaplikacion}other{# miniaplikacione}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# shkurtore}other{# shkurtore}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"Gjerësi %1$d dhe lartësi %2$d"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"Miniaplikacioni i \"<ns0:g id="WIDGET_NAME">%1$s</ns0:g>\", me gjerësi %2$d dhe lartësi %3$d"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"Shfaq butonin e shtimit"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"Fshih butonin e shtimit"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"Shto"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"Shto miniaplikacionin e \"<ns0:g id="WIDGET_NAME">%1$s</ns0:g>\""</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"Të veçuara"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"Shfleto"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"Miniaplikacionet në \"<ns0:g id="TAB_NAME">%1$s</ns0:g>\""</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"Miniaplikacionet e \"<ns0:g id="SELECTED_HEADER">%1$s</ns0:g>\" në të djathtë, kërkimi dhe opsionet në të majtë"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"Opsionet e kërkimit dhe miniaplikacioneve në të majtë, miniaplikacionet në të djathtë"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"Kërko"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"Pastro"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"Prapa"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"Miniaplikacionet dhe shkurtoret nuk ofrohen"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"Nuk u gjet asnjë miniaplikacion ose shkurtore"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"Shto në ekranin bazë"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"Anulo"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"Prek dhe mbaj shtypur për të zhvendosur një miniaplikacion."</string>
+</resources>

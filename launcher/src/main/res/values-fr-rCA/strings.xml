@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Lanceur3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Travail"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"L\'appli n\'est pas installée."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"Appli indisponible"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"L\'appli téléchargée est désactivée en mode sans échec."</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"Widgets désactivés en mode sans échec"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"Le raccourci n\'est pas disponible"</string>
+    <string name="home_screen" msgid="5629429142036709174">"Accueil"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"Définissez <ns0:g id="LAUNCHER_NAME">%1$s</ns0:g> comme appli d\'accueil par défaut dans les paramètres"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"Écran divisé"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"Modifier les proportions"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"Renseignements sur l\'appli pour %1$s"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"Paramètres d\'utilisation pour %1$s"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"Fermer %1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"Nouvelle fenêtre"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"Gérer les fenêtres"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"Fermer"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"Enr. paire d\'applis"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"Cette paire d\'applis n\'est pas prise en charge sur cet appareil"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"Déplier l\'appareil pour utiliser cette paire d\'applis"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"La Paire d\'applis n\'est pas offerte"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"Maintenez le doigt sur un widget pour le déplacer."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"Touchez 2x un widget et maintenez le doigt dessus pour le déplacer ou utiliser des actions personnalisées."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"Autres options"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"Afficher tous les widgets"</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"%1$d de largeur sur %2$d de hauteur"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"Widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"Widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, %2$d de largeur sur %3$d de hauteur"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"Maintenez le doigt sur le widget pour le déplacer sur l\'écran d\'accueil"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"Ajouter à l\'écran d\'accueil"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"Le widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g> a été ajouté à l\'écran d\'accueil"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"Suggestions"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"Essentiels"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"Actualités et magazines"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"Divertissement"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"Médias sociaux"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"Suggestions personnalisées"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"Widgets <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> à droite, recherche et options à gauche"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# widget}one{# widget}other{# widgets}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# raccourci}one{# raccourci}other{# raccourcis}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"Widgets"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"Aucun widget ou raccourci proposé"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"Aucun widget ni raccourci trouvé"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"Personnels"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"Travail"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"Conversations"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"Prise de note"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"Afficher le bouton Ajouter"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"Masquer le bouton Ajouter"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"Ajouter"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"Ajoutez le widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"Tout afficher"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"Afficher tous les widgets"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"Tous les widgets affichés"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"Touchez pour modifier les paramètres du widget"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"Modifier les paramètres du widget"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"Rechercher dans les applis"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"Chargement des applis en cours…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"Aucune appli trouvée correspondant à « <ns0:g id="QUERY">%1$s</ns0:g> »"</string>
+    <string name="label_application" msgid="8531721983832654978">"Appli"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"Toutes les applis"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"Liste des applis"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"Notifications"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"Maintenez le doigt sur un raccourci pour le déplacer."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"Touchez deux fois un raccourci et maintenez le doigt dessus pour le déplacer ou utiliser des actions personnalisées."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"Pas d\'espace libre sur cet écran d\'accueil"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"Il n\'y a plus d\'espace dans la zone des favoris"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"Liste des applis"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"Résultats de recherche"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"Liste des applis personnelles"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"Liste des applis professionnelles"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"Retirer"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"Désinstaller"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"Détails de l\'appli"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"Installer en privé"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"Désinstaller l\'appli"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"Installer"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"Ne pas suggérer d\'appli"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"Épingler la prédiction"</string>
+    <string name="bubble" msgid="3072951361014076670">"Bulle"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"Verrouillage d\'appli"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"Retirer verr. appli"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"Paramètres"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"Ajout. : Barre tâche"</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"Ret. : Barre tâches"</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"Pas de place dans la Barre des tâches"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"Appli ajoutée à la Barre des tâches"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"Appli retirée de la Barre des tâches"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"Retirer"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"Copier"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"Ouvrir"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"Renommer"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"Supprimer définitivement"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"Déplacer vers la corbeille"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"Élément déplacé vers la corbeille"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"Impossible de déplacer l\'élément dans la corbeille. Un problème est survenu."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"Cette action est irréversible. Accédez à l\'appli Fichiers pour restaurer l\'élément."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"Actions"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"Raccourcis"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"Afficher le menu des actions"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"Afficher le menu des raccourcis des applis"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"Interrompre l\'appli"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"installer des raccourcis"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"Permet à une appli d\'ajouter des raccourcis sans l\'intervention de l\'utilisateur."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"lire les paramètres et les raccourcis de la page d\'accueil"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"Permet à l\'appli de lire les paramètres et les raccourcis de l\'écran d\'accueil."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"modifier les paramètres et les raccourcis de la page d\'accueil"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"Permet à l\'appli de modifier les paramètres et les raccourcis de l\'écran d\'accueil."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"Impossible de charger le widget"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"Paramètres du widget"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"Touchez pour terminer la configuration"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"Impossible de désinstaller cette appli, car il s\'agit d\'une appli système."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"Modifier le nom"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"Paginer vers la gauche"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"Paginer vers la droite"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"L\'appli <ns0:g id="APP_NAME">%1$s</ns0:g> est désactivée"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{{app_name} a # notification}one{{app_name} a # notification}other{{app_name} a # notifications}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"Appli prédite : <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"Page %1$d sur %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"Écran d\'accueil %1$d sur %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"Nouvelle page d\'écran d\'accueil"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"Actif"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"Réduit"</string>
+    <string name="folder_opened" msgid="94695026776264709">"Dossier ouvert, <ns0:g id="WIDTH">%1$d</ns0:g> par <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"Touchez pour fermer le dossier"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"Touchez pour enregistrer le nouveau nom"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"Dossier fermé"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"Nouveau nom du dossier : <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"Dossier"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"Dossier d\'applis"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g> : <ns0:g id="NAME">%2$s</ns0:g>, nombre d\'éléments : <ns0:g id="SIZE">%3$d</ns0:g>"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g> : <ns0:g id="NAME">%2$s</ns0:g>, nombre d\'éléments : <ns0:g id="SIZE">%3$d</ns0:g>, contient des notifications"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g> : <ns0:g id="NAME">%2$s</ns0:g>, nombre d\'éléments : <ns0:g id="SIZE">%3$d</ns0:g> ou plus"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g> : <ns0:g id="NAME">%2$s</ns0:g>, nombre d\'éléments : <ns0:g id="SIZE">%3$d</ns0:g> ou plus, contient des notifications"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"Dossier sans nom"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"Dossier de fichiers : <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"Paire d\'applis : <ns0:g id="APP1">%1$s</ns0:g> et <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"Fond d\'écran et style"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"Modifier l\'écran d\'accueil"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"Paramètres d\'accueil"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"Cette fonction est désactivée par votre administrateur"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"Organisateur Home"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"Lorsque vous faites pivoter le téléphone"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"Activer le traçage de la composition"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"Activez le traçage de la composition lors de la prise d\'une trace Perfetto dans l\'aperçu"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"Mode Paysage"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"Réglez l\'écran d\'accueil en mode Paysage"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"Pastilles de notification"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"Activées"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"Désactivé"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"L\'accès aux notifications est requis"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"Pour afficher les points de notification, activez les notifications d\'appli pour <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"Modifier les paramètres"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"Afficher les points de notification"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"Options pour les développeurs"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"Ajouter les icônes des applis à l\'écran d\'accueil"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"Pour les nouvelles applis"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"Inconnu"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"Supprimer"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"Rechercher"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"Cette appli n\'est pas installée"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"L\'appli liée à cette icône n\'est pas installée. Vous pouvez la supprimer ou rechercher l\'appli et l\'installer manuellement."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"Installation de l\'appli <ns0:g id="NAME">%1$s</ns0:g> en cours, <ns0:g id="PROGRESS">%2$s</ns0:g> terminée"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"Téléchargement de <ns0:g id="NAME">%1$s</ns0:g> : <ns0:g id="PROGRESS">%2$s</ns0:g>"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"<ns0:g id="NAME">%1$s</ns0:g> en attente d\'installation"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"L\'appli <ns0:g id="NAME">%1$s</ns0:g> est archivée."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"télécharger et restaurer"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"Mise à jour de l\'appli requise"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"L\'appli pour cette icône n\'est pas à jour. Vous pouvez soit la mettre à jour manuellement pour réactiver ce raccourci, soit retirer l\'icône."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"Mettre à jour"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"Retirer"</string>
+    <string name="widgets_list" msgid="796804551140113767">"Liste des widgets"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"Liste des widgets fermée"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"Ajouter à l\'écran d\'accueil"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"Déplacer l\'élément ici"</string>
+    <string name="item_removed" msgid="851119963877842327">"Élément retiré"</string>
+    <string name="undo" msgid="4151576204245173321">"Annuler"</string>
+    <string name="action_move" msgid="4339390619886385032">"Déplacer l\'élément"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"Déplacer à la ligne <ns0:g id="NUMBER_0">%1$s</ns0:g> colonne <ns0:g id="NUMBER_1">%2$s</ns0:g> dans <ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"Déplacer vers la position <ns0:g id="NUMBER">%1$s</ns0:g>"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"Déplacer vers la position <ns0:g id="NUMBER">%1$s</ns0:g> dans les favoris"</string>
+    <string name="item_moved" msgid="4606538322571412879">"Élément déplacé"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"Ajouter au dossier : <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"Ajouter au dossier <ns0:g id="NAME">%1$s</ns0:g>. Ligne <ns0:g id="NUMBER_0">%2$s</ns0:g>, colonne <ns0:g id="NUMBER_1">%3$s</ns0:g> dans <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"Ajouter au dossier contenant <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"Ajouter au dossier avec <ns0:g id="NAME">%1$s</ns0:g>. Ligne <ns0:g id="NUMBER_0">%2$s</ns0:g>, colonne <ns0:g id="NUMBER_1">%3$s</ns0:g>, dans <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"Élément ajouté au dossier"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"Créer un dossier avec : <ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"Créer un dossier avec <ns0:g id="NAME">%1$s</ns0:g>. Ligne <ns0:g id="NUMBER_0">%2$s</ns0:g>, colonne <ns0:g id="NUMBER_1">%3$s</ns0:g>, dans <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"Dossier créé"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"Déplacer sur l\'écran d\'accueil"</string>
+    <string name="action_resize" msgid="1802976324781771067">"Redimensionner"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"Augmenter la largeur"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"Augmenter la hauteur"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"Diminuer la largeur"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"Diminuer la hauteur"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"Poignée de redim. gauche"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"Poignée de redim. supérieure"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"Poignée de redim. droite"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"Poignée de redim. inférieure"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"Afficher les boutons de redim."</string>
+    <string name="widget_resized" msgid="9130327887929620">"Le widget a été redimensionné (largeur : <ns0:g id="NUMBER_0">%1$s</ns0:g>, hauteur : <ns0:g id="NUMBER_1">%2$s</ns0:g>)"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"Menu des raccourcis"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"Cadre de redimensionnement du widget pour <ns0:g id="STRING">%1$s</ns0:g>"</string>
+    <string name="action_close" msgid="1077760267194136901">"Fermer"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"Ignorer"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"Fermer"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"Personnel"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"Travail"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"Onglet Applis personnelles"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"Onglet Applis professionnelles"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"Profil professionnel"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"Les applis professionnelles sont indiquées par un badge et elles sont visibles pour votre administrateur informatique"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"Les applis professionnelles sont interrompues"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"Vous ne recevrez pas de notifications de vos applis professionnelles"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"Les applis professionnelles ne peuvent ni vous envoyer de notifications, ni utiliser la pile, ni accéder à votre position"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"Vous ne recevrez pas d\'appels téléphoniques, de messages texte ni de notifications de vos applis professionnelles"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"Les applis professionnelles sont indiquées par un badge et sont visibles pour votre administrateur informatique"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"OK"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"Mettre en pause les applis professionnelles"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"Réactiver"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"Horaire des applis professionnelles"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"Filtrer"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"Échec : <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"Espace privé"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"Touchez pour configurer ou ouvrir"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"Privé"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"Paramètres de l\'espace privé"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"Privé, déverrouillé."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"Privé, verrouillé."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"Verrouiller"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"Transition vers l\'Espace privé"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"Installer"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"Ajouter"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"Installer des applis dans l\'Espace privé"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"Ajouter des fichiers et plus à l\'espace privé"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"Cercle"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"Carré"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Biscuit à quatre côtés"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Biscuit à sept côtés"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"Arche"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"Nouveau dossier"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"Nouveau dossier"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"Effacer"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"Annuler"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"Renommer"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"Renommer le fichier"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"Renommer le dossier"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"Un problème est survenu"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"Créer un écran"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"Choisissez une catégorie pour ajouter des applis et des widgets à partir de votre téléphone"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"Choisir la mise en page"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"Épingler"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"Forme libre"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"Bureau"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"Bureau pour %1$s"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"Passer à un écran externe"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"Effacer"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"Bureau"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"Aucun élément récent"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"Paramètres d\'utilisation de l\'appli"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"Tout effacer"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"Ajouter un nouveau bureau"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"Applis récentes"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g> : <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"&lt; 1 min"</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"Il reste <ns0:g id="TIME">%1$s</ns0:g> aujourd\'hui"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"Suggestions d\'applis"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"Vos prédictions d\'applis"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"Paramètres"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"Les applis les plus utilisées s\'affichent ici et changent en fonction des habitudes"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"Faites glisser des applis hors de la rangée du bas pour obtenir des suggestions d\'applis"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"Applis suggérées ajoutées à l\'espace vide"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"Les suggestions d\'applis sont activées"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"Les suggestions d\'applis sont désactivées"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"Tutoriel de navigation par gestes"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"Faites pivoter votre appareil"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"Veuillez faire pivoter votre appareil pour terminer le tutoriel de navigation par gestes"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"Assurez-vous de balayer l\'écran à partir de l\'extrémité droite ou gauche"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"Assurez-vous de balayer l\'écran à partir de l\'extrémité droite ou gauche vers le centre, puis allons-y"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"Vous avez appris à balayer de la droite pour revenir en arrière. Apprenez comment changer d\'appli."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"Vous avez appris le geste de retour en arrière. Maintenant, apprenez comment changer d\'appli."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"Vous avez appris le geste de retour"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"Assurez-vous de ne pas balayer trop près du bas de l\'écran"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"Modifiez la sensibilité du geste de retour dans Paramètres"</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"Balayez l\'écran pour revenir en arrière"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"Pour revenir à l\'écran précédent, balayez l\'écran de l\'extrémité gauche ou droite vers le centre."</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"Retour"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"Balayez l\'écran à partir du bord gauche ou droit vers le centre"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"Assurez-vous de balayer l\'écran à partir de l\'extrémité inférieure vers le haut"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"Assurez-vous de ne pas interrompre le geste avant de lever le doigt"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"Assurez-vous de balayer l\'écran en ligne droite vers le haut"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"Vous avez appris le geste de retour à l\'écran d\'accueil. Maintenant, apprenez à revenir en arrière."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"Vous avez appris le geste de retour à la page d\'accueil"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"Balayez pour revenir à l\'écran d\'accueil"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"Balayez l\'écran du bas vers le haut. Ce geste vous ramène toujours à l\'écran d\'accueil."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"Retour à la page d\'accueil"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"Balayez votre écran du bas vers le haut"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"Super!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"Assurez-vous de balayer l\'écran à partir de l\'extrémité inférieure vers le haut"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"Essayez de tenir la fenêtre plus longtemps avant de relâcher"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"Assurez-vous de balayer l\'écran vers le haut, puis de faire une pause"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"Vous avez appris à utiliser les gestes. Pour les désactiver, accédez au menu Paramètres."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"Vous avez appris le geste de changement d\'appli"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"Balayez pour basculer entre les applis"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"Pour changer d\'appli, balayez l\'écran de bas en haut, maintenez le doigt dessus, puis relâchez-le."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"Changement d\'appli"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"Balayez l\'écran de bas en haut, maintenez le doigt en place, puis relâchez-le"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"Bien joué!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"Terminé"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"OK"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"Paramètres"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"Réessayez"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"Bien!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"Étape <ns0:g id="CURRENT">%1$d</ns0:g> sur <ns0:g id="TOTAL">%2$d</ns0:g> du tutoriel"</string>
+    <string name="allset_title" msgid="5021126669778966707">"Tout est prêt!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"Balayez l\'écran vers le haut pour accéder à l\'écran d\'accueil"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"Toucher le bouton d\'accueil pour passer sur votre écran d\'accueil"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"Vous êtes maintenant prêt à utiliser votre <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"Vous êtes maintenant prêt à utiliser votre appareil."</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"Paramètres de navigation du système"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"Votre appareil <ns0:g id="DEVICE">%1$s</ns0:g> est \nprêt!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"Votre appareil est \nprêt!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"Tout est prêt!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"Profitez de votre nouvel appareil <ns0:g id="DEVICE">%1$s</ns0:g>!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"Balayez vers le haut pour commencer à utiliser votre <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"Touchez pour commencer à utiliser votre <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"Choisir un mode de navigation"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"Balayez l\'écran vers le haut"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"Touchez la touche d\'accueil"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"tablette"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"téléphone"</string>
+    <string name="action_share" msgid="2648470652637092375">"Partager"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"Capture d\'écran"</string>
+    <string name="action_split" msgid="2098009717623550676">"Diviser"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"Enr. paire d\'applis"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"Toucher une autre appli pour partager l\'écran"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"Choisir une autre appli pour utiliser l\'Écran divisé"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"Annuler"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"Quitter la sélection d\'écran divisé"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"Choisir une autre appli pour utiliser l\'écran partagé"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"L\'appli ou votre organisation n\'autorise pas cette action"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"Les widgets ne sont actuellement pas pris en charge. Veuillez sélectionner une autre appli"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"Copier"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"Enregistrer"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"Faire pivoter l\'écran"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"Animation montrant comment la Barre des tâches s\'affiche dans la partie inférieure de l\'écran et se masque automatiquement lorsqu\'elle n\'est pas utilisée"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"Animation montrant comment épingler la Barre des tâches à l\'aide d\'un commutateur, de sorte qu\'elle reste visible en permanence dans la partie inférieure de l\'écran"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"Animation montrant comment créer une bulle à partir de la barre des tâches à l\'aide d\'un geste de glissement"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"Animation montrant comment créer un Écran divisé, en glissant-déposant une appli de la Barre des tâches au-dessus d\'une appli ouverte"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"Animation montrant comment accéder aux applis suggérées sur votre appareil"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"Animation montrant comment rechercher un élément à l\'écran, en touchant et en maintenant le doigt sur la touche d\'action et en sélectionnant la zone dans laquelle se trouve l\'élément"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"Informations sur la barre des tâches"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"Faites glisser une appli sur le côté pour en utiliser deux à la fois."</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"Faites glisser vers les coins inférieurs pour faire flotter"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"Balayez l\'écran lentement vers le haut pour afficher la Barre des tâches"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"Obtenez des suggestions d\'applis en fonction de vos routines."</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"Maintenez le doigt sur le séparateur pour épingler la barre des tâches."</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"Faites-en plus avec la barre des tâches"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"Toujours afficher la Barre des tâches"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"Pour toujours afficher la Barre des tâches en bas de l\'écran, maintenez le doigt sur le séparateur"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"Faites glisser une appli dans un coin pour la faire flotter"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"Maintenez le doigt sur la touche d\'action pour rechercher ce qui se trouve sur votre écran"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"Ce produit utilise la partie sélectionnée de votre écran pour effectuer une recherche. La <ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>politique de confidentialité<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> et les <ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>conditions d\'utilisation<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g> de Google s\'appliquent."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"Fermer"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"OK"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"Suivant"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"Accueil"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"Accessibilité"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"Retour"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"Sélecteur IME"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"Récents"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"Notifications"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"Paramètres rapides"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"Autres options"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"Barre des tâches"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"Barre de bulles"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"Barre de navigation"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"Tjrs afficher barre des tâches"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"Changer de mode de navigation"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"Séparateur de la barre des tâches"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"Autres applis récentes"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"Autres applis"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"Retirer"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"Déplacer vers le coin supérieur gauche de l\'écran"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"Déplacer vers le coin inférieur droit de l\'écran"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"Ouvrir l\'appli sous forme de bulle"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"Déplacer l\'élément vers la gauche"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"Déplacer l\'élément vers la droite"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"Applis récentes"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"Liste des applis récentes"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{autre appli}one{autre appli}other{autres applis}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"Bureau"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g> et <ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, élément <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> de <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>, relâcher les liaisons de touches pour sélectionner"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"Faire défiler vers la gauche"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"Faire défiler vers la droite"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"Bulle"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"Bulle à développer"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g> de <ns0:g id="APP_NAME">%2$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g> et <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g> autres"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"Déplacer vers la gauche"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"Déplacer vers la droite"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"Tout ignorer"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"Encercler et rechercher"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"Icône de l\'appli"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"Nom de l\'appli"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"Fermer"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"Coup de coude"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"Fermer"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"Coup de coude sur l\'image"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"Icône"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"Obtenir des suggestions utiles"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"Nous utilisons l\'IA pour suggérer de manière proactive des informations et des actions pertinentes par rapport à ce que vous faites à l\'écran"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"Fermer"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"Développer"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"Icône de suggestions d\'ambiance"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"Maintenir le doigt sur l\'affichage pour voir comment les suggestions sont générées"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"Remplir automatiquement"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"Partager appli"</string>
+    <string name="action_listen" msgid="2370304050784689486">"Écouter"</string>
+    <string name="action_translate" msgid="8028378961867277746">"Traduire"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lentille"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"OK"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ANNULER"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"PARAMÈTRES"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"Traduire ou écouter le texte à l\'écran"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"Des renseignements comme du texte sur votre écran, des adresses Web et des captures d\'écran peuvent être partagés avec Google.\n\nPour modifier les renseignements que vous partagez, accédez à "<b>"Paramètres &gt; Applis &gt; Applis par défaut &gt; Appli d\'assistant numérique"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"Choisir un assistant pour utiliser cette fonctionnalité"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"Pour écouter ou traduire le texte affiché sur votre écran, choisissez l\'appli d\'un assistant numérique dans les paramètres"</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"Modifier votre assistant pour utiliser cette fonctionnalité"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"Pour écouter ou traduire le texte affiché sur votre écran, modifiez l\'appli de votre assistant numérique dans les paramètres"</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"Touchez ce bouton pour écouter le texte affiché sur cet écran"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"Touchez ce bouton pour traduire le texte affiché sur cet écran"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"Cette appli ne peut pas être partagée"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"Fermer la feuille"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"Nom de l\'appli"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# widget}one{# widget}other{# widgets}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# raccourci}one{# raccourci}other{# raccourcis}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d x %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"%1$d de largeur sur %2$d de hauteur"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"Widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g>, %2$d de largeur sur %3$d de hauteur"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"Afficher le bouton Ajouter"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"Masquer le bouton Ajouter"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"Ajouter"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"Ajouter le widget <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"En vedette"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"Parcourir"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"<ns0:g id="TAB_NAME">%1$s</ns0:g> widgets"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"Widgets <ns0:g id="SELECTED_HEADER">%1$s</ns0:g> à droite, recherche et options à gauche"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"Options de recherche et de widget à gauche, widgets à droite"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"Recherchez"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"Effacer"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"Retour"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"Aucun widget ni raccourci accessible"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"Aucun widget ni raccourci trouvé"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"Ajouter à l\'écran d\'accueil"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"Annuler"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"Maintenez le doigt sur un widget pour le déplacer."</string>
+</resources>

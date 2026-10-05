@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="delete_package_intent" translatable="false">#Intent;action=android.intent.action.DELETE;launchFlags=0x10800000;B.android.intent.extra.RETURN_RESULT=true;end</string>
+    <string name="fallback_search_package_name" translatable="false" />
+    <integer name="config_pageSnapAnimationDuration">750</integer>
+    <integer name="config_keyboardTaskFocusSnapAnimationDuration">750</integer>
+    <integer name="config_dragOutlineFadeTime">500</integer>
+    <integer name="config_dragOutlineMaxAlpha">255</integer>
+    <integer name="config_dropAnimMinDuration">100</integer>
+    <integer name="config_dropAnimMaxDuration">500</integer>
+    <integer name="config_materialFolderExpandDuration">200</integer>
+    <integer name="config_folderDelay">30</integer>
+    <integer name="config_dropAnimMaxDist">800</integer>
+    <integer name="config_caretAnimationDuration">200</integer>
+    <dimen name="hotseat_bar_bottom_space_default">48</dimen>
+    <dimen name="hotseat_qsb_space_default">0</dimen>
+    <bool name="config_enableTaskSnapshotPreloading">true</bool>
+    <item name="widget_rect_scale_stiffness" type="dimen" format="float">600</item>
+    <item name="widget_x_stiffness" type="dimen" format="float">450</item>
+    <item name="widget_y_stiffness" type="dimen" format="float">550</item>
+    <item name="dismiss_task_trans_y_damping_ratio" type="dimen" format="float">0.73</item>
+    <item name="dismiss_task_trans_y_stiffness" type="dimen" format="float">800</item>
+    <item name="swipe_up_rect_scale_damping_ratio" type="dimen" format="float">0.75</item>
+    <item name="swipe_up_rect_scale_stiffness" type="dimen" format="float">200</item>
+    <item name="swipe_up_rect_scale_damping_ratio_v2" type="dimen" format="float">0.99</item>
+    <item name="swipe_up_rect_scale_stiffness_v2" type="dimen" format="float">500</item>
+    <item name="swipe_up_rect_xy_fling_friction" type="dimen" format="float">1.5</item>
+    <item name="swipe_up_scale_start" type="dimen" format="float">0.88</item>
+    <item name="swipe_up_rect_x_damping_ratio" type="dimen" format="float">0.965</item>
+    <item name="swipe_up_rect_x_stiffness" type="dimen" format="float">450</item>
+    <item name="swipe_up_rect_y_damping_ratio" type="dimen" format="float">0.95</item>
+    <item name="swipe_up_rect_y_stiffness" type="dimen" format="float">400</item>
+    <item name="taskbar_swipe_up_rect_x_stiffness" type="dimen" format="float">350</item>
+    <item name="taskbar_swipe_up_rect_x_damping" type="dimen" format="float">0.9</item>
+    <item name="taskbar_swipe_up_rect_y_stiffness" type="dimen" format="float">200</item>
+    <item name="taskbar_swipe_up_rect_y_damping" type="dimen" format="float">0.78</item>
+    <item name="taskbar_swipe_up_rect_scale_stiffness" type="dimen" format="float">200</item>
+    <item name="staggered_damping_ratio" type="dimen" format="float">0.7</item>
+    <item name="staggered_stiffness" type="dimen" format="float">150</item>
+    <dimen name="unlock_staggered_velocity_dp_per_s">2dp</dimen>
+    <item name="hint_scale_damping_ratio" type="dimen" format="float">0.7</item>
+    <item name="hint_scale_stiffness" type="dimen" format="float">200</item>
+    <dimen name="hint_scale_velocity_dp_per_s">0.3dp</dimen>
+    <dimen name="swipe_up_fling_min_visible_change">18dp</dimen>
+    <dimen name="swipe_up_max_workspace_trans_y">-60dp</dimen>
+    <dimen name="swipe_up_max_velocity">7.619dp</dimen>
+    <item name="swipe_up_min_velocity_x_px_per_s" type="dimen" format="integer">300</item>
+    <item name="swipe_up_max_velocity_x_px_per_s" type="dimen" format="integer">500</item>
+    <item name="swipe_up_min_velocity_y_px_per_s" type="dimen" format="integer">2000</item>
+    <item name="swipe_up_max_velocity_y_px_per_s" type="dimen" format="integer">5000</item>
+    <item name="swipe_up_max_velocity_fall_off_factor" type="dimen" format="float">1.4</item>
+    <array name="dynamic_resources">
+        <item>@dimen/swipe_up_scale_start</item>
+        <item>@dimen/swipe_up_max_velocity</item>
+    </array>
+    <string-array name="default_featured_widget_apps" translatable="false">
+    </string-array>
+    <dimen name="swipe_back_window_scale_x_margin">10dp</dimen>
+    <dimen name="swipe_back_window_corner_radius">40dp</dimen>
+    <integer name="config_bottomSheetOpenDuration">267</integer>
+    <integer name="config_bottomSheetCloseDuration">267</integer>
+    <integer name="config_allAppsOpenDuration">600</integer>
+    <integer name="config_allAppsCloseDuration">300</integer>
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">
+        1.1
+    </item>
+    <bool name="floating_rotation_button_position_left">true</bool>
+    <dimen name="iconSize48dp">52dp</dimen>
+    <dimen name="iconSize50dp">55dp</dimen>
+    <dimen name="iconSize52dp">57dp</dimen>
+    <dimen name="iconSize54dp">59dp</dimen>
+    <dimen name="iconSize56dp">61dp</dimen>
+    <dimen name="iconSize58dp">63dp</dimen>
+    <dimen name="iconSize60dp">66dp</dimen>
+    <dimen name="iconSize66dp">72dp</dimen>
+    <dimen name="iconSize72dp">79dp</dimen>
+    <dimen name="iconSize82dp">90dp</dimen>
+    <dimen name="iconSize110dp">121dp</dimen>
+    <dimen name="iconSize144dp">158dp</dimen>
+    <integer-array name="icon_size_steps">
+        <item>@dimen/iconSize48dp</item>
+        <item>@dimen/iconSize50dp</item>
+        <item>@dimen/iconSize52dp</item>
+        <item>@dimen/iconSize54dp</item>
+        <item>@dimen/iconSize56dp</item>
+        <item>@dimen/iconSize58dp</item>
+        <item>@dimen/iconSize60dp</item>
+        <item>@dimen/iconSize66dp</item>
+        <item>@dimen/iconSize72dp</item>
+        <item>@dimen/iconSize82dp</item>
+        <item>@dimen/iconSize110dp</item>
+        <item>@dimen/iconSize144dp</item>
+    </integer-array>
+    <dimen name="minimum_icon_label_size">8sp</dimen>
+    <dimen name="activity_split_ratio" format="float">0.5</dimen>
+    <integer name="min_width_split">720</integer>
+    <string-array name="config_appsSupportMultiInstancesSplit">
+    </string-array>
+    <bool name="desktop_form_factor">false</bool>
+    <string-array name="grid_control_known_signers" translatable="false" />
+    <string-array name="supported_overlay_apps" translatable="false" />
+    <bool name="config_widgetPickerSupportsBlurTokens">true</bool>
+    <bool name="reduce_workspace_blur_usage">false</bool>
+    <dimen name="home_organizer_background_blur_radius">30dp</dimen>
+    <string name="home_screen_files_file_icon_path_data" translatable="false">m 12.5,0 h 75 C 94.403542,0 100,5.5964375 100,12.5 v 75 c 0,6.903542 -5.596458,12.5 -12.5,12.5 h -75 C 5.5964375,100 0,94.403542 0,87.5 v -75 C 0,5.5964375 5.5964375,0 12.5,0 Z</string>
+    <string name="home_screen_files_folder_icon_path_data" translatable="false">M10 4H4c-1.1 0,-1.99.9,-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2,-.9 2,-2V8c0,-1.1,-.9,-2,-2,-2h-8l-2,-2z</string>
+    <integer name="home_screen_files_folder_icon_path_intrinsic_size">24</integer>
+    <string-array name="back_gesture_blocking_activities" translatable="false">
+        <item>com.android.launcher3/com.android.quickstep.interaction.GestureSandboxActivity</item>
+    </string-array>
+    <integer name="recentsThumbnailCacheSize">3</integer>
+    <integer name="recentsIconCacheSize">12</integer>
+    <integer name="recentsScrollHapticMinGapMillis">20</integer>
+    <integer name="assistant_gesture_min_time_threshold">200</integer>
+    <integer name="assistant_gesture_corner_deg_threshold">20</integer>
+    <string name="wellbeing_provider_pkg" translatable="false" />
+    <dimen name="max_depth_blur_radius_enhanced">30dp</dimen>
+    <item type="id" name="action_move_to_top_or_left" />
+    <item type="id" name="action_move_to_bottom_or_right" />
+    <item type="id" name="action_create_application_bubble" />
+    <string name="setup_wizard_pkg" translatable="false" />
+    <item name="expressive_dismiss_task_trans_y_damping_ratio" type="dimen" format="float">0.65</item>
+    <item name="expressive_dismiss_task_trans_y_stiffness" type="dimen" format="float">850</item>
+    <item name="expressive_dismiss_task_trans_x_damping_ratio" type="dimen" format="float">0.8</item>
+    <item name="expressive_dismiss_task_trans_x_stiffness" type="dimen" format="float">2800</item>
+    <item name="expressive_dismiss_effects_damping_ratio" type="dimen" format="float">1</item>
+    <item name="expressive_dismiss_effects_stiffness" type="dimen" format="float">1600</item>
+    <string name="all_set_arrow_path" translatable="false">M61.554,32.22C58.4,27.364 55.245,22.502 52.091,17.646C50.045,14.494 47.963,11.299 45.196,8.796C42.43,6.287 38.846,4.514 35.171,4.745C31.945,4.951 28.954,6.686 26.593,8.952C24.232,11.218 22.398,14.008 20.594,16.773C15.715,24.237 10.829,31.702 5.95,39.173C3.632,42.718 1.252,46.419 0.611,50.645C-0.164,55.75 1.924,60.95 5.629,64.345C9.504,67.896 15.781,67.609 20.497,66.635C25.667,65.568 30.722,63.558 35.995,63.565C40.511,63.565 44.875,65.05 49.271,66.13C53.659,67.203 58.375,67.865 62.613,66.267C67.873,64.289 71.651,58.665 71.548,52.892C71.451,47.624 68.503,42.918 65.664,38.536C64.296,36.433 62.928,34.324 61.56,32.22H61.554Z</string>
+    <integer name="max_launcher_memory_mb">300</integer>
+    <string-array name="allowed_image_mime_types" translatable="false">
+        <item>image/png</item>
+        <item>image/jpeg</item>
+        <item>image/webp</item>
+        <item>image/gif</item>
+        <item>image/bmp</item>
+        <item>image/x-ico</item>
+        <item>image/vnd.wap.wbmp</item>
+        <item>image/heif</item>
+        <item>image/heic</item>
+        <item>image/avif</item>
+    </string-array>
+    <string name="app_sharing_component" translatable="false" />
+    <bool name="enable_niu_actions">true</bool>
+    <string name="task_overlay_factory_class" translatable="false">com.android.quickstep.TaskOverlayFactoryGo</string>
+</resources>

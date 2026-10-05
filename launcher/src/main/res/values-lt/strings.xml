@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Launcher3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Darbas"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"Programa neįdiegta."</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"Programa nepasiekiama"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"Atsisiųsta programa išjungta Saugos režimu"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"Valdikliai išjungti Saugiame režime"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"Sparčiojo klavišo negalima naudoti"</string>
+    <string name="home_screen" msgid="5629429142036709174">"Pagrindinis"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"Nustatykite „<ns0:g id="LAUNCHER_NAME">%1$s</ns0:g>“ kaip numatytąją pagrindinę programą skiltyje „Nustatymai“"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"Išskaidytas ekranas"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"Keisti kraštinių santykį"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"Programos „%1$s“ informacija"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"„%1$s“ naudojimo nustatymai"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"Uždaryti „%1$s“"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"Naujas langas"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"Tvarkyti langus"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"Uždaryti"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"Išsaugoti programų porą"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"Ši programų pora šiame įrenginyje nepalaikoma"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"Atlenkite įrenginį, kad galėtumėte naudoti šią programų porą."</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"Programų pora nepasiekiama"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"Dukart pal. ir palaik., kad perkeltumėte valdiklį."</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"Dukart palieskite ir palaikykite, kad perkeltumėte valdiklį ar naudotumėte tinkintus veiksmus."</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"Daugiau parinkčių"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"Rodyti visus valdiklius"</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"%1$d plotis ir %2$d aukštis"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"<ns0:g id="WIDGET_NAME">%1$s</ns0:g> valdiklis"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"Valdiklis: <ns0:g id="WIDGET_NAME">%1$s</ns0:g>; %2$d pločio ir %3$d aukščio"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"Palietę ir palaikę valdiklį galėsite jį judinti pagrindiniame ekrane"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"Pridėti prie pagrindinio ekrano"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"Valdiklis „<ns0:g id="WIDGET_NAME">%1$s</ns0:g>“ pridėtas prie pagrindinio ekrano"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"Pasiūlymai"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"Būtiniausi"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"Naujienos ir žurnalai"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"Pramogos"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"Socialiniai tinklai"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"Siūloma jums"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"<ns0:g id="SELECTED_HEADER">%1$s</ns0:g> valdikliai dešinėje, paieška ir parinktys kairėje"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# valdiklis}one{# valdiklis}few{# valdikliai}many{# valdiklio}other{# valdiklių}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# spartusis klavišas}one{# spartusis klavišas}few{# spartieji klavišai}many{# sparčiojo klavišo}other{# sparčiųjų klavišų}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"Valdikliai"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"Valdikliai ir spartieji klavišai nepasiekiami"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"Neaptikta jokių valdiklių ar sparčiųjų klavišų"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"Asmeniniai"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"Darbas"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"Pokalbiai"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"Užrašų kūrimas"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"Rodyti mygtuką „Pridėti“"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"Slėpti mygtuką „Pridėti“"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"Pridėti"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"Pridėti valdiklį: <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"Rodyti viską"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"Rodyti visus valdiklius"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"Rodomi visi valdikliai"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"Palieskite, kad pakeistumėte valdiklio nustatymus"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"Pakeisti valdiklio nustatymus"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"Paieškos programos"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"Įkeliamos programos…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"Nerasta jokių užklausą „<ns0:g id="QUERY">%1$s</ns0:g>“ atitinkančių programų"</string>
+    <string name="label_application" msgid="8531721983832654978">"Programa"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"Visos programos"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"Programų sąrašas"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"Pranešimai"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"Dukart pal. ir palaik., kad perk. spart. klavišą."</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"Dukart palieskite ir palaikykite, kad perkeltumėte spartųjį klavišą ar naudotumėte tinkintus veiksmus."</string>
+    <string name="out_of_space" msgid="6455557115204099579">"Šiame pagrindiniame ekrane nebėra vietos"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"Mėgstamiausių dėkle nebėra vietos"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"Programų sąrašas"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"Paieškos rezultatai"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"Asmeninių programų sąrašas"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"Darbo programų sąrašas"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"Pašalinti"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"Pašalinti"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"Programos inform."</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"Įdiegti privačiai"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"Pašalinti programą"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"Įdiegti"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"Nesiūlyti programos"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"Prisegti numatymą"</string>
+    <string name="bubble" msgid="3072951361014076670">"Debesėlis"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"Programos užraktas"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"Pašalinti programos užraktą"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"Nustatymai"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"Pridėti prie užduočių juostos"</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"Pašalinti iš užduočių juostos"</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"Užduočių juostoje nėra vietos"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"Programa pridėta prie Užduočių juostos"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"Programa pašalinta iš Užduočių juostos"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"Pašalinti"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"Kopijuoti"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"Atidaryti"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"Pervardyti"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"Ištrinti visam laikui"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"Perkelti į šiukšliadėžę"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"Elementas perkeltas į šiukšliadėžę"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"Negalima perkelti į šiukšliadėžę. Kažkas nepavyko."</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"Negalima anuliuoti. Eikite į Failų programą, kad atkurtumėte."</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"Veiksmai"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"Spartieji klavišai"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"Rodyti veiksmų meniu"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"Rodyti programos šaukinių meniu"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"Pristabdyti programą"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"įdiegti sparčiuosius klavišus"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"Programai leidžiama pridėti sparčiuosius klavišus be naudotojo įsikišimo."</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"skaityti pagrindinio ekrano nustatymus ir sparčiuosius klavišus"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"Programai leidžiama skaityti pagrindinio ekrano nustatymus ir sparčiuosius klavišus."</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"rašyti pagrindinio ekrano nustatymus ir sparčiuosius klavišus"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"Programai leidžiama keisti pagrindinio ekrano nustatymus ir sparčiuosius klavišus."</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"Nepavyko įkelti valdiklio"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"Valdiklio nustatymai"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"Palieskite, kad užbaigtumėte sąranką"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"Tai sistemos programa ir jos negalima pašalinti."</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"Pavadinimo redagavimas"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"Pereiti į ankstesnį puslapį"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"Pereiti į tolesnį puslapį"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"„<ns0:g id="APP_NAME">%1$s</ns0:g>“ išjungta"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{Programoje „{app_name}“ yra # pranešimas}one{Programoje „{app_name}“ yra # pranešimas}few{Programoje „{app_name}“ yra # pranešimai}many{Programoje „{app_name}“ yra # pranešimo}other{Programoje „{app_name}“ yra # pranešimų}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"Numatoma programa: <ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"%1$d psl. iš %2$d"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"%1$d pagrindinis ekranas iš %2$d"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"Naujas pagrindinio ekrano puslapis"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"Aktyvi"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"Sumažinta"</string>
+    <string name="folder_opened" msgid="94695026776264709">"Atidarytas aplankas, <ns0:g id="WIDTH">%1$d</ns0:g> ir <ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"Palieskite, kad uždarytumėte aplanką"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"Palieskite, kad išsaugotumėte pakeistą pavadinimą"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"Aplankas uždarytas"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"Aplankas pervardytas kaip „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"Aplankas"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"Programų aplankas"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g>: „<ns0:g id="NAME">%2$s</ns0:g>“, <ns0:g id="SIZE">%3$d</ns0:g> element."</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g>: „<ns0:g id="NAME">%2$s</ns0:g>“, <ns0:g id="SIZE">%3$d</ns0:g> element., yra pranešimų"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g>: „<ns0:g id="NAME">%2$s</ns0:g>“, <ns0:g id="SIZE">%3$d</ns0:g> ar daugiau elementų"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g>: „<ns0:g id="NAME">%2$s</ns0:g>“, <ns0:g id="SIZE">%3$d</ns0:g> ar daugiau elementų, yra pranešimų"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"Aplankas be pavadinimo"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"Failų aplankas: „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"Programų pora: „<ns0:g id="APP1">%1$s</ns0:g>“ ir „<ns0:g id="APP2">%2$s</ns0:g>“"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"Ekrano fonas ir stilius"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"Redaguoti pagrindinį ekraną"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"Pagrindinio ekrano nustatymai"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"Išjungė administratorius"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"Namų tvarkytojas"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"Kai telefonas pasukamas"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"Įgalinti kūrimo sekimą"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"Įgalinti kūrimo sekimą, kai apžvalgoje pateikiamas „Perfetto“ pėdsakas"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"Gulsčiojo ekrano režimas"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"Pagrindinį ekraną rodyti gulsčiojo ekrano režimu"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"Pranešimų taškai"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"Įjungta"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"Išjungta"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"Reikalinga prieiga prie pranešimų"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"Kad būtų rodomi pranešimų taškai, įjunkite programos „<ns0:g id="NAME">%1$s</ns0:g>“ pranešimus."</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"Keisti nustatymus"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"Rodyti pranešimų taškus"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"Kūrėjo parinktys"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"Pridėti programų piktogramas pagrindiniame ekrane"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"Skirta naujoms programoms"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"Nežinoma"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"Panaikinti"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"Ieškoti"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"Ši programa neįdiegta"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"Šios piktogramos programa neįdiegta. Galite ją pašalinti arba bandyti ieškoti programos ir ją įdiegti patys."</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"Įdiegiama: „<ns0:g id="NAME">%1$s</ns0:g>“; baigta: <ns0:g id="PROGRESS">%2$s</ns0:g>"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"Atsisiunčiama programa „<ns0:g id="NAME">%1$s</ns0:g>“, <ns0:g id="PROGRESS">%2$s</ns0:g> baigta"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"Laukiama, kol bus įdiegta programa „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"Programa „<ns0:g id="NAME">%1$s</ns0:g>“ suarchyvuota."</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"atsisiųsti ir atkurti"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"Būtina atnaujinti programą"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"Šios piktogramos programa neatnaujinta. Galite patys atnaujinti, kad iš naujo įgalintumėte šį spartųjį klavišą, arba pašalinkite piktogramą."</string>
+    <string name="dialog_update" msgid="2178028071796141234">"Atnaujinti"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"Pašalinti"</string>
+    <string name="widgets_list" msgid="796804551140113767">"Valdiklių sąrašas"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"Valdiklių sąrašas uždarytas"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"Pridėti prie pagrind. ekrano"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"Perkelti elementą čia"</string>
+    <string name="item_removed" msgid="851119963877842327">"Elementas perkeltas"</string>
+    <string name="undo" msgid="4151576204245173321">"Anuliuoti"</string>
+    <string name="action_move" msgid="4339390619886385032">"Perkelti elementą"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"Perkelti į <ns0:g id="NUMBER_0">%1$s</ns0:g> eilutės <ns0:g id="NUMBER_1">%2$s</ns0:g> stulpelį, esantį <ns0:g id="STRING">%3$s</ns0:g>"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"Perkelti į <ns0:g id="NUMBER">%1$s</ns0:g> poziciją"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"Perkelti į <ns0:g id="NUMBER">%1$s</ns0:g> mėgstamiausių poziciją"</string>
+    <string name="item_moved" msgid="4606538322571412879">"Elementas perkeltas"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"Pridėti prie aplanko: „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"Pridėti prie aplanko „<ns0:g id="NAME">%1$s</ns0:g>“. <ns0:g id="NUMBER_0">%2$s</ns0:g> eilutė, <ns0:g id="NUMBER_1">%3$s</ns0:g> stulpelis <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"Pridėti prie aplanko su „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"Pridėti prie aplanko pavadinimu „<ns0:g id="NAME">%1$s</ns0:g>“. <ns0:g id="NUMBER_0">%2$s</ns0:g> eilutė, <ns0:g id="NUMBER_1">%3$s</ns0:g> stulpelis, <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"Elementas pridėtas prie aplanko"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"Kurti aplanką naudojant: „<ns0:g id="NAME">%1$s</ns0:g>“"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"Sukurti aplanką pavadinimu „<ns0:g id="NAME">%1$s</ns0:g>“. <ns0:g id="NUMBER_0">%2$s</ns0:g> eilutė, <ns0:g id="NUMBER_1">%3$s</ns0:g> stulpelis, <ns0:g id="STRING">%4$s</ns0:g>"</string>
+    <string name="folder_created" msgid="6409794597405184510">"Aplankas sukurtas"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"Perkelti į pagrindinį ekraną"</string>
+    <string name="action_resize" msgid="1802976324781771067">"Pakeisti dydį"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"Padidinti plotį"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"Padidinti aukštį"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"Sumažinti plotį"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"Sumažinti aukštį"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"Kairioji dydžio keitimo rankenėlė"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"Viršutinė dydžio keitimo rankenėlė"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"Dešinioji dydžio keitimo rankenėlė"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"Apatinė dydžio keitimo rankenėlė"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"Rodyti dydžio keitimo mygtukus"</string>
+    <string name="widget_resized" msgid="9130327887929620">"Valdiklio dydis pakeistas: plotis – <ns0:g id="NUMBER_0">%1$s</ns0:g>, aukštis – <ns0:g id="NUMBER_1">%2$s</ns0:g>"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"Sparčiųjų klavišų meniu"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"„<ns0:g id="STRING">%1$s</ns0:g>“ valdiklio dydžio keitimo rėmelis"</string>
+    <string name="action_close" msgid="1077760267194136901">"Uždaryti"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"Atsisakyti"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"Uždaryti"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"Asmeninės"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"Darbo"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"Asmeninių programų skirtukas"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"Darbo programų skirtukas"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"Darbo profilis"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"Darbo programos yra pažymėtos ženkleliu ir matomos IT administratoriui"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"Darbo programos pristabdytos"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"Negausite pranešimų iš darbo programų"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"Darbo programos negali siųsti jums pranešimų, naudoti jūsų akumuliatoriaus ar pasiekti jūsų vietovės"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"Negausite telefonų skambučių, teksto pranešimų ar pranešimų iš darbo programų"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"Darbo programos yra pažymėtos ženkleliu ir matomos IT administratoriui"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"Supratau"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"Pristabdyti darbo programas"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"Atšaukti pristabdymą"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"Darbo programų tvarkaraštis"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"Filtruoti"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"Nepavyko: <ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"Privati erdvė"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"Palieskite, kad nustatytumėte arba atidarytumėte"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"Privati"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"Privačios erdvės nustatymai"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"Privatus, atrakintas."</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"Privatus, užrakintas."</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"Užrakinti"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"Privačios erdvės perkėlimas"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"Įdiegti"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"Pridėti"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"Įdiegti programas privačioje erdvėje"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"Pridėkite failų ir kt. prie privačios erdvės"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"Apskritimas"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"Kvadratas"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"Keturkampis sausainis"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"Septyniakampis sausainis"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"Arka"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"Naujas aplankas"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"Naujas aplankas"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"Išvalyti"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"Atšaukti"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"Pervardyti"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"Failo pervardijimas"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"Aplanko pervardijimas"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"Kažkas nepavyko"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"Ekrano kūrimas"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"Pasirinkite kategoriją, kad galėtumėte pridėti programų ir valdiklių iš telefono"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"Išdėstymo pasirinkimas"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"Prisegti"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"Laisva forma"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"Stalinis kompiuteris"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"%1$s skirtas kompiuteris"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"Perkelkite į išorinį ekraną"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"Išvalyti"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"Stalinis kompiuteris"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"Nėra jokių naujausių elementų"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"Programos naudojimo nustatymai"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"Išvalyti viską"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"Pridėti naują darbalaukį"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"Naujausios programos"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="REMAINING_TIME">%2$s</ns0:g>"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"&lt; 1 min."</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"Šiandien liko: <ns0:g id="TIME">%1$s</ns0:g>"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"Programų pasiūlymai"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"Numatomos programos"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"Nustatymai"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"Dažniausiai naudojamos programos rodomos čia ir keičiasi pagal tai, kaip jas naudojate"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"Nuvilkę programas į apatinę eilutę gausite programų pasiūlymų"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"Programų pasiūlymai pridedami tuščioje vietoje"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"Siūlomų programų funkcija įgalinta"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"Siūlomų programų funkcija išjungta"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"Naršymo gestais mokomoji medžiaga"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"Pasukite įrenginį"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"Pasukite įrenginį, kad pereitumėte į naršymo gestais mokomąją medžiagą"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"Turite perbraukti nuo dešiniojo ar kairiojo krašto"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"Turite perbraukti nuo dešiniojo ar kairiojo krašto link ekrano vidurio ir pakelti pirštą"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"Išmokote, kaip sugrįžti perbraukiant iš dešinės. Toliau sužinosite, kaip perjungti programas."</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"Atlikote grįžimo atgal gestą. Toliau sužinosite, kaip perjungti programas."</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"Atlikote grįžimo atgal gestą"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"Nebraukite per arti ekrano apačios"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"Norėd. pak. grįžimo gesto jautr., eikite į sk. „Nustatymai“"</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"Norėdami grįžti, perbraukite"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"Norėdami grįžti į ankstesnį ekraną, perbr. nuo kairiojo arba dešinio krašto link ekrano vidurio."</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"Grįžti"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"Perbraukite nuo kairiojo arba dešiniojo krašto link ekrano vidurio"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"Turite perbraukti aukštyn nuo apatinio ekrano krašto"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"Nepristabdykite prieš pakeldami pirštą"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"Turite tiesiai perbraukti aukštyn"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"Atlikote perėjimo į pagrindinį ekraną gestą. Toliau sužinosite, kaip grįžti atgal."</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"Atlikote perėjimo į pagrindinį ekraną gestą"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"Perbraukite, kad pereitumėte į pagrindinį ekraną"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"Perbraukite aukštyn nuo ekrano apačios. Atlikus šį gestą, visada nukreipiama į pagrindinį ekraną."</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"Eiti į pagrindinį ekraną"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"Perbraukite aukštyn nuo ekrano apačios"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"Puiku!"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"Turite perbraukti aukštyn nuo apatinio ekrano krašto"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"Pabandykite palaikyti langą ilgiau prieš pakeldami pirštą"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"Turite tiesiai perbraukti aukštyn, o tada pristabdyti"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"Išmokote naudotis gestais. Gestus galite išjungti nustatymuose."</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"Atlikote programų perjungimo gestą"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"Perbraukite, kad perjungtumėte programas"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"Norėdami perjungti programas, perbraukite aukštyn nuo ekrano apačios, palaikykite ir paleiskite."</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"Perjungti programas"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"Perbraukite aukštyn nuo ekrano apačios, palaikykite ir paleiskite"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"Puiku!"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"Viskas nustatyta"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"Atlikta"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"Nustatymai"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"Bandykite dar kartą"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"Šaunu!"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"Mokymo programa: <ns0:g id="CURRENT">%1$d</ns0:g> iš <ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"Paruošta!"</string>
+    <string name="allset_hint" msgid="459504134589971527">"Perbraukite aukštyn, kad grįžtumėte į pagrindinį ekraną"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"Norėdami eiti į pagrindinį ekraną, palieskite pagrindinio ekrano mygtuką"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"Jau parengta naudoti: <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"Esate pasirengę pradėti naudoti įrenginį"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"Sistemos naršymo nustatymai"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"„<ns0:g id="DEVICE">%1$s</ns0:g>“ \nparuoštas!"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"Įrenginys \nparuoštas!"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"Esate pasiruošę!"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"Mėgaukitės naujuoju „<ns0:g id="DEVICE">%1$s</ns0:g>“!"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"Perbraukite aukštyn norėdami pradėti naudoti įrenginį (<ns0:g id="DEVICE">%1$s</ns0:g>)"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"Palieskite, kad pradėtumėte naudoti <ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"Pasirinkite naršymo būdą"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"Perbraukti aukštyn"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"Palieskite pagrindinio ekrano mygtuką"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"planšetinis kompiuteris"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"telefonas"</string>
+    <string name="action_share" msgid="2648470652637092375">"Bendrinti"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"Ekrano kopija"</string>
+    <string name="action_split" msgid="2098009717623550676">"Išskaidymo režimas"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"Išsaug. progr. porą"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"Išskaidyto ekrano režimas palietus kitą programą"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"Išskaidyto ekrano režimą naudokite kita programa"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"Atšaukti"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"Išeiti iš išskaidyto ekrano pasirinkimo"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"Išskaidyto ekrano režimą naudokite kita programa"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"Jūsų organizacijoje arba naudojant šią programą neleidžiama atlikti šio veiksmo"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"Valdikliai šiuo metu nepalaikomi, pasirinkite kitą programą"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"Kopijuoti"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"Išsaugoti"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"Pasukti ekraną"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"Animacija, kaip užduočių juosta pasirodo iš ekrano apačios ir automatiškai paslepiama, kai ji nenaudojama"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"Animacija, kaip prisegti užduočių juostą naudojant jungiklį, kad užduočių juosta visada būtų matoma ekrano apačioje"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"Animacija, kurioje rodoma, kaip sukurti pokalbio debesėlį iš užduočių juostos naudojant vilkimo gestą"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"Animacija, kaip išskaidyti ekraną nuvelkant programą iš užduočių juostos virš atidarytos programos"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"Animacija, kaip pasiekti siūlomas programas įrenginyje"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"Animacija, kaip ieškoti elemento ekrane, paliečiant ir palaikant veiksmų klavišą ir pasirenkant sritį, kurioje yra elementas"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"Užduočių juostos mokomoji informacija"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"Nuvilkę programą į šoną vienu metu naudokite dvi programas"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"Nuvilkite į apatinius kampus, kad slankiotų"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"Lėtai perbraukite aukštyn, kad būtų rodoma Užduočių juosta"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"Gaukite programų pasiūlymų pagal savo veiklą"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"Ilgai paspauskite daliklį, kad prisegtumėte užduočių juostą"</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"Atlikite daugiau naudodami Užduočių juostą"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"Visada rodyti užduočių juostą"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"Jei norite, kad užduočių juosta visada būtų rodoma ekrano apačioje, palieskite ir palaikykite daliklį"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"Nuvilkite programą į kampą, kad ji užslinktų"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"Ekrane rodomo turinio paieška palietus ir laikant veiksmų klavišą"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"Šis produktas paieškai naudoja pasirinktą ekrano dalį. Taikomos „Google“ <ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>privatumo politikos<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g> ir <ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>paslaugų teikimo sąlygos<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g>."</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"Uždaryti"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"Atlikta"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"Kitas"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"Pagrindinis"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"Pritaikomumas"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"Atgal"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"IMRP perjungiklis"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"Naujausi"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"Pranešimai"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"Spartieji nustatymai"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"Daugiau parinkčių"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"Užduočių juosta"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"Debesėlių juosta"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"Naršymo juosta"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"Visada rodyti užduočių juostą"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"Keisti naršymo režimą"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"Užduočių juostos daliklis"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"Kitos naujausios programos"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"Kitos programos"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"Pašalinti"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"Perkelti aukštyn, kairėn"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"Perkelti žemyn, dešinėn"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"Atidaryti programą kaip burbulą"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"Perkelti elementą kairėn"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"Perkelti elementą dešinėn"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"Naujausios programos"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"Naujausių programų sąrašas"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{papildoma programa}one{papildoma programa}few{papildomos programos}many{papildomos programos}other{papildomų programų}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"Stalinis kompiuteris"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"„<ns0:g id="APP_NAME_1">%1$s</ns0:g>“ ir „<ns0:g id="APP_NAME_2">%2$s</ns0:g>“"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>, <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> elementas iš <ns0:g id="TOTAL_TASKS">%3$d</ns0:g>, atleiskite klavišų susiejimus, kad pasirinktumėte"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"Slinkti kairėn"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"Slinkti dešinėn"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"Burbulas"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"Perpildymas"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"„<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g>“ iš „<ns0:g id="APP_NAME">%2$s</ns0:g>“"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"„<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g>“ ir dar <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g>"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"Perkelti kairėn"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"Perkelti dešinėn"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"Atsisakyti visų"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"Paieška apibrėžiant"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"Programos piktograma"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"Programos pavadinimas"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"Uždaryti"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"Priminimas"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"Uždaryti"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"Pastumti vaizdą"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"Piktograma"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"Gaukite naudingų pasiūlymų"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"Naudojame DI, kad galėtume aktyviai siūlyti informaciją ir veiksmus, susijusius su tuo, ką darote ekrane"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"Uždaryti"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"išskleisti"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"Adaptyviojo režimo pasiūlymų piktograma"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"Palieskite ir palaikykite, kad peržiūrėtumėte, kaip generuojami pasiūlymai"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"automatiškai pildyti"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"Bendrinti programą"</string>
+    <string name="action_listen" msgid="2370304050784689486">"Klausyti"</string>
+    <string name="action_translate" msgid="8028378961867277746">"Išversti"</string>
+    <string name="action_search" msgid="6269564710943755464">"Lens"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"SUPRATAU"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"ATŠAUKTI"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"NUSTATYMAI"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"Ekrane esančio teksto vertimas arba klausymas"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"Tam tikra informacija, pvz., ekrane esantis tekstas, žiniatinklio adresai ir ekrano kopijos, gali būti bendrinama su „Google“.\n\nJei norite pakeisti, kokia informacija gali būti bendrinama, eikite į "<b>"„Nustatymai“ &gt; „Programos“ &gt; „Numatytosios programos“ &gt; „Skaitmeninio pagelbiklio programa“"</b>"."</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"Norint naudoti šią funkciją, reikia pasirinkti pagelbiklį"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"Jei norite klausyti teksto ekrane ar jį išversti, pasirinkite skaitmeninio pagelbiklio programą „Nustatymų“ skiltyje"</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"Norint naudoti šią funkciją, reikia pakeisti pagelbiklį"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"Jei norite klausyti teksto ekrane ar jį išversti, pakeiskite skaitmeninio pagelbiklio programą „Nustatymų“ skiltyje"</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"Palieskite čia, jei norite klausyti teksto šiame ekrane"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"Palieskite čia, jei norite išversti tekstą šiame ekrane"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"Šios programos negalima bendrinti"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"Uždaryti lapą"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"Programos pavadinimas"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# valdiklis}one{# valdiklis}few{# valdikliai}many{# valdiklio}other{# valdiklių}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# spartusis klavišas}one{# spartusis klavišas}few{# spartieji klavišai}many{# sparčiojo klavišo}other{# sparčiųjų klavišų}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>, <ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"%1$d plotis ir %2$d aukštis"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"Valdiklis: <ns0:g id="WIDGET_NAME">%1$s</ns0:g>; %2$d pločio ir %3$d aukščio"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"Rodyti mygtuką „Pridėti“"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"Slėpti mygtuką „Pridėti“"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"Pridėti"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"Pridėti valdiklį: <ns0:g id="WIDGET_NAME">%1$s</ns0:g>"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"Rekomenduojami"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"Naršyti"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"<ns0:g id="TAB_NAME">%1$s</ns0:g> valdikliai"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"<ns0:g id="SELECTED_HEADER">%1$s</ns0:g> valdikliai dešinėje, paieška ir parinktys kairėje"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"Paieška ir valdiklių parinktys kairėje, valdikliai dešinėje"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"Paieška"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"Išvalyti"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"Atgal"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"Valdikliai ir spartieji klavišai nepasiekiami"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"Neaptikta jokių valdiklių ar sparčiųjų klavišų"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"Pridėti prie pagrindinio ekrano"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"Atšaukti"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"Palieskite ir palaikykite, kad perkeltumėte valdiklį."</string>
+</resources>

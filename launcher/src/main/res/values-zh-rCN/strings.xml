@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="649227358658669779">"Launcher3"</string>
+    <string name="work_folder_name" msgid="3753320833950115786">"Work"</string>
+    <string name="activity_not_found" msgid="8071924732094499514">"未安装该应用。"</string>
+    <string name="activity_not_available" msgid="7456344436509528827">"应用不可用"</string>
+    <string name="safemode_shortcut_error" msgid="9160126848219158407">"安全模式下不允许使用下载的此应用"</string>
+    <string name="safemode_widget_error" msgid="4863470563535682004">"安全模式下不允许使用微件"</string>
+    <string name="shortcut_not_available" msgid="2536503539825726397">"无法使用快捷方式"</string>
+    <string name="home_screen" msgid="5629429142036709174">"主屏幕"</string>
+    <string name="set_default_home_app" msgid="5808906607627586381">"在“设置”中将“<ns0:g id="LAUNCHER_NAME">%1$s</ns0:g>”设为默认主屏幕应用"</string>
+    <string name="recent_task_option_split_screen" msgid="6690461455618725183">"分屏"</string>
+    <string name="recent_task_option_aspect_ratio" msgid="7008605516391096989">"更改宽高比"</string>
+    <string name="split_app_info_accessibility" msgid="5475288491241414932">"%1$s 的应用信息"</string>
+    <string name="split_app_usage_settings" msgid="7214375263347964093">"%1$s的使用设置"</string>
+    <string name="close_task_accessibility" msgid="4765872229211282647">"关闭%1$s"</string>
+    <string name="new_window_option_taskbar" msgid="6448780542727767211">"新窗口"</string>
+    <string name="manage_windows_option_taskbar" msgid="2294109489960654212">"管理窗口"</string>
+    <string name="close_app_taskbar" msgid="3238979263877091273">"关闭"</string>
+    <string name="save_app_pair" msgid="5647523853662686243">"保存应用对"</string>
+    <string name="app_pair_default_title" msgid="4045241727446873529">"<ns0:g id="APP1">%1$s</ns0:g> | <ns0:g id="APP2">%2$s</ns0:g>"</string>
+    <string name="app_pair_unlaunchable_at_screen_size" msgid="3446551575502685376">"在该设备上无法使用此应用对"</string>
+    <string name="app_pair_needs_unfold" msgid="4588897528143807002">"展开设备即可使用此应用对"</string>
+    <string name="app_pair_not_available" msgid="3556767440808032031">"应用对不可用"</string>
+    <string name="long_press_widget_to_add" msgid="3587712543577675817">"按住即可移动微件。"</string>
+    <string name="long_accessible_way_to_add" msgid="2733588281439571974">"点按两次并按住微件即可移动该微件或使用自定义操作。"</string>
+    <string name="widget_picker_widget_options_button_description" msgid="4770099264476852363">"更多选项"</string>
+    <string name="widget_picker_show_all_widgets_menu_item_title" msgid="9023638224586908119">"显示所有微件"</string>
+    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
+    <string name="widget_accessible_dims_format" msgid="3640149169885301790">"宽 %1$d，高 %2$d"</string>
+    <string name="widget_preview_context_description" msgid="9045841361655787574">"“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件"</string>
+    <string name="widget_preview_name_and_dims_content_description" msgid="8489038126122831595">"“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件，宽 %2$d，高 %3$d"</string>
+    <string name="add_item_request_drag_hint" msgid="8730547755622776606">"按住此微件即可将其拖拽到主屏幕上的任意位置"</string>
+    <string name="add_to_home_screen" msgid="9168649446635919791">"添加到主屏幕"</string>
+    <string name="added_to_home_screen_accessibility_text" msgid="4451545765448884415">"已将“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件添加到主屏幕"</string>
+    <string name="suggested_widgets_header_title" msgid="1844314680798145222">"建议"</string>
+    <string name="productivity_widget_recommendation_category_label" msgid="3811812719618323750">"必备之选"</string>
+    <string name="news_widget_recommendation_category_label" msgid="6756167867113741310">"新闻与杂志"</string>
+    <string name="entertainment_widget_recommendation_category_label" msgid="3973107268630717874">"娱乐"</string>
+    <string name="social_widget_recommendation_category_label" msgid="689147679536384717">"社交"</string>
+    <string name="others_widget_recommendation_category_label" msgid="5555987036267226245">"为您推荐"</string>
+    <string name="widget_picker_right_pane_accessibility_title" msgid="1673313931455067502">"右边是<ns0:g id="SELECTED_HEADER">%1$s</ns0:g>微件，左边是搜索功能和选项"</string>
+    <string name="widgets_count" msgid="6467746476364652096">"{count,plural, =1{# 个微件}other{# 个微件}}"</string>
+    <string name="shortcuts_count" msgid="8471715556199592381">"{count,plural, =1{# 个快捷方式}other{# 个快捷方式}}"</string>
+    <string name="widgets_and_shortcuts_count" msgid="7209136747878365116">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>，<ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_button_text" msgid="2880537293434387943">"微件"</string>
+    <string name="no_widgets_available" msgid="4337693382501046170">"没有可用的微件和快捷方式"</string>
+    <string name="no_search_results" msgid="3787956167293097509">"未找到任何微件或快捷方式"</string>
+    <string name="widgets_full_sheet_personal_tab" msgid="2743540105607120182">"个人"</string>
+    <string name="widgets_full_sheet_work_tab" msgid="3767150027110633765">"工作"</string>
+    <string name="widget_category_conversations" msgid="8894438636213590446">"对话"</string>
+    <string name="widget_category_note_taking" msgid="3469689394504266039">"记事"</string>
+    <string name="widget_cell_tap_to_show_add_button_label" msgid="4354194214317043581">"显示“添加”按钮"</string>
+    <string name="widget_cell_tap_to_hide_add_button_label" msgid="6117805205101555997">"隐藏“添加”按钮"</string>
+    <string name="widget_add_button_label" msgid="2761267068711937179">"添加"</string>
+    <string name="widget_add_button_content_description" msgid="1810530016360039643">"添加“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件"</string>
+    <string name="widgets_list_expand_button_label" msgid="7912016136574932622">"全部显示"</string>
+    <string name="widgets_list_expand_button_content_description" msgid="4600513860973450888">"显示所有微件"</string>
+    <string name="widgets_list_expanded" msgid="7374857868788557730">"正在显示所有微件"</string>
+    <string name="reconfigurable_widget_education_tip" msgid="6336962690888067057">"点按即可更改微件设置"</string>
+    <string name="widget_reconfigure_button_content_description" msgid="8811472721881205250">"更改微件设置"</string>
+    <string name="all_apps_search_bar_hint" msgid="1390553134053255246">"搜索应用"</string>
+    <string name="all_apps_loading_message" msgid="5813968043155271636">"正在加载应用…"</string>
+    <string name="all_apps_no_search_results" msgid="3200346862396363786">"未找到与“<ns0:g id="QUERY">%1$s</ns0:g>”相符的应用"</string>
+    <string name="label_application" msgid="8531721983832654978">"应用"</string>
+    <string name="all_apps_label" msgid="5015784846527570951">"所有应用"</string>
+    <string name="all_apps_list_label" msgid="5106226764073070906">"应用列表"</string>
+    <string name="notifications_header" msgid="1404149926117359025">"通知"</string>
+    <string name="long_press_shortcut_to_add" msgid="5405328730817637737">"轻触并按住快捷方式即可移动该快捷方式。"</string>
+    <string name="long_accessible_way_to_add_shortcut" msgid="2199537273817090740">"点按两次并按住快捷方式即可移动该快捷方式或使用自定义操作。"</string>
+    <string name="out_of_space" msgid="6455557115204099579">"此主屏幕上已没有空间"</string>
+    <string name="hotseat_out_of_space" msgid="7448809638125333693">"收藏栏已满"</string>
+    <string name="all_apps_button_label" msgid="8130441508702294465">"应用列表"</string>
+    <string name="all_apps_search_results" msgid="5889367432531296759">"搜索结果"</string>
+    <string name="all_apps_button_personal_label" msgid="1315764287305224468">"个人应用列表"</string>
+    <string name="all_apps_button_work_label" msgid="7270707118948892488">"工作应用列表"</string>
+    <string name="remove_drop_target_label" msgid="7812859488053230776">"移除"</string>
+    <string name="uninstall_drop_target_label" msgid="4722034217958379417">"卸载"</string>
+    <string name="app_info_drop_target_label" msgid="692894985365717661">"应用信息"</string>
+    <string name="install_private_system_shortcut_label" msgid="1616889277073184841">"安装到私密个人资料中"</string>
+    <string name="uninstall_private_system_shortcut_label" msgid="8423460530441627982">"卸载应用"</string>
+    <string name="install_drop_target_label" msgid="2539096853673231757">"安装"</string>
+    <string name="dismiss_prediction_label" msgid="3357562989568808658">"不要推荐此应用"</string>
+    <string name="pin_prediction" msgid="4196423321649756498">"固定预测的应用"</string>
+    <string name="bubble" msgid="3072951361014076670">"消息气泡"</string>
+    <string name="enable_app_lock" msgid="5606772593969266718">"应用锁"</string>
+    <string name="disable_app_lock" msgid="2252606435270354961">"移除应用锁"</string>
+    <string name="widget_settings" msgid="5280157748464495511">"设置"</string>
+    <string name="add_to_taskbar" msgid="1442306985857150792">"添加到任务栏"</string>
+    <string name="remove_from_taskbar" msgid="5817026706030273018">"从任务栏中移除"</string>
+    <string name="no_room_in_taskbar" msgid="6885243748717395469">"任务栏空间不足"</string>
+    <string name="app_added_to_taskbar" msgid="6348755169793615171">"应用已添加到任务栏"</string>
+    <string name="app_removed_from_taskbar" msgid="3471754847898675396">"应用已从任务栏中移除"</string>
+    <string name="remove_system_shortcut_label" msgid="3991201411148073972">"移除"</string>
+    <string name="home_screen_files_context_menu_copy_label" msgid="8769381168712216221">"复制"</string>
+    <string name="home_screen_files_context_menu_open_in_app_label" msgid="7930552598671791537">"打开"</string>
+    <string name="home_screen_files_context_menu_rename_label" msgid="699579827537411711">"重命名"</string>
+    <string name="home_screen_files_context_menu_delete_permanently_label" msgid="8660443461874174185">"永久删除"</string>
+    <string name="home_screen_files_context_menu_move_to_trash_label" msgid="1145655050674479315">"移至回收站"</string>
+    <string name="home_screen_files_moved_to_trash_message" msgid="2848141584483641247">"内容已移到回收站"</string>
+    <string name="home_screen_files_move_to_trash_error_message" msgid="3836240816166417826">"无法移至回收站。出了点问题。"</string>
+    <string name="home_screen_files_restore_from_trash_error_message" msgid="994941644161090497">"无法撤销，请前往谷歌文件极客应用进行恢复。"</string>
+    <string name="actions_popup_menu_button" msgid="2442187572711557413">"操作"</string>
+    <string name="shortcuts_popup_menu_button" msgid="766598805805882499">"快捷方式"</string>
+    <string name="actions_popup_menu_button_description" msgid="4224192559473869722">"显示“操作”菜单"</string>
+    <string name="shortcuts_popup_menu_button_description" msgid="7566698511556454634">"显示应用快捷方式菜单"</string>
+    <string name="pause_app_label" msgid="6796255881727695791">"暂停应用"</string>
+    <string name="permlab_install_shortcut" msgid="5632423390354674437">"安装快捷方式"</string>
+    <string name="permdesc_install_shortcut" msgid="923466509822011139">"允许应用自行添加快捷方式。"</string>
+    <string name="permlab_read_settings" msgid="5136500343007704955">"读取主屏幕设置和快捷方式"</string>
+    <string name="permdesc_read_settings" msgid="4208061150510996676">"允许此应用读取主屏幕中的设置和快捷方式。"</string>
+    <string name="permlab_write_settings" msgid="4820028712156303762">"写入主屏幕设置和快捷方式"</string>
+    <string name="permdesc_write_settings" msgid="726859348127868466">"允许此应用更改主屏幕中的设置和快捷方式。"</string>
+    <string name="gadget_error_text" msgid="740356548025791839">"无法加载微件"</string>
+    <string name="gadget_setup_text" msgid="8348374825537681407">"微件设置"</string>
+    <string name="gadget_complete_setup_text" msgid="309040266978007925">"点按即可完成设置"</string>
+    <string name="uninstall_system_app_text" msgid="4172046090762920660">"这是系统应用，无法卸载。"</string>
+    <string name="folder_hint_text" msgid="5174843001373488816">"修改名称"</string>
+    <string name="paginate_left" msgid="7915437358451360433">"左侧分页"</string>
+    <string name="paginate_right" msgid="6701038155201975878">"右侧分页"</string>
+    <string name="disabled_app_label" msgid="6673129024321402780">"已停用<ns0:g id="APP_NAME">%1$s</ns0:g>"</string>
+    <string name="dotted_app_label" msgid="1865617679843363410">"{count,plural, =1{“{app_name}”有 # 条通知}other{“{app_name}”有 # 条通知}}"</string>
+    <string name="hotseat_prediction_content_description" msgid="7680403232742709704">"预测的应用：<ns0:g id="TITLE">%1$s</ns0:g>"</string>
+    <string name="default_scroll_format" msgid="7475544710230993317">"第%1$d页，共%2$d页"</string>
+    <string name="workspace_scroll_format" msgid="8458889198184077399">"主屏幕：第%1$d屏，共%2$d屏"</string>
+    <string name="workspace_new_page" msgid="257366611030256142">"主屏幕新页面"</string>
+    <string name="app_running_state_description" msgid="5645053189564740904">"活跃"</string>
+    <string name="app_minimized_state_description" msgid="710740620044902509">"已最小化"</string>
+    <string name="folder_opened" msgid="94695026776264709">"文件夹已打开，大小为<ns0:g id="WIDTH">%1$d</ns0:g>×<ns0:g id="HEIGHT">%2$d</ns0:g>"</string>
+    <string name="folder_tap_to_close" msgid="4625795376335528256">"点按可关闭文件夹"</string>
+    <string name="folder_tap_to_rename" msgid="4017685068016979677">"点按可保存新名称"</string>
+    <string name="folder_closed" msgid="4100806530910930934">"文件夹已关闭"</string>
+    <string name="folder_renamed" msgid="1794088362165669656">"已将文件夹重命名为“<ns0:g id="NAME">%1$s</ns0:g>”"</string>
+    <string name="folder_type_name" msgid="506043307348675355">"文件夹"</string>
+    <string name="app_folder_type_name" msgid="149643408248060284">"应用文件夹"</string>
+    <string name="apps_folder_name_format_exact" msgid="891345161390366700">"<ns0:g id="TYPE">%1$s</ns0:g>：<ns0:g id="NAME">%2$s</ns0:g>，<ns0:g id="SIZE">%3$d</ns0:g> 项"</string>
+    <string name="apps_folder_name_format_exact_with_dot" msgid="7729062268048931718">"<ns0:g id="TYPE">%1$s</ns0:g>：<ns0:g id="NAME">%2$s</ns0:g>，<ns0:g id="SIZE">%3$d</ns0:g> 项，有通知"</string>
+    <string name="apps_folder_name_format_overflow" msgid="4614729357510054194">"<ns0:g id="TYPE">%1$s</ns0:g>：<ns0:g id="NAME">%2$s</ns0:g>，<ns0:g id="SIZE">%3$d</ns0:g> 项或更多项"</string>
+    <string name="apps_folder_name_format_overflow_with_dot" msgid="4738681518782744688">"<ns0:g id="TYPE">%1$s</ns0:g>：<ns0:g id="NAME">%2$s</ns0:g>，<ns0:g id="SIZE">%3$d</ns0:g> 项或更多项，有通知"</string>
+    <string name="unnamed_folder" msgid="2420192029474044442">"未命名文件夹"</string>
+    <string name="files_folder_name" msgid="7712191128817533622">"文件夹：<ns0:g id="NAME">%1$s</ns0:g>"</string>
+    <string name="app_pair_name_format" msgid="8134106404716224054">"应用对：“<ns0:g id="APP1">%1$s</ns0:g>”和“<ns0:g id="APP2">%2$s</ns0:g>”"</string>
+    <string name="styles_wallpaper_button_text" msgid="8216961355289236794">"壁纸与风格"</string>
+    <string name="edit_home_screen" msgid="8947858375782098427">"修改主屏幕"</string>
+    <string name="settings_button_text" msgid="8873672322605444408">"主屏幕设置"</string>
+    <string name="msg_disabled_by_admin" msgid="6898038085516271325">"已被您的管理员停用"</string>
+    <string name="settings_home_organizer" msgid="5184766349407080054">"主屏幕整理工具"</string>
+    <string name="allow_rotation_desc" msgid="8662546029078692509">"手机旋转时"</string>
+    <string name="compose_developer_options_section" msgid="8211460486549952595">"Jetpack Compose"</string>
+    <string name="enable_composition_tracing_title" msgid="8989606591739368424">"启用组合跟踪功能"</string>
+    <string name="enable_composition_tracing_desc" msgid="7187566039216492405">"在概览中获取 Perfetto 跟踪记录时启用组合跟踪功能"</string>
+    <string name="landscape_mode_title" msgid="5138814555934843926">"横屏模式"</string>
+    <string name="landscape_mode_desc" msgid="3085236452297838664">"将主屏幕设为横屏模式"</string>
+    <string name="notification_dots_title" msgid="9062440428204120317">"通知圆点"</string>
+    <string name="notification_dots_desc_on" msgid="1679848116452218908">"已开启"</string>
+    <string name="notification_dots_desc_off" msgid="1760796511504341095">"已关闭"</string>
+    <string name="title_missing_notification_access" msgid="7503287056163941064">"需要获取通知使用权"</string>
+    <string name="msg_missing_notification_access" msgid="281113995110910548">"要显示通知圆点，请开启<ns0:g id="NAME">%1$s</ns0:g>的应用通知功能"</string>
+    <string name="title_change_settings" msgid="1376365968844349552">"更改设置"</string>
+    <string name="notification_dots_service_title" msgid="4284221181793592871">"显示通知圆点"</string>
+    <string name="developer_options_title" msgid="700788437593726194">"开发者选项"</string>
+    <string name="auto_add_shortcuts_label" msgid="4926805029653694105">"将应用图标添加到主屏幕"</string>
+    <string name="auto_add_shortcuts_description" msgid="7117251166066978730">"适用于新应用"</string>
+    <string name="package_state_unknown" msgid="7592128424511031410">"未知"</string>
+    <string name="abandoned_clean_this" msgid="7610119707847920412">"移除"</string>
+    <string name="abandoned_search" msgid="891119232568284442">"搜索"</string>
+    <string name="abandoned_promises_title" msgid="7096178467971716750">"未安装此应用"</string>
+    <string name="abandoned_promise_explanation" msgid="3990027586878167529">"未安装此图标对应的应用。您可以移除此图标，也可以尝试搜索相应的应用并手动安装。"</string>
+    <string name="app_installing_title" msgid="5864044122733792085">"正在安装<ns0:g id="NAME">%1$s</ns0:g>，已完成 <ns0:g id="PROGRESS">%2$s</ns0:g>"</string>
+    <string name="app_downloading_title" msgid="8336702962104482644">"正在下载<ns0:g id="NAME">%1$s</ns0:g>，已完成 <ns0:g id="PROGRESS">%2$s</ns0:g>"</string>
+    <string name="app_waiting_download_title" msgid="7053938513995617849">"<ns0:g id="NAME">%1$s</ns0:g>正在等待安装"</string>
+    <string name="app_archived_title" msgid="4548283110222420708">"已归档“<ns0:g id="NAME">%1$s</ns0:g>”。"</string>
+    <string name="app_unarchiving_action" msgid="5736107006413929484">"下载并恢复"</string>
+    <string name="dialog_update_title" msgid="114234265740994042">"需要更新应用"</string>
+    <string name="dialog_update_message" msgid="4176784553982226114">"此图标对应的应用未更新。您可以手动更新以重新启用该快捷方式，或者移除此图标。"</string>
+    <string name="dialog_update" msgid="2178028071796141234">"更新"</string>
+    <string name="dialog_remove" msgid="6510806469849709407">"移除"</string>
+    <string name="widgets_list" msgid="796804551140113767">"微件列表"</string>
+    <string name="widgets_list_closed" msgid="6141506579418771922">"微件列表已关闭"</string>
+    <string name="action_add_to_workspace" msgid="215894119683164916">"添加到主屏幕"</string>
+    <string name="action_move_here" msgid="2170188780612570250">"将项目移至此处"</string>
+    <string name="item_removed" msgid="851119963877842327">"已移除项目"</string>
+    <string name="undo" msgid="4151576204245173321">"撤销"</string>
+    <string name="action_move" msgid="4339390619886385032">"移动项目"</string>
+    <string name="move_to_empty_cell_description" msgid="5254852678218206889">"移至<ns0:g id="STRING">%3$s</ns0:g>中的第 <ns0:g id="NUMBER_0">%1$s</ns0:g> 行第 <ns0:g id="NUMBER_1">%2$s</ns0:g> 列"</string>
+    <string name="move_to_position" msgid="6750008980455459790">"移至第 <ns0:g id="NUMBER">%1$s</ns0:g> 个位置"</string>
+    <string name="move_to_hotseat_position" msgid="6295412897075147808">"移至收藏夹第 <ns0:g id="NUMBER">%1$s</ns0:g> 个位置"</string>
+    <string name="item_moved" msgid="4606538322571412879">"已移动项目"</string>
+    <string name="add_to_folder" msgid="9040534766770853243">"添加到“<ns0:g id="NAME">%1$s</ns0:g>”文件夹"</string>
+    <string name="add_to_folder_with_position" msgid="4457486890869662">"添加到 <ns0:g id="NAME">%1$s</ns0:g> 文件夹中。“<ns0:g id="STRING">%4$s</ns0:g>”中的第 <ns0:g id="NUMBER_0">%2$s</ns0:g> 行，第 <ns0:g id="NUMBER_1">%3$s</ns0:g> 列"</string>
+    <string name="add_to_folder_with_app" msgid="4534929978967147231">"添加到“<ns0:g id="NAME">%1$s</ns0:g>”所在文件夹"</string>
+    <string name="add_to_folder_with_app_with_position" msgid="6670979489897093325">"添加到包含 <ns0:g id="NAME">%1$s</ns0:g> 的文件夹中。“<ns0:g id="STRING">%4$s</ns0:g>”中的第 <ns0:g id="NUMBER_0">%2$s</ns0:g> 行，第 <ns0:g id="NUMBER_1">%3$s</ns0:g> 列"</string>
+    <string name="added_to_folder" msgid="4793259502305558003">"项目已添加到文件夹"</string>
+    <string name="create_folder_with" msgid="4050141361160214248">"创建“<ns0:g id="NAME">%1$s</ns0:g>”文件夹"</string>
+    <string name="create_folder_with_position" msgid="3093164349445159115">"创建 <ns0:g id="NAME">%1$s</ns0:g> 文件夹。“<ns0:g id="STRING">%4$s</ns0:g>”中的第 <ns0:g id="NUMBER_0">%2$s</ns0:g> 行，第 <ns0:g id="NUMBER_1">%3$s</ns0:g> 列"</string>
+    <string name="folder_created" msgid="6409794597405184510">"文件夹已创建"</string>
+    <string name="action_move_to_workspace" msgid="39528912300293768">"移至主屏幕"</string>
+    <string name="action_resize" msgid="1802976324781771067">"调整大小"</string>
+    <string name="action_increase_width" msgid="8773715375078513326">"增加宽度"</string>
+    <string name="action_increase_height" msgid="459390020612501122">"增加高度"</string>
+    <string name="action_decrease_width" msgid="1374549771083094654">"减小宽度"</string>
+    <string name="action_decrease_height" msgid="282377193880900022">"减小高度"</string>
+    <string name="resize_handle_start" msgid="431073846880883794">"左侧大小调整手柄"</string>
+    <string name="resize_handle_top" msgid="280799523356834542">"顶部大小调整手柄"</string>
+    <string name="resize_handle_end" msgid="8411240534474246075">"右侧大小调整手柄"</string>
+    <string name="resize_handle_bottom" msgid="4217171801060928429">"底部大小调整手柄"</string>
+    <string name="tap_to_show_resize_buttons" msgid="964815552123289232">"显示大小调整按钮"</string>
+    <string name="widget_resized" msgid="9130327887929620">"微件尺寸已调整为：宽度 <ns0:g id="NUMBER_0">%1$s</ns0:g>，高度 <ns0:g id="NUMBER_1">%2$s</ns0:g>"</string>
+    <string name="action_deep_shortcut" msgid="4766835855579976045">"快捷键菜单"</string>
+    <string name="widget_frame_name" msgid="8782828448471444270">"<ns0:g id="STRING">%1$s</ns0:g>的微件调整大小框架"</string>
+    <string name="action_close" msgid="1077760267194136901">"关闭"</string>
+    <string name="action_dismiss_notification" msgid="5909461085055959187">"关闭"</string>
+    <string name="accessibility_close" msgid="2277148124685870734">"关闭"</string>
+    <string name="all_apps_personal_tab" msgid="4190252696685155002">"个人"</string>
+    <string name="all_apps_work_tab" msgid="4884822796154055118">"工作"</string>
+    <string name="all_apps_personal_tab_content_description" msgid="6286808898381807242">"“个人应用”标签页"</string>
+    <string name="all_apps_work_tab_content_description" msgid="3835637212347968316">"“工作应用”标签页"</string>
+    <string name="work_profile_toggle_label" msgid="3081029915775481146">"工作资料"</string>
+    <string name="work_profile_edu_work_apps" msgid="7895468576497746520">"工作应用都有相应的标志，且您的 IT 管理员可以看到它们"</string>
+    <string name="work_apps_paused_title" msgid="3040901117349444598">"工作应用已暂停"</string>
+    <string name="work_apps_paused_info_body" msgid="1687828929959237477">"您将不会收到来自工作应用的通知"</string>
+    <string name="work_apps_paused_body" msgid="261634750995824906">"工作应用无法向您发送通知、不能耗用电池电量，也无法获取您的位置信息"</string>
+    <string name="work_apps_paused_telephony_unavailable_body" msgid="8358872357502756790">"您将不会收到来自工作应用的来电、短信或通知"</string>
+    <string name="work_apps_paused_edu_banner" msgid="8872412121608402058">"工作应用都有相应的标志，且您的 IT 管理员可以看到它们"</string>
+    <string name="work_apps_paused_edu_accept" msgid="6377476824357318532">"知道了"</string>
+    <string name="work_apps_pause_btn_text" msgid="4669288269140620646">"暂停工作应用"</string>
+    <string name="work_apps_enable_btn_text" msgid="1736198302467317371">"取消暂停"</string>
+    <string name="work_scheduler_button_content_description" msgid="917340740986764967">"工作应用时间表"</string>
+    <string name="developer_options_filter_hint" msgid="5896817443635989056">"过滤器"</string>
+    <string name="remote_action_failed" msgid="1383965239183576790">"失败：<ns0:g id="WHAT">%1$s</ns0:g>"</string>
+    <string name="private_space_label" msgid="2359721649407947001">"私密空间"</string>
+    <string name="private_space_secondary_label" msgid="9203933341714508907">"点按即可设置或打开"</string>
+    <string name="ps_container_title" msgid="4391796149519594205">"私密"</string>
+    <string name="ps_container_settings" msgid="6059734123353320479">"私密空间设置"</string>
+    <string name="ps_container_unlock_button_content_description" msgid="9181551784092204234">"私密，未锁定。"</string>
+    <string name="ps_container_lock_button_content_description" msgid="5961993384382649530">"私密，已锁定。"</string>
+    <string name="ps_container_lock_title" msgid="2640257399982364682">"锁定"</string>
+    <string name="ps_container_transition" msgid="8667331812048014412">"私密空间转换"</string>
+    <string name="ps_add_button_label" msgid="8127988716897128773">"安装"</string>
+    <string name="ps_app_label_override" msgid="6876160706011676804">"添加"</string>
+    <string name="ps_add_button_content_description" msgid="3254274107740952556">"将应用安装到私密空间"</string>
+    <string name="ps_app_content_description" msgid="1129133475892816226">"将文件等内容添加到私密空间"</string>
+    <string name="circle_shape_title" msgid="3582075061179674565">"圆形"</string>
+    <string name="square_shape_title" msgid="3085320803149569308">"方形"</string>
+    <string name="four_sided_cookie_shape_title" msgid="3275212586290522151">"四边形饼干"</string>
+    <string name="seven_sided_cookie_shape_title" msgid="4862560582029671668">"七边形饼干"</string>
+    <string name="arch_shape_title" msgid="2213843822192871318">"拱形"</string>
+    <string name="create_new_folder_button_text" msgid="4037052463794735069">"新建文件夹"</string>
+    <string name="default_new_folder_name" msgid="8821062664729412079">"新建文件夹"</string>
+    <string name="home_screen_files_rename_dialog_clear_button" msgid="1516608063079626727">"清除"</string>
+    <string name="home_screen_files_rename_dialog_neutral_button" msgid="961781261154618336">"取消"</string>
+    <string name="home_screen_files_rename_dialog_positive_button" msgid="6506701192246379747">"重命名"</string>
+    <string name="home_screen_files_rename_dialog_file_title" msgid="3540941610992603887">"重命名文件"</string>
+    <string name="home_screen_files_rename_dialog_folder_title" msgid="2453152990256864379">"重命名文件夹"</string>
+    <string name="something_went_wrong" msgid="1492883246069060632">"出了点问题"</string>
+    <string name="organizer_create_screen_title" msgid="1052454457895703433">"创建屏幕"</string>
+    <string name="organizer_create_screen_description" msgid="3224132391919219061">"选择一个类别，以便从手机添加应用和微件"</string>
+    <string name="organizer_choose_layout_title" msgid="127228966942084947">"选择布局"</string>
+    <string name="recent_task_option_pin" msgid="7929860679018978258">"固定"</string>
+    <string name="recent_task_option_freeform" msgid="48863056265284071">"自由窗口"</string>
+    <string name="recent_task_option_desktop" msgid="8280879717125435668">"桌面"</string>
+    <string name="recent_split_task_option_desktop" msgid="7272418191932478598">"%1$s 的桌面模式"</string>
+    <string name="recent_task_option_external_display" msgid="4533840664313389484">"移至外接显示屏"</string>
+    <string name="recent_task_option_remove_task" msgid="803559928027541555">"清除"</string>
+    <string name="recent_task_desktop" msgid="8081113562549637334">"桌面设备"</string>
+    <string name="recents_empty_message" msgid="7040467240571714191">"近期没有任何内容"</string>
+    <string name="accessibility_app_usage_settings" msgid="6312864233673544149">"应用使用设置"</string>
+    <string name="recents_clear_all" msgid="5328176793634888831">"全部清除"</string>
+    <string name="add_desk_button_content_description" msgid="5866025518368823735">"添加新桌面"</string>
+    <string name="accessibility_recent_apps" msgid="4058661986695117371">"最近用过的应用"</string>
+    <string name="task_contents_description_with_remaining_time" msgid="4479688746574672685">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>（<ns0:g id="REMAINING_TIME">%2$s</ns0:g>）"</string>
+    <string name="shorter_duration_less_than_one_minute" msgid="4722015666335015336">"不到 1 分钟"</string>
+    <string name="time_left_for_app" msgid="3111996412933644358">"今天还可使用 <ns0:g id="TIME">%1$s</ns0:g>"</string>
+    <string name="title_app_suggestions" msgid="4185902664111965088">"应用建议"</string>
+    <string name="all_apps_prediction_tip" msgid="2672336544844936186">"您可能想要使用的应用"</string>
+    <string name="hotseat_prediction_settings" msgid="6246554993566070818">"设置"</string>
+    <string name="hotseat_auto_enrolled" msgid="522100018967146807">"最常用的应用会显示在此处，显示的项目会根据日常安排而发生变化"</string>
+    <string name="hotseat_tip_no_empty_slots" msgid="1325212677738179185">"将应用拖离底部，以获取应用建议"</string>
+    <string name="hotseat_tip_gaps_filled" msgid="3035673010274223538">"应用建议已添加到空白区域"</string>
+    <string name="hotsaet_tip_prediction_enabled" msgid="2233554377501347650">"已启用应用建议"</string>
+    <string name="hotsaet_tip_prediction_disabled" msgid="1506426298884658491">"已停用应用建议"</string>
+    <string name="gesture_tutorial_title" msgid="2750751261768388354">"手势导航教程"</string>
+    <string name="gesture_tutorial_rotation_prompt_title" msgid="7537946781362766964">"请旋转设备"</string>
+    <string name="gesture_tutorial_rotation_prompt" msgid="1664493449851960691">"请旋转设备，完成手势导航教程"</string>
+    <string name="back_gesture_feedback_swipe_too_far_from_edge" msgid="4175100312909721217">"确保从最右侧或最左侧边缘开始滑动"</string>
+    <string name="back_gesture_feedback_cancelled" msgid="762621530959111290">"确保从右侧或左侧边缘滑动到屏幕中间位置后再松开手指"</string>
+    <string name="back_gesture_feedback_complete_with_overview_follow_up" msgid="9176400654037014471">"您已了解如何使用“从右侧向左滑动”手势返回。接下来学习切换应用吧！"</string>
+    <string name="back_gesture_feedback_complete_with_follow_up" msgid="8653374779579748392">"您完成了“返回”手势教程。接下来了解如何切换应用。"</string>
+    <string name="back_gesture_feedback_complete_without_follow_up" msgid="197189945858268342">"您已完成“返回”手势教程"</string>
+    <string name="back_gesture_feedback_swipe_in_nav_bar" msgid="9157480023651452969">"确保滑动时手的位置不要太靠近屏幕底部"</string>
+    <string name="back_gesture_tutorial_confirm_subtitle" msgid="5181305411668713250">"如要调节“返回”手势的灵敏度，请转到“设置”"</string>
+    <string name="back_gesture_intro_title" msgid="19551256430224428">"滑动即可返回"</string>
+    <string name="back_gesture_intro_subtitle" msgid="7912576483031802797">"如要返回上一个屏幕，请从屏幕左侧或右侧边缘往屏幕中间滑动。"</string>
+    <string name="back_gesture_tutorial_title" msgid="1944737946101059789">"返回"</string>
+    <string name="back_gesture_tutorial_subtitle" msgid="6639993416000920142">"从屏幕左侧或右侧边缘往屏幕中间滑动"</string>
+    <string name="home_gesture_feedback_swipe_too_far_from_edge" msgid="4816365433160895458">"确保从屏幕底部边缘向上滑动"</string>
+    <string name="home_gesture_feedback_overview_detected" msgid="5177627157303895077">"松开手指前，请勿中途停顿"</string>
+    <string name="home_gesture_feedback_wrong_swipe_direction" msgid="8328465201424027148">"确保笔直向上滑动"</string>
+    <string name="home_gesture_feedback_complete_with_follow_up" msgid="8766981412895888417">"您已完成“前往主屏幕”手势教程。接下来学习如何返回。"</string>
+    <string name="home_gesture_feedback_complete_without_follow_up" msgid="2978063221383413443">"您已完成“前往主屏幕”手势教程"</string>
+    <string name="home_gesture_intro_title" msgid="836590312858441830">"上滑可转到主屏幕"</string>
+    <string name="home_gesture_intro_subtitle" msgid="2632238748497975326">"从屏幕底部向上滑动，即可随时回到主屏幕。"</string>
+    <string name="home_gesture_tutorial_title" msgid="3126834347496917376">"前往主屏幕"</string>
+    <string name="home_gesture_tutorial_subtitle" msgid="7245995490408668778">"从屏幕底部向上滑动"</string>
+    <string name="home_gesture_tutorial_success" msgid="1736295017642244751">"太棒了！"</string>
+    <string name="overview_gesture_feedback_swipe_too_far_from_edge" msgid="6402349235265407385">"确保从屏幕底部边缘向上滑动"</string>
+    <string name="overview_gesture_feedback_home_detected" msgid="663432226180397138">"请尝试长按窗口，然后再松开手指"</string>
+    <string name="overview_gesture_feedback_wrong_swipe_direction" msgid="1191055451018584958">"确保笔直向上滑动，然后停住"</string>
+    <string name="overview_gesture_feedback_complete_with_follow_up" msgid="3544611727467765026">"您已了解如何使用手势了。如要关闭手势，请前往“设置”。"</string>
+    <string name="overview_gesture_feedback_complete_without_follow_up" msgid="2903050864432331629">"您已完成“切换应用”手势教程"</string>
+    <string name="overview_gesture_intro_title" msgid="2902054412868489378">"滑动即可切换应用"</string>
+    <string name="overview_gesture_intro_subtitle" msgid="4968091015637850859">"如需在应用之间切换，请从屏幕底部向上滑动并按住，然后松开。"</string>
+    <string name="overview_gesture_tutorial_title" msgid="4125835002668708720">"切换应用"</string>
+    <string name="overview_gesture_tutorial_subtitle" msgid="5253549754058973071">"从屏幕底部向上滑动并按住，然后松开"</string>
+    <string name="overview_gesture_tutorial_success" msgid="1910267697807973076">"恭喜！"</string>
+    <string name="gesture_tutorial_confirm_title" msgid="6201516182040074092">"大功告成"</string>
+    <string name="gesture_tutorial_action_button_label" msgid="6249846312991332122">"完成"</string>
+    <string name="gesture_tutorial_action_button_label_settings" msgid="2923621047916486604">"设置"</string>
+    <string name="gesture_tutorial_try_again" msgid="65962545858556697">"重试"</string>
+    <string name="gesture_tutorial_nice" msgid="2936275692616928280">"很好！"</string>
+    <string name="gesture_tutorial_step" msgid="1279786122817620968">"教程 <ns0:g id="CURRENT">%1$d</ns0:g>/<ns0:g id="TOTAL">%2$d</ns0:g>"</string>
+    <string name="allset_title" msgid="5021126669778966707">"大功告成！"</string>
+    <string name="allset_hint" msgid="459504134589971527">"向上滑动可前往主屏幕"</string>
+    <string name="allset_button_hint" msgid="2395219947744706291">"点按主屏幕按钮即可前往主屏幕"</string>
+    <string name="allset_description_generic" msgid="5385500062202019855">"您可以开始使用<ns0:g id="DEVICE">%1$s</ns0:g>了"</string>
+    <string name="allset_description_fallback" msgid="2488751930355201578">"您可以开始使用自己的设备了"</string>
+    <string name="allset_navigation_settings" msgid="4713404605961476027">
+        <annotation id="link">"系统导航设置"</annotation>
+    </string>
+    <string name="allset_title_expressive" msgid="474399969304146994">"您的 <ns0:g id="DEVICE">%1$s</ns0:g>\n已设置完毕！"</string>
+    <string name="allset_title_expressive_fallback" msgid="2829102990606405239">"您的设备\n已设置完毕！"</string>
+    <string name="allset_title_expressive_fixed" msgid="3564219469262883526">"设置完毕，开始使用吧！"</string>
+    <string name="allset_subtitle_expressive" msgid="419688197551192358">"尽情享用新的<ns0:g id="DEVICE">%1$s</ns0:g>吧！"</string>
+    <string name="allset_subtitle_expressive_gesture_navigation" msgid="8931442349501593934">"向上滑动即可开始使用您的<ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_subtitle_expressive_button_navigation" msgid="5219509605046028014">"点按即可开始使用<ns0:g id="DEVICE">%1$s</ns0:g>"</string>
+    <string name="allset_navigation_settings_expressive" msgid="3745595273748356">
+        <annotation id="link">"选择导航方式"</annotation>
+    </string>
+    <string name="allset_hint_expressive" msgid="756856423510976261">"向上滑动"</string>
+    <string name="allset_button_hint_expressive" msgid="667643693410494225">"点按主屏幕按钮"</string>
+    <string name="allset_device_type_tablet" msgid="2173392009787325894">"平板电脑"</string>
+    <string name="allset_device_type_phone" msgid="6842334562074507337">"手机"</string>
+    <string name="action_share" msgid="2648470652637092375">"分享"</string>
+    <string name="action_screenshot" msgid="8171125848358142917">"屏幕截图"</string>
+    <string name="action_split" msgid="2098009717623550676">"分屏"</string>
+    <string name="action_save_app_pair" msgid="5974823919237645229">"保存应用对"</string>
+    <string name="toast_split_select_app" msgid="8464310533320556058">"点按另一个应用即可使用分屏"</string>
+    <string name="toast_contextual_split_select_app" msgid="433510957123687090">"另外选择一个应用才可使用分屏模式"</string>
+    <string name="toast_split_select_app_cancel" msgid="1939025102486630426">"取消"</string>
+    <string name="toast_split_select_cont_desc" msgid="2119685056059607602">"退出分屏选择模式"</string>
+    <string name="toast_split_app_unsupported" msgid="2360229567007828914">"另外选择一个应用才可使用分屏模式"</string>
+    <string name="blocked_by_policy" msgid="2071401072261365546">"该应用或您所在的单位不允许执行此操作"</string>
+    <string name="split_widgets_not_supported" msgid="1355743038053053866">"目前不支持微件，请选择其他应用"</string>
+    <string name="action_image_copy" msgid="6877540054727709339">"复制"</string>
+    <string name="action_image_save" msgid="6205538612408306742">"保存"</string>
+    <string name="accessibility_rotate_button" msgid="4771825231336502943">"旋转屏幕"</string>
+    <string name="taskbar_edu_swipe_animation_description" msgid="1690727240826006218">"该动画展示了任务栏如何显示在屏幕底部，以及如何在不使用时自动隐藏"</string>
+    <string name="taskbar_edu_pinning_animation_description" msgid="8148601093590683880">"该动画展示了如何使用切换开关固定任务栏，让任务栏始终显示在屏幕底部"</string>
+    <string name="taskbar_edu_bubbles_animation_description" msgid="421866726938396813">"通过拖动手势从任务栏创建气泡的动画演示"</string>
+    <string name="taskbar_edu_split_screen_animation_description" msgid="371796444988899166">"该动画展示了如何通过将应用从任务栏拖放到打开的应用的上方，来创建分屏"</string>
+    <string name="taskbar_edu_suggested_app_animation_description" msgid="3443453246478079085">"该动画展示了如何在设备上访问推荐的应用"</string>
+    <string name="taskbar_edu_suggested_search_animation_description" msgid="1874284242557104818">"该动画展示了如何通过轻触并按住快捷操作按键并选择相应内容所在的区域，在界面中搜索相应内容"</string>
+    <string name="taskbar_edu_a11y_title" msgid="5417986057866415355">"任务栏教程"</string>
+    <string name="taskbar_edu_splitscreen" msgid="5605512479258053350">"将一个应用拖到一侧，即可同时使用两个应用"</string>
+    <string name="taskbar_edu_bubbles" msgid="5179266214319135127">"拖到下方角落即可使其悬浮"</string>
+    <string name="taskbar_edu_stashing" msgid="911857479758694381">"缓慢向上滑动即可显示任务栏"</string>
+    <string name="taskbar_edu_suggestions" msgid="8215044496435527982">"根据您的日常使用习惯获得应用建议"</string>
+    <string name="taskbar_edu_pinning" msgid="6708550858580071558">"长按分隔线即可固定任务栏"</string>
+    <string name="taskbar_edu_features" msgid="3320337287472848162">"体验任务栏的更多功能"</string>
+    <string name="taskbar_edu_pinning_title" msgid="210102174154211712">"始终显示任务栏"</string>
+    <string name="taskbar_edu_pinning_standalone" msgid="2636919474366410467">"若要始终在屏幕底部显示任务栏，请轻触并按住分隔线"</string>
+    <string name="taskbar_edu_bubbles_standalone" msgid="4182824636656528043">"将应用拖到角落即可使其悬浮"</string>
+    <string name="taskbar_search_edu_title" msgid="5569194922234364530">"轻触并按住操作键，即可根据屏幕上的内容进行搜索"</string>
+    <string name="taskbar_edu_search_disclosure" msgid="8734536088447779686">"此产品会根据屏幕上的所选内容进行搜索。Google 的<ns0:g id="BEGIN_PRIVACY_LINK">&lt;a href="%1$s"&gt;</ns0:g>《隐私权政策》<ns0:g id="END_PRIVACY_LINK">&lt;/a&gt;</ns0:g>和<ns0:g id="BEGIN_TOS_LINK">&lt;a href="%2$s"&gt;</ns0:g>《服务条款》<ns0:g id="END_TOS_LINK">&lt;/a&gt;</ns0:g>适用。"</string>
+    <string name="taskbar_edu_close" msgid="887022990168191073">"关闭"</string>
+    <string name="taskbar_edu_done" msgid="6880178093977704569">"完成"</string>
+    <string name="taskbar_edu_next" msgid="4007618274426775841">"继续"</string>
+    <string name="taskbar_button_home" msgid="2151398979630664652">"主屏幕"</string>
+    <string name="taskbar_button_a11y" msgid="5241161324875094465">"无障碍功能"</string>
+    <string name="taskbar_button_back" msgid="8558862226461164514">"返回"</string>
+    <string name="taskbar_button_ime_switcher" msgid="1730244360907588541">"IME 切换器"</string>
+    <string name="taskbar_button_recents" msgid="7273376136216613134">"最近用过"</string>
+    <string name="taskbar_button_notifications" msgid="7471740351507357318">"通知"</string>
+    <string name="taskbar_button_quick_settings" msgid="227662894293189391">"快捷设置"</string>
+    <string name="taskbar_button_more_options" msgid="8685586215650683202">"更多选项"</string>
+    <string name="taskbar_a11y_title" msgid="6432169809852243110">"任务栏"</string>
+    <string name="bubble_bar_a11y_title" msgid="7743340801055597168">"气泡条"</string>
+    <string name="taskbar_phone_a11y_title" msgid="4933360237131229395">"导航栏"</string>
+    <string name="always_show_taskbar" msgid="3608801276107751229">"始终显示任务栏"</string>
+    <string name="change_navigation_mode" msgid="9088393078736808968">"更改导航模式"</string>
+    <string name="taskbar_divider_a11y_title" msgid="6608690309720242080">"任务栏分隔线"</string>
+    <string name="taskbar_recents_overflow_a11y_title" msgid="8005941062446304304">"其他最近用过的应用"</string>
+    <string name="taskbar_pinned_overflow_a11y_title" msgid="2314810718333302626">"其他应用"</string>
+    <string name="taskbar_drag_to_unpin_title" msgid="7652941692376783721">"移除"</string>
+    <string name="move_drop_target_top_or_left" msgid="2988702185049595807">"移到顶部/左侧"</string>
+    <string name="move_drop_target_bottom_or_right" msgid="5431393418797620162">"移到底部/右侧"</string>
+    <string name="open_app_as_a_bubble" msgid="6642626287247807473">"以气泡的形式打开应用"</string>
+    <string name="action_move_item_left" msgid="1553114361342866236">"向左移动项目"</string>
+    <string name="action_move_item_right" msgid="682950193875586183">"向右移动项目"</string>
+    <string name="quick_switch_pane_title" msgid="4677158207760585812">"最近打开过的应用"</string>
+    <string name="quick_switch_content_description" msgid="2851244536728720005">"“最近打开过的应用”列表"</string>
+    <string name="quick_switch_overflow" msgid="3679780650881041632">"{count,plural, =1{多个应用}other{多个应用}}"</string>
+    <string name="quick_switch_desktop" msgid="8393802056024499749">"桌面模式"</string>
+    <string name="quick_switch_split_task" msgid="5598194724255333896">"<ns0:g id="APP_NAME_1">%1$s</ns0:g>和<ns0:g id="APP_NAME_2">%2$s</ns0:g>"</string>
+    <string name="quick_switch_task_with_position_in_parent" msgid="9082434281522648105">"<ns0:g id="TASK_DESCRIPTION">%1$s</ns0:g>，第 <ns0:g id="INDEX_IN_PARENT">%2$d</ns0:g> 项，共 <ns0:g id="TOTAL_TASKS">%3$d</ns0:g> 项，松开按键即可选择"</string>
+    <string name="quick_switch_scroll_arrow_left" msgid="6527033155534184309">"向左滚动"</string>
+    <string name="quick_switch_scroll_arrow_right" msgid="7319779291086916348">"向右滚动"</string>
+    <string name="bubble_bar_bubble_fallback_description" msgid="7811684548953452009">"消息气泡"</string>
+    <string name="bubble_bar_overflow_description" msgid="8617628132733151708">"溢出式气泡框"</string>
+    <string name="bubble_bar_bubble_description" msgid="1882466152448446446">"来自“<ns0:g id="APP_NAME">%2$s</ns0:g>”的<ns0:g id="NOTIFICATION_TITLE">%1$s</ns0:g>"</string>
+    <string name="bubble_bar_description_multiple_bubbles" msgid="3922207715357143648">"<ns0:g id="BUBBLE_BAR_BUBBLE_DESCRIPTION">%1$s</ns0:g>以及另外 <ns0:g id="BUBBLE_COUNT">%2$d</ns0:g> 个"</string>
+    <string name="bubble_bar_action_move_left" msgid="3306922475737714758">"左移"</string>
+    <string name="bubble_bar_action_move_right" msgid="3455099638571411251">"右移"</string>
+    <string name="bubble_bar_action_dismiss_all" msgid="3290722022983403060">"全部关闭"</string>
+    <string name="search_gesture_feature_title" msgid="1294044108313175306">"圈定即搜"</string>
+    <string name="header_app_icon_description" msgid="2184625881433608027">"应用图标"</string>
+    <string name="header_default_app_title" msgid="8308052350689531566">"应用名称"</string>
+    <string name="header_close_icon_description" msgid="9216416109255777643">"关闭"</string>
+    <string name="nudge_a11y_title" msgid="2126529303123687912">"智能推送"</string>
+    <string name="nudge_a11y_close" msgid="4513937143817625570">"关闭"</string>
+    <string name="nudge_a11y_image" msgid="117910310515857252">"智能推送图片"</string>
+    <string name="running_app_description" msgid="1309281047289078871">"<ns0:g id="APP_TITLE">%1$s</ns0:g>
+        <ns0:g id="RUNNING_STATE">%2$s</ns0:g>"</string>
+    <string name="ambientcue_first_time_edu_icon_description" msgid="899917821554299010">"图标"</string>
+    <string name="ambientcue_first_time_edu_title" msgid="2018548669156363447">"获取实用建议"</string>
+    <string name="ambientcue_first_time_edu_text" msgid="4645551981871066999">"我们会运用 AI 技术，根据您在屏幕上的操作主动提供相关信息和操作建议"</string>
+    <string name="underlay_close_button_content_description" msgid="5386282762373529057">"关闭"</string>
+    <string name="ambient_cue_expand_action" msgid="3718141784327417087">"展开"</string>
+    <string name="ambient_cue_icon_content_description" msgid="6470228671884918485">"情境建议图标"</string>
+    <string name="ambientcue_long_press_edu_text" msgid="2399090372677751105">"轻触并按住即可查看建议是如何生成的"</string>
+    <string name="ambient_cue_autofill_action" msgid="5880997492149716614">"自动填充"</string>
+    <string name="app_share_drop_target_label" msgid="5804774105974539508">"分享应用"</string>
+    <string name="action_listen" msgid="2370304050784689486">"聆听"</string>
+    <string name="action_translate" msgid="8028378961867277746">"翻译"</string>
+    <string name="action_search" msgid="6269564710943755464">"智能镜头"</string>
+    <string name="dialog_acknowledge" msgid="2804025517675853172">"知道了"</string>
+    <string name="dialog_cancel" msgid="6464336969134856366">"取消"</string>
+    <string name="dialog_settings" msgid="6564397136021186148">"设置"</string>
+    <string name="niu_actions_confirmation_title" msgid="3863451714863526143">"翻译或聆听屏幕上的文字"</string>
+    <string name="niu_actions_confirmation_text" msgid="2105271481950866089">"系统可能会将屏幕上的文字、网址和屏幕截图等信息分享给 Google。\n\n如需更改要分享哪些信息，请依次转到"<b>"设置 &gt; 应用 &gt; 默认应用 &gt; 数字助理应用"</b>"。"</string>
+    <string name="assistant_not_selected_title" msgid="5017072974603345228">"需选择一款助理应用，才能使用此功能"</string>
+    <string name="assistant_not_selected_text" msgid="3244613673884359276">"如需收听或翻译屏幕上的文字，请在“设置”部分选择一款数字助理应用"</string>
+    <string name="assistant_not_supported_title" msgid="1675788067597484142">"需更改助理应用，才能使用此功能"</string>
+    <string name="assistant_not_supported_text" msgid="1708031078549268884">"如需收听或翻译屏幕上的文字，请在“设置”部分更改数字助理应用"</string>
+    <string name="tooltip_listen" msgid="7634466447860989102">"点按此处即可收听屏幕上的文字"</string>
+    <string name="tooltip_translate" msgid="4184845868901542567">"点按此处即可翻译屏幕上的文字"</string>
+    <string name="toast_p2p_app_not_shareable" msgid="7229739094132131536">"无法分享此应用"</string>
+    <string name="widget_picker_collapse_sheet_label" msgid="5179800676332357316">"关闭动作条"</string>
+    <string name="widgets_list_header_app_name_fallback_label" msgid="5151621916941957989">"应用名称"</string>
+    <string name="widgets_list_header_widgets_count_label" msgid="578128450351893001">"{count,plural, =1{# 个微件}other{# 个微件}}"</string>
+    <string name="widgets_list_header_shortcuts_count_label" msgid="9168853338469361424">"{count,plural, =1{# 个快捷方式}other{# 个快捷方式}}"</string>
+    <string name="widgets_list_header_widgets_and_shortcuts_count_label" msgid="3942871723001789249">"<ns0:g id="WIDGETS_COUNT">%1$s</ns0:g>、<ns0:g id="SHORTCUTS_COUNT">%2$s</ns0:g>"</string>
+    <string name="widget_span_dimensions_format" msgid="4325492869474815131">"%1$d × %2$d"</string>
+    <string name="widget_span_dimensions_accessible_format" msgid="6976586776463259811">"宽 %1$d，高 %2$d"</string>
+    <string name="widget_details_accessibility_label" msgid="4525863892199168041">"“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件，宽 %2$d，高 %3$d"</string>
+    <string name="widget_tap_to_show_add_button_label" msgid="3358071294981269937">"显示“添加”按钮"</string>
+    <string name="widget_tap_to_hide_add_button_label" msgid="7484536838079871360">"隐藏“添加”按钮"</string>
+    <string name="widget_tap_to_add_button_label" msgid="3110313936849291769">"添加"</string>
+    <string name="widget_tap_to_add_button_content_description" msgid="3591512565497536699">"添加“<ns0:g id="WIDGET_NAME">%1$s</ns0:g>”微件"</string>
+    <string name="featured_widgets_tab_label" msgid="5911854248145111652">"精选"</string>
+    <string name="browse_widgets_tab_label" msgid="7179933202350730737">"浏览"</string>
+    <string name="widgets_tab_accessibility_label" msgid="559010210491169400">"“<ns0:g id="TAB_NAME">%1$s</ns0:g>”类微件"</string>
+    <string name="widget_picker_right_pane_accessibility_label" msgid="5095301787174820892">"右侧是“<ns0:g id="SELECTED_HEADER">%1$s</ns0:g>”微件，左侧是搜索功能和选项"</string>
+    <string name="widget_picker_left_pane_accessibility_label" msgid="4719054594582596067">"左侧是搜索功能和微件选项，右侧是微件"</string>
+    <string name="widgets_search_bar_hint" msgid="5705758627532180867">"搜索"</string>
+    <string name="widget_search_bar_clear_button_label" msgid="6120140737164336517">"清除"</string>
+    <string name="widget_search_bar_back_button_label" msgid="7028448831228587743">"返回"</string>
+    <string name="widgets_list_no_widgets_available" msgid="6451723564588621540">"无法使用微件和快捷方式"</string>
+    <string name="widgets_no_search_results" msgid="4336254967062545985">"未找到任何微件或快捷方式"</string>
+    <string name="widget_add_to_homescreen_button_label" msgid="5293968342564702338">"添加到主屏幕"</string>
+    <string name="widget_cancel_pin_button_label" msgid="7548758841712339886">"取消"</string>
+    <string name="widget_touch_hold_instruction" msgid="7360267776497592789">"按住即可移动微件。"</string>
+</resources>
