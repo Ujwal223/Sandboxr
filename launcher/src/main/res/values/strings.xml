@@ -2,6 +2,10 @@
 <resources>
     <string name="derived_app_name">Sandboxr</string>
     <string name="notification_dots_service_title">Notification Dots</string>
+    <string name="notification_dots_title">Notification dots</string>
+    <string name="notification_dots_desc_on">On</string>
+    <string name="notification_dots_desc_off">Off</string>
+    <string name="notification_dots_desc_permission_needed">Missing notification access</string>
     <string name="settings_button_text">Home settings</string>
     <string name="gesture_tutorial_title">Gesture Navigation Tutorial</string>
     <string name="allset_title">All Set</string>
@@ -39,4 +43,53 @@
     <string name="gadget_setup_text">Setup</string>
     <string name="qsb_voice_search">Voice search</string>
     <string name="qsb_lens_search">Lens</string>
+
+    <!-- Drop Target Strings -->
+    <string name="remove_drop_target_label">Remove</string>
+    <string name="uninstall_drop_target_label">Uninstall</string>
+    <string name="app_info_drop_target_label">App info</string>
+    <string name="reconfigure_drop_target_label">Setup</string>
+    <string name="cancel_drop_target_label">Cancel</string>
+
+    <!-- App Pairs -->
+    <string name="app_pair_name_format">App pair: %1$s and %2$s</string>
+    <string name="app_pair_save_toast">App pair saved to Home screen</string>
+    <string name="app_pair_launch_error">Unable to launch app pair in split screen</string>
+    <string name="disabled_app_label">%1$s (Disabled)</string>
+
+    <!-- Context Menus, Popup & Shortcuts -->
+    <string name="widget_button_text">Widgets</string>
+    <string name="remove_system_shortcut_label">Remove</string>
+    <string name="action_add_to_workspace">Add to Home screen</string>
+    <string name="install_private_system_shortcut_label">Install to Private space</string>
+    <string name="install_drop_target_label">Install</string>
+    <string name="dismiss_prediction_label">Don\'t suggest app</string>
+    <string name="item_removed">Item removed</string>
+    <string name="undo">Undo</string>
+    <string name="uninstall_private_system_shortcut_label">Uninstall</string>
+    <string name="bubble">Bubble</string>
+    <string name="enable_app_lock">Enable App lock</string>
+    <string name="disable_app_lock">Disable App lock</string>
+    <string name="action_deep_shortcut">Shortcut</string>
+    <string name="pause_app_label">Pause app</string>
+    <string name="styles_wallpaper_button_text">Wallpaper &amp; style</string>
+    <string name="edit_home_screen">Edit home screen</string>
+    <string name="all_apps_button_label">All apps</string>
+    <string name="popup_container_iterate_children">popup_container_iterate_children</string>
+    <string name="widget_settings">Widget settings</string>
+    <string name="split_app_info_accessibility">App info for %1$s</string>
+    <string name="add_to_taskbar">Pin to taskbar</string>
+    <string name="remove_from_taskbar">Unpin from taskbar</string>
+    <string name="taskbar_pin_limit_reached">Maximum items pinned to taskbar</string>
+    <string name="storage_scopes_drop_target_label">Storage Scopes</string>
+    <string name="contact_scopes_label">Contact Scopes</string>
+    <string name="actions_popup_menu_button">Actions</string>
+    <string name="actions_popup_menu_button_description">Show actions menu</string>
+    <string name="shortcuts_popup_menu_button">Shortcuts</string>
+    <string name="shortcuts_popup_menu_button_description">Show app shortcuts menu</string>
+    <string name="safemode_widget_error">Widgets disabled in Safe mode</string>
+    <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
+    <string name="remote_action_failed">Failed to perform action: %1$s</string>
+
+    <string-array name="skip_private_profile_shortcut_packages" />
 </resources>

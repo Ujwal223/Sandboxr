@@ -48,6 +48,9 @@ interface ActivityContextComponent {
     @ActivityTag
     fun activityTag(): String
 
+    val popupDataProvider: com.sandboxr.launcher.popup.PopupDataProvider?
+        get() = null
+
     @Subcomponent.Builder
     interface Builder {
         @BindsInstance

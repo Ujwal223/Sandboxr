@@ -82,7 +82,7 @@ open class BitmapInfo(
 /**
  * A fast lightweight Drawable wrapping a Bitmap.
  */
-open class FastBitmapDrawable(
+open class FastBitmapDrawable @JvmOverloads constructor(
     @JvmField val bitmap: Bitmap,
     @ColorInt @JvmField val iconColor: Int = 0,
 ) : Drawable() {

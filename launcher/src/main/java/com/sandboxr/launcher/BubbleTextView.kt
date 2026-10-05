@@ -48,6 +48,12 @@ import com.sandboxr.launcher.model.data.ItemInfoWithIcon
 import com.sandboxr.launcher.model.data.WorkspaceItemInfo
 import com.sandboxr.launcher.util.MultiTranslateDelegate
 
+import com.sandboxr.launcher.anim.AnimatedFloat
+import com.sandboxr.launcher.popup.IconViewController
+import com.sandboxr.launcher.popup.Poppable
+import com.sandboxr.launcher.popup.PoppableType
+import com.sandboxr.launcher.util.MultiPropertyFactory
+
 /**
  * Compound drawable TextView displaying app icons with labels, notification dot badges,
  * press feedback bounce animations, and drag/reorder transformations.
@@ -59,7 +65,9 @@ open class BubbleTextView @JvmOverloads constructor(
 ) : AppCompatTextView(context, attrs, defStyleAttr),
     IconCache.ItemInfoUpdateReceiver,
     DraggableView,
-    Reorderable {
+    Reorderable,
+    IconViewController,
+    Poppable {
 
     companion object {
         const val TAG = "BubbleTextView"
@@ -152,6 +160,7 @@ open class BubbleTextView @JvmOverloads constructor(
     }
 
     @UiThread
+    @JvmOverloads
     open fun applyFromWorkspaceItem(info: WorkspaceItemInfo, animate: Boolean = false) {
         applyIconAndLabel(info)
         tag = info
@@ -211,7 +220,7 @@ open class BubbleTextView @JvmOverloads constructor(
 
     open fun getIcon(): Drawable? = mIcon
 
-    open fun setIconVisible(visible: Boolean) {
+    override fun setIconVisible(visible: Boolean) {
         mIsIconVisible = visible
         val icon = if (visible) mIcon else ColorDrawable(Color.TRANSPARENT)
         applyCompoundDrawables(icon)
@@ -277,9 +286,9 @@ open class BubbleTextView @JvmOverloads constructor(
 
     open fun hasDot(): Boolean = mDotInfo != null && mDotInfo!!.hasDot()
 
-    open fun setForceHideDot(forceHide: Boolean) {
-        if (mForceHideDot != forceHide) {
-            mForceHideDot = forceHide
+    override fun setForceHideDot(forceHideDot: Boolean) {
+        if (mForceHideDot != forceHideDot) {
+            mForceHideDot = forceHideDot
             invalidate()
         }
     }
@@ -330,6 +339,32 @@ open class BubbleTextView @JvmOverloads constructor(
     }
 
     open fun getTextAlpha(): Float = mTextAlpha
+
+    private val mTextAlphaMultiPropertyFactory = MultiPropertyFactory<AnimatedFloat>(
+        AnimatedFloat(java.util.function.Consumer { value: Float -> setTextAlpha(value) }, 1f),
+        AnimatedFloat.VALUE,
+        2,
+        { a, b -> a * b },
+        1f
+    )
+
+    override fun getFloatingViewTextAlpha(): MultiPropertyFactory<AnimatedFloat>.MultiProperty? =
+        mTextAlphaMultiPropertyFactory.get(0)
+
+    override fun getPoppableType(): PoppableType = PoppableType.APP
+
+    override fun getIconHeight(): Int = iconSize
+
+    var showingMinimalPopup: Boolean = false
+        private set
+
+    fun configureMinimalPopup(shouldDisableAnimationAndShortcuts: Boolean) {
+        showingMinimalPopup = shouldDisableAnimationAndShortcuts
+    }
+
+    fun setHideBadge(hide: Boolean) {
+    }
+
 
     // --- Reorderable & DraggableView ---
 

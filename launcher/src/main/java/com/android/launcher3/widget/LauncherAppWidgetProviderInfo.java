@@ -22,19 +22,11 @@ import com.sandboxr.launcher.model.data.LauncherAppWidgetInfo;
 /**
  * Thin wrapper around AppWidgetProviderInfo for Launcher.
  */
-public class LauncherAppWidgetProviderInfo extends AppWidgetProviderInfo implements CachedObject {
+public class LauncherAppWidgetProviderInfo extends com.sandboxr.launcher.widget.LauncherAppWidgetProviderInfo implements CachedObject {
 
     public static final String CUSTOM_WIDGET_PACKAGE = "custom-widget";
 
-    public int spanX;
-    public int spanY;
-    public int minSpanX;
-    public int minSpanY;
-    public int maxSpanX;
-    public int maxSpanY;
-
     private boolean mIsMinSizeFulfilled;
-    protected PackageManager mPM;
 
     public static LauncherAppWidgetProviderInfo fromProviderInfo(
             Context context, AppWidgetProviderInfo info) {
@@ -52,9 +44,9 @@ public class LauncherAppWidgetProviderInfo extends AppWidgetProviderInfo impleme
         return launcherInfo;
     }
 
-    protected LauncherAppWidgetProviderInfo() {}
+    public LauncherAppWidgetProviderInfo() {}
 
-    protected LauncherAppWidgetProviderInfo(Parcel in) {
+    public LauncherAppWidgetProviderInfo(Parcel in) {
         super(in);
     }
 
@@ -134,7 +126,11 @@ public class LauncherAppWidgetProviderInfo extends AppWidgetProviderInfo impleme
 
     @Override
     public final UserHandle getUser() {
-        return getProfile();
+        try {
+            UserHandle profile = getProfile();
+            if (profile != null) return profile;
+        } catch (Throwable ignored) {}
+        return android.os.Process.myUserHandle();
     }
 
     public Drawable getFullResIcon(@NonNull IconLoadRequest<CachedObject> request) {

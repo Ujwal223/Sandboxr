@@ -171,4 +171,20 @@ public class CellLayoutLayoutParams extends ViewGroup.MarginLayoutParams {
     public void setTmpCellY(int tmpCellY) {
         this.mTmpCellY = tmpCellY;
     }
+
+    public int getCellHSpan() {
+        return cellHSpan;
+    }
+
+    public void setCellHSpan(int cellHSpan) {
+        this.cellHSpan = cellHSpan;
+    }
+
+    public int getCellVSpan() {
+        return cellVSpan;
+    }
+
+    public void setCellVSpan(int cellVSpan) {
+        this.cellVSpan = cellVSpan;
+    }
 }

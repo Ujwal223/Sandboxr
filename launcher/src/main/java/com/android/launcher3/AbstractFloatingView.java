@@ -46,6 +46,7 @@ public abstract class AbstractFloatingView extends LinearLayout implements Touch
     public static final int TYPE_ICON_SURFACE = 1 << 13;
     public static final int TYPE_OPTIONS_POPUP_DIALOG = 1 << 14;
 
+    public static final int TYPE_REBIND_SAFE = TYPE_WIDGETS_BOTTOM_SHEET;
     public static final int TYPE_ALL = ~0;
 
     protected boolean mIsOpen = false;
@@ -78,7 +79,7 @@ public abstract class AbstractFloatingView extends LinearLayout implements Touch
         return mIsOpen;
     }
 
-    protected abstract boolean isOfType(int type);
+    public abstract boolean isOfType(int type);
 
     public boolean canHandleBack() {
         return true;
@@ -129,6 +130,13 @@ public abstract class AbstractFloatingView extends LinearLayout implements Touch
         return getOpenView(activity, TYPE_ALL);
     }
 
+    public static void closeOpenContainer(ActivityContext activity, int type) {
+        AbstractFloatingView view = getOpenView(activity, type);
+        if (view != null) {
+            view.close(true);
+        }
+    }
+
     public static void closeOpenViews(ActivityContext activity, boolean animate, int type) {
         if (activity == null) return;
         BaseDragLayer<?> dragLayer = activity.getDragLayer();
@@ -142,6 +150,45 @@ public abstract class AbstractFloatingView extends LinearLayout implements Touch
                 }
             }
         }
+    }
+
+    public boolean areAnimatorsEnabled() {
+        return true;
+    }
+
+    protected void announceAccessibilityChanges() {
+        android.util.Pair<View, String> targetInfo = getAccessibilityTarget();
+        if (targetInfo == null) {
+            return;
+        }
+        if (mIsOpen) {
+            View focusView = getAccessibilityInitialFocusView();
+            if (focusView != null) {
+                focusView.performAccessibilityAction(
+                        android.view.accessibility.AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS, null);
+            }
+        }
+        ActivityContext ctx = ActivityContext.lookupContext(getContext());
+        if (ctx != null && ctx.getDragLayer() != null) {
+            ctx.getDragLayer().sendAccessibilityEvent(
+                    android.view.accessibility.AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED);
+        }
+    }
+
+    protected android.util.Pair<View, String> getAccessibilityTarget() {
+        return null;
+    }
+
+    protected View getAccessibilityInitialFocusView() {
+        return this;
+    }
+
+    public static void closeAllOpenViewsExcept(ActivityContext activity, boolean animate, int type) {
+        closeOpenViews(activity, animate, TYPE_ALL & ~type);
+    }
+
+    public static void closeAllOpenViewsExcept(ActivityContext activity, int type) {
+        closeAllOpenViewsExcept(activity, true, type);
     }
 
     public static void closeAllOpenViews(ActivityContext activity, boolean animate) {

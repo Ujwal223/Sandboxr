@@ -22,6 +22,10 @@ package com.android.launcher3.icons;
  */
 public class FastBitmapDrawable extends com.sandboxr.launcher.icons.FastBitmapDrawable {
 
+    public FastBitmapDrawable(android.graphics.Bitmap bitmap) {
+        super(bitmap);
+    }
+
     public FastBitmapDrawable(android.graphics.Bitmap bitmap, int iconColor) {
         super(bitmap, iconColor);
     }

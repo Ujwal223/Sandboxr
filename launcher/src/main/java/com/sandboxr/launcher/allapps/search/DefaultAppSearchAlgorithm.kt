@@ -40,7 +40,8 @@ class DefaultAppSearchAlgorithm @JvmOverloads constructor(
     private val context: Context,
     private val appsStore: AllAppsStore,
     uiExecutor: LooperExecutor = Executors.MAIN_EXECUTOR,
-    private val addNoResultsMessage: Boolean = true
+    private val addNoResultsMessage: Boolean = true,
+    private val bgExecutor: java.util.concurrent.Executor = Executors.MODEL_EXECUTOR
 ) : SearchAlgorithm<AdapterItem> {
 
     private val resultHandler = Handler(uiExecutor.looper)
@@ -62,7 +63,7 @@ class DefaultAppSearchAlgorithm @JvmOverloads constructor(
         searchGeneration++
         val currentGeneration = searchGeneration
 
-        Executors.MODEL_EXECUTOR.execute {
+        bgExecutor.execute {
             val trimmedQuery = query.trim()
             val apps = appsStore.getApps()
             val scoredResults = ArrayList<ScoredApp>()

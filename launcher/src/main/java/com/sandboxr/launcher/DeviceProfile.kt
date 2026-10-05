@@ -98,6 +98,14 @@ open class DeviceProfile @VisibleForTesting constructor() {
     /** Active display rotation hint. */
     @JvmField var rotationHint: Int = 0
 
+    /** Display density in DPI. */
+    @JvmField var densityDpi: Int = DisplayMetrics.DENSITY_DEVICE_STABLE
+
+    val workspaceProfile: DeviceProfile get() = this
+    val deviceProperties: DeviceProfile get() = this
+
+    fun pxToDp(px: Float): Float = dpiFromPx(px, if (densityDpi > 0) densityDpi else DisplayMetrics.DENSITY_DEFAULT * 2)
+
     // ─────────────────────────────────────────────────────────────────────────────────────────
     // Grid metrics
     // ─────────────────────────────────────────────────────────────────────────────────────────
@@ -123,6 +131,8 @@ open class DeviceProfile @VisibleForTesting constructor() {
 
     /** Icon drawable size in pixels. */
     @JvmField var iconSizePx: Int = 0
+
+    fun getIconSizePx(): Int = iconSizePx
 
     /** Icon label text size in pixels. */
     @JvmField var iconTextSizePx: Float = 0f
@@ -455,6 +465,7 @@ open class DeviceProfile @VisibleForTesting constructor() {
                 isTwoPanels = deviceProperties.isTwoPanels
                 isLandscape = deviceProperties.isLandscape
                 rotationHint = deviceProperties.rotationHint
+                this.densityDpi = densityDpi
                 isTaskbarPresent = deviceProperties.taskbarConfiguration.isTaskbarPresent
                 insets = Rect(deviceProperties.insets)
 

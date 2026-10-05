@@ -102,7 +102,7 @@ public class ShortcutRequest {
         try {
             return new QueryResult(mContext.getSystemService(LauncherApps.class)
                     .getShortcuts(mQuery, mUserHandle));
-        } catch (SecurityException | IllegalStateException e) {
+        } catch (SecurityException | IllegalStateException | UnsupportedOperationException e) {
             FileLog.e(TAG, "Failed to query for shortcuts", e);
             return QueryResult.DEFAULT;
         }

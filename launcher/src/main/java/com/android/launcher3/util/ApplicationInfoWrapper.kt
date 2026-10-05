@@ -26,15 +26,9 @@ import android.content.pm.ApplicationInfo.FLAG_SUSPENDED
 import android.content.pm.ApplicationInfo.FLAG_SYSTEM
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
-import android.content.pm.PackageManager.NameNotFoundException
 import android.os.UserHandle
-import com.android.launcher3.Flags.enableSupportForArchiving
-import com.android.launcher3.Utilities.ATLEAST_V
 import kotlin.LazyThreadSafetyMode.NONE
 
-/**
- * A set of utility methods around ApplicationInfo with support for fetching the actual info lazily
- */
 class ApplicationInfoWrapper private constructor(provider: () -> ApplicationInfo?) {
 
     constructor(appInfo: ApplicationInfo?) : this({ appInfo })
@@ -48,18 +42,13 @@ class ApplicationInfoWrapper private constructor(provider: () -> ApplicationInfo
             ctx.getSystemService(LauncherApps::class.java)
                 ?.getApplicationInfo(pkg, PackageManager.MATCH_UNINSTALLED_PACKAGES, user)
                 ?.let { ai ->
-                    // its enabled and (either installed or archived)
-                    if (
-                        ai.enabled &&
-                            (ai.flags.and(FLAG_INSTALLED) != 0 ||
-                                (ATLEAST_V && enableSupportForArchiving() && ai.isArchived))
-                    ) {
+                    if (ai.enabled && (ai.flags and FLAG_INSTALLED) != 0) {
                         ai
                     } else {
                         null
                     }
                 }
-        } catch (e: NameNotFoundException) {
+        } catch (e: Exception) {
             null
         }
     })
@@ -81,7 +70,7 @@ class ApplicationInfoWrapper private constructor(provider: () -> ApplicationInfo
                             ?.activityInfo
                             ?.applicationInfo
                 pm.getApplicationInfo(packageName, 0)
-            } catch (e: NameNotFoundException) {
+            } catch (e: Exception) {
                 null
             }
         }
@@ -89,34 +78,21 @@ class ApplicationInfoWrapper private constructor(provider: () -> ApplicationInfo
 
     private val appInfo: ApplicationInfo? by lazy(NONE, provider)
 
-    private fun hasFlag(flag: Int) = appInfo?.let { it.flags.and(flag) != 0 } ?: false
+    private fun hasFlag(flag: Int) = appInfo?.let { (it.flags and flag) != 0 } ?: false
 
-    /**
-     * Returns true if the app can possibly be on the SDCard. This is just a workaround and doesn't
-     * guarantee that the app is on SD card.
-     */
-    fun isOnSdCard() = hasFlag(FLAG_EXTERNAL_STORAGE)
+    fun isOnSdCard(): Boolean = hasFlag(FLAG_EXTERNAL_STORAGE)
 
-    /** Returns whether the target app is installed for a given user */
-    fun isInstalled() = hasFlag(FLAG_INSTALLED)
+    fun isInstalled(): Boolean = hasFlag(FLAG_INSTALLED)
 
-    /**
-     * Returns whether the target app is suspended for a given user as per
-     * [android.app.admin.DevicePolicyManager.isPackageSuspended].
-     */
-    fun isSuspended() = hasFlag(FLAG_INSTALLED) && hasFlag(FLAG_SUSPENDED)
+    fun isSuspended(): Boolean = hasFlag(FLAG_INSTALLED) && hasFlag(FLAG_SUSPENDED)
 
-    /** Returns whether the target app is archived for a given user */
-    fun isArchived() = ATLEAST_V && enableSupportForArchiving() && (appInfo?.isArchived ?: false)
+    fun isArchived(): Boolean = false
 
-    /** Returns whether the target app is a system app */
-    fun isSystem() = hasFlag(FLAG_SYSTEM)
+    fun isSystem(): Boolean = hasFlag(FLAG_SYSTEM)
 
     fun getInfo(): ApplicationInfo? = appInfo
 
-    /** Returns whether the target app supports App Lock for a given user */
     fun isAppLockSupported(): Boolean = false
 
-    /** Returns whether the target app has App Lock enabled for a given user */
     fun isAppLockEnabled(): Boolean = false
 }

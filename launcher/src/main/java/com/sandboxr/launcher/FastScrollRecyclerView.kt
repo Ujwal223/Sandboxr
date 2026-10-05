@@ -33,6 +33,7 @@ abstract class FastScrollRecyclerView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : RecyclerView(context, attrs, defStyleAttr) {
 
+    @JvmField
     protected var mScrollbar: RecyclerViewFastScroller? = null
 
     val scrollbar: RecyclerViewFastScroller?

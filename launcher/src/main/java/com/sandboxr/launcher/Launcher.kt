@@ -21,11 +21,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import com.sandboxr.launcher.allapps.ActivityAllAppsContainerView
 import com.sandboxr.launcher.dragndrop.DragLayer
+import com.sandboxr.launcher.dragndrop.LauncherDragController
 import com.sandboxr.launcher.statemanager.StateManager
 import com.sandboxr.launcher.statemanager.StatefulActivity
 import com.sandboxr.launcher.views.ActivityContext
@@ -44,6 +46,9 @@ open class Launcher : StatefulActivity<LauncherState>(),
     private lateinit var mStateManager: StateManager<LauncherState, Launcher>
 
     protected var mDragLayer: DragLayer? = null
+    protected var mDragController: LauncherDragController? = null
+    protected var mDropTargetBar: DropTargetBar? = null
+    protected var mDropTargetHandler: DropTargetHandler? = null
     protected var mWorkspace: Workspace<*>? = null
     protected var mHotseat: Hotseat? = null
     protected var mHotseatPredictionController: com.sandboxr.launcher.hybridhotseat.HotseatPredictionController? = null
@@ -58,6 +63,9 @@ open class Launcher : StatefulActivity<LauncherState>(),
     protected var mAllAppsController: com.sandboxr.launcher.allapps.AllAppsTransitionController? = null
 
     open fun getAllAppsController(): com.sandboxr.launcher.allapps.AllAppsTransitionController? = mAllAppsController
+    open fun getDropTargetBar(): DropTargetBar? = mDropTargetBar
+    override fun getDropTargetHandler(): DropTargetHandler? = mDropTargetHandler
+    open fun getModelWriter(): com.sandboxr.launcher.model.IModelWriter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Show live system wallpaper behind window for home screen experience
@@ -150,10 +158,23 @@ open class Launcher : StatefulActivity<LauncherState>(),
         }
         mAppsView = appsView
 
+        val dragController = LauncherDragController(this)
+        mDragController = dragController
+        dragLayer.setup(dragController, workspace)
+
+        val dropTargetBar = (LayoutInflater.from(this).inflate(
+            R.layout.drop_target_bar, dragLayer, false
+        ) as DropTargetBar).apply {
+            setup(dragController)
+        }
+        mDropTargetBar = dropTargetBar
+        mDropTargetHandler = DropTargetHandler(this)
+
         dragLayer.addView(workspace)
         dragLayer.addView(hotseat)
         dragLayer.addView(scrimView)
         dragLayer.addView(appsView)
+        dragLayer.addView(dropTargetBar)
         root.addView(dragLayer)
 
         val allAppsController = com.sandboxr.launcher.allapps.AllAppsTransitionController(this).apply {
@@ -168,6 +189,8 @@ open class Launcher : StatefulActivity<LauncherState>(),
 
     override fun getDragLayer(): DragLayer? = mDragLayer
 
+    override fun getDragController(): LauncherDragController? = mDragController
+
     fun getWorkspace(): Workspace<*>? = mWorkspace
 
     fun getHotseat(): Hotseat? = mHotseat
@@ -178,6 +201,10 @@ open class Launcher : StatefulActivity<LauncherState>(),
     override fun getAppsView(): ActivityAllAppsContainerView<Launcher>? = mAppsView
 
     fun getScrimView(): ScrimView? = mScrimView
+
+    open fun launchAppPair(appPairIcon: com.sandboxr.launcher.apppairs.AppPairIcon) {
+        com.sandboxr.launcher.apppairs.AppPairsController(this).launchAppPair(appPairIcon.info)
+    }
 
     open fun onAllAppsTransition(progress: Float) {
         // Subclasses or listeners can react to All Apps continuous transition progress
@@ -192,9 +219,13 @@ open class Launcher : StatefulActivity<LauncherState>(),
                     LauncherState.NORMAL -> {
                         mWorkspace?.visibility = View.VISIBLE
                         mHotseat?.visibility = View.VISIBLE
+                        mAppsView?.visibility = View.GONE
                         mOverviewPanel?.visibility = View.GONE
                     }
                     LauncherState.ALL_APPS -> {
+                        mWorkspace?.visibility = View.GONE
+                        mHotseat?.visibility = View.GONE
+                        mAppsView?.visibility = View.VISIBLE
                         mOverviewPanel?.visibility = View.GONE
                     }
                     LauncherState.OVERVIEW -> {

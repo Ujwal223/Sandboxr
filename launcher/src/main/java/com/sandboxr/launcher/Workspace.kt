@@ -26,7 +26,12 @@ import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.annotation.VisibleForTesting
 import com.sandboxr.launcher.anim.PropertySetter
+import com.sandboxr.launcher.celllayout.CellLayoutLayoutParams
 import com.sandboxr.launcher.celllayout.CellPosMapper
+import com.sandboxr.launcher.dragndrop.DraggableView
+import com.sandboxr.launcher.dragndrop.DragOptions
+import com.sandboxr.launcher.dragndrop.DragView
+import com.sandboxr.launcher.graphics.DragPreviewProvider
 import com.sandboxr.launcher.model.data.ItemInfo
 import com.sandboxr.launcher.pageindicators.PageIndicator
 import com.sandboxr.launcher.statemanager.StateManager
@@ -101,6 +106,14 @@ open class Workspace<T : View> @JvmOverloads constructor(
 
     fun getPageIndexForScreenId(screenId: Int): Int {
         return mScreenOrder.indexOf(screenId)
+    }
+
+    /**
+     * Returns the CellLayout associated with the current page.
+     */
+    open fun getCurrentCellLayout(): CellLayout? {
+        val current = getCurrentPage()
+        return if (current in 0 until childCount) getChildAt(current) as? CellLayout else null
     }
 
     /**
@@ -198,6 +211,35 @@ open class Workspace<T : View> @JvmOverloads constructor(
         // Will be connected to LauncherAppWidgetHost in Phase 6
     }
 
+    open fun removeWorkspaceItem(view: View?, item: com.sandboxr.launcher.model.data.ItemInfo?) {
+        if (view != null) {
+            val parent = view.parent
+            if (parent is android.view.ViewGroup) {
+                parent.removeView(view)
+            }
+        }
+        if (item != null && view == null) {
+            for (i in 0 until childCount) {
+                val screen = getChildAt(i)
+                if (screen is CellLayout) {
+                    val container = screen.shortcutsAndWidgets
+                    for (j in 0 until container.childCount) {
+                        val child = container.getChildAt(j)
+                        val tag = child.tag as? com.sandboxr.launcher.model.data.ItemInfo
+                        if (tag == item || (item.id != com.sandboxr.launcher.model.data.ItemInfo.NO_ID && tag?.id == item.id)) {
+                            container.removeView(child)
+                            break
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    open fun stripEmptyScreens() {
+        removeExtraEmptyScreens()
+    }
+
     // --- CellLayoutContainer Implementation ---
 
     override fun getCellLayoutId(cellLayout: CellLayout): Int {
@@ -250,6 +292,56 @@ open class Workspace<T : View> @JvmOverloads constructor(
 
     open fun beginDragShared(child: View, source: View?, info: ItemInfo) {
         enterSpringLoadedMode()
+    }
+
+    open fun beginDragShared(
+        child: View,
+        draggableView: DraggableView?,
+        source: DragSource?,
+        info: ItemInfo,
+        dragPreviewProvider: DragPreviewProvider?,
+        dragOptions: DragOptions?,
+    ): DragView? {
+        enterSpringLoadedMode()
+        return null
+    }
+
+    override fun onDrop(dragObject: DropTarget.DragObject, options: Any?) {
+        val info = dragObject.dragInfo ?: return
+        val screenId = getCurrentPage()
+        val cellLayout = getScreenWithId(screenId) ?: return
+
+        val cell = kotlin.IntArray(2)
+        if (dragObject.x >= 0 && dragObject.y >= 0) {
+            cellLayout.pointToCellExact(dragObject.x, dragObject.y, cell)
+        } else {
+            cellLayout.findCellForSpan(cell, info.spanX, info.spanY)
+        }
+
+        info.cellX = cell[0].coerceAtLeast(0)
+        info.cellY = cell[1].coerceAtLeast(0)
+        info.screenId = screenId
+        info.container = LauncherSettings.Favorites.CONTAINER_DESKTOP
+
+        val launcher = try { Launcher.getLauncher(context) } catch (e: Exception) { null }
+        launcher?.getModelWriter()?.addItemToDatabase(
+            info,
+            info.container,
+            info.screenId,
+            info.cellX,
+            info.cellY
+        )
+
+        if (info is com.sandboxr.launcher.model.data.ItemInfoWithIcon) {
+            val childView = BubbleTextView(context).apply {
+                applyFromItemInfoWithIcon(info)
+            }
+            val lp = CellLayoutLayoutParams(info.cellX, info.cellY, info.spanX, info.spanY)
+            cellLayout.addViewToCellLayout(childView, -1, info.id.toInt(), lp, true)
+        }
+
+        dragObject.dragComplete = true
+        exitSpringLoadedMode()
     }
 
     override fun onDropCompleted(target: View?, d: DropTarget.DragObject, success: Boolean) {

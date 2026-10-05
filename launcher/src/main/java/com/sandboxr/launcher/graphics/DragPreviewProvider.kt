@@ -32,12 +32,14 @@ import kotlin.math.roundToInt
  * Generates elevated preview bitmaps and drawables when dragging icons, folders, or widgets
  * across the workspace grid.
  */
-open class DragPreviewProvider(
+open class DragPreviewProvider @JvmOverloads constructor(
     @JvmField val view: View,
     context: Context = view.context,
 ) {
+    @JvmField val mView: View = view
     private val tempRect = Rect()
 
+    @JvmField
     val blurSizeOutline: Int = try {
         val id = context.resources.getIdentifier("blur_size_medium_outline", "dimen", context.packageName)
         if (id != 0) context.resources.getDimensionPixelSize(id) else 16
@@ -46,6 +48,12 @@ open class DragPreviewProvider(
     }
 
     val previewPadding: Int = blurSizeOutline
+
+    fun getDrawableBounds(d: Drawable?): Rect {
+        val bounds = Rect()
+        d?.let { bounds.set(it.bounds) }
+        return bounds
+    }
 
     open fun drawDragView(destCanvas: Canvas, scale: Float) {
         val saveCount = destCanvas.save()

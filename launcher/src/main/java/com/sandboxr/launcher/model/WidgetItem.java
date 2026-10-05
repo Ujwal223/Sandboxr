@@ -28,7 +28,8 @@ public class WidgetItem extends ComponentKey {
 
     public WidgetItem(LauncherAppWidgetProviderInfo info,
             InvariantDeviceProfile idp, IconCache iconCache, Context context) {
-        super(info.provider, info.getProfile());
+        super(info.provider, (info != null && info.getUser() != null)
+                ? info.getUser() : android.os.Process.myUserHandle());
 
         label = iconCache.getTitleNoCache(info);
         description = info.loadDescription(context);

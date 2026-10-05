@@ -1,0 +1,44 @@
+/*
+ * Copyright (C) 2024 The Android Open Source Project
+ * Copyright (C) 2026 Sandboxr Platform
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.sandboxr.launcher
+
+import androidx.core.view.size
+import com.sandboxr.launcher.views.AbstractFloatingView
+import com.sandboxr.launcher.views.ActivityContext
+
+/**
+ * Helper class for managing AbstractFloatingViews which shows a floating UI on top of the launcher UI.
+ */
+object AbstractFloatingViewHelper {
+    @JvmStatic
+    fun closeOpenViews(activity: ActivityContext, animate: Boolean, type: Int) {
+        val dragLayer = activity.getDragLayer() ?: return
+        for (i in dragLayer.size - 1 downTo 0) {
+            val child = dragLayer.getChildAt(i)
+            if (child is AbstractFloatingView && child.isOfType(type)) {
+                child.close(animate)
+            }
+        }
+    }
+
+    @JvmStatic
+    fun getTopOpenViewWithType(
+        activity: ActivityContext,
+        type: Int,
+    ): AbstractFloatingView? = AbstractFloatingView.getOpenView(activity, type)
+}

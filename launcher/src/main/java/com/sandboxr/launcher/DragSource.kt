@@ -22,7 +22,7 @@ import android.view.View
 /**
  * Interface defining an object that can originate a drag.
  */
-interface DragSource {
+fun interface DragSource {
 
     /**
      * A callback made back to the source after an item from this source has been dropped on a DropTarget.

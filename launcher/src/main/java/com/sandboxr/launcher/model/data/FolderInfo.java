@@ -95,12 +95,48 @@ public class FolderInfo extends CollectionInfo {
         itemType = LauncherSettings.Favorites.ITEM_TYPE_FOLDER;
     }
 
+    public interface FolderListener {
+        void onAdd(ItemInfo item, int rank);
+        void onRemove(java.util.List<ItemInfo> items);
+        void onTitleChanged(CharSequence title);
+        void onItemsChanged(boolean animate);
+    }
+
+    private final ArrayList<FolderListener> listeners = new ArrayList<>();
+
+    public void addListener(FolderListener listener) {
+        if (!listeners.contains(listener)) {
+            listeners.add(listener);
+        }
+    }
+
+    public void removeListener(FolderListener listener) {
+        listeners.remove(listener);
+    }
+
     @Override
     public void add(@NonNull ItemInfo item) {
+        add(item, true);
+    }
+
+    public void add(@NonNull ItemInfo item, boolean animate) {
         if (!willAcceptItemType(item.itemType)) {
             throw new RuntimeException("tried to add an illegal type into a folder");
         }
-        getContents().add(item);
+        contents.add(item);
+        for (FolderListener listener : new ArrayList<>(listeners)) {
+            listener.onAdd(item, contents.size() - 1);
+            listener.onItemsChanged(animate);
+        }
+    }
+
+    public void remove(ItemInfo item, boolean animate) {
+        contents.remove(item);
+        java.util.List<ItemInfo> items = java.util.Collections.singletonList(item);
+        for (FolderListener listener : new ArrayList<>(listeners)) {
+            listener.onRemove(items);
+            listener.onItemsChanged(animate);
+        }
     }
 
     /**
@@ -205,6 +241,9 @@ public class FolderInfo extends CollectionInfo {
         }
         if (modelWriter != null) {
             modelWriter.updateItemInDatabase(this);
+        }
+        for (FolderListener listener : new ArrayList<>(listeners)) {
+            listener.onTitleChanged(title);
         }
     }
 

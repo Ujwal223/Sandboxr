@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 The Android Open Source Project
+     Copyright (C) 2026 Sandboxr Platform -->
+<com.sandboxr.launcher.DropTargetBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drop_target_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dynamic_grid_drop_target_size"
+    android:layout_gravity="center_horizontal|top"
+    android:focusable="false"
+    android:alpha="0"
+    android:visibility="invisible">
+
+    <!-- Delete target -->
+    <com.sandboxr.launcher.DeleteDropTarget
+        android:id="@+id/delete_target_text"
+        style="@style/DropTargetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/remove_drop_target_label" />
+
+    <!-- Uninstall / Secondary target -->
+    <com.sandboxr.launcher.SecondaryDropTarget
+        android:id="@+id/uninstall_target_text"
+        style="@style/DropTargetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/uninstall_drop_target_label" />
+
+</com.sandboxr.launcher.DropTargetBar>

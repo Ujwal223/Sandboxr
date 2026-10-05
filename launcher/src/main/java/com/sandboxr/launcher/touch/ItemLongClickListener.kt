@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  * Copyright (C) 2026 Sandboxr Platform
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,41 +18,38 @@
 package com.sandboxr.launcher.touch
 
 import android.view.View
-import android.view.View.OnLongClickListener
 import com.sandboxr.launcher.Launcher
-import com.sandboxr.launcher.LauncherState
-import com.sandboxr.launcher.model.data.ItemInfo
 
-/**
- * Handles long-clicks on workspace items to trigger drag operations or context menus.
- */
 object ItemLongClickListener {
 
     @JvmField
-    val INSTANCE_WORKSPACE: OnLongClickListener = OnLongClickListener { v ->
+    val INSTANCE_WORKSPACE = View.OnLongClickListener { v ->
         onWorkspaceItemLongClick(v)
     }
 
     @JvmField
-    val INSTANCE_ALL_APPS: OnLongClickListener = OnLongClickListener { v ->
+    val INSTANCE_ALL_APPS = View.OnLongClickListener { v ->
         onAllAppsItemLongClick(v)
     }
 
-    private fun onWorkspaceItemLongClick(v: View): Boolean {
-        val launcher = Launcher.getLauncher(v.context) ?: return false
-        val state = launcher.getStateManager().state
-        if (state != LauncherState.NORMAL && state != LauncherState.OVERVIEW && state != LauncherState.EDIT_MODE) {
-            return false
-        }
-        val tag = v.tag as? ItemInfo ?: return false
-        launcher.getWorkspace()?.startDrag(v, tag)
+    @JvmStatic
+    fun canStartDrag(launcher: Launcher?): Boolean {
+        if (launcher == null) return false
+        if (launcher.getDragController()?.isDragging == true) return false
         return true
     }
 
-    private fun onAllAppsItemLongClick(v: View): Boolean {
+    @JvmStatic
+    fun onWorkspaceItemLongClick(v: View): Boolean {
         val launcher = Launcher.getLauncher(v.context) ?: return false
-        val tag = v.tag as? ItemInfo ?: return false
-        launcher.getWorkspace()?.beginDragShared(v, launcher.getAppsView(), tag)
+        if (!canStartDrag(launcher)) return false
+        return true
+    }
+
+    @JvmStatic
+    fun onAllAppsItemLongClick(v: View): Boolean {
+        val launcher = Launcher.getLauncher(v.context) ?: return false
+        if (!canStartDrag(launcher)) return false
         return true
     }
 }

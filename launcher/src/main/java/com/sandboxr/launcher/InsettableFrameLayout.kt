@@ -81,7 +81,7 @@ open class InsettableFrameLayout @JvmOverloads constructor(
         }
     }
 
-    class LayoutParams : FrameLayout.LayoutParams {
+    open class LayoutParams : FrameLayout.LayoutParams {
         @JvmField
         var ignoreInsets: Boolean = false
 

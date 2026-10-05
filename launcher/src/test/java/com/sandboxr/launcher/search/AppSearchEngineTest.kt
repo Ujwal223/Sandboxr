@@ -33,6 +33,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.shadows.ShadowLooper
 import java.util.ArrayList
 import java.util.concurrent.CountDownLatch
@@ -96,7 +97,7 @@ class AppSearchEngineTest {
 
         store.setApps(arrayOf(appChrome, appCalc, appCamera, appMaps))
 
-        val algorithm = DefaultAppSearchAlgorithm(context, store)
+        val algorithm = DefaultAppSearchAlgorithm(context, store, bgExecutor = Runnable::run)
         var receivedQuery: String? = null
         var receivedItems: ArrayList<BaseAllAppsAdapter.AdapterItem>? = null
 
@@ -112,8 +113,6 @@ class AppSearchEngineTest {
             override fun clearSearchResult() {}
         })
 
-        // Wait for executor background thread and shadow looper
-        Thread.sleep(200)
         ShadowLooper.idleMainLooper()
 
         assertNotNull(receivedItems)
@@ -130,7 +129,7 @@ class AppSearchEngineTest {
         val store = AllAppsStore()
         store.setApps(arrayOf(createApp("com.app", "TestApp")))
 
-        val algorithm = DefaultAppSearchAlgorithm(context, store, addNoResultsMessage = true)
+        val algorithm = DefaultAppSearchAlgorithm(context, store, addNoResultsMessage = true, bgExecutor = Runnable::run)
         var receivedItems: ArrayList<BaseAllAppsAdapter.AdapterItem>? = null
 
         algorithm.doSearch("nonexistent", object : SearchCallback<BaseAllAppsAdapter.AdapterItem> {
@@ -144,7 +143,6 @@ class AppSearchEngineTest {
             override fun clearSearchResult() {}
         })
 
-        Thread.sleep(200)
         ShadowLooper.idleMainLooper()
 
         assertNotNull(receivedItems)

@@ -38,4 +38,20 @@ object Executors {
         thread.start()
         LooperExecutor(thread.looper)
     }
+
+    @JvmField
+    val ORDERED_BG_EXECUTOR: LooperExecutor = run {
+        val thread = HandlerThread("BackgroundExecutor", Process.THREAD_PRIORITY_BACKGROUND)
+        thread.start()
+        LooperExecutor(thread.looper)
+    }
+
+    @JvmField
+    val THREAD_POOL_EXECUTOR: java.util.concurrent.ThreadPoolExecutor = java.util.concurrent.ThreadPoolExecutor(
+        maxOf(Runtime.getRuntime().availableProcessors(), 2),
+        maxOf(Runtime.getRuntime().availableProcessors(), 2),
+        1L,
+        java.util.concurrent.TimeUnit.SECONDS,
+        java.util.concurrent.LinkedBlockingQueue()
+    )
 }

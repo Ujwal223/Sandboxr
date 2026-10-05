@@ -3,6 +3,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="popupColorPrimary">@color/popup_color_primary_dark</item>
+        <item name="popupShadeFirst">@color/popup_shade_first_dark</item>
+        <item name="popupShadeSecond">@color/popup_shade_second_dark</item>
+        <item name="popupShadeThird">@color/popup_shade_third_dark</item>
     </style>
 
     <style name="LauncherTheme" parent="AppTheme" />
@@ -25,4 +29,32 @@
     <style name="GestureTutorialActivity" parent="Theme.AppCompat.DayNight.NoActionBar" />
 
     <style name="AllSetTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="HomeScreenElementTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="DropTargetButton" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:drawablePadding">@dimen/drop_target_button_drawable_padding</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="PopupMenuItemText" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="ExpandButtonText" parent="PopupMenuItemText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="PopupItem" />
+
+    <style name="PopupItemIconOnly" />
+
+    <style name="BaseIcon" />
+
+    <style name="BaseIconUnBounded" parent="BaseIcon" />
 </resources>

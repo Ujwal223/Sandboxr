@@ -46,6 +46,8 @@ interface ActivityContext : SavedStateRegistryOwner {
 
     fun getUndoDeleteController(): com.android.launcher3.UndoDeleteController? = null
 
+    fun getDropTargetHandler(): com.sandboxr.launcher.DropTargetHandler? = null
+
     fun getDeviceProfile(): DeviceProfile
 
     fun getOnDeviceProfileChangeListeners(): List<OnDeviceProfileChangeListener> {
@@ -59,6 +61,10 @@ interface ActivityContext : SavedStateRegistryOwner {
     fun getRootView(): View?
 
     fun getDragLayer(): BaseDragLayer<*>? {
+        return null
+    }
+
+    fun getDragController(): com.sandboxr.launcher.dragndrop.DragController? {
         return null
     }
 
@@ -91,6 +97,34 @@ interface ActivityContext : SavedStateRegistryOwner {
     fun startActivitySafely(v: View?, intent: android.content.Intent?, item: com.sandboxr.launcher.model.data.ItemInfo?): Boolean = false
 
     fun closeOnDestroy(closeable: SafeCloseable) {}
+
+    fun canUseMultipleShadesForPopup(): Boolean = false
+
+    fun getStatsLogManager(): com.sandboxr.launcher.logging.StatsLogManager {
+        return com.sandboxr.launcher.logging.StatsLogManager.newInstance(asContext())
+    }
+
+    fun getAccessibilityDelegate(): View.AccessibilityDelegate? = null
+
+    fun getActivityLaunchOptions(v: View, item: com.sandboxr.launcher.model.data.ItemInfo): com.sandboxr.launcher.util.ActivityOptionsWrapper {
+        return com.sandboxr.launcher.util.ActivityOptionsWrapper(null, com.sandboxr.launcher.util.RunnableList())
+    }
+
+    fun sendPendingIntentWithAnimation(view: View, pendingIntent: android.app.PendingIntent, itemInfo: com.sandboxr.launcher.model.data.ItemInfo): com.sandboxr.launcher.util.RunnableList? = null
+
+    fun getCellLayout(container: Int, screenId: Int): com.sandboxr.launcher.CellLayout? = null
+
+    fun getSupportedShortcuts(itemInfo: com.sandboxr.launcher.model.data.ItemInfo): java.util.stream.Stream<com.sandboxr.launcher.popup.SystemShortcut.Factory<*>> {
+        return java.util.stream.Stream.empty()
+    }
+
+    fun refreshAndBindWidgetsForPackageUser(packageUser: com.sandboxr.launcher.util.PackageUserKey?) {}
+
+    fun getPopupDataProvider(): com.sandboxr.launcher.popup.PopupDataProvider? = null
+
+    fun getPopupControllerForAppIcons(): com.sandboxr.launcher.popup.PopupController<*>? = null
+
+    fun getContent(): com.sandboxr.launcher.util.LauncherBindableItemsContainer? = null
 
     companion object {
         const val TAG = "ActivityContext"

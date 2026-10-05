@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 The Android Open Source Project
+     Copyright (C) 2026 Sandboxr Platform -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base Material 3 Colors -->
+    <color name="materialColorSurface">#12121A</color>
+    <color name="materialColorSurfaceDim">#0F0F14</color>
+    <color name="materialColorSurfaceBright">#2A2A38</color>
+    <color name="materialColorSurfaceContainerLowest">#0A0A0F</color>
+    <color name="materialColorSurfaceContainerLow">#14141E</color>
+    <color name="materialColorSurfaceContainer">#1A1A26</color>
+    <color name="materialColorSurfaceContainerHigh">#222232</color>
+    <color name="materialColorSurfaceContainerHighest">#2A2A3E</color>
+    <color name="materialColorSurfaceVariant">#252538</color>
+    <color name="materialColorSecondary">#5B8AF5</color>
+    <color name="materialColorOnSurface">#E6E6FA</color>
+    <color name="materialColorOnSurfaceVariant">#A0A0B8</color>
+    <color name="materialColorOutline">#3D3D56</color>
+    <color name="materialColorOutlineVariant">#484860</color>
+    <color name="materialColorTertiary">#7C9BFF</color>
+    <color name="materialColorOnTertiary">#FFFFFF</color>
+    <color name="materialColorTertiaryContainer">#263668</color>
+    <color name="materialColorTertiaryFixedDim">#4A6BD6</color>
+
+    <!-- Popup container colors -->
+    <color name="notification_icon_default_color">#757575</color>
+    <color name="icon_background">#E0E0E0</color>
+
+    <color name="popup_color_primary_light">#FFFFFF</color>
+    <color name="popup_color_secondary_light">#F1F3F4</color>
+    <color name="popup_color_tertiary_light">#E0E0E0</color>
+    <color name="popup_text_color_light">#1F1F1F</color>
+    <color name="popup_color_neutral_dark">#1A1A26</color>
+    <color name="popup_color_primary_dark">#1A1A26</color>
+    <color name="popup_color_secondary_dark">#12121A</color>
+    <color name="popup_color_tertiary_dark">#757575</color>
+    <color name="popup_text_color_dark">#E3E3E3</color>
+
+    <color name="popup_shade_first_light">#F9F9F9</color>
+    <color name="popup_shade_second_light">#F1F1F1</color>
+    <color name="popup_shade_third_light">#E2E2E2</color>
+    <color name="popup_shade_first_dark">#252538</color>
+    <color name="popup_shade_second_dark">#1E1E2C</color>
+    <color name="popup_shade_third_dark">#161622</color>
+
+    <color name="popup_notification_dot_light">#FFFFFF</color>
+    <color name="popup_notification_dot_dark">#757575</color>
+    <color name="notification_dot_color_light">#6DD58C</color>
+    <color name="notification_dot_color_dark">#C4EED0</color>
+</resources>

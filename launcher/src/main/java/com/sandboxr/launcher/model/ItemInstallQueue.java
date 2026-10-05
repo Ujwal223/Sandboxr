@@ -22,6 +22,7 @@ import static com.android.launcher3.util.Executors.MAIN_EXECUTOR;
 import static com.android.launcher3.util.Executors.MODEL_EXECUTOR;
 
 import android.content.Context;
+import android.content.pm.ShortcutInfo;
 import android.os.UserHandle;
 
 import androidx.annotation.AnyThread;
@@ -105,7 +106,7 @@ public class ItemInstallQueue {
         mIconUISurface = new WeakReference<>(context);
     }
 
-    /** Queues a pending item to ths install queue */
+    /** Queues a pending item to the install queue */
     @AnyThread
     public void queueItem(SerializedItemItem info) {
         // Queue the item up for adding if launcher has not loaded properly yet
@@ -117,6 +118,14 @@ public class ItemInstallQueue {
             }
         });
         flushInstallQueue();
+    }
+
+    /** Queues a shortcut info item to the install queue */
+    @AnyThread
+    public void queueItem(ShortcutInfo info) {
+        if (info != null) {
+            queueItem(new SerializedItemItem(info));
+        }
     }
 
     @WorkerThread

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 The Android Open Source Project
+     Copyright (C) 2026 Sandboxr Platform -->
+<resources>
+    <dimen name="drop_target_bar_margin_horizontal">4dp</dimen>
+    <dimen name="dynamic_grid_drop_target_size">48dp</dimen>
+    <dimen name="drop_target_button_drawable_size">24dp</dimen>
+    <dimen name="drop_target_button_drawable_padding">8dp</dimen>
+    <dimen name="drag_distanceThreshold">10dp</dimen>
+
+    <!-- Dialogs and Corners -->
+    <dimen name="default_dialog_corner_radius">26dp</dimen>
+    <dimen name="dialogCornerRadius">@dimen/default_dialog_corner_radius</dimen>
+
+    <!-- Popup and Shortcuts -->
+    <dimen name="deep_shortcuts_elevation">2dp</dimen>
+    <dimen name="bg_popup_padding">2dp</dimen>
+    <dimen name="bg_popup_item_width">216dp</dimen>
+    <dimen name="bg_popup_item_height">52dp</dimen>
+    <dimen name="bg_popup_item_vertical_padding">12dp</dimen>
+    <dimen name="pre_drag_view_scale">6dp</dimen>
+    <dimen name="deep_shortcut_add_button_size">48dp</dimen>
+    <dimen name="deep_shortcut_text_end_padding">48dp</dimen>
+    <dimen name="deep_shortcuts_start_drag_threshold">16dp</dimen>
+    <dimen name="deep_shortcut_icon_size">35dp</dimen>
+    <dimen name="popup_blur_radius">20dp</dimen>
+    <dimen name="popup_margin">2dp</dimen>
+    <dimen name="popup_single_item_radius">100dp</dimen>
+    <dimen name="popup_smaller_radius">4dp</dimen>
+    <dimen name="deep_shortcut_drawable_padding">16dp</dimen>
+    <dimen name="popup_padding_start">10dp</dimen>
+    <dimen name="popup_padding_end">14dp</dimen>
+    <dimen name="popup_vertical_padding">4dp</dimen>
+    <dimen name="popup_arrow_width">12dp</dimen>
+    <dimen name="popup_arrow_height">10dp</dimen>
+    <dimen name="popup_arrow_vertical_offset">-1dp</dimen>
+    <dimen name="popup_arrow_horizontal_center_offset">26dp</dimen>
+    <dimen name="popup_arrow_corner_radius">2dp</dimen>
+    <dimen name="deep_shortcuts_text_padding_start">54dp</dimen>
+    <dimen name="system_shortcut_icon_size">20dp</dimen>
+    <dimen name="system_shortcut_margin_start">16dp</dimen>
+    <dimen name="system_shortcut_header_height">52dp</dimen>
+    <dimen name="system_shortcut_header_icon_touch_size">48dp</dimen>
+    <dimen name="system_shortcut_header_icon_padding">14dp</dimen>
+    <dimen name="system_shortcut_header_icon_padding_outer">16dp</dimen>
+    <dimen name="system_shortcut_header_icon_padding_inner">12dp</dimen>
+    <dimen name="popup_corner_radius">26dp</dimen>
+    <dimen name="deep_shortcuts_divider_width">1dp</dimen>
+    <dimen name="popup_item_margin">2dp</dimen>
+    <dimen name="widget_cell_add_button_drawable_width">19dp</dimen>
+    <dimen name="options_menu_icon_size">24dp</dimen>
+</resources>

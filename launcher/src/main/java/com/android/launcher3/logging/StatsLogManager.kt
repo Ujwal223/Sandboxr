@@ -47,7 +47,7 @@ constructor(
 
     /** No-op stats logger stub. */
     interface StatsLogger {
-        fun withItemInfo(itemInfo: ItemInfo?) = this
+        fun withItemInfo(itemInfo: Any?) = this
         fun withInstanceId(instanceId: InstanceId?) = this
         fun withRank(rank: Int) = this
         fun withSrcState(srcState: Int) = this
@@ -98,6 +98,41 @@ constructor(
         LAUNCHER_GRID_SIZE_5_BY_5(2212),
         LAUNCHER_GRID_SIZE_5_BY_6(2213),
         LAUNCHER_GRID_SIZE_6_BY_5(2214),
+        LAUNCHER_OPEN_APP_PAIR_LONG_PRESS_MENU(2001),
+        LAUNCHER_OPEN_FOLDER_LONG_PRESS_MENU(2002),
+        LAUNCHER_OPEN_WIDGET_LONG_PRESS_MENU(2003),
+        LAUNCHER_OPEN_APP_LONG_PRESS_MENU(2004),
+        LAUNCHER_OPEN_APP_SHORTCUT_LONG_PRESS_MENU(2005),
+        LAUNCHER_CLOSE_APP_PAIR_LONG_PRESS_MENU(2006),
+        LAUNCHER_CLOSE_FOLDER_LONG_PRESS_MENU(2007),
+        LAUNCHER_CLOSE_WIDGET_LONG_PRESS_MENU(2008),
+        LAUNCHER_CLOSE_APP_LONG_PRESS_MENU(2009),
+        LAUNCHER_CLOSE_APP_SHORTCUT_LONG_PRESS_MENU(2010),
+        LAUNCHER_SYSTEM_SHORTCUT_APP_INFO_TAP(2011),
+        LAUNCHER_SYSTEM_SHORTCUT_WIDGETS_TAP(2012),
+        LAUNCHER_SYSTEM_SHORTCUT_INSTALL_TAP(2013),
+        LAUNCHER_SYSTEM_SHORTCUT_DONT_SUGGEST_APP_TAP(2014),
+        LAUNCHER_SYSTEM_SHORTCUT_PAUSE_TAP(2015),
+        LAUNCHER_SYSTEM_SHORTCUT_ENABLE_APP_LOCK_TAP(2016),
+        LAUNCHER_SYSTEM_SHORTCUT_DISABLE_APP_LOCK_TAP(2017),
+        LAUNCHER_PRIVATE_SPACE_INSTALL_SYSTEM_SHORTCUT_TAP(2018),
+        LAUNCHER_PRIVATE_SPACE_UNINSTALL_SYSTEM_SHORTCUT_TAP(2019),
+        LAUNCHER_DISMISS_PREDICTION_UNDO(2020),
+        LAUNCHER_TAP_TO_ADD_TO_HOME_SCREEN_FROM_ALL_APPS(2021),
+        LAUNCHER_ALL_APPS_TAP_OR_LONGPRESS(2022),
+        LAUNCHER_SETTINGS_BUTTON_TAP_OR_LONGPRESS(2023),
+        LAUNCHER_WIDGETSTRAY_BUTTON_TAP_OR_LONGPRESS(2024),
+        LAUNCHER_CREATE_NEW_FOLDER_BUTTON_TAP_OR_LONGPRESS(2025),
+        LAUNCHER_TAP_TO_ADD_DEEP_SHORTCUT(2446),
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance(context: Context): StatsLogManager {
+            return StatsLogManager(context) {
+                object : StatsLogger {}
+            }
+        }
     }
 
     enum class LauncherLatencyEvent(override val id: Int) : EventEnum {

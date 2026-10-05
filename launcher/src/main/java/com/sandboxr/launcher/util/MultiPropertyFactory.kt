@@ -73,8 +73,10 @@ open class MultiPropertyFactory<T> @JvmOverloads constructor(
         val index: Int,
         private val defaultValue: Float
     ) {
-        var value: Float = defaultValue
-            private set
+        private var mValue: Float = defaultValue
+
+        val value: Float
+            get() = mValue
 
         fun setValue(newValue: Float) {
             if (lastIndexSet != index) {
@@ -87,7 +89,7 @@ open class MultiPropertyFactory<T> @JvmOverloads constructor(
                 lastIndexSet = index
             }
             val lastAggregatedValue = aggregator.apply(aggregationOfOthers, newValue)
-            value = newValue
+            mValue = newValue
             apply(lastAggregatedValue)
         }
 
@@ -97,7 +99,7 @@ open class MultiPropertyFactory<T> @JvmOverloads constructor(
             return animator
         }
 
-        override fun toString(): String = value.toString()
+        override fun toString(): String = mValue.toString()
     }
 
     companion object {
